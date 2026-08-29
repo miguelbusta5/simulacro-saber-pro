@@ -4,13 +4,19 @@ Aplicación web para presentar simulacros de las **competencias genéricas de se
 múltiple** del Saber Pro (ICFES), con cronómetro controlado por el servidor, resultado por
 módulo, revisión de respuestas y análisis de qué estudiar.
 
-Node + Express + Postgres (Supabase). El frontend es HTML, CSS y JavaScript sin paso de build.
+Node + Express + Postgres. El frontend es HTML, CSS y JavaScript sin paso de build.
 
 ## Puesta en marcha
 
-**1. Crea la base de datos.** En [supabase.com](https://supabase.com) crea un proyecto. Ve a
-*Project Settings → Database → Connection string → URI*, copia la del *Session pooler* y
-reemplaza `[YOUR-PASSWORD]` por la contraseña de la base de datos.
+**1. Crea la base de datos.** Sirve cualquier Postgres; la app no depende de ningún proveedor.
+
+- **[Neon](https://neon.tech)** — recomendado: el proyecto despierta solo tras la inactividad.
+  Copia la *Connection string* del panel.
+- **[Supabase](https://supabase.com)** — *Project Settings → Database → Connection string → URI*.
+  Usa la del **Session pooler**, no la *Direct connection*: esa última solo responde por IPv6 y
+  falla desde Render.
+
+En ambos casos reemplaza el marcador por la contraseña real de la base de datos.
 
 **2. Configura el proyecto.** Copia `.env.example` como `.env` y pega ahí tu URI en
 `DATABASE_URL`. Ese archivo está en `.gitignore` y nunca se sube al repositorio.
@@ -19,13 +25,22 @@ reemplaza `[YOUR-PASSWORD]` por la contraseña de la base de datos.
 npm install
 ```
 
-**3. Crea las tablas y carga el banco de preguntas.**
+**3. Comprueba la conexión.**
+
+```bash
+npm run conexion
+```
+
+Si algo está mal, este comando dice exactamente qué: contraseña sin reemplazar, host incorrecto,
+proyecto pausado o la cadena de Supabase equivocada.
+
+**4. Crea las tablas y carga el banco de preguntas.**
 
 ```bash
 npm run seed
 ```
 
-**4. Levanta la aplicación.**
+**5. Levanta la aplicación.**
 
 ```bash
 npm start
@@ -44,9 +59,12 @@ terminar. Nunca toca tus datos reales.
 
 ## Despliegue en Render
 
-El repositorio incluye `render.yaml`. En Render: *New → Blueprint*, conecta este repositorio y
-en *Environment* agrega la variable `DATABASE_URL` con la misma URI de Supabase. El plan
-gratuito basta, porque los datos viven en Supabase y no en el disco del servidor.
+GitHub guarda el código y dispara el despliegue, pero no ejecuta la app: GitHub Pages solo sirve
+archivos estáticos y aquí hace falta un proceso Node y una base de datos.
+
+En Render: *New → Blueprint*, conecta este repositorio (lee `render.yaml`) y en *Environment*
+agrega la variable `DATABASE_URL` con la misma URI del paso 1. El plan gratuito basta, porque los
+datos viven en el Postgres administrado y no en el disco del servidor.
 
 Cada despliegue ejecuta `npm run seed`, así que los cambios que hagas al banco de preguntas
 llegan solos a producción. Como la carga es un *upsert* por `id`, no se duplica nada.
@@ -124,7 +142,7 @@ server/
 data/banco/           banco de preguntas por módulo
 data/estudio.json     recomendaciones de estudio por competencia y tema
 public/               interfaz (HTML + CSS + JS sin build)
-scripts/              seed.js, smoke.js
+scripts/              verificar-conexion.js, seed.js, smoke.js
 render.yaml           configuración de despliegue
 ```
 
