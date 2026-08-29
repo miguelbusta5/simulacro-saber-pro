@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revisión de respuestas — Simulacro Saber Pro</title>
+<link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+<header class="barra">
+  <div class="marca">Revisión de respuestas<small id="resumen"></small></div>
+  <button id="btn-resultados" type="button">Ver resultados</button>
+  <button id="btn-inicio" type="button">Volver al inicio</button>
+</header>
+
+<div class="contenedor">
+  <div id="aviso" class="aviso oculto"></div>
+
+  <div id="contenido" class="oculto">
+    <div class="tarjeta">
+      <h3>Filtrar</h3>
+      <div class="filtros" id="filtros-estado"></div>
+      <div class="filtros" id="filtros-modulo"></div>
+    </div>
+    <div id="lista"></div>
+  </div>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/revision.js"></script>
+</body>
+</html>

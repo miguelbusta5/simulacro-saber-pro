@@ -1,0 +1,189 @@
+{
+  "competencias": {
+    "lectura_critica.literal": {
+      "que_mide": "Identificar y entender la información que el texto dice de forma explícita: definiciones, datos, referencias de los pronombres y significado de palabras por contexto.",
+      "que_estudiar": [
+        "Identificación de la idea principal de un párrafo frente a las ideas secundarias",
+        "Referentes: a qué sustantivo remite cada pronombre y cada conector",
+        "Significado de una palabra deducido por el contexto, sin diccionario",
+        "Diferencia entre lo que el texto afirma y lo que el lector supone"
+      ],
+      "como_practicar": "Lee un artículo de opinión y, sin releerlo, escribe en una frase qué afirma cada párrafo. Luego verifica señalando la línea exacta que lo respalda."
+    },
+    "lectura_critica.articulacion": {
+      "que_mide": "Comprender cómo se relacionan las partes del texto para construir un sentido global: estructura, función de cada párrafo y conectores lógicos.",
+      "que_estudiar": [
+        "Función de los conectores: causa, consecuencia, oposición, adición, concesión",
+        "Estructura de un texto argumentativo: tesis, argumentos, contraargumentos, conclusión",
+        "Función retórica de un párrafo: ejemplificar, refutar, definir, matizar",
+        "Reconocer el propósito comunicativo global del texto"
+      ],
+      "como_practicar": "Toma columnas de prensa y rotula cada párrafo con su función (introduce, ejemplifica, refuta, concluye). Si dos párrafos reciben la misma etiqueta, pregúntate por qué el autor los separó."
+    },
+    "lectura_critica.reflexion": {
+      "que_mide": "Evaluar el texto: validez de los argumentos, supuestos que da por sentados el autor, intención, sesgos y confrontación con otras posturas.",
+      "que_estudiar": [
+        "Falacias frecuentes: ad hominem, falsa causa, generalización apresurada, falso dilema",
+        "Distinguir hecho verificable, opinión y supuesto implícito",
+        "Evaluar si una evidencia realmente sostiene la conclusión que se le atribuye",
+        "Identificar la intención y el destinatario del texto (persuadir, informar, criticar)"
+      ],
+      "como_practicar": "Ante cada texto pregúntate qué tendría que ser cierto para que ese argumento funcione, y qué dato lo derrumbaría. Escribe ambas respuestas antes de mirar las opciones."
+    },
+    "razonamiento_cuantitativo.interpretacion": {
+      "que_mide": "Leer y comprender información cuantitativa presentada en tablas, gráficas, diagramas y textos con datos.",
+      "que_estudiar": [
+        "Lectura de gráficas de barras, líneas, circulares e histogramas: qué representa cada eje",
+        "Diferencia entre cambio absoluto y cambio porcentual",
+        "Lectura de tablas de doble entrada y de porcentajes sobre totales distintos",
+        "Escalas, unidades y conversiones antes de comparar cifras"
+      ],
+      "como_practicar": "Toma gráficas del DANE o de prensa y escribe tres afirmaciones verdaderas y dos falsas pero verosímiles a partir de cada una. Ese es exactamente el tipo de distractor de la prueba."
+    },
+    "razonamiento_cuantitativo.formulacion": {
+      "que_mide": "Plantear y ejecutar el procedimiento que resuelve una situación: regla de tres, porcentajes, proporciones, áreas, probabilidad y promedios.",
+      "que_estudiar": [
+        "Porcentajes: aumentos, descuentos, descuentos sucesivos y porcentaje sobre porcentaje",
+        "Proporcionalidad directa e inversa, y regla de tres compuesta",
+        "Promedio, promedio ponderado, mediana y moda",
+        "Perímetro, área y volumen de figuras básicas y compuestas",
+        "Probabilidad simple, conteo y casos favorables sobre casos posibles"
+      ],
+      "como_practicar": "Resuelve por escrito 10 problemas diarios de porcentajes y proporciones planteando primero la ecuación completa y solo después haciendo cuentas. La mayoría de errores en esta competencia son de planteamiento, no de aritmética."
+    },
+    "razonamiento_cuantitativo.argumentacion": {
+      "que_mide": "Validar o refutar conclusiones a partir de datos: decidir si la información disponible es suficiente y si el razonamiento es correcto.",
+      "que_estudiar": [
+        "Distinguir correlación de causalidad",
+        "Determinar si los datos dados son suficientes para concluir algo",
+        "Detectar comparaciones inválidas: bases distintas, muestras no comparables",
+        "Uso de contraejemplos para refutar una afirmación general"
+      ],
+      "como_practicar": "Ante cada conclusión pregúntate qué dato adicional necesitarías para sostenerla. Si puedes imaginar un solo contraejemplo, la afirmación general es falsa."
+    },
+    "competencias_ciudadanas.conocimientos": {
+      "que_mide": "Conocer la Constitución de 1991, la organización del Estado colombiano, los derechos fundamentales y los mecanismos de protección y participación.",
+      "que_estudiar": [
+        "Derechos fundamentales, sociales y colectivos (Constitución, Títulos I y II)",
+        "Ramas del poder público y órganos de control: quién hace qué",
+        "Mecanismos de protección: tutela, habeas corpus, acción de cumplimiento, acciones populares",
+        "Mecanismos de participación: voto, referendo, plebiscito, consulta popular, cabildo abierto, revocatoria, iniciativa legislativa",
+        "Funciones de la Corte Constitucional, la Procuraduría, la Defensoría y la Contraloría"
+      ],
+      "como_practicar": "Arma una tabla de una página con cada mecanismo: para qué sirve, quién lo puede usar y ante quién se presenta. Es el contenido que más se repite y el más fácil de asegurar."
+    },
+    "competencias_ciudadanas.argumentacion": {
+      "que_mide": "Analizar y evaluar los argumentos que usan las personas en debates sobre asuntos públicos.",
+      "que_estudiar": [
+        "Identificar la premisa implícita de la que depende un argumento",
+        "Distinguir un argumento de una simple opinión o descalificación",
+        "Evaluar la pertinencia de una evidencia frente a la conclusión defendida",
+        "Falacias en el debate público: apelación a la mayoría, autoridad irrelevante, hombre de paja"
+      ],
+      "como_practicar": "Toma una controversia pública actual y escribe el mejor argumento de cada lado, no el más débil. La prueba castiga precisamente al que solo reconoce la caricatura del otro lado."
+    },
+    "competencias_ciudadanas.multiperspectivismo": {
+      "que_mide": "Reconocer que en un conflicto hay varias perspectivas legítimas y comprender la posición de actores distintos al propio.",
+      "que_estudiar": [
+        "Identificar los intereses y valores de cada actor en un conflicto social",
+        "Diferenciar la postura de una persona de los prejuicios sobre su grupo",
+        "Reconocer cuándo un enunciado presenta un solo punto de vista como universal",
+        "Enfoque diferencial: género, etnia, discapacidad, víctimas del conflicto"
+      ],
+      "como_practicar": "Frente a cada caso, completa por escrito la frase «desde el punto de vista de X, lo justo sería...» para cada actor mencionado, antes de mirar las opciones."
+    },
+    "competencias_ciudadanas.pensamiento_sistemico": {
+      "que_mide": "Comprender un problema social como un sistema: identificar causas, consecuencias, actores y los efectos de una intervención.",
+      "que_estudiar": [
+        "Distinguir causa estructural de causa inmediata de un problema social",
+        "Anticipar efectos no deseados de una política pública",
+        "Relación entre las dimensiones económica, política, cultural y ambiental de un problema",
+        "Identificar qué actor tiene la competencia para resolver cada aspecto"
+      ],
+      "como_practicar": "Dibuja un mapa de causas y consecuencias para un problema local (movilidad, informalidad, contaminación) y marca en qué punto actuaría cada medida propuesta."
+    },
+    "ingles.part1": {
+      "que_mide": "Comprender avisos, letreros y mensajes cortos de la vida cotidiana.",
+      "que_estudiar": [
+        "Vocabulario de espacios públicos: aeropuerto, hospital, calle, universidad, transporte",
+        "Verbos de instrucción y prohibición: keep, avoid, do not, must, allowed",
+        "Interpretar la intención de un aviso, no traducirlo palabra por palabra"
+      ],
+      "como_practicar": "Busca imágenes de señales y letreros en inglés y responde en una frase dónde los verías y qué te ordenan hacer."
+    },
+    "ingles.part2": {
+      "que_mide": "Reconocer la palabra que corresponde a una definición o descripción.",
+      "que_estudiar": [
+        "Vocabulario temático por campos: profesiones, salud, casa, clima, tecnología",
+        "Sustantivos concretos frente a abstractos",
+        "Sinónimos y palabras que se confunden entre sí"
+      ],
+      "como_practicar": "Estudia vocabulario con tarjetas, siempre en dirección definición hacia palabra, que es como lo pregunta la prueba."
+    },
+    "ingles.part3": {
+      "que_mide": "Completar conversaciones cortas con la respuesta apropiada al contexto.",
+      "que_estudiar": [
+        "Fórmulas de cortesía, ofrecimientos, disculpas, invitaciones y respuestas típicas",
+        "Preguntas con wh- y sus respuestas coherentes",
+        "Registro formal e informal según el interlocutor"
+      ],
+      "como_practicar": "Practica diálogos cortos tapando una de las réplicas y escribiendo la que falta antes de comprobar."
+    },
+    "ingles.part4": {
+      "que_mide": "Comprender un texto informativo corto (aviso, correo, folleto) y localizar información específica.",
+      "que_estudiar": [
+        "Lectura de búsqueda (scanning) para encontrar fechas, precios, horarios y nombres",
+        "Vocabulario de anuncios, correos y folletos informativos",
+        "Distinguir el dato pedido de datos parecidos que aparecen en el mismo texto"
+      ],
+      "como_practicar": "Cronométrate: lee la pregunta primero y luego busca solo ese dato en el texto. No leas el texto completo antes que la pregunta."
+    },
+    "ingles.part5": {
+      "que_mide": "Completar un texto con las palabras que corresponden gramaticalmente y por significado.",
+      "que_estudiar": [
+        "Tiempos verbales: presente simple y continuo, pasado simple, presente perfecto, futuro",
+        "Preposiciones de tiempo y lugar: in, on, at, for, since, during",
+        "Cuantificadores: much, many, few, little, some, any",
+        "Conectores: however, therefore, although, because, so"
+      ],
+      "como_practicar": "Antes de mirar las opciones, decide qué tipo de palabra falta (verbo, preposición, conector). Eso elimina la mitad de los distractores."
+    },
+    "ingles.part6": {
+      "que_mide": "Comprender un texto largo: idea general, detalles e inferencias.",
+      "que_estudiar": [
+        "Identificar la idea principal de un texto largo en inglés",
+        "Inferir el significado de palabras desconocidas por contexto",
+        "Reconocer la actitud o el propósito del autor",
+        "Vocabulario académico frecuente"
+      ],
+      "como_practicar": "Lee un artículo corto en inglés al día y resúmelo en dos frases en inglés, sin traducir al español."
+    },
+    "ingles.part7": {
+      "que_mide": "Completar un texto eligiendo palabras de una lista, atendiendo a la coherencia y a la categoría gramatical.",
+      "que_estudiar": [
+        "Colocaciones frecuentes: make/do, take/have, strong/heavy",
+        "Reconocer la categoría gramatical exigida por cada espacio",
+        "Coherencia léxica dentro de un párrafo"
+      ],
+      "como_practicar": "Marca en cada espacio si falta sustantivo, verbo, adjetivo o adverbio antes de escoger de la lista."
+    }
+  },
+  "temas": {
+    "texto_continuo": "Lectura de textos expositivos y periodísticos completos: idea principal, progresión temática y conectores.",
+    "texto_discontinuo": "Lectura de infografías, tablas, caricaturas y publicidad: relacionar imagen y texto para obtener el sentido.",
+    "texto_argumentativo": "Columnas de opinión y ensayos: tesis, argumentos, contraargumentos y falacias.",
+    "texto_literario": "Cuento, poema y fragmento narrativo: narrador, tono, figuras literarias y sentido connotativo.",
+    "numerico_variacional": "Porcentajes, proporciones, secuencias, funciones lineales y variación entre magnitudes.",
+    "geometrico_metrico": "Perímetro, área, volumen, escalas, planos y unidades de medida.",
+    "aleatorio": "Estadística descriptiva, lectura de gráficos, probabilidad y conteo.",
+    "constitucion_derechos": "Constitución de 1991: derechos fundamentales, sociales y colectivos, y sus límites.",
+    "organizacion_estado": "Ramas del poder, órganos de control y competencias de cada entidad.",
+    "mecanismos_participacion": "Voto, referendo, plebiscito, consulta popular, cabildo abierto, revocatoria e iniciativa popular.",
+    "convivencia_diversidad": "Convivencia pacífica, resolución de conflictos, discriminación y enfoque diferencial.",
+    "dimension_politica": "Problemas públicos, políticas públicas, participación ciudadana y control social.",
+    "vocabulario": "Ampliación de vocabulario en inglés por campos semánticos.",
+    "gramatica": "Tiempos verbales, preposiciones, cuantificadores y conectores en inglés.",
+    "comprension_lectura": "Comprensión de lectura en inglés: idea principal, detalle e inferencia.",
+    "comunicacion_cotidiana": "Lenguaje funcional en inglés para situaciones cotidianas."
+  }
+}

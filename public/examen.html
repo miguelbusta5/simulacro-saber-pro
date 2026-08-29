@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Examen — Simulacro Saber Pro</title>
+<link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+<header class="barra">
+  <div class="marca">Simulacro Saber Pro<small id="modulo-actual"></small></div>
+  <span class="reloj" id="reloj">--:--:--</span>
+  <span class="silencio" id="estado-guardado">&nbsp;</span>
+  <button class="btn-peligro" id="btn-finalizar" type="button">Finalizar y entregar</button>
+</header>
+
+<div class="contenedor">
+  <div id="aviso" class="aviso oculto"></div>
+
+  <div class="examen">
+    <main>
+      <article class="tarjeta" id="tarjeta-pregunta">
+        <p class="silencio" id="ubicacion"></p>
+        <div id="contexto"></div>
+        <p class="enunciado" id="enunciado">Cargando…</p>
+        <div id="opciones"></div>
+        <div class="acciones" style="margin-top:1rem">
+          <button id="btn-anterior" type="button">← Anterior</button>
+          <button id="btn-siguiente" type="button">Siguiente →</button>
+          <button id="btn-marcar" type="button">Marcar para revisar</button>
+          <button id="btn-limpiar" type="button">Borrar respuesta</button>
+        </div>
+      </article>
+    </main>
+
+    <aside class="panel">
+      <div class="tarjeta">
+        <h3>Navegación</h3>
+        <div class="modulos-nav" id="modulos-nav"></div>
+        <div class="grilla" id="grilla"></div>
+        <p class="leyenda">
+          <span class="l-resp"></span> respondida &nbsp;
+          <span class="l-marc"></span> marcada
+        </p>
+        <p class="silencio" id="conteo"></p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/examen.js"></script>
+</body>
+</html>

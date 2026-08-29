@@ -1,0 +1,1000 @@
+{
+  "modulo": "razonamiento_cuantitativo",
+  "contextos": [
+    {
+      "id": "rc_ctx_01",
+      "titulo": "Ventas de una tienda de calzado",
+      "contenido": "La siguiente tabla registra las unidades vendidas por una tienda de calzado durante el primer semestre. El precio de venta fue de $25.000 por unidad y se mantuvo constante todo el semestre.\n\nMES ............ UNIDADES VENDIDAS\nEnero .......... 120\nFebrero ........ 150\nMarzo .......... 90\nAbril .......... 180\nMayo ........... 210\nJunio .......... 150",
+      "fuente": "Tabla elaborada para el simulacro."
+    },
+    {
+      "id": "rc_ctx_02",
+      "titulo": "Matrícula por programa académico",
+      "contenido": "El siguiente gráfico de barras muestra el número de estudiantes matriculados en cada programa de una universidad durante el semestre actual.\n\nIngeniería ....... 480 estudiantes\nAdministración ... 360 estudiantes\nPsicología ....... 300 estudiantes\nDerecho .......... 240 estudiantes\nDiseño ........... 120 estudiantes\n\nTOTAL ............ 1.500 estudiantes",
+      "fuente": "Gráfico elaborado para el simulacro."
+    },
+    {
+      "id": "rc_ctx_03",
+      "titulo": "Dos planes de datos móviles",
+      "contenido": "Un operador ofrece dos planes de datos:\n\nPLAN A: cargo fijo de $30.000 mensuales, que incluye 5 GB. Cada gigabyte adicional cuesta $8.000.\n\nPLAN B: cargo fijo de $45.000 mensuales, que incluye 12 GB. Cada gigabyte adicional cuesta $6.000.\n\nEn ambos planes los gigabytes no consumidos no se acumulan para el mes siguiente.",
+      "fuente": "Situación elaborada para el simulacro."
+    },
+    {
+      "id": "rc_ctx_04",
+      "titulo": "Cómo llegan los estudiantes a la universidad",
+      "contenido": "Una universidad encuestó a 800 estudiantes sobre el medio de transporte que usan habitualmente para llegar al campus. Cada estudiante señaló un solo medio.\n\nMEDIO DE TRANSPORTE ......... PORCENTAJE\nTransporte público .......... 45 %\nA pie ....................... 20 %\nBicicleta ................... 15 %\nCarro particular ............ 12 %\nMoto ........................ 8 %",
+      "fuente": "Encuesta elaborada para el simulacro."
+    },
+    {
+      "id": "rc_ctx_05",
+      "titulo": "Plano de un apartamento",
+      "contenido": "Un apartamento está compuesto por cinco espacios rectangulares, con las siguientes dimensiones:\n\nESPACIO ...................... DIMENSIONES\nSala-comedor ................. 5,0 m × 4,0 m\nCocina ....................... 3,0 m × 2,5 m\nHabitación principal ......... 4,0 m × 3,5 m\nHabitación secundaria ........ 3,0 m × 3,0 m\nBaño ......................... 2,0 m × 1,5 m\n\nNo se consideran muros ni pasillos: el área del apartamento es la suma de las áreas de los cinco espacios.",
+      "fuente": "Plano elaborado para el simulacro."
+    },
+    {
+      "id": "rc_ctx_06",
+      "titulo": "Nota definitiva de una asignatura",
+      "contenido": "En una asignatura la nota definitiva se calcula así:\n\nTalleres ......... 20 % de la nota\nParciales ........ 45 % de la nota\nExamen final ..... 35 % de la nota\n\nUn estudiante ya tiene 4,5 en talleres y 3,2 en parciales. Le falta presentar el examen final. La nota mínima para aprobar la asignatura es 3,0 y la escala va de 0,0 a 5,0.",
+      "fuente": "Situación elaborada para el simulacro."
+    },
+    {
+      "id": "rc_ctx_07",
+      "titulo": "Producción de café en cuatro fincas",
+      "contenido": "La tabla muestra la producción de café, en arrobas, de cuatro fincas de un mismo municipio en dos años consecutivos.\n\nFINCA .............. 2023 ...... 2024\nLa Esperanza ....... 400 ....... 460\nEl Mirador ......... 350 ....... 315\nSanta Rita ......... 500 ....... 590\nLos Naranjos ....... 250 ....... 325",
+      "fuente": "Tabla elaborada para el simulacro."
+    },
+    {
+      "id": "rc_ctx_08",
+      "titulo": "Bolsa de balotas",
+      "contenido": "Una bolsa opaca contiene 10 balotas del mismo tamaño y peso, indistinguibles al tacto:\n\n5 balotas rojas\n3 balotas azules\n2 balotas verdes\n\nSe extraen balotas al azar sin mirar dentro de la bolsa.",
+      "fuente": "Situación elaborada para el simulacro."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "rc_001",
+      "competencia": "interpretacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": "rc_ctx_01",
+      "enunciado": "¿Cuál fue la variación porcentual de las unidades vendidas entre febrero y marzo?",
+      "opciones": [
+        { "clave": "A", "texto": "Una disminución del 40 %." },
+        { "clave": "B", "texto": "Una disminución del 60 %." },
+        { "clave": "C", "texto": "Una disminución del 66,7 %." },
+        { "clave": "D", "texto": "Una disminución de 60 puntos porcentuales." }
+      ],
+      "correcta": "A",
+      "justificacion": "La variación se calcula sobre el valor inicial: (90 − 150) ÷ 150 = −0,4, es decir, una caída del 40 %.",
+      "justificaciones_incorrectas": {
+        "B": "60 es la diferencia en unidades, no el porcentaje.",
+        "C": "66,7 % resultaría de dividir 60 entre 90, es decir, de usar el valor final como base en vez del inicial.",
+        "D": "Los puntos porcentuales se usan para comparar porcentajes entre sí; aquí se comparan cantidades de unidades."
+      }
+    },
+    {
+      "id": "rc_002",
+      "competencia": "interpretacion",
+      "tema": "numerico_variacional",
+      "dificultad": 1,
+      "contexto_id": "rc_ctx_01",
+      "enunciado": "¿En qué mes obtuvo la tienda el mayor ingreso por ventas?",
+      "opciones": [
+        { "clave": "A", "texto": "Abril." },
+        { "clave": "B", "texto": "Mayo." },
+        { "clave": "C", "texto": "Febrero." },
+        { "clave": "D", "texto": "No se puede determinar con la información dada." }
+      ],
+      "correcta": "B",
+      "justificacion": "Como el precio unitario es constante, el ingreso es proporcional a las unidades vendidas: mayo, con 210 unidades, es el mes de mayor venta y por tanto de mayor ingreso.",
+      "justificaciones_incorrectas": {
+        "A": "Abril vendió 180 unidades, menos que mayo.",
+        "C": "Febrero vendió 150 unidades.",
+        "D": "Sí se puede determinar, precisamente porque el precio se mantuvo constante."
+      }
+    },
+    {
+      "id": "rc_003",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": "rc_ctx_01",
+      "enunciado": "¿Cuál fue el ingreso total de la tienda durante el semestre?",
+      "opciones": [
+        { "clave": "A", "texto": "$18.750.000" },
+        { "clave": "B", "texto": "$22.500.000" },
+        { "clave": "C", "texto": "$3.750.000" },
+        { "clave": "D", "texto": "$25.000.000" }
+      ],
+      "correcta": "B",
+      "justificacion": "Las unidades suman 120 + 150 + 90 + 180 + 210 + 150 = 900. El ingreso es 900 × $25.000 = $22.500.000.",
+      "justificaciones_incorrectas": {
+        "A": "Corresponde a 750 unidades: se omitió algún mes al sumar.",
+        "C": "Es el ingreso de un solo mes promedio (150 × $25.000), no del semestre.",
+        "D": "No corresponde a ninguna cantidad de unidades de la tabla."
+      }
+    },
+    {
+      "id": "rc_004",
+      "competencia": "argumentacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc_ctx_01",
+      "enunciado": "El gerente afirma: «Las ventas crecieron de forma sostenida durante todo el semestre». Frente a los datos de la tabla, esta afirmación es",
+      "opciones": [
+        { "clave": "A", "texto": "válida, porque en junio se vendió más que en enero." },
+        { "clave": "B", "texto": "inválida, porque hubo caídas en marzo y en junio." },
+        { "clave": "C", "texto": "válida, porque el promedio mensual fue de 150 unidades." },
+        { "clave": "D", "texto": "inválida, porque el precio unitario no cambió." }
+      ],
+      "correcta": "B",
+      "justificacion": "Crecer «de forma sostenida» exige aumentos mes a mes. Marzo cayó frente a febrero (150 → 90) y junio cayó frente a mayo (210 → 150): basta un descenso para refutar la afirmación.",
+      "justificaciones_incorrectas": {
+        "A": "Comparar solo los extremos oculta lo que pasó en el medio, que es justamente lo que la palabra «sostenida» pone en juego.",
+        "C": "El promedio no dice nada sobre la trayectoria mes a mes.",
+        "D": "El precio constante es irrelevante para juzgar si las unidades crecieron o no."
+      }
+    },
+    {
+      "id": "rc_005",
+      "competencia": "interpretacion",
+      "tema": "aleatorio",
+      "dificultad": 1,
+      "contexto_id": "rc_ctx_02",
+      "enunciado": "¿Qué porcentaje de los estudiantes matriculados cursa Psicología?",
+      "opciones": [
+        { "clave": "A", "texto": "15 %" },
+        { "clave": "B", "texto": "20 %" },
+        { "clave": "C", "texto": "25 %" },
+        { "clave": "D", "texto": "30 %" }
+      ],
+      "correcta": "B",
+      "justificacion": "300 ÷ 1.500 = 0,20, es decir, el 20 % del total.",
+      "justificaciones_incorrectas": {
+        "A": "15 % corresponde a 225 estudiantes.",
+        "C": "25 % corresponde a 375 estudiantes.",
+        "D": "30 % corresponde a 450 estudiantes."
+      }
+    },
+    {
+      "id": "rc_006",
+      "competencia": "interpretacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": "rc_ctx_02",
+      "enunciado": "¿Cuántas veces es mayor la matrícula de Ingeniería que la de Diseño?",
+      "opciones": [
+        { "clave": "A", "texto": "3 veces." },
+        { "clave": "B", "texto": "4 veces." },
+        { "clave": "C", "texto": "360 veces." },
+        { "clave": "D", "texto": "2 veces." }
+      ],
+      "correcta": "B",
+      "justificacion": "480 ÷ 120 = 4: la matrícula de Ingeniería es cuatro veces la de Diseño.",
+      "justificaciones_incorrectas": {
+        "A": "3 veces daría 360 estudiantes, que es la matrícula de Administración.",
+        "C": "360 es la diferencia entre ambas matrículas, no el número de veces.",
+        "D": "2 veces daría 240 estudiantes."
+      }
+    },
+    {
+      "id": "rc_007",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": "rc_ctx_02",
+      "enunciado": "Si para el próximo semestre la matrícula de Derecho aumenta un 25 % y las demás se mantienen iguales, ¿cuál será el total de estudiantes de la universidad?",
+      "opciones": [
+        { "clave": "A", "texto": "1.525" },
+        { "clave": "B", "texto": "1.560" },
+        { "clave": "C", "texto": "1.575" },
+        { "clave": "D", "texto": "1.875" }
+      ],
+      "correcta": "B",
+      "justificacion": "Derecho pasa de 240 a 240 × 1,25 = 300, es decir, 60 estudiantes más. El total queda en 1.500 + 60 = 1.560.",
+      "justificaciones_incorrectas": {
+        "A": "Correspondería a un aumento de 25 estudiantes, no del 25 %.",
+        "C": "Correspondería a un aumento de 75 estudiantes.",
+        "D": "Resulta de aplicar el 25 % al total de la universidad y no solo a Derecho."
+      }
+    },
+    {
+      "id": "rc_008",
+      "competencia": "argumentacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc_ctx_02",
+      "enunciado": "Un directivo sostiene: «Más de la tercera parte de nuestros estudiantes están en Ingeniería». Esta afirmación es",
+      "opciones": [
+        { "clave": "A", "texto": "correcta, porque Ingeniería es el programa con más estudiantes." },
+        { "clave": "B", "texto": "incorrecta, porque 480 de 1.500 equivale al 32 %, y la tercera parte es 33,3 %." },
+        { "clave": "C", "texto": "correcta, porque 480 es más de 400." },
+        { "clave": "D", "texto": "incorrecta, porque Ingeniería tiene menos estudiantes que la suma de Administración y Psicología." }
+      ],
+      "correcta": "B",
+      "justificacion": "La tercera parte de 1.500 son 500 estudiantes. Ingeniería tiene 480, es decir, 32 %: queda por debajo del umbral que el directivo afirma superar.",
+      "justificaciones_incorrectas": {
+        "A": "Ser el programa más grande no implica superar un tercio del total.",
+        "C": "El umbral relevante es 500, no 400.",
+        "D": "Es un dato verdadero pero no evalúa la afirmación, que se refiere a la proporción sobre el total."
+      }
+    },
+    {
+      "id": "rc_009",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": "rc_ctx_03",
+      "enunciado": "Un usuario del Plan A consume 8 GB en el mes. ¿Cuánto debe pagar?",
+      "opciones": [
+        { "clave": "A", "texto": "$54.000" },
+        { "clave": "B", "texto": "$64.000" },
+        { "clave": "C", "texto": "$94.000" },
+        { "clave": "D", "texto": "$38.000" }
+      ],
+      "correcta": "A",
+      "justificacion": "El plan incluye 5 GB, así que se cobran 3 GB adicionales: $30.000 + 3 × $8.000 = $54.000.",
+      "justificaciones_incorrectas": {
+        "B": "Resulta de cobrar 4 GB adicionales en vez de 3.",
+        "C": "Resulta de cobrar los 8 GB como adicionales, ignorando los 5 incluidos.",
+        "D": "Resulta de cobrar un solo gigabyte adicional."
+      }
+    },
+    {
+      "id": "rc_010",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc_ctx_03",
+      "enunciado": "¿A partir de qué consumo mensual el Plan B resulta más barato que el Plan A?",
+      "opciones": [
+        { "clave": "A", "texto": "A partir de 6 GB." },
+        { "clave": "B", "texto": "A partir de 7 GB." },
+        { "clave": "C", "texto": "A partir de 12 GB." },
+        { "clave": "D", "texto": "El Plan B nunca resulta más barato." }
+      ],
+      "correcta": "B",
+      "justificacion": "Con 6 GB el Plan A cuesta $30.000 + $8.000 = $38.000, menos que los $45.000 del Plan B. Con 7 GB el Plan A cuesta $30.000 + 2 × $8.000 = $46.000, que ya supera los $45.000 del Plan B.",
+      "justificaciones_incorrectas": {
+        "A": "Con 6 GB el Plan A todavía es más barato ($38.000 frente a $45.000).",
+        "C": "En 12 GB la diferencia es enorme, pero el Plan B ya era más barato desde mucho antes.",
+        "D": "A partir de 7 GB el Plan B es más económico, y la diferencia crece con el consumo."
+      }
+    },
+    {
+      "id": "rc_011",
+      "competencia": "interpretacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": "rc_ctx_03",
+      "enunciado": "Para un consumo de 12 GB mensuales, ¿cuánto más paga un usuario del Plan A que uno del Plan B?",
+      "opciones": [
+        { "clave": "A", "texto": "$15.000" },
+        { "clave": "B", "texto": "$41.000" },
+        { "clave": "C", "texto": "$56.000" },
+        { "clave": "D", "texto": "$86.000" }
+      ],
+      "correcta": "B",
+      "justificacion": "Plan A: $30.000 + 7 × $8.000 = $86.000. Plan B: $45.000, porque 12 GB están incluidos. La diferencia es $86.000 − $45.000 = $41.000.",
+      "justificaciones_incorrectas": {
+        "A": "$15.000 es solo la diferencia entre los cargos fijos, sin contar los gigabytes adicionales del Plan A.",
+        "C": "No corresponde a ninguna diferencia entre los dos planes.",
+        "D": "$86.000 es el costo total del Plan A, no la diferencia."
+      }
+    },
+    {
+      "id": "rc_012",
+      "competencia": "argumentacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc_ctx_03",
+      "enunciado": "Un vendedor afirma: «El Plan B siempre conviene más, porque incluye más gigabytes». ¿Qué objeción es válida?",
+      "opciones": [
+        { "clave": "A", "texto": "Ninguna: incluir más gigabytes por un precio fijo siempre es mejor." },
+        { "clave": "B", "texto": "Que para quien consume 5 GB o menos, el Plan A cuesta $15.000 menos y los gigabytes de más no se aprovechan." },
+        { "clave": "C", "texto": "Que el Plan B cobra más caro cada gigabyte adicional." },
+        { "clave": "D", "texto": "Que el Plan A no tiene cargo fijo." }
+      ],
+      "correcta": "B",
+      "justificacion": "La conveniencia depende del consumo. Como los gigabytes no consumidos no se acumulan, quien usa poco paga $45.000 por algo que le costaría $30.000 en el Plan A.",
+      "justificaciones_incorrectas": {
+        "A": "Es exactamente el error del vendedor: se paga por capacidad que puede no usarse.",
+        "C": "Es al contrario: el gigabyte adicional del Plan B cuesta $6.000 y el del Plan A, $8.000.",
+        "D": "El Plan A sí tiene cargo fijo: $30.000."
+      }
+    },
+    {
+      "id": "rc_013",
+      "competencia": "interpretacion",
+      "tema": "aleatorio",
+      "dificultad": 1,
+      "contexto_id": "rc_ctx_04",
+      "enunciado": "¿Cuántos estudiantes de los encuestados se movilizan en bicicleta?",
+      "opciones": [
+        { "clave": "A", "texto": "96" },
+        { "clave": "B", "texto": "120" },
+        { "clave": "C", "texto": "150" },
+        { "clave": "D", "texto": "160" }
+      ],
+      "correcta": "B",
+      "justificacion": "El 15 % de 800 es 0,15 × 800 = 120 estudiantes.",
+      "justificaciones_incorrectas": {
+        "A": "96 corresponde al 12 %, que es el porcentaje de carro particular.",
+        "C": "150 no corresponde a ningún porcentaje de la tabla aplicado a 800.",
+        "D": "160 corresponde al 20 %, que es el porcentaje de quienes van a pie."
+      }
+    },
+    {
+      "id": "rc_014",
+      "competencia": "interpretacion",
+      "tema": "aleatorio",
+      "dificultad": 2,
+      "contexto_id": "rc_ctx_04",
+      "enunciado": "¿Cuántos estudiantes llegan al campus sin usar un vehículo motorizado propio ni transporte público, es decir, a pie o en bicicleta?",
+      "opciones": [
+        { "clave": "A", "texto": "280" },
+        { "clave": "B", "texto": "360" },
+        { "clave": "C", "texto": "520" },
+        { "clave": "D", "texto": "160" }
+      ],
+      "correcta": "A",
+      "justificacion": "A pie (20 %) más bicicleta (15 %) suman 35 % de 800, es decir, 280 estudiantes.",
+      "justificaciones_incorrectas": {
+        "B": "360 correspondería al 45 %, el porcentaje de transporte público.",
+        "C": "520 es la suma de transporte público y a pie (65 %).",
+        "D": "160 corresponde solo a quienes van a pie."
+      }
+    },
+    {
+      "id": "rc_015",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc_ctx_04",
+      "enunciado": "La universidad quiere que el 25 % de los estudiantes llegue en bicicleta, manteniendo el mismo total de 800 encuestados. ¿Cuántos estudiantes más deberían pasarse a la bicicleta?",
+      "opciones": [
+        { "clave": "A", "texto": "10" },
+        { "clave": "B", "texto": "80" },
+        { "clave": "C", "texto": "100" },
+        { "clave": "D", "texto": "200" }
+      ],
+      "correcta": "B",
+      "justificacion": "El 25 % de 800 son 200 estudiantes. Hoy hay 120, así que faltan 200 − 120 = 80.",
+      "justificaciones_incorrectas": {
+        "A": "10 es la diferencia entre los porcentajes (25 − 15), no el número de estudiantes.",
+        "C": "100 no corresponde a la diferencia entre 200 y 120.",
+        "D": "200 es la meta total, no cuántos faltan para alcanzarla."
+      }
+    },
+    {
+      "id": "rc_016",
+      "competencia": "argumentacion",
+      "tema": "aleatorio",
+      "dificultad": 3,
+      "contexto_id": "rc_ctx_04",
+      "enunciado": "Un artículo del periódico universitario titula: «La mayoría de los estudiantes usa transporte público». De acuerdo con los datos, este titular es",
+      "opciones": [
+        { "clave": "A", "texto": "correcto, porque el transporte público es el medio más usado." },
+        { "clave": "B", "texto": "incorrecto, porque el 45 % no supera la mitad de los encuestados." },
+        { "clave": "C", "texto": "incorrecto, porque la encuesta solo cubrió a 800 estudiantes." },
+        { "clave": "D", "texto": "correcto, porque 45 % más 12 % supera la mitad." }
+      ],
+      "correcta": "B",
+      "justificacion": "«La mayoría» significa más de la mitad. El transporte público es el medio más frecuente, pero con 45 % no alcanza el 50 %: es la opción más común, no la de la mayoría.",
+      "justificaciones_incorrectas": {
+        "A": "Confunde «el más frecuente» con «la mayoría», que son cosas distintas.",
+        "C": "El tamaño de la muestra podría discutirse, pero no es lo que hace incorrecto el titular.",
+        "D": "Sumar carro particular al transporte público mezcla dos categorías distintas para forzar el resultado."
+      }
+    },
+    {
+      "id": "rc_017",
+      "competencia": "formulacion",
+      "tema": "geometrico_metrico",
+      "dificultad": 2,
+      "contexto_id": "rc_ctx_05",
+      "enunciado": "¿Cuál es el área total del apartamento?",
+      "opciones": [
+        { "clave": "A", "texto": "50,0 m²" },
+        { "clave": "B", "texto": "53,5 m²" },
+        { "clave": "C", "texto": "56,0 m²" },
+        { "clave": "D", "texto": "60,5 m²" }
+      ],
+      "correcta": "B",
+      "justificacion": "Sala-comedor 20 m², cocina 7,5 m², habitación principal 14 m², habitación secundaria 9 m² y baño 3 m². La suma es 53,5 m².",
+      "justificaciones_incorrectas": {
+        "A": "Se obtiene si se omite el área del baño y se redondea.",
+        "C": "No corresponde a la suma de las cinco áreas.",
+        "D": "Excede el total; probablemente se sumó dos veces algún espacio."
+      }
+    },
+    {
+      "id": "rc_018",
+      "competencia": "formulacion",
+      "tema": "geometrico_metrico",
+      "dificultad": 3,
+      "contexto_id": "rc_ctx_05",
+      "enunciado": "Se quiere instalar piso nuevo únicamente en la sala-comedor y la cocina. Si el metro cuadrado instalado cuesta $45.000, ¿cuánto costará el trabajo?",
+      "opciones": [
+        { "clave": "A", "texto": "$900.000" },
+        { "clave": "B", "texto": "$1.237.500" },
+        { "clave": "C", "texto": "$1.575.000" },
+        { "clave": "D", "texto": "$2.407.500" }
+      ],
+      "correcta": "B",
+      "justificacion": "Sala-comedor (20 m²) más cocina (7,5 m²) suman 27,5 m². Entonces 27,5 × $45.000 = $1.237.500.",
+      "justificaciones_incorrectas": {
+        "A": "Corresponde a instalar piso solo en la sala-comedor (20 m²).",
+        "C": "Corresponde a 35 m², que no es la suma de esos dos espacios.",
+        "D": "Corresponde a los 53,5 m² del apartamento completo."
+      }
+    },
+    {
+      "id": "rc_019",
+      "competencia": "interpretacion",
+      "tema": "geometrico_metrico",
+      "dificultad": 2,
+      "contexto_id": "rc_ctx_05",
+      "enunciado": "¿Cuál es el perímetro de la habitación principal?",
+      "opciones": [
+        { "clave": "A", "texto": "7,5 m" },
+        { "clave": "B", "texto": "14 m" },
+        { "clave": "C", "texto": "15 m" },
+        { "clave": "D", "texto": "16 m" }
+      ],
+      "correcta": "C",
+      "justificacion": "El perímetro de un rectángulo es 2 × (largo + ancho) = 2 × (4,0 + 3,5) = 15 m.",
+      "justificaciones_incorrectas": {
+        "A": "7,5 m es la suma del largo y el ancho, sin duplicar.",
+        "B": "14 es el área en metros cuadrados, no el perímetro.",
+        "D": "16 m correspondería a un cuadrado de 4 m de lado."
+      }
+    },
+    {
+      "id": "rc_020",
+      "competencia": "argumentacion",
+      "tema": "geometrico_metrico",
+      "dificultad": 3,
+      "contexto_id": "rc_ctx_05",
+      "enunciado": "El propietario afirma: «La habitación principal ocupa más de la cuarta parte del apartamento». Esta afirmación es",
+      "opciones": [
+        { "clave": "A", "texto": "verdadera, porque 14 m² sobre 53,5 m² equivale a cerca del 26 %." },
+        { "clave": "B", "texto": "falsa, porque la habitación principal mide menos que la sala-comedor." },
+        { "clave": "C", "texto": "falsa, porque 14 m² es menos de la cuarta parte de 53,5 m²." },
+        { "clave": "D", "texto": "imposible de evaluar sin conocer la altura de los espacios." }
+      ],
+      "correcta": "A",
+      "justificacion": "La cuarta parte de 53,5 m² es 13,375 m². La habitación principal tiene 14 m², que supera ese valor: alrededor del 26 % del total.",
+      "justificaciones_incorrectas": {
+        "B": "Que la sala-comedor sea mayor no dice nada sobre la proporción que ocupa la habitación.",
+        "C": "El cálculo es al revés: 14 m² sí supera los 13,375 m² de la cuarta parte.",
+        "D": "La afirmación se refiere a áreas, no a volúmenes: la altura es irrelevante."
+      }
+    },
+    {
+      "id": "rc_021",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": "rc_ctx_06",
+      "enunciado": "¿Cuánto lleva acumulado el estudiante en su nota definitiva antes del examen final?",
+      "opciones": [
+        { "clave": "A", "texto": "2,34" },
+        { "clave": "B", "texto": "3,85" },
+        { "clave": "C", "texto": "3,60" },
+        { "clave": "D", "texto": "1,44" }
+      ],
+      "correcta": "A",
+      "justificacion": "0,20 × 4,5 = 0,90 y 0,45 × 3,2 = 1,44. La suma es 2,34 sobre 5,0.",
+      "justificaciones_incorrectas": {
+        "B": "3,85 es el promedio simple de 4,5 y 3,2, que ignora los pesos.",
+        "C": "No corresponde a ningún cálculo con los datos dados.",
+        "D": "1,44 es solo el aporte de los parciales, sin sumar los talleres."
+      }
+    },
+    {
+      "id": "rc_022",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc_ctx_06",
+      "enunciado": "¿Qué nota mínima necesita el estudiante en el examen final para aprobar la asignatura?",
+      "opciones": [
+        { "clave": "A", "texto": "1,9" },
+        { "clave": "B", "texto": "2,4" },
+        { "clave": "C", "texto": "3,0" },
+        { "clave": "D", "texto": "3,4" }
+      ],
+      "correcta": "A",
+      "justificacion": "Le faltan 3,0 − 2,34 = 0,66 puntos, que debe conseguir con el 35 % del examen: 0,66 ÷ 0,35 = 1,886, es decir, 1,9 aproximando hacia arriba.",
+      "justificaciones_incorrectas": {
+        "B": "Se obtiene si se usa un peso distinto al 35 % del examen final.",
+        "C": "Supone que necesita sacar 3,0 en el examen, ignorando lo que ya tiene acumulado.",
+        "D": "Es mayor que la nota realmente necesaria."
+      }
+    },
+    {
+      "id": "rc_023",
+      "competencia": "argumentacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc_ctx_06",
+      "enunciado": "Un compañero le dice al estudiante: «Ya perdiste la materia: aunque saques 5,0 en el final no alcanzas a pasar». Esta afirmación es",
+      "opciones": [
+        { "clave": "A", "texto": "correcta, porque su promedio actual es inferior a 3,0." },
+        { "clave": "B", "texto": "incorrecta, porque con 5,0 en el final la definitiva sería 4,09." },
+        { "clave": "C", "texto": "correcta, porque el examen final solo vale el 35 %." },
+        { "clave": "D", "texto": "incorrecta, porque el estudiante puede repetir los parciales." }
+      ],
+      "correcta": "B",
+      "justificacion": "Con 5,0 en el examen la definitiva sería 2,34 + 0,35 × 5,0 = 2,34 + 1,75 = 4,09, muy por encima del 3,0 requerido. De hecho le basta con 1,9.",
+      "justificaciones_incorrectas": {
+        "A": "El 2,34 no es un promedio: es lo acumulado de una nota a la que aún le falta el 35 %.",
+        "C": "El 35 % es suficiente: aporta hasta 1,75 puntos y solo necesita 0,66.",
+        "D": "El enunciado no contempla repetir parciales, y no hace falta para refutar la afirmación."
+      }
+    },
+    {
+      "id": "rc_024",
+      "competencia": "interpretacion",
+      "tema": "aleatorio",
+      "dificultad": 1,
+      "contexto_id": "rc_ctx_07",
+      "enunciado": "¿Cuál de las fincas disminuyó su producción de 2023 a 2024?",
+      "opciones": [
+        { "clave": "A", "texto": "La Esperanza." },
+        { "clave": "B", "texto": "El Mirador." },
+        { "clave": "C", "texto": "Santa Rita." },
+        { "clave": "D", "texto": "Los Naranjos." }
+      ],
+      "correcta": "B",
+      "justificacion": "El Mirador pasó de 350 a 315 arrobas: es la única finca cuya cifra bajó.",
+      "justificaciones_incorrectas": {
+        "A": "La Esperanza subió de 400 a 460.",
+        "C": "Santa Rita subió de 500 a 590.",
+        "D": "Los Naranjos subió de 250 a 325."
+      }
+    },
+    {
+      "id": "rc_025",
+      "competencia": "interpretacion",
+      "tema": "aleatorio",
+      "dificultad": 2,
+      "contexto_id": "rc_ctx_07",
+      "enunciado": "¿Cuál fue la producción total de las cuatro fincas en 2024?",
+      "opciones": [
+        { "clave": "A", "texto": "1.500 arrobas." },
+        { "clave": "B", "texto": "1.615 arrobas." },
+        { "clave": "C", "texto": "1.690 arrobas." },
+        { "clave": "D", "texto": "1.725 arrobas." }
+      ],
+      "correcta": "C",
+      "justificacion": "460 + 315 + 590 + 325 = 1.690 arrobas.",
+      "justificaciones_incorrectas": {
+        "A": "1.500 es el total de 2023, no el de 2024.",
+        "B": "No corresponde a la suma de la columna de 2024.",
+        "D": "Excede la suma real de las cuatro fincas."
+      }
+    },
+    {
+      "id": "rc_026",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc_ctx_07",
+      "enunciado": "¿Cuál finca tuvo el mayor crecimiento porcentual entre 2023 y 2024?",
+      "opciones": [
+        { "clave": "A", "texto": "La Esperanza, con 15 %." },
+        { "clave": "B", "texto": "Santa Rita, con 18 %." },
+        { "clave": "C", "texto": "Los Naranjos, con 30 %." },
+        { "clave": "D", "texto": "El Mirador, con 10 %." }
+      ],
+      "correcta": "C",
+      "justificacion": "Los Naranjos creció 75 arrobas sobre una base de 250: 75 ÷ 250 = 0,30, es decir, 30 %, el mayor de las cuatro.",
+      "justificaciones_incorrectas": {
+        "A": "La Esperanza creció 60 sobre 400, es decir, 15 %: menos que Los Naranjos.",
+        "B": "Santa Rita creció 90 sobre 500, es decir, 18 %: es el mayor aumento en arrobas, pero no en porcentaje.",
+        "D": "El Mirador no creció: disminuyó un 10 %."
+      }
+    },
+    {
+      "id": "rc_027",
+      "competencia": "argumentacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc_ctx_07",
+      "enunciado": "Un técnico agrícola afirma: «La finca que más arrobas aumentó es también la que más creció en términos relativos». Frente a los datos, esta afirmación es",
+      "opciones": [
+        { "clave": "A", "texto": "verdadera: Santa Rita lidera en ambos indicadores." },
+        { "clave": "B", "texto": "falsa: Santa Rita aumentó más arrobas (90), pero Los Naranjos creció más en porcentaje (30 % frente a 18 %)." },
+        { "clave": "C", "texto": "verdadera: Los Naranjos lidera en ambos indicadores." },
+        { "clave": "D", "texto": "imposible de evaluar sin conocer el área cultivada de cada finca." }
+      ],
+      "correcta": "B",
+      "justificacion": "El aumento absoluto y el relativo pueden apuntar a fincas distintas cuando parten de bases diferentes: Santa Rita gana en arrobas y Los Naranjos, que partía de una base más baja, gana en porcentaje.",
+      "justificaciones_incorrectas": {
+        "A": "Santa Rita lidera en arrobas, pero no en crecimiento porcentual.",
+        "C": "Los Naranjos lidera en porcentaje, pero aumentó 75 arrobas frente a las 90 de Santa Rita.",
+        "D": "Los dos indicadores en discusión se calculan con los datos disponibles; el área no hace falta."
+      }
+    },
+    {
+      "id": "rc_028",
+      "competencia": "formulacion",
+      "tema": "aleatorio",
+      "dificultad": 1,
+      "contexto_id": "rc_ctx_08",
+      "enunciado": "Si se extrae una balota al azar, ¿cuál es la probabilidad de que sea roja?",
+      "opciones": [
+        { "clave": "A", "texto": "1/5" },
+        { "clave": "B", "texto": "1/2" },
+        { "clave": "C", "texto": "3/10" },
+        { "clave": "D", "texto": "5/9" }
+      ],
+      "correcta": "B",
+      "justificacion": "Hay 5 balotas rojas entre 10 posibles: 5/10 = 1/2.",
+      "justificaciones_incorrectas": {
+        "A": "1/5 correspondería a 2 balotas favorables de 10, es decir, a las verdes.",
+        "C": "3/10 corresponde a las azules.",
+        "D": "5/9 supondría que ya se sacó una balota antes, lo que el enunciado no plantea."
+      }
+    },
+    {
+      "id": "rc_029",
+      "competencia": "formulacion",
+      "tema": "aleatorio",
+      "dificultad": 2,
+      "contexto_id": "rc_ctx_08",
+      "enunciado": "Si se extrae una balota al azar, ¿cuál es la probabilidad de que NO sea verde?",
+      "opciones": [
+        { "clave": "A", "texto": "1/5" },
+        { "clave": "B", "texto": "3/5" },
+        { "clave": "C", "texto": "4/5" },
+        { "clave": "D", "texto": "8/9" }
+      ],
+      "correcta": "C",
+      "justificacion": "Hay 2 verdes, así que 8 de las 10 balotas no lo son: 8/10 = 4/5.",
+      "justificaciones_incorrectas": {
+        "A": "1/5 es la probabilidad de que sí sea verde.",
+        "B": "3/5 equivale a 6 balotas favorables, que no corresponde a ningún grupo del problema.",
+        "D": "8/9 supondría que quedan 9 balotas en la bolsa."
+      }
+    },
+    {
+      "id": "rc_030",
+      "competencia": "formulacion",
+      "tema": "aleatorio",
+      "dificultad": 3,
+      "contexto_id": "rc_ctx_08",
+      "enunciado": "Se extrae una balota roja y no se devuelve a la bolsa. ¿Cuál es la probabilidad de que la siguiente balota extraída sea azul?",
+      "opciones": [
+        { "clave": "A", "texto": "3/10" },
+        { "clave": "B", "texto": "1/3" },
+        { "clave": "C", "texto": "2/9" },
+        { "clave": "D", "texto": "3/7" }
+      ],
+      "correcta": "B",
+      "justificacion": "Tras retirar una roja quedan 9 balotas, de las cuales 3 son azules: 3/9 = 1/3.",
+      "justificaciones_incorrectas": {
+        "A": "3/10 sería la probabilidad si la primera balota se hubiera devuelto a la bolsa.",
+        "C": "2/9 corresponde a las verdes después de la extracción, no a las azules.",
+        "D": "3/7 supondría que se retiraron tres balotas, no una."
+      }
+    },
+    {
+      "id": "rc_031",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Una chaqueta cuesta $180.000. La tienda aplica un descuento del 20 % y, sobre el precio ya rebajado, un cupón adicional del 10 %. ¿Cuál es el precio final?",
+      "opciones": [
+        { "clave": "A", "texto": "$126.000" },
+        { "clave": "B", "texto": "$129.600" },
+        { "clave": "C", "texto": "$135.000" },
+        { "clave": "D", "texto": "$144.000" }
+      ],
+      "correcta": "B",
+      "justificacion": "Primer descuento: 180.000 × 0,8 = 144.000. Segundo descuento sobre ese valor: 144.000 × 0,9 = $129.600.",
+      "justificaciones_incorrectas": {
+        "A": "Resulta de sumar los descuentos como si fueran 30 % sobre el precio original.",
+        "C": "Resulta de aplicar solo un 25 % de descuento.",
+        "D": "Es el precio después del primer descuento; falta aplicar el cupón."
+      }
+    },
+    {
+      "id": "rc_032",
+      "competencia": "argumentacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "Un almacén anuncia: «Descuento del 20 % y luego 10 % adicional: ¡30 % de descuento total!». Este anuncio es engañoso porque",
+      "opciones": [
+        { "clave": "A", "texto": "el segundo descuento se aplica sobre un precio ya reducido, de modo que el descuento real es del 28 %." },
+        { "clave": "B", "texto": "los descuentos sucesivos no pueden aplicarse a un mismo producto." },
+        { "clave": "C", "texto": "el descuento real es mayor al 30 %." },
+        { "clave": "D", "texto": "el orden de los descuentos cambia el resultado final." }
+      ],
+      "correcta": "A",
+      "justificacion": "Aplicar 20 % y luego 10 % equivale a multiplicar por 0,8 × 0,9 = 0,72, es decir, un descuento total del 28 %, no del 30 %.",
+      "justificaciones_incorrectas": {
+        "B": "Sí pueden aplicarse; el problema es cómo se suman en el anuncio.",
+        "C": "El descuento real es menor, no mayor.",
+        "D": "El orden no altera el producto 0,8 × 0,9: el resultado sería el mismo."
+      }
+    },
+    {
+      "id": "rc_033",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Tres personas pintan una fachada en 8 días trabajando al mismo ritmo. ¿Cuántos días tardarían 4 personas con ese mismo ritmo?",
+      "opciones": [
+        { "clave": "A", "texto": "5 días." },
+        { "clave": "B", "texto": "6 días." },
+        { "clave": "C", "texto": "9 días." },
+        { "clave": "D", "texto": "10,7 días." }
+      ],
+      "correcta": "B",
+      "justificacion": "El trabajo total es 3 × 8 = 24 jornadas-persona. Con 4 personas: 24 ÷ 4 = 6 días. Es una proporcionalidad inversa.",
+      "justificaciones_incorrectas": {
+        "A": "5 días implicaría 20 jornadas-persona, menos trabajo del necesario.",
+        "C": "Aumentar el número de trabajadores no puede alargar la obra.",
+        "D": "Resulta de aplicar proporcionalidad directa, que aquí no corresponde."
+      }
+    },
+    {
+      "id": "rc_034",
+      "competencia": "interpretacion",
+      "tema": "aleatorio",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Las notas de siete estudiantes en un examen fueron: 2,0 — 3,0 — 3,0 — 3,5 — 4,0 — 4,5 — 5,0. ¿Cuál es la mediana?",
+      "opciones": [
+        { "clave": "A", "texto": "3,0" },
+        { "clave": "B", "texto": "3,5" },
+        { "clave": "C", "texto": "3,57" },
+        { "clave": "D", "texto": "4,0" }
+      ],
+      "correcta": "B",
+      "justificacion": "Con siete datos ordenados, la mediana es el cuarto valor: 3,5.",
+      "justificaciones_incorrectas": {
+        "A": "3,0 es la moda, el valor que más se repite.",
+        "C": "3,57 es aproximadamente el promedio, no la mediana.",
+        "D": "4,0 es el quinto valor de la lista, no el central."
+      }
+    },
+    {
+      "id": "rc_035",
+      "competencia": "argumentacion",
+      "tema": "aleatorio",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "En una empresa, el salario promedio es de $6.000.000 y el salario mediano es de $2.500.000. ¿Qué se puede concluir?",
+      "opciones": [
+        { "clave": "A", "texto": "Que hubo un error de cálculo, porque el promedio no puede superar a la mediana." },
+        { "clave": "B", "texto": "Que unos pocos salarios muy altos elevan el promedio, mientras la mitad de los empleados gana $2.500.000 o menos." },
+        { "clave": "C", "texto": "Que la mayoría de los empleados gana alrededor de $6.000.000." },
+        { "clave": "D", "texto": "Que todos los salarios están entre $2.500.000 y $6.000.000." }
+      ],
+      "correcta": "B",
+      "justificacion": "La mediana parte a la población en dos mitades. Que el promedio la duplique indica una distribución asimétrica: valores extremos altos tiran del promedio sin mover la mediana.",
+      "justificaciones_incorrectas": {
+        "A": "Es perfectamente posible y frecuente en distribuciones de ingresos.",
+        "C": "El promedio no describe al empleado típico cuando la distribución es asimétrica.",
+        "D": "Nada impide que existan salarios por fuera de ese rango; de hecho es lo que explica la diferencia."
+      }
+    },
+    {
+      "id": "rc_036",
+      "competencia": "interpretacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "El precio de un producto subió de $40.000 a $50.000 y meses después bajó de $50.000 a $40.000. ¿Qué se puede afirmar sobre esas dos variaciones porcentuales?",
+      "opciones": [
+        { "clave": "A", "texto": "Son iguales: 25 % de subida y 25 % de bajada." },
+        { "clave": "B", "texto": "La subida fue del 25 % y la bajada del 20 %." },
+        { "clave": "C", "texto": "La subida fue del 20 % y la bajada del 25 %." },
+        { "clave": "D", "texto": "Son iguales: 20 % en ambos casos." }
+      ],
+      "correcta": "B",
+      "justificacion": "La subida se calcula sobre 40.000: 10.000 ÷ 40.000 = 25 %. La bajada se calcula sobre 50.000: 10.000 ÷ 50.000 = 20 %. La misma diferencia absoluta da porcentajes distintos según la base.",
+      "justificaciones_incorrectas": {
+        "A": "Ignora que la base de cálculo cambia entre una variación y la otra.",
+        "C": "Invierte los porcentajes: usa la base equivocada en cada caso.",
+        "D": "Solo sería cierto si ambas variaciones se calcularan sobre $50.000."
+      }
+    },
+    {
+      "id": "rc_037",
+      "competencia": "formulacion",
+      "tema": "geometrico_metrico",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Un tanque cilíndrico tiene 2 m de radio y 3 m de altura. Usando π ≈ 3,14, ¿cuál es aproximadamente su volumen?",
+      "opciones": [
+        { "clave": "A", "texto": "18,84 m³" },
+        { "clave": "B", "texto": "37,68 m³" },
+        { "clave": "C", "texto": "12,56 m³" },
+        { "clave": "D", "texto": "75,36 m³" }
+      ],
+      "correcta": "B",
+      "justificacion": "V = π r² h = 3,14 × 2² × 3 = 3,14 × 4 × 3 = 37,68 m³.",
+      "justificaciones_incorrectas": {
+        "A": "Resulta de usar el radio sin elevarlo al cuadrado (3,14 × 2 × 3).",
+        "C": "12,56 m² es el área de la base, no el volumen.",
+        "D": "Resulta de usar el diámetro en lugar del radio."
+      }
+    },
+    {
+      "id": "rc_038",
+      "competencia": "interpretacion",
+      "tema": "geometrico_metrico",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "En un plano a escala 1:200, un salón aparece dibujado con 4 cm de largo. ¿Cuál es su longitud real?",
+      "opciones": [
+        { "clave": "A", "texto": "0,8 m" },
+        { "clave": "B", "texto": "8 m" },
+        { "clave": "C", "texto": "50 m" },
+        { "clave": "D", "texto": "80 m" }
+      ],
+      "correcta": "B",
+      "justificacion": "Cada centímetro del plano representa 200 cm reales. Entonces 4 cm × 200 = 800 cm = 8 m.",
+      "justificaciones_incorrectas": {
+        "A": "Resulta de dividir por 5 en lugar de multiplicar por la escala.",
+        "C": "Resulta de dividir 200 entre 4, invirtiendo la operación.",
+        "D": "Resulta de un error de una posición decimal: 800 cm son 8 m, no 80."
+      }
+    },
+    {
+      "id": "rc_039",
+      "competencia": "interpretacion",
+      "tema": "aleatorio",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "Un estudio informa que el 8 % de los pacientes tratados con el medicamento X presentó una reacción adversa, frente al 4 % del grupo que recibió placebo. ¿Cuál de las siguientes lecturas es correcta?",
+      "opciones": [
+        { "clave": "A", "texto": "El riesgo de reacción adversa se duplicó, pasando de 4 de cada 100 a 8 de cada 100 pacientes." },
+        { "clave": "B", "texto": "El riesgo aumentó un 4 %, porque 8 % menos 4 % es 4 %." },
+        { "clave": "C", "texto": "El 8 % de la población sufrirá una reacción adversa al medicamento." },
+        { "clave": "D", "texto": "El medicamento es cuatro veces más peligroso que el placebo." }
+      ],
+      "correcta": "A",
+      "justificacion": "Pasar de 4 % a 8 % duplica el riesgo relativo, y en términos absolutos significa 4 casos más por cada 100 pacientes. Ambas cifras describen el mismo hecho desde ángulos distintos.",
+      "justificaciones_incorrectas": {
+        "B": "La diferencia entre dos porcentajes se expresa en puntos porcentuales; decir «aumentó un 4 %» confunde dos medidas distintas.",
+        "C": "El dato proviene de los pacientes del estudio y no puede extenderse sin más a toda la población.",
+        "D": "El riesgo se duplicó, no se cuadruplicó."
+      }
+    },
+    {
+      "id": "rc_040",
+      "competencia": "argumentacion",
+      "tema": "aleatorio",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "Un estudio observa que los municipios con más bibliotecas tienen mejores resultados en pruebas de lectura. Un concejal concluye: «Construir bibliotecas mejora los resultados en lectura». La principal debilidad de este razonamiento es que",
+      "opciones": [
+        { "clave": "A", "texto": "la muestra de municipios es demasiado pequeña." },
+        { "clave": "B", "texto": "una correlación no establece por sí sola una relación de causa a efecto." },
+        { "clave": "C", "texto": "los resultados de lectura no son medibles de forma confiable." },
+        { "clave": "D", "texto": "las bibliotecas no tienen relación alguna con la lectura." }
+      ],
+      "correcta": "B",
+      "justificacion": "Ambas variables podrían responder a una tercera causa —por ejemplo, el nivel de inversión pública o socioeconómico del municipio— o la relación podría ir en sentido contrario. La correlación es compatible con varias explicaciones.",
+      "justificaciones_incorrectas": {
+        "A": "El enunciado no da información sobre el tamaño de la muestra, así que no puede ser esa la objeción.",
+        "C": "El problema no está en la medición sino en el salto de la asociación a la causa.",
+        "D": "Negar toda relación es tan poco fundado como afirmar la causalidad."
+      }
+    },
+    {
+      "id": "rc_041",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Una receta para 6 personas requiere 450 g de arroz. ¿Cuánto arroz se necesita para 10 personas?",
+      "opciones": [
+        { "clave": "A", "texto": "650 g" },
+        { "clave": "B", "texto": "700 g" },
+        { "clave": "C", "texto": "750 g" },
+        { "clave": "D", "texto": "900 g" }
+      ],
+      "correcta": "C",
+      "justificacion": "Cada persona requiere 450 ÷ 6 = 75 g. Para 10 personas: 75 × 10 = 750 g.",
+      "justificaciones_incorrectas": {
+        "A": "No corresponde a la proporción de 75 g por persona.",
+        "B": "Tampoco corresponde: serían 70 g por persona.",
+        "D": "900 g alcanzarían para 12 personas, no para 10."
+      }
+    },
+    {
+      "id": "rc_042",
+      "competencia": "interpretacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "El recibo de energía de una vivienda pasó de $95.000 a $114.000 de un mes al siguiente. ¿Cuál fue el aumento porcentual?",
+      "opciones": [
+        { "clave": "A", "texto": "16,7 %" },
+        { "clave": "B", "texto": "19 %" },
+        { "clave": "C", "texto": "20 %" },
+        { "clave": "D", "texto": "24 %" }
+      ],
+      "correcta": "C",
+      "justificacion": "El aumento fue de $19.000 sobre una base de $95.000: 19.000 ÷ 95.000 = 0,20, es decir, 20 %.",
+      "justificaciones_incorrectas": {
+        "A": "16,7 % resulta de dividir 19.000 entre 114.000, usando el valor final como base.",
+        "B": "19 es el aumento en miles de pesos, no el porcentaje.",
+        "D": "No corresponde a ningún cálculo con estas cifras."
+      }
+    },
+    {
+      "id": "rc_043",
+      "competencia": "argumentacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "Una alcaldía informa: «Los accidentes de tránsito bajaron un 30 % este año». Para evaluar si la cifra respalda que las medidas de seguridad funcionaron, lo más pertinente sería preguntar",
+      "opciones": [
+        { "clave": "A", "texto": "si también cambió el número de vehículos en circulación durante el mismo periodo." },
+        { "clave": "B", "texto": "cuántos funcionarios trabajan en la secretaría de movilidad." },
+        { "clave": "C", "texto": "en qué mes ocurrieron más accidentes." },
+        { "clave": "D", "texto": "cuál es el presupuesto de la alcaldía para el próximo año." }
+      ],
+      "correcta": "A",
+      "justificacion": "Si circularon muchos menos vehículos, la caída se explicaría por la exposición al riesgo y no por las medidas. Sin controlar esa variable, el dato no permite atribuir el resultado a la política.",
+      "justificaciones_incorrectas": {
+        "B": "El tamaño de la planta de personal no dice nada sobre el efecto de las medidas.",
+        "C": "La distribución mensual describe el fenómeno, pero no permite atribuirle una causa.",
+        "D": "El presupuesto futuro no aporta información sobre lo ya ocurrido."
+      }
+    },
+    {
+      "id": "rc_044",
+      "competencia": "interpretacion",
+      "tema": "geometrico_metrico",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Un terreno rectangular mide 30 m de largo por 20 m de ancho. Se quiere cercarlo con alambre en tres vueltas. ¿Cuántos metros de alambre se necesitan?",
+      "opciones": [
+        { "clave": "A", "texto": "100 m" },
+        { "clave": "B", "texto": "150 m" },
+        { "clave": "C", "texto": "300 m" },
+        { "clave": "D", "texto": "1.800 m" }
+      ],
+      "correcta": "C",
+      "justificacion": "El perímetro es 2 × (30 + 20) = 100 m. Tres vueltas requieren 100 × 3 = 300 m de alambre.",
+      "justificaciones_incorrectas": {
+        "A": "100 m corresponde a una sola vuelta.",
+        "B": "150 m no corresponde a un número entero de vueltas del perímetro.",
+        "D": "1.800 resulta de multiplicar el área (600 m²) por tres, confundiendo área con longitud."
+      }
+    },
+    {
+      "id": "rc_045",
+      "competencia": "argumentacion",
+      "tema": "geometrico_metrico",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "Un vendedor afirma: «Si duplico el lado de un terreno cuadrado, duplico su área». Esta afirmación es",
+      "opciones": [
+        { "clave": "A", "texto": "verdadera, porque el área depende directamente del lado." },
+        { "clave": "B", "texto": "falsa, porque al duplicar el lado el área se cuadruplica." },
+        { "clave": "C", "texto": "falsa, porque al duplicar el lado el área se triplica." },
+        { "clave": "D", "texto": "verdadera solo si el terreno mide más de 100 m²." }
+      ],
+      "correcta": "B",
+      "justificacion": "Si el lado pasa de L a 2L, el área pasa de L² a (2L)² = 4L². Se multiplica por cuatro, no por dos.",
+      "justificaciones_incorrectas": {
+        "A": "El área depende del cuadrado del lado, no de forma directamente proporcional.",
+        "C": "Triplicarse no corresponde a ninguna relación entre lado y área.",
+        "D": "La relación entre lado y área es la misma para cualquier tamaño del terreno."
+      }
+    }
+  ]
+}

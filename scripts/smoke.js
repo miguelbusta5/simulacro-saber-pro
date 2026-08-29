@@ -1,0 +1,291 @@
+'use strict';
+
+// Prueba de extremo a extremo del flujo completo, contra una base de datos temporal.
+// Verifica sobre todo las dos reglas que gobiernan la app:
+//   1. un usuario no puede tener dos simulacros corriendo;
+//   2. no se pueden ver respuestas mientras haya un simulacro en curso.
+// Uso: npm run smoke
+
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
+
+const RUTA_DB = path.join(os.tmpdir(), `simulacro-smoke-${process.pid}.db`);
+process.env.SIMULACRO_DB = RUTA_DB;
+
+let fallos = 0;
+let pruebas = 0;
+
+function check(nombre, condicion, detalle = '') {
+  pruebas++;
+  if (condicion) {
+    console.log(`  ok   ${nombre}`);
+  } else {
+    fallos++;
+    console.error(`  FALLA ${nombre}${detalle ? ` — ${detalle}` : ''}`);
+  }
+}
+
+function limpiar() {
+  for (const sufijo of ['', '-wal', '-shm', '-journal']) {
+    try {
+      fs.unlinkSync(RUTA_DB + sufijo);
+    } catch {
+      /* puede no existir */
+    }
+  }
+}
+
+limpiar();
+
+// Carga el banco en la base temporal (imprime su propio reporte).
+require('./seed.js');
+
+const { db } = require('../server/db');
+const app = require('../server/index');
+
+let cookie = '';
+let base = '';
+
+async function pedir(ruta, opciones = {}) {
+  const res = await fetch(base + ruta, {
+    method: opciones.method || 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      ...(cookie ? { Cookie: cookie } : {}),
+    },
+    body: opciones.body ? JSON.stringify(opciones.body) : undefined,
+  });
+  const nuevas = res.headers.getSetCookie?.() || [];
+  if (nuevas.length) cookie = nuevas.map((c) => c.split(';')[0]).join('; ');
+  let datos = null;
+  try {
+    datos = await res.json();
+  } catch {
+    /* respuesta sin cuerpo */
+  }
+  return { status: res.status, datos };
+}
+
+async function main() {
+  const server = app.listen(0);
+  await new Promise((r) => server.once('listening', r));
+  base = `http://127.0.0.1:${server.address().port}`;
+  console.log(`\nServidor de prueba en ${base}\n`);
+
+  console.log('Autenticación');
+  const usuario = `smoke_${Date.now()}`;
+  let r = await pedir('/api/auth/register', {
+    method: 'POST',
+    body: { usuario, nombre: 'Usuario de prueba', password: 'secreta123' },
+  });
+  check('registro devuelve 201', r.status === 201, `status ${r.status}`);
+
+  r = await pedir('/api/auth/register', {
+    method: 'POST',
+    body: { usuario, password: 'secreta123' },
+  });
+  check('registro duplicado devuelve 409', r.status === 409, `status ${r.status}`);
+
+  r = await pedir('/api/auth/login', { method: 'POST', body: { usuario, password: 'incorrecta' } });
+  check('login con clave errada devuelve 401', r.status === 401, `status ${r.status}`);
+
+  r = await pedir('/api/auth/login', { method: 'POST', body: { usuario, password: 'secreta123' } });
+  check('login correcto devuelve 200', r.status === 200, `status ${r.status}`);
+
+  console.log('\nCreación del intento');
+  r = await pedir('/api/intentos', { method: 'POST' });
+  check('crear simulacro devuelve 201', r.status === 201, `status ${r.status}`);
+  const intentoId = r.datos.intento_id;
+
+  r = await pedir('/api/intentos', { method: 'POST' });
+  check(
+    'un segundo simulacro se rechaza con 409 INTENTO_EN_CURSO',
+    r.status === 409 && r.datos.error === 'INTENTO_EN_CURSO',
+    `status ${r.status}, error ${r.datos?.error}`
+  );
+
+  console.log('\nBloqueo de la revisión mientras hay un simulacro corriendo');
+  for (const ruta of ['revision', 'resultados', 'analisis']) {
+    r = await pedir(`/api/intentos/${intentoId}/${ruta}`);
+    check(
+      `GET /${ruta} se bloquea con 409 REVISION_BLOQUEADA`,
+      r.status === 409 && r.datos.error === 'REVISION_BLOQUEADA',
+      `status ${r.status}, error ${r.datos?.error}`
+    );
+  }
+
+  console.log('\nCuadernillo del examen');
+  r = await pedir(`/api/intentos/${intentoId}`);
+  const examen = r.datos;
+  check('el cuadernillo trae 160 preguntas', examen.preguntas.length === 160, `trae ${examen.preguntas.length}`);
+
+  const serializado = JSON.stringify(examen);
+  check(
+    'el cuadernillo NO expone la respuesta correcta',
+    !serializado.includes('"correcta"'),
+    'aparece el campo "correcta" en el payload del examen'
+  );
+  check(
+    'el cuadernillo NO expone las justificaciones',
+    !serializado.includes('justificacion'),
+    'aparece una justificación en el payload del examen'
+  );
+  check(
+    'quedan alrededor de 270 minutos',
+    examen.segundos_restantes > 269 * 60 && examen.segundos_restantes <= 270 * 60,
+    `${examen.segundos_restantes} s`
+  );
+
+  console.log('\nRespuestas');
+  // Responde correctamente la mitad y deja unas cuantas en blanco, para que el
+  // análisis tenga aciertos, errores y preguntas sin responder.
+  const correctasReales = new Map(
+    db
+      .prepare('SELECT id, correcta FROM preguntas')
+      .all()
+      .map((p) => [p.id, p.correcta])
+  );
+
+  let esperadas = 0;
+  for (const [i, p] of examen.preguntas.entries()) {
+    if (i % 10 === 9) continue; // 16 preguntas quedan en blanco
+    const correcta = correctasReales.get(p.id);
+    const otra = p.opciones.find((o) => o.clave !== correcta).clave;
+    const elegida = i % 2 === 0 ? correcta : otra;
+    if (elegida === correcta) esperadas++;
+    const res = await pedir(`/api/intentos/${intentoId}/respuestas/${p.id}`, {
+      method: 'PUT',
+      body: { opcion: elegida, revisar: i % 25 === 0 },
+    });
+    if (res.status !== 200) {
+      check(`guardar la respuesta ${p.numero}`, false, `status ${res.status}`);
+      break;
+    }
+  }
+  check('todas las respuestas se guardaron', true);
+
+  r = await pedir(`/api/intentos/${intentoId}/respuestas/${examen.preguntas[0].id}`, {
+    method: 'PUT',
+    body: { opcion: 'Z' },
+  });
+  check('una opción inexistente se rechaza con 400', r.status === 400, `status ${r.status}`);
+
+  console.log('\nFinalización');
+  r = await pedir(`/api/intentos/${intentoId}/finalizar`, { method: 'POST' });
+  check('finalizar devuelve 200', r.status === 200, `status ${r.status}`);
+
+  r = await pedir('/api/auth/me');
+  check('tras finalizar ya no hay intento activo', r.datos.intento_activo === null);
+
+  console.log('\nResultados, revisión y análisis');
+  r = await pedir(`/api/intentos/${intentoId}/resultados`);
+  check('resultados devuelve 200', r.status === 200, `status ${r.status}`);
+  const resultados = r.datos;
+  check(
+    'los aciertos calculados coinciden con lo respondido',
+    resultados.aciertos === esperadas,
+    `servidor ${resultados.aciertos}, esperado ${esperadas}`
+  );
+  check('los módulos suman 160 preguntas', resultados.total === 160, `total ${resultados.total}`);
+  check(
+    'el puntaje global está en la escala 0-300',
+    resultados.puntaje_global >= 0 && resultados.puntaje_global <= 300,
+    `puntaje ${resultados.puntaje_global}`
+  );
+
+  r = await pedir(`/api/intentos/${intentoId}/revision`);
+  check('revisión devuelve 200 al no haber intento en curso', r.status === 200, `status ${r.status}`);
+  const revision = r.datos.preguntas;
+  check(
+    'la revisión sí expone la respuesta correcta y su justificación',
+    revision.every((p) => p.correcta && p.justificacion)
+  );
+  check(
+    'la revisión marca 16 preguntas sin responder',
+    revision.filter((p) => p.estado === 'sin_responder').length === 16,
+    `${revision.filter((p) => p.estado === 'sin_responder').length} sin responder`
+  );
+
+  r = await pedir(`/api/intentos/${intentoId}/analisis`);
+  check('análisis devuelve 200', r.status === 200, `status ${r.status}`);
+  const analisis = r.datos;
+  check('el análisis agrupa por competencia', analisis.por_competencia.length > 0);
+  check('el análisis agrupa por tema', analisis.por_tema.length > 0);
+  check(
+    'el análisis reporta las preguntas en blanco',
+    analisis.sin_responder === 16,
+    `reporta ${analisis.sin_responder}`
+  );
+  check(
+    'el plan de estudio trae recomendaciones concretas',
+    analisis.plan_de_estudio.every((p) => p.que_estudiar.length > 0 && p.como_practicar)
+  );
+
+  console.log('\nVencimiento del tiempo');
+  r = await pedir('/api/intentos', { method: 'POST' });
+  check('se puede iniciar otro simulacro tras finalizar', r.status === 201, `status ${r.status}`);
+  const segundoId = r.datos.intento_id;
+
+  // Se fuerza el vencimiento en la base: la siguiente petición debe cerrarlo sola.
+  db.prepare('UPDATE intentos SET vence_en = ? WHERE id = ?').run(
+    new Date(Date.now() - 1000).toISOString(),
+    segundoId
+  );
+
+  const primera = (await pedir(`/api/intentos/${segundoId}`)).datos;
+  r = await pedir('/api/auth/me');
+  check(
+    'un intento vencido se cierra solo en la siguiente petición',
+    r.datos.intento_activo === null,
+    `intento_activo ${JSON.stringify(r.datos.intento_activo)}`
+  );
+
+  r = await pedir(`/api/intentos/${segundoId}/respuestas/${examen.preguntas[0].id}`, {
+    method: 'PUT',
+    body: { opcion: 'A' },
+  });
+  check(
+    'ya no se aceptan respuestas en un intento vencido',
+    r.status === 409,
+    `status ${r.status}`
+  );
+
+  r = await pedir(`/api/intentos/${segundoId}/resultados`);
+  check(
+    'el intento vencido quedó marcado como entregado por tiempo',
+    r.status === 200 && r.datos.motivo_cierre === 'tiempo_agotado',
+    `motivo ${r.datos?.motivo_cierre}`
+  );
+  check('el intento vencido se calificó igual', r.datos.total === 160, `total ${r.datos?.total}`);
+  check('el cuadernillo vencido seguía respondiendo antes del cierre', primera != null);
+
+  console.log('\nAislamiento entre usuarios');
+  const otro = `smoke_otro_${Date.now()}`;
+  await pedir('/api/auth/register', {
+    method: 'POST',
+    body: { usuario: otro, password: 'secreta123' },
+  });
+  r = await pedir(`/api/intentos/${intentoId}/revision`);
+  check(
+    'otro usuario no puede ver el intento ajeno',
+    r.status === 403 && r.datos.error === 'AJENO',
+    `status ${r.status}, error ${r.datos?.error}`
+  );
+
+  server.close();
+  console.log(`\n${pruebas - fallos}/${pruebas} verificaciones pasaron.`);
+  if (fallos) {
+    console.error(`${fallos} verificaciones fallaron.`);
+    process.exitCode = 1;
+  }
+}
+
+main()
+  .catch((e) => {
+    console.error(e);
+    process.exitCode = 1;
+  })
+  .finally(() => {
+    setTimeout(limpiar, 100);
+  });

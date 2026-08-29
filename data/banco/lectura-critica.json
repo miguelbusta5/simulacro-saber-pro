@@ -1,0 +1,1024 @@
+{
+  "modulo": "lectura_critica",
+  "contextos": [
+    {
+      "id": "lc_ctx_01",
+      "titulo": "El sueño no es tiempo perdido",
+      "contenido": "Durante décadas se creyó que dormir era un estado de inactividad, una pausa en la que el cuerpo simplemente se apagaba. Las investigaciones de las últimas dos décadas desmintieron esa idea. Mientras dormimos, el cerebro clasifica lo aprendido durante el día, descarta la información irrelevante y consolida en la memoria de largo plazo aquello que resulta útil. Además, durante el sueño profundo se activa el sistema glinfático, encargado de eliminar los desechos metabólicos que se acumulan en el tejido cerebral.\n\nLa privación de sueño, en cambio, tiene efectos medibles. Un adulto que duerme menos de seis horas por noche durante una semana muestra, en pruebas de atención sostenida, un desempeño comparable al de una persona con alcohol en la sangre. El problema es que quien no duerme lo suficiente rara vez percibe su propio deterioro: el cansancio crónico se normaliza y el sujeto cree estar rindiendo igual que siempre.\n\nPor eso los especialistas insisten en que el sueño no es tiempo muerto que pueda recortarse para ganar horas productivas. Recortarlo es, en la práctica, pagar con eficiencia futura las horas que se ganan hoy.",
+      "fuente": "Texto elaborado para el simulacro."
+    },
+    {
+      "id": "lc_ctx_02",
+      "titulo": "Columna: prohibir el celular en el colegio",
+      "contenido": "Cada vez que un colegio anuncia que prohibirá los celulares en clase, aparecen dos bandos que discuten sin escucharse.\n\nQuienes defienden la prohibición señalan un hecho difícil de negar: la atención es un recurso limitado y el teléfono compite por ella con una eficacia que ningún profesor puede igualar. Las evaluaciones aplicadas en colegios que retiraron los dispositivos muestran mejoras modestas pero consistentes en los estudiantes de menor rendimiento, que son justamente los más expuestos a distraerse.\n\nQuienes se oponen replican que prohibir no es educar. Un estudiante que aprende a concentrarse solo porque le quitaron el aparato no ha aprendido nada sobre su propia atención; apenas cambió de entorno. Y añaden un argumento incómodo: el celular es hoy la única herramienta de consulta que tienen muchos estudiantes de colegios sin biblioteca ni sala de cómputo.\n\nLa discusión, planteada así, no tiene salida, porque las dos partes tienen razón en lo que afirman y se equivocan en lo que suponen del otro. Prohibir el celular en clase y enseñar a usarlo fuera de ella no son medidas contrarias: son las dos mitades de la misma política. El error no está en prohibir, sino en creer que la prohibición, por sí sola, educa a alguien.",
+      "fuente": "Texto elaborado para el simulacro."
+    },
+    {
+      "id": "lc_ctx_03",
+      "titulo": "Consumo de agua en el hogar",
+      "contenido": "La siguiente tabla resume el consumo promedio de agua de un hogar de cuatro personas en una ciudad colombiana, según el uso que se le da.\n\nUSO ............................ LITROS POR DÍA ...... PORCENTAJE\nSanitario ...................... 240 .................. 30 %\nDucha .......................... 200 .................. 25 %\nLavadora ....................... 160 .................. 20 %\nCocina y lavaplatos ............ 120 .................. 15 %\nAseo de la vivienda ............ 48 ................... 6 %\nRiego y otros usos ............. 32 ................... 4 %\nTOTAL .......................... 800 .................. 100 %\n\nAl pie de la tabla aparece esta nota: «Cambiar un sanitario convencional por uno de bajo consumo reduce en un 60 % el agua usada en ese ítem. Reducir la ducha de 10 a 5 minutos ahorra la mitad del consumo de ducha».",
+      "fuente": "Tabla elaborada para el simulacro con datos ilustrativos."
+    },
+    {
+      "id": "lc_ctx_04",
+      "titulo": "El reloj de mi abuelo",
+      "contenido": "Mi abuelo tenía un reloj de bolsillo que no funcionaba. Lo sacaba tres o cuatro veces al día, lo abría con el pulgar, miraba las manecillas detenidas en las cuatro y quince y lo volvía a guardar con la satisfacción de quien acaba de comprobar algo.\n\nDe niño creí que no se había dado cuenta. Una tarde se lo dije. Él me miró largo rato, con esa paciencia que tienen los viejos para las preguntas que ya se hicieron alguna vez, y me respondió que claro que lo sabía, que hacía cuarenta años que lo sabía.\n\n—Entonces, ¿para qué lo mira? —le pregunté.\n—Para acordarme de que alguna vez fueron las cuatro y quince —dijo—, y de que yo estaba ahí.\n\nGuardó el reloj. Nunca volvimos a hablar del asunto. Cuando murió, mi madre repartió sus cosas y a mí me tocó el reloj. Todavía no funciona. Yo tampoco lo he mandado a arreglar.",
+      "fuente": "Texto literario elaborado para el simulacro."
+    },
+    {
+      "id": "lc_ctx_05",
+      "titulo": "La papa: de los Andes al mundo",
+      "contenido": "La papa fue domesticada hace unos ocho mil años en el altiplano andino, entre lo que hoy son Perú y Bolivia. Los pueblos andinos desarrollaron cientos de variedades adaptadas a diferentes altitudes y aprendieron a conservarla mediante el chuño, un proceso de congelación y secado que permitía almacenarla durante años.\n\nCuando los españoles la llevaron a Europa en el siglo XVI, el recibimiento fue frío. Durante casi doscientos años la papa fue vista con desconfianza: no aparecía en la Biblia, crecía bajo tierra y se la asoció con enfermedades. Solo el hambre la volvió aceptable. En el siglo XVIII, gobiernos y agrónomos promovieron su cultivo porque producía más calorías por hectárea que cualquier cereal y resistía los inviernos que arruinaban las cosechas de trigo.\n\nEl resultado fue paradójico. La papa contribuyó a sostener el crecimiento de la población europea, pero esa dependencia también la volvió peligrosa: cuando en 1845 un hongo arrasó los cultivos de Irlanda, un país que había apostado casi por completo a una sola variedad, murió cerca de un millón de personas y otro millón emigró.\n\nLa lección de la papa no es que un cultivo salve o condene a un pueblo, sino que la diversidad que los pueblos andinos cuidaron durante milenios era, además de una tradición, una forma de seguro contra la catástrofe.",
+      "fuente": "Texto elaborado para el simulacro."
+    },
+    {
+      "id": "lc_ctx_06",
+      "titulo": "Caricatura: la fila",
+      "contenido": "Descripción de la caricatura:\n\nEn la viñeta se ve una fila larguísima de personas frente a una ventanilla. Sobre la ventanilla hay un aviso grande que dice: «ATENCIÓN AL USUARIO – SU OPINIÓN NOS IMPORTA».\n\nDetrás de la ventanilla, un funcionario duerme con la cabeza apoyada sobre un montón de papeles. Sobre el montón hay una etiqueta que dice: «BUZÓN DE SUGERENCIAS».\n\nEn primer plano, dos personas de la fila conversan. Una de ellas dice: «Yo ya puse mi queja». La otra responde: «¿Y qué le contestaron?». La primera señala hacia el funcionario dormido y dice: «Eso».",
+      "fuente": "Caricatura descrita para el simulacro."
+    },
+    {
+      "id": "lc_ctx_07",
+      "titulo": "Columna: el mito del trabajo remoto",
+      "contenido": "Se ha vuelto costumbre presentar el trabajo remoto como una conquista de los trabajadores. Conviene revisar esa idea con cuidado.\n\nEs cierto que quien trabaja desde casa ahorra tiempo de desplazamiento y gana control sobre su día. En ciudades donde el trayecto promedio supera la hora y media, ese ahorro no es menor: son quince horas al mes que vuelven a la vida de la persona.\n\nPero el mismo arreglo trasladó al trabajador costos que antes asumía la empresa. La oficina, la silla, la conexión, la energía y el café dejaron de ser un gasto corporativo para convertirse en un gasto doméstico que nadie compensa. Y algo más difícil de medir: la frontera entre la jornada y el resto de la vida se disolvió. Muchos empleados reportan hoy jornadas más largas que las que tenían cuando salían de una oficina a las seis.\n\nNada de esto significa que haya que volver atrás. Significa que el trabajo remoto no es, en sí mismo, ni una conquista ni un despojo: es un arreglo cuyo balance depende de quién asuma los costos y de quién controle el horario. Discutir eso es más útil que celebrar o lamentar el fenómeno en abstracto.",
+      "fuente": "Texto elaborado para el simulacro."
+    },
+    {
+      "id": "lc_ctx_08",
+      "titulo": "Poema: Inventario",
+      "contenido": "INVENTARIO\n\nDe la casa que fue quedan\ntres llaves que no abren nada,\nel olor del patio después de la lluvia\ny una discusión que nunca terminamos.\n\nLos muebles se vendieron.\nLas paredes son de otros.\nEl patio, dicen, ahora es un garaje.\n\nY sin embargo, cuando llueve,\nalgo en mí sigue siendo\nesa casa.",
+      "fuente": "Poema elaborado para el simulacro."
+    },
+    {
+      "id": "lc_ctx_09",
+      "titulo": "La desaparición de los polinizadores",
+      "contenido": "Cerca del setenta y cinco por ciento de los cultivos que consumimos depende, en algún grado, de la polinización animal. Las abejas hacen la mayor parte de ese trabajo, pero no son las únicas: mariposas, escarabajos, murciélagos y aves cumplen la misma función en distintos ecosistemas.\n\nEn las últimas décadas se ha documentado un descenso sostenido en las poblaciones de polinizadores. Las causas señaladas son varias y actúan juntas: el uso de plaguicidas, la pérdida de hábitat por expansión agrícola, la propagación de parásitos y el cambio en los patrones de floración asociado al aumento de la temperatura.\n\nConviene precisar algo que suele confundirse. La abeja de miel, que es la que aparece en las noticias, es una especie manejada por el ser humano y no está en riesgo de extinción: sus colmenas se cuentan y se reponen. Las que están desapareciendo son las abejas silvestres, cientos de especies que nadie cría y que en muchos cultivos polinizan mejor que la abeja doméstica.\n\nDe ahí que las campañas centradas en «salvar a las abejas» instalando colmenas urbanas puedan resultar contraproducentes: una colmena doméstica introduce miles de individuos que compiten por el mismo alimento con las especies silvestres que se pretende proteger.",
+      "fuente": "Texto elaborado para el simulacro."
+    },
+    {
+      "id": "lc_ctx_10",
+      "titulo": "Ensayo: leer sin terminar",
+      "contenido": "Existe una superstición, heredada de la escuela, según la cual un libro empezado debe terminarse. La abandonamos con culpa, como si dejar una novela a la mitad fuera una falta de carácter.\n\nSospecho que esa idea le ha hecho más daño a la lectura que cualquier pantalla. Quien se obliga a terminar todo lee menos, porque cada libro que no lo atrapa se convierte en un muro. En cambio, quien abandona sin culpa avanza: descarta rápido, encuentra antes lo que le interesa y vuelve a leer con gusto.\n\nAlguien dirá que así nunca se enfrentarán los libros difíciles. Es un buen reparo, y lo acepto a medias. Hay una diferencia entre el libro que no me interesa y el libro que me exige. El primero se abandona sin pérdida. El segundo se aplaza: se deja en la mesa y se vuelve a él cuando uno ya es capaz de leerlo.\n\nLo que no tiene defensa es la lectura por deber, esa que se hace mirando cuántas páginas faltan. De ahí no sale ningún lector.",
+      "fuente": "Texto elaborado para el simulacro."
+    },
+    {
+      "id": "lc_ctx_11",
+      "titulo": "Publicidad: agua embotellada",
+      "contenido": "Descripción del aviso publicitario:\n\nFondo azul con una montaña nevada. En primer plano, una botella de agua transparente.\n\nTexto grande: «PUREZA QUE VIENE DEL GLACIAR».\n\nDebajo, en letra mediana: «Agua Cristal Andina. 100 % natural. Sin conservantes. Sin colorantes».\n\nEn una esquina inferior, en letra muy pequeña: «Producto envasado en planta de tratamiento en la ciudad de Bogotá. Agua tratada apta para consumo humano».",
+      "fuente": "Aviso elaborado para el simulacro."
+    },
+    {
+      "id": "lc_ctx_12",
+      "titulo": "Los nombres en el muro",
+      "contenido": "En un pueblo del país hay un muro con los nombres de las personas desaparecidas durante el conflicto. Lo pintaron los familiares, no el Estado. Cada año, en la misma fecha, vuelven a pasarle una mano de pintura y agregan los nombres que faltaban.\n\nHubo una propuesta de la alcaldía para reemplazar el muro por un monumento en mármol, con una placa formal y un acto oficial. Los familiares se negaron. Explicaron que el muro no está terminado y que un monumento en mármol daría a entender que sí lo está.\n\nUna de las mujeres que organiza la pintada lo dijo en una frase que quedó en el acta de la reunión: «Nosotros no queremos un lugar bonito para recordarlos. Queremos un lugar donde todavía quepan nombres».",
+      "fuente": "Texto elaborado para el simulacro."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "lc_001",
+      "competencia": "literal",
+      "tema": "texto_continuo",
+      "dificultad": 1,
+      "contexto_id": "lc_ctx_01",
+      "enunciado": "Según el texto, ¿cuál es la función del sistema glinfático?",
+      "opciones": [
+        { "clave": "A", "texto": "Consolidar en la memoria de largo plazo lo aprendido durante el día." },
+        { "clave": "B", "texto": "Eliminar los desechos metabólicos acumulados en el tejido cerebral." },
+        { "clave": "C", "texto": "Regular la duración total de las horas de sueño." },
+        { "clave": "D", "texto": "Compensar los efectos del alcohol sobre la atención." }
+      ],
+      "correcta": "B",
+      "justificacion": "El primer párrafo lo dice de forma explícita: durante el sueño profundo se activa el sistema glinfático, «encargado de eliminar los desechos metabólicos que se acumulan en el tejido cerebral».",
+      "justificaciones_incorrectas": {
+        "A": "Consolidar la memoria también se menciona en el párrafo, pero el texto lo atribuye al cerebro en general, no al sistema glinfático.",
+        "C": "El texto nunca afirma que ese sistema regule cuántas horas se duerme.",
+        "D": "El alcohol aparece solo como término de comparación del deterioro de la atención, sin relación con el sistema glinfático."
+      }
+    },
+    {
+      "id": "lc_002",
+      "competencia": "literal",
+      "tema": "texto_continuo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_01",
+      "enunciado": "En la expresión «Recortarlo es, en la práctica, pagar con eficiencia futura las horas que se ganan hoy», el pronombre «lo» se refiere a",
+      "opciones": [
+        { "clave": "A", "texto": "el tiempo productivo." },
+        { "clave": "B", "texto": "el deterioro de la atención." },
+        { "clave": "C", "texto": "el sueño." },
+        { "clave": "D", "texto": "el cansancio crónico." }
+      ],
+      "correcta": "C",
+      "justificacion": "La oración anterior afirma que «el sueño no es tiempo muerto que pueda recortarse»; el pronombre retoma ese sujeto.",
+      "justificaciones_incorrectas": {
+        "A": "El tiempo productivo es lo que se gana al recortar, no lo que se recorta.",
+        "B": "El deterioro no se recorta: es la consecuencia de recortar el sueño.",
+        "D": "El cansancio crónico aparece en el párrafo anterior y no es el referente inmediato del pronombre."
+      }
+    },
+    {
+      "id": "lc_003",
+      "competencia": "articulacion",
+      "tema": "texto_continuo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_01",
+      "enunciado": "¿Cuál es la función del segundo párrafo dentro del texto?",
+      "opciones": [
+        { "clave": "A", "texto": "Refutar la idea, expuesta en el primer párrafo, de que el sueño cumple funciones biológicas." },
+        { "clave": "B", "texto": "Mostrar con evidencia los efectos de no dormir, para reforzar la importancia de las funciones descritas antes." },
+        { "clave": "C", "texto": "Introducir el tema del consumo de alcohol como causa del mal dormir." },
+        { "clave": "D", "texto": "Definir técnicamente en qué consiste la privación de sueño." }
+      ],
+      "correcta": "B",
+      "justificacion": "El párrafo empieza con «La privación de sueño, en cambio, tiene efectos medibles» y aporta datos que muestran el costo de no dormir, lo que refuerza lo dicho antes sobre las funciones del sueño.",
+      "justificaciones_incorrectas": {
+        "A": "No refuta nada del primer párrafo; lo complementa desde el lado opuesto.",
+        "C": "El alcohol se usa como comparación del deterioro, nunca como causa del mal dormir.",
+        "D": "El texto no define la privación de sueño: describe sus efectos."
+      }
+    },
+    {
+      "id": "lc_004",
+      "competencia": "reflexion",
+      "tema": "texto_continuo",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_01",
+      "enunciado": "La afirmación «quien no duerme lo suficiente rara vez percibe su propio deterioro» cumple, en la argumentación del texto, la función de",
+      "opciones": [
+        { "clave": "A", "texto": "explicar por qué las personas siguen recortando el sueño a pesar de sus efectos." },
+        { "clave": "B", "texto": "demostrar que las pruebas de atención no son confiables." },
+        { "clave": "C", "texto": "señalar que el deterioro por falta de sueño es reversible." },
+        { "clave": "D", "texto": "cuestionar los estudios sobre el sistema glinfático." }
+      ],
+      "correcta": "A",
+      "justificacion": "Es la pieza que conecta el daño con la conducta: si el deterioro no se percibe, nada frena al sujeto y por eso sigue recortando horas de sueño, que es lo que el texto quiere advertir.",
+      "justificaciones_incorrectas": {
+        "B": "Al contrario: el texto usa esas pruebas como evidencia válida del deterioro.",
+        "C": "El texto no dice en ningún momento que el deterioro sea reversible.",
+        "D": "La afirmación no tiene relación con los estudios sobre el sistema glinfático."
+      }
+    },
+    {
+      "id": "lc_005",
+      "competencia": "articulacion",
+      "tema": "texto_argumentativo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_02",
+      "enunciado": "¿Cuál es la tesis que sostiene el autor de la columna?",
+      "opciones": [
+        { "clave": "A", "texto": "Los colegios deben prohibir el celular porque mejora el rendimiento de los estudiantes más débiles." },
+        { "clave": "B", "texto": "Prohibir el celular es inútil mientras existan colegios sin biblioteca." },
+        { "clave": "C", "texto": "Prohibir en clase y enseñar a usar el celular fuera de ella son medidas complementarias, no opuestas." },
+        { "clave": "D", "texto": "El debate sobre los celulares distrae de los problemas reales de la educación." }
+      ],
+      "correcta": "C",
+      "justificacion": "El último párrafo lo formula de manera explícita: no son medidas contrarias, «son las dos mitades de la misma política».",
+      "justificaciones_incorrectas": {
+        "A": "Ese es el argumento de uno de los bandos que el autor expone, no su tesis.",
+        "B": "Ese es el argumento del bando contrario, que el autor tampoco asume como propio.",
+        "D": "El autor considera el debate pertinente; lo que critica es cómo está planteado."
+      }
+    },
+    {
+      "id": "lc_006",
+      "competencia": "articulacion",
+      "tema": "texto_argumentativo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_02",
+      "enunciado": "¿Qué función cumple el tercer párrafo («Quienes se oponen replican...») en la estructura del texto?",
+      "opciones": [
+        { "clave": "A", "texto": "Presentar la contraparte del debate antes de que el autor tome posición." },
+        { "clave": "B", "texto": "Ejemplificar con casos concretos lo dicho en el párrafo anterior." },
+        { "clave": "C", "texto": "Concluir la argumentación del texto." },
+        { "clave": "D", "texto": "Definir los términos técnicos que se usarán después." }
+      ],
+      "correcta": "A",
+      "justificacion": "El texto expone primero a los partidarios de la prohibición y luego a sus opositores; solo en el último párrafo el autor fija su propia posición.",
+      "justificaciones_incorrectas": {
+        "B": "No ejemplifica el párrafo anterior: lo contradice.",
+        "C": "La conclusión aparece en el cuarto párrafo, no en el tercero.",
+        "D": "No hay definición de términos técnicos en ese párrafo."
+      }
+    },
+    {
+      "id": "lc_007",
+      "competencia": "reflexion",
+      "tema": "texto_argumentativo",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_02",
+      "enunciado": "Cuando el autor afirma que las dos partes «se equivocan en lo que suponen del otro», da a entender que",
+      "opciones": [
+        { "clave": "A", "texto": "cada bando atribuye al contrario una posición más extrema de la que realmente sostiene." },
+        { "clave": "B", "texto": "los datos citados por ambos bandos son falsos." },
+        { "clave": "C", "texto": "ninguno de los dos bandos conoce el funcionamiento de los colegios." },
+        { "clave": "D", "texto": "la discusión debería resolverse mediante una votación entre los estudiantes." }
+      ],
+      "correcta": "A",
+      "justificacion": "El autor separa lo que cada bando afirma (donde tiene razón) de lo que supone del otro (donde se equivoca): cada uno le atribuye al contrario una posición que este no defiende.",
+      "justificaciones_incorrectas": {
+        "B": "El autor acepta expresamente que ambos bandos tienen razón en lo que afirman.",
+        "C": "El texto no cuestiona el conocimiento de ninguno de los dos bandos.",
+        "D": "La votación no se menciona ni se insinúa en el texto."
+      }
+    },
+    {
+      "id": "lc_008",
+      "competencia": "reflexion",
+      "tema": "texto_argumentativo",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_02",
+      "enunciado": "¿Cuál de los siguientes hallazgos debilitaría más el argumento de quienes defienden la prohibición?",
+      "opciones": [
+        { "clave": "A", "texto": "Que los estudiantes de mejor rendimiento no mejoraran tras la prohibición." },
+        { "clave": "B", "texto": "Que los estudiantes de menor rendimiento empeoraran su desempeño tras retirarles el celular." },
+        { "clave": "C", "texto": "Que algunos profesores también usaran el celular en clase." },
+        { "clave": "D", "texto": "Que la prohibición fuera impopular entre los padres de familia." }
+      ],
+      "correcta": "B",
+      "justificacion": "El argumento se apoya precisamente en que los estudiantes de menor rendimiento mejoran; un resultado contrario en ese mismo grupo derrumba la evidencia que lo sostiene.",
+      "justificaciones_incorrectas": {
+        "A": "El argumento nunca prometió mejoras para los estudiantes de mejor rendimiento, así que ese resultado no lo contradice.",
+        "C": "Sería una incoherencia en la aplicación de la medida, no una objeción a su efecto sobre el aprendizaje.",
+        "D": "La impopularidad no dice nada sobre si la medida funciona o no."
+      }
+    },
+    {
+      "id": "lc_009",
+      "competencia": "literal",
+      "tema": "texto_argumentativo",
+      "dificultad": 1,
+      "contexto_id": "lc_ctx_02",
+      "enunciado": "Según el texto, ¿cuál es el «argumento incómodo» que añaden quienes se oponen a la prohibición?",
+      "opciones": [
+        { "clave": "A", "texto": "Que los profesores no saben competir con el teléfono por la atención." },
+        { "clave": "B", "texto": "Que las mejoras observadas son modestas." },
+        { "clave": "C", "texto": "Que para muchos estudiantes el celular es la única herramienta de consulta disponible." },
+        { "clave": "D", "texto": "Que prohibir no es educar." }
+      ],
+      "correcta": "C",
+      "justificacion": "El texto marca ese argumento como «incómodo» y lo enuncia enseguida: en colegios sin biblioteca ni sala de cómputo, el celular es la única herramienta de consulta.",
+      "justificaciones_incorrectas": {
+        "A": "Esa idea aparece en el párrafo de quienes defienden la prohibición.",
+        "B": "La modestia de las mejoras la reconoce el propio autor al citar la evidencia, no es el argumento incómodo.",
+        "D": "«Prohibir no es educar» es el argumento principal de ese bando; lo «incómodo» es lo que se añade después."
+      }
+    },
+    {
+      "id": "lc_010",
+      "competencia": "literal",
+      "tema": "texto_discontinuo",
+      "dificultad": 1,
+      "contexto_id": "lc_ctx_03",
+      "enunciado": "De acuerdo con la tabla, ¿cuál es el uso que más agua consume en el hogar?",
+      "opciones": [
+        { "clave": "A", "texto": "La ducha." },
+        { "clave": "B", "texto": "El sanitario." },
+        { "clave": "C", "texto": "La lavadora." },
+        { "clave": "D", "texto": "La cocina y el lavaplatos." }
+      ],
+      "correcta": "B",
+      "justificacion": "El sanitario aparece con 240 litros diarios, el 30 % del total, por encima de cualquier otro uso.",
+      "justificaciones_incorrectas": {
+        "A": "La ducha consume 200 litros, menos que el sanitario.",
+        "C": "La lavadora consume 160 litros, el 20 %.",
+        "D": "Cocina y lavaplatos suman 120 litros, el 15 %."
+      }
+    },
+    {
+      "id": "lc_011",
+      "competencia": "articulacion",
+      "tema": "texto_discontinuo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_03",
+      "enunciado": "¿Qué relación establece la nota al pie con la información de la tabla?",
+      "opciones": [
+        { "clave": "A", "texto": "Corrige los datos de consumo presentados en la tabla." },
+        { "clave": "B", "texto": "Indica en qué usos concretos puede intervenirse para reducir el consumo que la tabla registra." },
+        { "clave": "C", "texto": "Explica cómo se recolectaron los datos de la tabla." },
+        { "clave": "D", "texto": "Advierte que los porcentajes de la tabla no suman cien." }
+      ],
+      "correcta": "B",
+      "justificacion": "La nota toma dos ítems de la tabla —sanitario y ducha— y señala cuánto se ahorraría interviniendo en ellos; es una guía de acción sobre los mismos datos.",
+      "justificaciones_incorrectas": {
+        "A": "La nota no modifica ninguna cifra de la tabla.",
+        "C": "No hay ninguna referencia al método de recolección.",
+        "D": "Los porcentajes sí suman 100 %, como indica la fila de total."
+      }
+    },
+    {
+      "id": "lc_012",
+      "competencia": "reflexion",
+      "tema": "texto_discontinuo",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_03",
+      "enunciado": "Una persona concluye: «Si cambio el sanitario, reduzco mi consumo total en un 60 %». Esta conclusión es",
+      "opciones": [
+        { "clave": "A", "texto": "correcta, porque la nota afirma que la reducción es del 60 %." },
+        { "clave": "B", "texto": "incorrecta, porque el 60 % se aplica solo al consumo del sanitario, que es el 30 % del total." },
+        { "clave": "C", "texto": "incorrecta, porque el sanitario no es el uso que más consume." },
+        { "clave": "D", "texto": "correcta, siempre que además se reduzca el tiempo de ducha." }
+      ],
+      "correcta": "B",
+      "justificacion": "La nota aplica el 60 % «al agua usada en ese ítem». Como el sanitario es el 30 % del total, el ahorro real sobre el total es 60 % de 30 %, es decir, 18 %.",
+      "justificaciones_incorrectas": {
+        "A": "Toma un porcentaje calculado sobre una parte y lo aplica al todo: ese es exactamente el error.",
+        "C": "El sanitario sí es el uso que más consume; el problema de la conclusión es otro.",
+        "D": "Reducir la ducha añadiría más ahorro, pero no convierte en correcto el cálculo del 60 % sobre el total."
+      }
+    },
+    {
+      "id": "lc_013",
+      "competencia": "reflexion",
+      "tema": "texto_literario",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_04",
+      "enunciado": "¿Qué sentido tiene, en el relato, la respuesta del abuelo: «Para acordarme de que alguna vez fueron las cuatro y quince y de que yo estaba ahí»?",
+      "opciones": [
+        { "clave": "A", "texto": "Que el reloj marca la hora exacta de un acontecimiento que el abuelo prefiere no revelar." },
+        { "clave": "B", "texto": "Que el abuelo confía en reparar algún día el reloj." },
+        { "clave": "C", "texto": "Que el valor del objeto no está en su utilidad, sino en el instante de vida que conserva." },
+        { "clave": "D", "texto": "Que el abuelo ya no distingue con claridad el paso del tiempo." }
+      ],
+      "correcta": "C",
+      "justificacion": "El abuelo sabe que el reloj no funciona y aun así lo consulta: lo que mira no es la hora sino un momento propio que el objeto guarda. El relato desplaza el valor de lo útil a lo memorioso.",
+      "justificaciones_incorrectas": {
+        "A": "El relato no insinúa que haya un acontecimiento oculto; el énfasis está en el gesto, no en un secreto.",
+        "B": "El final indica lo contrario: nadie ha querido mandarlo a arreglar.",
+        "D": "Nada sugiere confusión del abuelo; él responde con plena conciencia de que el reloj está detenido."
+      }
+    },
+    {
+      "id": "lc_014",
+      "competencia": "articulacion",
+      "tema": "texto_literario",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_04",
+      "enunciado": "La frase final, «Todavía no funciona. Yo tampoco lo he mandado a arreglar», sugiere que el narrador",
+      "opciones": [
+        { "clave": "A", "texto": "heredó del abuelo la manera de entender ese objeto." },
+        { "clave": "B", "texto": "olvidó por descuido llevar el reloj al taller." },
+        { "clave": "C", "texto": "guarda resentimiento hacia su madre por el reparto de las cosas." },
+        { "clave": "D", "texto": "considera que el reloj ya no tiene ningún valor." }
+      ],
+      "correcta": "A",
+      "justificacion": "El «tampoco» equipara al narrador con el abuelo: al no repararlo, repite deliberadamente el gesto y adopta su forma de darle sentido al objeto.",
+      "justificaciones_incorrectas": {
+        "B": "El adverbio «tampoco» marca una decisión consciente, no un olvido.",
+        "C": "El reparto se menciona sin ninguna carga de reproche.",
+        "D": "Si no tuviera valor, el narrador no lo conservaría ni cerraría el relato con él."
+      }
+    },
+    {
+      "id": "lc_015",
+      "competencia": "literal",
+      "tema": "texto_literario",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_04",
+      "enunciado": "En el relato, la expresión «con esa paciencia que tienen los viejos para las preguntas que ya se hicieron alguna vez» indica que el abuelo",
+      "opciones": [
+        { "clave": "A", "texto": "está molesto por la insistencia del niño." },
+        { "clave": "B", "texto": "no había pensado nunca en esa pregunta." },
+        { "clave": "C", "texto": "ya se había planteado esa misma pregunta en el pasado." },
+        { "clave": "D", "texto": "no entiende lo que el niño le está preguntando." }
+      ],
+      "correcta": "C",
+      "justificacion": "La frase señala que la pregunta del niño no es nueva para el abuelo: él ya se la hizo antes, y por eso puede responderla con calma.",
+      "justificaciones_incorrectas": {
+        "A": "La palabra clave es «paciencia», que expresa lo contrario de la molestia.",
+        "B": "El texto dice que hace cuarenta años que lo sabe, es decir, que sí lo había pensado.",
+        "D": "El abuelo responde con precisión, lo que muestra que entendió perfectamente."
+      }
+    },
+    {
+      "id": "lc_016",
+      "competencia": "reflexion",
+      "tema": "texto_literario",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_04",
+      "enunciado": "El hecho de que el reloj esté detenido en una hora precisa y no simplemente roto es significativo porque",
+      "opciones": [
+        { "clave": "A", "texto": "permite calcular cuándo dejó de funcionar el mecanismo." },
+        { "clave": "B", "texto": "convierte el objeto en la señal de un instante particular y no en un simple aparato dañado." },
+        { "clave": "C", "texto": "demuestra que el reloj era de buena calidad." },
+        { "clave": "D", "texto": "explica por qué el abuelo lo revisaba varias veces al día." }
+      ],
+      "correcta": "B",
+      "justificacion": "Una hora fija le da al objeto un contenido: no señala una avería, señala un momento. Sobre esa diferencia se apoya toda la respuesta del abuelo.",
+      "justificaciones_incorrectas": {
+        "A": "El relato no se interesa por la fecha de la avería, y el abuelo tampoco.",
+        "C": "La calidad del reloj es irrelevante en el texto.",
+        "D": "La frecuencia con que lo miraba se explica por lo que recuerda, no por la hora en que quedó detenido."
+      }
+    },
+    {
+      "id": "lc_017",
+      "competencia": "literal",
+      "tema": "texto_continuo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_05",
+      "enunciado": "Según el texto, ¿por qué en el siglo XVIII los gobiernos europeos promovieron el cultivo de la papa?",
+      "opciones": [
+        { "clave": "A", "texto": "Porque los pueblos andinos les enseñaron a producir chuño." },
+        { "clave": "B", "texto": "Porque rendía más calorías por hectárea que los cereales y resistía los inviernos." },
+        { "clave": "C", "texto": "Porque un hongo había arrasado los cultivos de trigo." },
+        { "clave": "D", "texto": "Porque la Iglesia recomendó su consumo." }
+      ],
+      "correcta": "B",
+      "justificacion": "El segundo párrafo lo enuncia directamente: se promovió porque «producía más calorías por hectárea que cualquier cereal y resistía los inviernos».",
+      "justificaciones_incorrectas": {
+        "A": "El chuño se menciona como técnica andina de conservación, sin ninguna relación con la promoción europea.",
+        "C": "El hongo aparece en 1845, en Irlanda, un siglo después.",
+        "D": "El texto dice justamente que la papa despertaba desconfianza porque no aparecía en la Biblia."
+      }
+    },
+    {
+      "id": "lc_018",
+      "competencia": "articulacion",
+      "tema": "texto_continuo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_05",
+      "enunciado": "¿Por qué el autor califica de «paradójico» el resultado de la expansión de la papa en Europa?",
+      "opciones": [
+        { "clave": "A", "texto": "Porque un cultivo que sostuvo el crecimiento de la población también hizo posible una hambruna." },
+        { "clave": "B", "texto": "Porque los europeos rechazaron la papa durante doscientos años y luego la adoptaron." },
+        { "clave": "C", "texto": "Porque la papa venía de los Andes y terminó siendo un alimento europeo." },
+        { "clave": "D", "texto": "Porque la papa produce más calorías que el trigo pero es más difícil de cultivar." }
+      ],
+      "correcta": "A",
+      "justificacion": "La paradoja que el texto desarrolla es esa: el mismo cultivo que permitió alimentar a más gente creó una dependencia que, al fallar, provocó un millón de muertos.",
+      "justificaciones_incorrectas": {
+        "B": "El rechazo inicial es curioso, pero el autor sitúa la paradoja en el párrafo siguiente, referida a las consecuencias.",
+        "C": "El origen andino no se presenta como paradoja en ninguna parte del texto.",
+        "D": "El texto no afirma que la papa sea más difícil de cultivar que el trigo."
+      }
+    },
+    {
+      "id": "lc_019",
+      "competencia": "reflexion",
+      "tema": "texto_continuo",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_05",
+      "enunciado": "De acuerdo con el último párrafo, la causa determinante de la magnitud de la hambruna irlandesa fue",
+      "opciones": [
+        { "clave": "A", "texto": "el hongo que atacó los cultivos." },
+        { "clave": "B", "texto": "la decisión de depender casi por completo de una sola variedad." },
+        { "clave": "C", "texto": "la falta de técnicas de conservación como el chuño." },
+        { "clave": "D", "texto": "el clima frío de Irlanda en 1845." }
+      ],
+      "correcta": "B",
+      "justificacion": "El cierre del texto lo dice: la lección no es sobre el cultivo sino sobre la diversidad. El hongo fue el detonante; la monodependencia es lo que convirtió el ataque en catástrofe.",
+      "justificaciones_incorrectas": {
+        "A": "El hongo fue la causa inmediata, pero el texto insiste en que lo determinante fue apostar a una sola variedad.",
+        "C": "El chuño no se relaciona en el texto con el caso irlandés.",
+        "D": "El clima se menciona como ventaja de la papa frente al trigo, no como causa de la hambruna."
+      }
+    },
+    {
+      "id": "lc_020",
+      "competencia": "articulacion",
+      "tema": "texto_continuo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_05",
+      "enunciado": "La frase «Solo el hambre la volvió aceptable» funciona en el texto como",
+      "opciones": [
+        { "clave": "A", "texto": "la explicación del cambio de actitud europea frente a la papa." },
+        { "clave": "B", "texto": "una crítica moral a los campesinos europeos." },
+        { "clave": "C", "texto": "la introducción del tema de la hambruna irlandesa." },
+        { "clave": "D", "texto": "una definición del concepto de seguridad alimentaria." }
+      ],
+      "correcta": "A",
+      "justificacion": "Es la bisagra entre el rechazo de doscientos años y la adopción del siglo XVIII: dice por qué cambió la actitud.",
+      "justificaciones_incorrectas": {
+        "B": "No hay juicio moral sobre los campesinos en esa frase.",
+        "C": "La hambruna irlandesa se introduce dos párrafos después y en otro contexto.",
+        "D": "El texto no define en ningún momento la seguridad alimentaria."
+      }
+    },
+    {
+      "id": "lc_021",
+      "competencia": "reflexion",
+      "tema": "texto_discontinuo",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_06",
+      "enunciado": "¿Cuál es la crítica principal que plantea la caricatura?",
+      "opciones": [
+        { "clave": "A", "texto": "Que los usuarios se quejan demasiado de los servicios públicos." },
+        { "clave": "B", "texto": "Que los mecanismos de participación ciudadana existen formalmente pero no producen respuesta." },
+        { "clave": "C", "texto": "Que los funcionarios reciben salarios excesivos." },
+        { "clave": "D", "texto": "Que las filas en las entidades públicas son demasiado largas." }
+      ],
+      "correcta": "B",
+      "justificacion": "El contraste entre el aviso —«su opinión nos importa»— y el funcionario dormido sobre el buzón de sugerencias señala que el canal existe en el papel pero no funciona.",
+      "justificaciones_incorrectas": {
+        "A": "La caricatura se solidariza con quien se queja; no lo ridiculiza.",
+        "C": "No hay ninguna alusión a salarios en la viñeta.",
+        "D": "La fila es el escenario, no el blanco de la crítica; el foco está en la respuesta que no llega."
+      }
+    },
+    {
+      "id": "lc_022",
+      "competencia": "articulacion",
+      "tema": "texto_discontinuo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_06",
+      "enunciado": "La respuesta «Eso», acompañada del gesto de señalar al funcionario dormido, produce su efecto porque",
+      "opciones": [
+        { "clave": "A", "texto": "responde a la pregunta con una imagen que contradice el aviso de la ventanilla." },
+        { "clave": "B", "texto": "indica que el funcionario contestó la queja por escrito." },
+        { "clave": "C", "texto": "sugiere que la persona no recuerda qué le respondieron." },
+        { "clave": "D", "texto": "revela que la queja fue presentada en la entidad equivocada." }
+      ],
+      "correcta": "A",
+      "justificacion": "La respuesta a «¿qué le contestaron?» no son palabras sino la escena misma: el silencio y el sueño del funcionario desmienten el aviso que promete atención.",
+      "justificaciones_incorrectas": {
+        "B": "El chiste consiste precisamente en que no hubo respuesta alguna.",
+        "C": "La persona sí sabe qué recibió: nada; por eso puede señalarlo.",
+        "D": "Nada en la viñeta sugiere que la entidad fuera la equivocada."
+      }
+    },
+    {
+      "id": "lc_023",
+      "competencia": "literal",
+      "tema": "texto_discontinuo",
+      "dificultad": 1,
+      "contexto_id": "lc_ctx_06",
+      "enunciado": "En la caricatura, la etiqueta «BUZÓN DE SUGERENCIAS» está colocada sobre",
+      "opciones": [
+        { "clave": "A", "texto": "la ventanilla de atención." },
+        { "clave": "B", "texto": "el montón de papeles que sirve de almohada al funcionario." },
+        { "clave": "C", "texto": "el aviso de atención al usuario." },
+        { "clave": "D", "texto": "la puerta de la entidad." }
+      ],
+      "correcta": "B",
+      "justificacion": "La descripción indica que el funcionario duerme sobre un montón de papeles y que sobre ese montón está la etiqueta del buzón de sugerencias.",
+      "justificaciones_incorrectas": {
+        "A": "Sobre la ventanilla está el aviso de atención al usuario, no la etiqueta.",
+        "C": "Son dos elementos distintos y están en lugares distintos de la viñeta.",
+        "D": "La descripción no menciona ninguna puerta."
+      }
+    },
+    {
+      "id": "lc_024",
+      "competencia": "articulacion",
+      "tema": "texto_argumentativo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_07",
+      "enunciado": "¿Cuál es el propósito principal del autor de esta columna?",
+      "opciones": [
+        { "clave": "A", "texto": "Convencer al lector de que el trabajo remoto perjudica a los trabajadores." },
+        { "clave": "B", "texto": "Proponer que las empresas vuelvan al trabajo presencial." },
+        { "clave": "C", "texto": "Reemplazar la valoración global del trabajo remoto por una discusión sobre costos y control del horario." },
+        { "clave": "D", "texto": "Calcular cuánto ahorra en desplazamiento un trabajador remoto." }
+      ],
+      "correcta": "C",
+      "justificacion": "El cierre es explícito: el trabajo remoto no es en sí conquista ni despojo, y discutir quién asume los costos y quién controla el horario «es más útil que celebrar o lamentar el fenómeno en abstracto».",
+      "justificaciones_incorrectas": {
+        "A": "El autor reconoce beneficios reales y evita esa conclusión unilateral.",
+        "B": "Dice expresamente que nada de esto significa que haya que volver atrás.",
+        "D": "El cálculo de las quince horas es un dato de apoyo, no el propósito del texto."
+      }
+    },
+    {
+      "id": "lc_025",
+      "competencia": "literal",
+      "tema": "texto_argumentativo",
+      "dificultad": 1,
+      "contexto_id": "lc_ctx_07",
+      "enunciado": "Según el texto, ¿qué costos se trasladaron de la empresa al trabajador con el trabajo remoto?",
+      "opciones": [
+        { "clave": "A", "texto": "El salario, las primas y las cesantías." },
+        { "clave": "B", "texto": "El transporte y la alimentación fuera de casa." },
+        { "clave": "C", "texto": "La oficina, la silla, la conexión, la energía y el café." },
+        { "clave": "D", "texto": "La capacitación y las herramientas de software." }
+      ],
+      "correcta": "C",
+      "justificacion": "El tercer párrafo enumera exactamente esos elementos como gastos que pasaron de ser corporativos a domésticos.",
+      "justificaciones_incorrectas": {
+        "A": "El texto no menciona el salario ni las prestaciones sociales.",
+        "B": "El transporte es lo que el trabajador deja de gastar, no un costo trasladado.",
+        "D": "La capacitación y el software no aparecen en el texto."
+      }
+    },
+    {
+      "id": "lc_026",
+      "competencia": "reflexion",
+      "tema": "texto_argumentativo",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_07",
+      "enunciado": "El autor escribe: «algo más difícil de medir: la frontera entre la jornada y el resto de la vida se disolvió». Al calificarlo así, el autor",
+      "opciones": [
+        { "clave": "A", "texto": "reconoce que ese efecto no se apoya en cifras, pero lo sostiene igualmente." },
+        { "clave": "B", "texto": "descarta ese efecto por falta de evidencia." },
+        { "clave": "C", "texto": "afirma que las empresas ocultan deliberadamente esa información." },
+        { "clave": "D", "texto": "sostiene que ese efecto solo ocurre en ciudades grandes." }
+      ],
+      "correcta": "A",
+      "justificacion": "El autor advierte la debilidad de la evidencia y aun así mantiene la afirmación, apoyándola en lo que reportan los empleados. Es una honestidad argumentativa, no un abandono del punto.",
+      "justificaciones_incorrectas": {
+        "B": "No lo descarta: lo desarrolla en la frase siguiente.",
+        "C": "No hay acusación alguna de ocultamiento en el texto.",
+        "D": "La referencia a las ciudades grandes corresponde al ahorro de desplazamiento, no a este punto."
+      }
+    },
+    {
+      "id": "lc_027",
+      "competencia": "reflexion",
+      "tema": "texto_argumentativo",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_07",
+      "enunciado": "¿Cuál de las siguientes medidas sería más coherente con la conclusión del autor?",
+      "opciones": [
+        { "clave": "A", "texto": "Eliminar el trabajo remoto en todas las empresas." },
+        { "clave": "B", "texto": "Establecer un auxilio de conectividad y un horario de desconexión obligatorio." },
+        { "clave": "C", "texto": "Aumentar el tiempo de desplazamiento permitido dentro de la jornada." },
+        { "clave": "D", "texto": "Dejar que cada trabajador decida libremente cuántas horas trabajar." }
+      ],
+      "correcta": "B",
+      "justificacion": "El autor concluye que el balance depende de quién asume los costos y quién controla el horario: un auxilio de conectividad ataca lo primero y la desconexión obligatoria lo segundo.",
+      "justificaciones_incorrectas": {
+        "A": "Contradice al autor, que dice explícitamente que no se trata de volver atrás.",
+        "C": "No aborda ninguno de los dos problemas que el texto identifica.",
+        "D": "El texto muestra que esa libertad, sin reglas, es justamente lo que alarga las jornadas."
+      }
+    },
+    {
+      "id": "lc_028",
+      "competencia": "articulacion",
+      "tema": "texto_argumentativo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_07",
+      "enunciado": "El conector «Pero» que abre el tercer párrafo señala que lo que sigue",
+      "opciones": [
+        { "clave": "A", "texto": "confirma con nuevos ejemplos lo dicho en el párrafo anterior." },
+        { "clave": "B", "texto": "contrapone al beneficio ya reconocido una serie de costos." },
+        { "clave": "C", "texto": "concluye la argumentación del texto." },
+        { "clave": "D", "texto": "explica la causa del ahorro de tiempo mencionado antes." }
+      ],
+      "correcta": "B",
+      "justificacion": "El párrafo anterior admite el beneficio del ahorro de tiempo; el «Pero» introduce el contrapeso: los costos trasladados al trabajador.",
+      "justificaciones_incorrectas": {
+        "A": "«Pero» es un conector adversativo, no de adición.",
+        "C": "La conclusión llega en el cuarto párrafo.",
+        "D": "No explica ninguna causa del ahorro; cambia de asunto."
+      }
+    },
+    {
+      "id": "lc_029",
+      "competencia": "reflexion",
+      "tema": "texto_literario",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_08",
+      "enunciado": "En el poema, la enumeración inicial —«tres llaves que no abren nada, / el olor del patio después de la lluvia / y una discusión que nunca terminamos»— produce su efecto porque",
+      "opciones": [
+        { "clave": "A", "texto": "mezcla en una misma lista objetos, sensaciones y hechos, igualándolos como restos de lo perdido." },
+        { "clave": "B", "texto": "describe con precisión el valor económico de lo que quedó." },
+        { "clave": "C", "texto": "ordena los recuerdos del más reciente al más antiguo." },
+        { "clave": "D", "texto": "señala que la casa fue vendida por necesidad." }
+      ],
+      "correcta": "A",
+      "justificacion": "El inventario pone en el mismo plano lo material, lo sensorial y lo emocional, y con ello sugiere que todo eso pesa igual en lo que quedó de la casa.",
+      "justificaciones_incorrectas": {
+        "B": "El poema hace lo contrario: incluye cosas que no tienen ningún valor económico.",
+        "C": "No hay ninguna marca temporal que ordene los elementos.",
+        "D": "El poema menciona la venta de los muebles sin explicar sus motivos."
+      }
+    },
+    {
+      "id": "lc_030",
+      "competencia": "articulacion",
+      "tema": "texto_literario",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_08",
+      "enunciado": "La expresión «Y sin embargo» que abre la última estrofa marca",
+      "opciones": [
+        { "clave": "A", "texto": "una consecuencia de lo dicho en la estrofa anterior." },
+        { "clave": "B", "texto": "un contraste entre la pérdida material y la permanencia interior." },
+        { "clave": "C", "texto": "una duda del hablante sobre sus propios recuerdos." },
+        { "clave": "D", "texto": "una enumeración adicional de objetos perdidos." }
+      ],
+      "correcta": "B",
+      "justificacion": "La segunda estrofa cierra la pérdida material —muebles vendidos, paredes ajenas, patio convertido en garaje— y el «sin embargo» introduce lo que a pesar de todo permanece dentro del hablante.",
+      "justificaciones_incorrectas": {
+        "A": "Es un conector adversativo: opone en vez de derivar.",
+        "C": "El cierre afirma, no duda.",
+        "D": "La enumeración de pérdidas termina en la estrofa anterior."
+      }
+    },
+    {
+      "id": "lc_031",
+      "competencia": "literal",
+      "tema": "texto_literario",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_08",
+      "enunciado": "En el poema, la lluvia funciona como",
+      "opciones": [
+        { "clave": "A", "texto": "el desencadenante que reactiva el recuerdo de la casa." },
+        { "clave": "B", "texto": "la causa del deterioro de la vivienda." },
+        { "clave": "C", "texto": "un símbolo de la tristeza del hablante." },
+        { "clave": "D", "texto": "la razón por la que se vendieron los muebles." }
+      ],
+      "correcta": "A",
+      "justificacion": "La lluvia aparece dos veces: primero asociada al olor del patio y luego en «cuando llueve, algo en mí sigue siendo esa casa». Es lo que dispara el recuerdo.",
+      "justificaciones_incorrectas": {
+        "B": "El poema no habla de deterioro por lluvia.",
+        "C": "No se asocia la lluvia con la tristeza, sino con la memoria.",
+        "D": "La venta de los muebles no se relaciona con la lluvia."
+      }
+    },
+    {
+      "id": "lc_032",
+      "competencia": "literal",
+      "tema": "texto_continuo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_09",
+      "enunciado": "Según el texto, ¿qué distingue a la abeja de miel de las abejas silvestres?",
+      "opciones": [
+        { "clave": "A", "texto": "La abeja de miel es una especie manejada por el ser humano y no está en riesgo de extinción." },
+        { "clave": "B", "texto": "La abeja de miel es la única que poliniza cultivos comerciales." },
+        { "clave": "C", "texto": "Las abejas silvestres no se ven afectadas por los plaguicidas." },
+        { "clave": "D", "texto": "Las abejas silvestres son una sola especie con muchas variedades." }
+      ],
+      "correcta": "A",
+      "justificacion": "El tercer párrafo lo precisa: la abeja de miel «es una especie manejada por el ser humano y no está en riesgo de extinción», mientras que las silvestres, que nadie cría, sí están desapareciendo.",
+      "justificaciones_incorrectas": {
+        "B": "El texto afirma que en muchos cultivos las silvestres polinizan mejor que la doméstica.",
+        "C": "Los plaguicidas se listan como causa del descenso de los polinizadores en general.",
+        "D": "El texto habla de «cientos de especies» silvestres, no de una sola."
+      }
+    },
+    {
+      "id": "lc_033",
+      "competencia": "articulacion",
+      "tema": "texto_continuo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_09",
+      "enunciado": "La expresión «Conviene precisar algo que suele confundirse» anuncia que el párrafo",
+      "opciones": [
+        { "clave": "A", "texto": "corregirá una creencia común sobre el tema tratado." },
+        { "clave": "B", "texto": "resumirá las causas expuestas en el párrafo anterior." },
+        { "clave": "C", "texto": "presentará datos estadísticos nuevos." },
+        { "clave": "D", "texto": "cerrará el texto con una recomendación práctica." }
+      ],
+      "correcta": "A",
+      "justificacion": "La fórmula anuncia una corrección, y el párrafo la desarrolla: distingue la abeja de miel, que no está en peligro, de las silvestres, que sí lo están.",
+      "justificaciones_incorrectas": {
+        "B": "No resume nada del párrafo anterior; introduce una distinción nueva.",
+        "C": "No aparecen cifras nuevas en ese párrafo.",
+        "D": "La consecuencia práctica llega en el párrafo siguiente, no en este."
+      }
+    },
+    {
+      "id": "lc_034",
+      "competencia": "reflexion",
+      "tema": "texto_continuo",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_09",
+      "enunciado": "¿Sobre qué supuesto se apoya la afirmación de que las colmenas urbanas pueden ser contraproducentes?",
+      "opciones": [
+        { "clave": "A", "texto": "Que las abejas de miel transmiten enfermedades a los seres humanos." },
+        { "clave": "B", "texto": "Que el alimento disponible en una zona es limitado y debe repartirse entre las especies que allí viven." },
+        { "clave": "C", "texto": "Que las abejas silvestres no pueden convivir con ninguna otra especie." },
+        { "clave": "D", "texto": "Que las colmenas urbanas están mal manejadas técnicamente." }
+      ],
+      "correcta": "B",
+      "justificacion": "El argumento dice que la colmena introduce miles de individuos «que compiten por el mismo alimento»; esa competencia solo tiene sentido si el recurso es limitado.",
+      "justificaciones_incorrectas": {
+        "A": "El texto no menciona riesgos sanitarios para las personas.",
+        "C": "El texto habla de competencia por el alimento, no de imposibilidad de convivencia.",
+        "D": "El problema planteado no es de manejo técnico sino de presión sobre el recurso."
+      }
+    },
+    {
+      "id": "lc_035",
+      "competencia": "reflexion",
+      "tema": "texto_continuo",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_09",
+      "enunciado": "Una campaña coherente con lo que plantea el texto sería aquella que",
+      "opciones": [
+        { "clave": "A", "texto": "promueva la instalación de colmenas de abeja de miel en terrazas urbanas." },
+        { "clave": "B", "texto": "proteja y restaure hábitats con floración variada para las especies silvestres." },
+        { "clave": "C", "texto": "aumente la producción nacional de miel." },
+        { "clave": "D", "texto": "reemplace la polinización animal por polinización manual." }
+      ],
+      "correcta": "B",
+      "justificacion": "El texto identifica la pérdida de hábitat como una de las causas del declive y señala que las especies en riesgo son las silvestres: restaurar hábitat actúa sobre ambos puntos.",
+      "justificaciones_incorrectas": {
+        "A": "Es exactamente la medida que el texto advierte como contraproducente.",
+        "C": "Producir más miel implica más abejas domésticas, lo que agrava la competencia descrita.",
+        "D": "El texto nunca propone reemplazar la polinización animal; señala su importancia."
+      }
+    },
+    {
+      "id": "lc_036",
+      "competencia": "articulacion",
+      "tema": "texto_argumentativo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_10",
+      "enunciado": "¿Qué función cumple en el ensayo la frase «Alguien dirá que así nunca se enfrentarán los libros difíciles»?",
+      "opciones": [
+        { "clave": "A", "texto": "Introduce una objeción a la propia tesis, que el autor responde a continuación." },
+        { "clave": "B", "texto": "Cita la opinión de un autor reconocido." },
+        { "clave": "C", "texto": "Cierra la argumentación con una conclusión." },
+        { "clave": "D", "texto": "Ejemplifica un caso de lectura por deber." }
+      ],
+      "correcta": "A",
+      "justificacion": "Es una objeción anticipada: el autor la formula, la califica de «buen reparo» y la responde distinguiendo el libro que no interesa del libro que exige.",
+      "justificaciones_incorrectas": {
+        "B": "No se cita a nadie; «alguien» es un interlocutor hipotético.",
+        "C": "La conclusión aparece en el párrafo final.",
+        "D": "La lectura por deber se trata al final y no se ejemplifica aquí."
+      }
+    },
+    {
+      "id": "lc_037",
+      "competencia": "reflexion",
+      "tema": "texto_argumentativo",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_10",
+      "enunciado": "El autor dice que acepta «a medias» la objeción. ¿Qué parte acepta y qué parte rechaza?",
+      "opciones": [
+        { "clave": "A", "texto": "Acepta que abandonar libros es una falta de carácter, pero rechaza que sea grave." },
+        { "clave": "B", "texto": "Acepta que hay libros que exigen esfuerzo, pero rechaza que por eso haya que terminar los que no interesan." },
+        { "clave": "C", "texto": "Acepta que la escuela enseña bien a leer, pero rechaza sus métodos." },
+        { "clave": "D", "texto": "Acepta que leer por deber es útil, pero rechaza que sea agradable." }
+      ],
+      "correcta": "B",
+      "justificacion": "El autor distingue el libro que no interesa —que «se abandona sin pérdida»— del libro que exige —que «se aplaza»—: concede lo segundo sin renunciar a su tesis sobre lo primero.",
+      "justificaciones_incorrectas": {
+        "A": "El autor rechaza desde el inicio que abandonar sea una falta de carácter.",
+        "C": "El texto atribuye a la escuela precisamente la superstición que critica.",
+        "D": "Dice que de la lectura por deber «no sale ningún lector», es decir, que no es útil."
+      }
+    },
+    {
+      "id": "lc_038",
+      "competencia": "literal",
+      "tema": "texto_argumentativo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_10",
+      "enunciado": "En el texto, la palabra «superstición» se usa para referirse a",
+      "opciones": [
+        { "clave": "A", "texto": "la creencia de que todo libro empezado debe terminarse." },
+        { "clave": "B", "texto": "el miedo a leer libros difíciles." },
+        { "clave": "C", "texto": "la idea de que las pantallas dañan la lectura." },
+        { "clave": "D", "texto": "la costumbre de contar cuántas páginas faltan." }
+      ],
+      "correcta": "A",
+      "justificacion": "La primera oración lo establece: la superstición heredada de la escuela es que «un libro empezado debe terminarse».",
+      "justificaciones_incorrectas": {
+        "B": "El miedo a los libros difíciles no se menciona; se habla de aplazarlos.",
+        "C": "Las pantallas aparecen solo como término de comparación del daño.",
+        "D": "Contar páginas es un síntoma de la lectura por deber, no la superstición nombrada."
+      }
+    },
+    {
+      "id": "lc_039",
+      "competencia": "articulacion",
+      "tema": "texto_argumentativo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_10",
+      "enunciado": "El argumento central que el autor ofrece a favor de abandonar libros es que",
+      "opciones": [
+        { "clave": "A", "texto": "los libros largos son peores que los cortos." },
+        { "clave": "B", "texto": "quien abandona sin culpa termina leyendo más, no menos." },
+        { "clave": "C", "texto": "la escuela debería dejar de asignar lecturas obligatorias." },
+        { "clave": "D", "texto": "los libros difíciles no valen el esfuerzo que exigen." }
+      ],
+      "correcta": "B",
+      "justificacion": "El segundo párrafo lo desarrolla: quien se obliga a terminar todo lee menos porque cada libro que no lo atrapa se vuelve un muro; quien abandona sin culpa avanza.",
+      "justificaciones_incorrectas": {
+        "A": "La extensión de los libros no se menciona en el texto.",
+        "C": "El autor critica una creencia heredada de la escuela, pero no propone esa medida.",
+        "D": "El autor defiende aplazar los libros difíciles, no descartarlos."
+      }
+    },
+    {
+      "id": "lc_040",
+      "competencia": "reflexion",
+      "tema": "texto_discontinuo",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_11",
+      "enunciado": "¿Qué tensión existe entre el mensaje principal del aviso y la información en letra pequeña?",
+      "opciones": [
+        { "clave": "A", "texto": "El aviso sugiere un origen glaciar mientras la letra pequeña indica que el agua se trata en una planta urbana." },
+        { "clave": "B", "texto": "El aviso promete un precio bajo que la letra pequeña desmiente." },
+        { "clave": "C", "texto": "El aviso afirma que el producto es importado y la letra pequeña dice que es nacional." },
+        { "clave": "D", "texto": "El aviso menciona conservantes que la letra pequeña no declara." }
+      ],
+      "correcta": "A",
+      "justificacion": "La imagen de la montaña nevada y la frase «pureza que viene del glaciar» construyen un origen natural que la letra pequeña contradice: es agua tratada, envasada en una planta de Bogotá.",
+      "justificaciones_incorrectas": {
+        "B": "El aviso no menciona precios en ninguna parte.",
+        "C": "El aviso no afirma que el producto sea importado.",
+        "D": "El aviso dice «sin conservantes» y la letra pequeña no lo contradice."
+      }
+    },
+    {
+      "id": "lc_041",
+      "competencia": "articulacion",
+      "tema": "texto_discontinuo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_11",
+      "enunciado": "La imagen de la montaña nevada cumple en el aviso la función de",
+      "opciones": [
+        { "clave": "A", "texto": "informar dónde se ubica la planta de tratamiento." },
+        { "clave": "B", "texto": "asociar el producto con un origen natural y no contaminado." },
+        { "clave": "C", "texto": "indicar la temperatura recomendada de consumo." },
+        { "clave": "D", "texto": "señalar que el producto se vende en zonas de montaña." }
+      ],
+      "correcta": "B",
+      "justificacion": "La imagen no aporta información verificable: construye una asociación entre el agua y un entorno puro, que es lo que refuerza el eslogan.",
+      "justificaciones_incorrectas": {
+        "A": "La ubicación real de la planta aparece solo en la letra pequeña y es urbana.",
+        "C": "No hay ninguna referencia a la temperatura de consumo.",
+        "D": "El aviso no informa sobre puntos de venta."
+      }
+    },
+    {
+      "id": "lc_042",
+      "competencia": "reflexion",
+      "tema": "texto_discontinuo",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_11",
+      "enunciado": "Un lector crítico del aviso debería concluir que la afirmación «100 % natural»",
+      "opciones": [
+        { "clave": "A", "texto": "es falsa y constituye un fraude comprobado." },
+        { "clave": "B", "texto": "es una expresión sin contenido verificable, que no compromete al anunciante a nada preciso." },
+        { "clave": "C", "texto": "garantiza que el agua no pasó por ningún proceso." },
+        { "clave": "D", "texto": "se refiere exclusivamente al material de la botella." }
+      ],
+      "correcta": "B",
+      "justificacion": "«Natural» no tiene aquí una definición que permita comprobarla, y convive sin contradicción formal con «agua tratada»: funciona como recurso persuasivo, no como dato.",
+      "justificaciones_incorrectas": {
+        "A": "Afirmar que es un fraude comprobado excede lo que el aviso permite concluir.",
+        "C": "La letra pequeña indica lo contrario: el agua sí pasa por tratamiento.",
+        "D": "El aviso aplica la expresión al agua, no al envase."
+      }
+    },
+    {
+      "id": "lc_043",
+      "competencia": "reflexion",
+      "tema": "texto_argumentativo",
+      "dificultad": 3,
+      "contexto_id": "lc_ctx_12",
+      "enunciado": "¿Cuál es la razón de fondo por la que los familiares rechazan el monumento en mármol?",
+      "opciones": [
+        { "clave": "A", "texto": "Porque desconfían de que la alcaldía cumpla con la obra." },
+        { "clave": "B", "texto": "Porque el mármol es un material más costoso que la pintura." },
+        { "clave": "C", "texto": "Porque un monumento acabado daría por cerrado un proceso que aún no termina." },
+        { "clave": "D", "texto": "Porque prefieren que el acto sea privado y no oficial." }
+      ],
+      "correcta": "C",
+      "justificacion": "El texto lo dice con claridad: el muro «no está terminado» y un monumento en mármol «daría a entender que sí lo está». La forma del memorial expresa el estado del proceso.",
+      "justificaciones_incorrectas": {
+        "A": "El texto no menciona desconfianza sobre la ejecución de la obra.",
+        "B": "El costo no aparece como argumento de los familiares.",
+        "D": "Los familiares ya realizan un acto público anual; lo que rechazan es el carácter concluido del monumento."
+      }
+    },
+    {
+      "id": "lc_044",
+      "competencia": "articulacion",
+      "tema": "texto_argumentativo",
+      "dificultad": 2,
+      "contexto_id": "lc_ctx_12",
+      "enunciado": "La frase «Queremos un lugar donde todavía quepan nombres» condensa la idea de que el memorial debe",
+      "opciones": [
+        { "clave": "A", "texto": "ser lo bastante amplio para recibir a muchos visitantes." },
+        { "clave": "B", "texto": "permanecer abierto porque la lista de desaparecidos aún puede crecer." },
+        { "clave": "C", "texto": "incluir también los nombres de los responsables." },
+        { "clave": "D", "texto": "ser reemplazado cada año por uno nuevo." }
+      ],
+      "correcta": "B",
+      "justificacion": "«Que quepan nombres» remite a la práctica descrita antes: cada año se agregan los que faltaban. El memorial sigue abierto porque el conteo no ha terminado.",
+      "justificaciones_incorrectas": {
+        "A": "La frase habla del espacio para nombres, no para visitantes.",
+        "C": "El texto se refiere únicamente a los nombres de las personas desaparecidas.",
+        "D": "El muro no se reemplaza: se repinta y se amplía."
+      }
+    },
+    {
+      "id": "lc_045",
+      "competencia": "literal",
+      "tema": "texto_argumentativo",
+      "dificultad": 1,
+      "contexto_id": "lc_ctx_12",
+      "enunciado": "Según el texto, ¿quién pintó y mantiene el muro?",
+      "opciones": [
+        { "clave": "A", "texto": "La alcaldía del pueblo." },
+        { "clave": "B", "texto": "Los familiares de las personas desaparecidas." },
+        { "clave": "C", "texto": "Un grupo de artistas contratado por el Estado." },
+        { "clave": "D", "texto": "Los habitantes del pueblo en general." }
+      ],
+      "correcta": "B",
+      "justificacion": "El primer párrafo lo indica: «Lo pintaron los familiares, no el Estado», y son ellos quienes cada año lo repintan y agregan nombres.",
+      "justificaciones_incorrectas": {
+        "A": "La alcaldía aparece proponiendo reemplazar el muro, no construyéndolo.",
+        "C": "El texto no menciona artistas contratados.",
+        "D": "El texto atribuye el trabajo específicamente a los familiares."
+      }
+    }
+  ]
+}

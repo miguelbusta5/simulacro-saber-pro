@@ -1,0 +1,102 @@
+# Simulacro Saber Pro
+
+Aplicación web para presentar simulacros de las **competencias genéricas de selección
+múltiple** del Saber Pro (ICFES), con cronómetro controlado por el servidor, resultado por
+módulo, revisión de respuestas y análisis de qué estudiar.
+
+## Cómo ejecutarla
+
+```bash
+npm install
+```
+
+```bash
+npm run seed
+```
+
+```bash
+npm start
+```
+
+Luego abre <http://localhost:3000>, crea una cuenta y empieza.
+
+Para verificar que todo funciona de extremo a extremo:
+
+```bash
+npm run smoke
+```
+
+## Cómo está armada la prueba
+
+Una sesión de **4 h 30 min** con **160 preguntas**, con navegación libre entre módulos:
+
+| Módulo | Preguntas |
+|---|---|
+| Lectura crítica | 35 |
+| Razonamiento cuantitativo | 35 |
+| Competencias ciudadanas | 35 |
+| Inglés | 55 |
+
+Cada simulacro se arma respetando la cobertura por competencia definida en
+[blueprint.js](server/exam/blueprint.js), y prioriza preguntas que ese usuario no ha visto antes.
+El banco tiene 200 preguntas, así que dos simulacros seguidos no son iguales.
+
+No se incluyen Comunicación escrita (no es calificable automáticamente) ni los módulos
+específicos por programa académico.
+
+## Las dos reglas de bloqueo
+
+1. **Un solo simulacro a la vez por usuario.** Lo garantiza un índice único parcial en la base
+   de datos, no solo una validación de la aplicación.
+2. **No se pueden ver respuestas, resultados ni análisis mientras haya un simulacro en curso.**
+   El servidor responde `409 REVISION_BLOQUEADA` en `/revision`, `/resultados` y `/analisis`.
+
+## El cronómetro
+
+El plazo (`vence_en`) se fija en el servidor al crear el intento. En cada petición autenticada
+se cierran los intentos vencidos, de modo que:
+
+- cerrar el navegador o recargar no regala tiempo;
+- al agotarse el plazo la prueba se entrega y se califica sola;
+- el contador del navegador es solo visual y se resincroniza con el servidor cada 30 segundos.
+
+## Calificación
+
+Los aciertos se convierten a la escala ICFES 0–300 mediante una interpolación lineal por tramos
+anclada en las fronteras de los niveles de desempeño, y se asigna el nivel con los puntos de
+corte oficiales de cada módulo (ver [scoring.js](server/exam/scoring.js)).
+
+**Es una aproximación.** El examen oficial califica con Teoría de Respuesta al Ítem, cuyos
+parámetros no son públicos. El puntaje sirve para medir progreso entre simulacros, no para
+predecir el puntaje real. La app lo advierte en la pantalla de resultados.
+
+## Análisis de qué estudiar
+
+Al terminar, las respuestas se agrupan por competencia y por tema. Cada grupo con al menos tres
+preguntas recibe una prioridad (alta &lt;50 %, media 50–69 %, consolidado ≥70 %) y las
+competencias débiles se acompañan de qué mide esa competencia, qué temas estudiar y cómo
+practicarlos; ese contenido está curado en [data/estudio.json](data/estudio.json). También se
+reporta cuántas preguntas quedaron en blanco, como señal de gestión del tiempo.
+
+## Ampliar el banco de preguntas
+
+El formato está documentado en [data/schema-pregunta.md](data/schema-pregunta.md). Agrega
+preguntas a los archivos de `data/banco/` y vuelve a ejecutar `npm run seed`: el script valida
+todo antes de escribir y al final imprime la cobertura frente al blueprint.
+
+## Estructura
+
+```
+server/
+  index.js            servidor Express
+  db.js               esquema SQLite (node:sqlite, sin dependencias nativas)
+  auth.js             scrypt + sesiones en cookie
+  routes/             auth.js, intentos.js
+  exam/               blueprint, selección, calificación, análisis, lógica de intentos
+data/banco/           banco de preguntas por módulo
+data/estudio.json     recomendaciones de estudio por competencia y tema
+public/               interfaz (HTML + CSS + JS sin build)
+scripts/              seed.js, smoke.js
+```
+
+La base de datos (`simulacro.db`) se crea sola en la raíz del proyecto y está en `.gitignore`.

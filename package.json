@@ -1,0 +1,18 @@
+{
+  "name": "simulacro-saber-pro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simulacro de la prueba Saber Pro (ICFES) - competencias genericas",
+  "type": "commonjs",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node --no-warnings server/index.js",
+    "seed": "node --no-warnings scripts/seed.js",
+    "smoke": "node --no-warnings scripts/smoke.js"
+  },
+  "engines": { "node": ">=22.5.0" },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2"
+  }
+}

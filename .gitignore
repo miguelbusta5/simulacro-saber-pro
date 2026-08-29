@@ -1,0 +1,6 @@
+node_modules/
+simulacro.db
+simulacro.db-journal
+*.db-wal
+*.db-shm
+.smoke/

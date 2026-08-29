@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resultados — Simulacro Saber Pro</title>
+<link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+<header class="barra">
+  <div class="marca">Resultados del simulacro<small id="fecha"></small></div>
+  <button id="btn-revision" type="button">Ver mis respuestas</button>
+  <button id="btn-inicio" type="button">Volver al inicio</button>
+</header>
+
+<div class="contenedor">
+  <div id="aviso" class="aviso oculto"></div>
+
+  <div id="contenido" class="oculto">
+    <section class="tarjeta puntaje-global">
+      <p class="silencio">Puntaje global (promedio de competencias genéricas)</p>
+      <p class="numero" id="puntaje-global">—</p>
+      <p id="resumen" class="silencio"></p>
+    </section>
+
+    <div class="aviso aviso-info">
+      El puntaje se calcula con una aproximación a la escala ICFES 0–300. El examen oficial usa
+      Teoría de Respuesta al Ítem con parámetros no públicos, así que esta cifra sirve para medir tu
+      progreso entre simulacros, no para predecir tu puntaje real.
+    </div>
+
+    <section class="tarjeta">
+      <h2>Resultados por módulo</h2>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Módulo</th>
+              <th>Aciertos</th>
+              <th>%</th>
+              <th>Puntaje</th>
+              <th>Nivel</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-modulos"></tbody>
+        </table>
+      </div>
+      <div id="descripciones-nivel" style="margin-top:1rem"></div>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Qué debes estudiar</h2>
+      <p class="silencio" id="gestion-tiempo"></p>
+      <div id="plan"></div>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Desempeño por competencia</h2>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Módulo</th>
+              <th>Competencia</th>
+              <th>Aciertos</th>
+              <th>%</th>
+              <th>Prioridad</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-competencias"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Desempeño por tema</h2>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Módulo</th>
+              <th>Tema</th>
+              <th>Aciertos</th>
+              <th>%</th>
+              <th>Prioridad</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-temas"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/resultados.js"></script>
+</body>
+</html>

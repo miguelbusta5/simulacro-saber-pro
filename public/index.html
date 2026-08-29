@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulacro Saber Pro</title>
+<link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+<div class="contenedor-estrecho">
+  <h1>Simulacro Saber Pro</h1>
+  <p class="silencio">Competencias genéricas de selección múltiple. Sesión de 4 h 30 min, 160 preguntas.</p>
+
+  <div id="aviso" class="aviso oculto"></div>
+
+  <div class="tarjeta">
+    <div class="filtros">
+      <button id="tab-login" class="activo" type="button">Iniciar sesión</button>
+      <button id="tab-registro" type="button">Crear cuenta</button>
+    </div>
+
+    <form id="form-login">
+      <label for="login-usuario">Usuario</label>
+      <input id="login-usuario" name="usuario" type="text" autocomplete="username" required>
+      <label for="login-password">Contraseña</label>
+      <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+      <button class="btn-primario" type="submit">Entrar</button>
+    </form>
+
+    <form id="form-registro" class="oculto">
+      <label for="reg-usuario">Usuario</label>
+      <input id="reg-usuario" name="usuario" type="text" autocomplete="username" required>
+      <label for="reg-nombre">Nombre (opcional)</label>
+      <input id="reg-nombre" name="nombre" type="text" autocomplete="name">
+      <label for="reg-password">Contraseña (mínimo 6 caracteres)</label>
+      <input id="reg-password" name="password" type="password" autocomplete="new-password" required>
+      <button class="btn-primario" type="submit">Crear cuenta</button>
+    </form>
+  </div>
+</div>
+<script src="/js/api.js"></script>
+<script src="/js/login.js"></script>
+</body>
+</html>

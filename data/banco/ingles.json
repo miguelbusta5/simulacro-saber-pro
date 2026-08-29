@@ -1,0 +1,1420 @@
+{
+  "modulo": "ingles",
+  "contextos": [
+    {
+      "id": "en_ctx_01",
+      "titulo": "PART 4 — Email: Summer intensive English course",
+      "contenido": "From: courses@citylanguagecentre.org\nTo: registered students\nSubject: Summer intensive English course\n\nDear student,\n\nThe summer intensive course begins on Monday, 3 July, and ends on Friday, 25 August. Classes take place from 7:00 to 9:00 a.m., Monday to Friday, in Building C, room 204.\n\nThe full price is $480. Students who register before 20 June pay $400. Payment can be made online or at the front desk, between 8:00 a.m. and 4:00 p.m.\n\nPlease note that students must attend at least 80 % of the classes in order to receive the certificate. Books are not included in the price and can be bought at the campus bookshop for $35.\n\nIf you cannot attend the course, please write to this address at least three days before it starts in order to get a full refund.\n\nKind regards,\nAna Ruiz\nCourse coordinator",
+      "fuente": "Text written for this practice test."
+    },
+    {
+      "id": "en_ctx_02",
+      "titulo": "PART 4 — Notice: City Sports Centre",
+      "contenido": "CITY SPORTS CENTRE — MEMBER INFORMATION\n\nOPENING HOURS\nMonday to Friday: 5:00 a.m. – 10:00 p.m.\nSaturday: 6:00 a.m. – 8:00 p.m.\nSunday: closed\n\nSWIMMING POOL\nThe pool closes 30 minutes before the centre. Children under 12 must be accompanied by an adult. A swimming cap is compulsory.\n\nCLASSES\nYoga: Tuesday and Thursday, 6:00 p.m.\nSpinning: Monday, Wednesday and Friday, 7:00 p.m.\nClasses must be booked through the app at least 12 hours in advance. Members who book a class and do not attend twice in the same month lose the right to book for two weeks.\n\nLOCKERS\nLockers are free, but they must be emptied before closing time. Items left overnight are taken to lost property and kept for 15 days.",
+      "fuente": "Text written for this practice test."
+    },
+    {
+      "id": "en_ctx_03",
+      "titulo": "PART 5 — Complete the text: Recycling at home",
+      "contenido": "Read the text and choose the word that best completes each blank.\n\nRecycling at home is easier than most people think. The first step is __(1)__ separate your waste into three groups: paper, plastic and organic material. If you __(2)__ this every day, it soon becomes a habit. Many families say that they produce __(3)__ less garbage after only one month.\n\nHowever, recycling __(4)__ works if the material is clean and dry. A plastic container full of food, for example, __(5)__ be recycled. __(6)__ you have any doubts, ask your local waste collection service.",
+      "fuente": "Text written for this practice test."
+    },
+    {
+      "id": "en_ctx_04",
+      "titulo": "PART 5 — Complete the text: A trip to the coast",
+      "contenido": "Read the text and choose the word that best completes each blank.\n\nLast July I __(1)__ to the coast with two friends. We __(2)__ been planning the trip since March, so everything was ready. We left __(3)__ six in the morning to avoid the traffic.\n\nThe road was in good condition, __(4)__ the last thirty kilometres were slow because of the rain. There __(5)__ many tourists that week, so the beach was quiet. We stayed there __(6)__ three nights and came back on Sunday.",
+      "fuente": "Text written for this practice test."
+    },
+    {
+      "id": "en_ctx_05",
+      "titulo": "PART 6 — Reading: Why we check our phones",
+      "contenido": "Most people believe they use their phones because of the messages they receive. Research on habit formation suggests the opposite: we do not pick up the phone because something happened, but because our hands have learned to do it whenever we feel bored, anxious or uncertain.\n\nThis matters because it changes what a solution should look like. Turning off notifications, the advice we hear most often, only removes the external signal. If the real trigger is an internal state, the behaviour continues even in complete silence. In studies where participants disabled all their alerts, the number of times they unlocked their phones fell only slightly.\n\nWhat does seem to work is friction. Leaving the phone in another room, or deleting an application so that using it requires downloading it again, makes the automatic gesture impossible. The habit is not broken by willpower but by distance.\n\nNone of this means that phones are the enemy. The same device that interrupts a conversation also allows a student in a rural area to attend a class. The question is not whether we use it, but whether the use is chosen or automatic.",
+      "fuente": "Text written for this practice test."
+    },
+    {
+      "id": "en_ctx_06",
+      "titulo": "PART 6 — Reading: What urban gardens really produce",
+      "contenido": "Urban gardens have become popular in many Latin American cities. On rooftops, empty lots and school yards, neighbours grow vegetables that they later share or sell.\n\nThe benefits usually mentioned are food and savings, but the evidence points somewhere else. A family garden rarely produces enough to change a household budget in a significant way. What it does produce is contact: people who did not speak to each other before now meet twice a week to water the plants and to decide what to grow next season.\n\nResearchers who studied twelve gardens in three cities found that the neighbourhoods with gardens reported more trust among neighbours and more participation in other community activities, even in those that had nothing to do with agriculture.\n\nThis suggests that city governments interested in urban gardens should not evaluate them only by the kilograms of tomatoes produced. If the main result is social, the indicators should be social as well.",
+      "fuente": "Text written for this practice test."
+    },
+    {
+      "id": "en_ctx_07",
+      "titulo": "PART 7 — Complete the text with words from the list: Cars in the city",
+      "contenido": "Choose the word from the list that best completes each blank.\n\nWORD LIST: arrive — crowded — expensive — healthy — journey — reduce — save — traffic\n\nMany cities are trying to __(1)__ the number of cars in the centre. Public transport is cheaper than driving, so it helps people __(2)__ money. It is also better for the environment and more __(3)__, because passengers walk more.\n\nThe main problem is that buses are often __(4)__ during rush hour. In some cities the __(5)__ from home to work can take more than two hours. Local governments know that if they do not act, __(6)__ will get worse every year.",
+      "fuente": "Text written for this practice test."
+    },
+    {
+      "id": "en_ctx_08",
+      "titulo": "PART 7 — Complete the text with words from the list: The university library",
+      "contenido": "Choose the word from the list that best completes each blank.\n\nWORD LIST: available — borrow — deadline — fine — quiet — research — return — staff\n\nThe university library is open from Monday to Saturday. Students can __(1)__ up to five books at a time. Each book must be given back before the __(2)__ printed on the receipt; if you __(3)__ it late, you have to pay a small __(4)__.\n\nThe second floor is reserved for __(5)__ study, so conversations are not allowed there.",
+      "fuente": "Text written for this practice test."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "en_001",
+      "competencia": "part1",
+      "tema": "comunicacion_cotidiana",
+      "dificultad": 1,
+      "contexto_id": null,
+      "enunciado": "NO OUTSIDE FOOD OR DRINKS ALLOWED\n\nWhere would you most probably see this notice?",
+      "opciones": [
+        { "clave": "A", "texto": "At a cinema entrance." },
+        { "clave": "B", "texto": "At a bus stop." },
+        { "clave": "C", "texto": "In a public park." },
+        { "clave": "D", "texto": "On a highway." }
+      ],
+      "correcta": "A",
+      "justificacion": "El aviso prohíbe entrar comida o bebida comprada afuera, algo típico de los cines, que venden sus propios productos.",
+      "justificaciones_incorrectas": {
+        "B": "En un paradero de bus no hay venta de alimentos que proteger.",
+        "C": "En un parque público no se restringe llevar comida.",
+        "D": "En una carretera un aviso así no tendría destinatario ni sentido."
+      }
+    },
+    {
+      "id": "en_002",
+      "competencia": "part1",
+      "tema": "comunicacion_cotidiana",
+      "dificultad": 1,
+      "contexto_id": null,
+      "enunciado": "MIND THE GAP\n\nWhat does this notice tell passengers to do?",
+      "opciones": [
+        { "clave": "A", "texto": "To be careful with the space between the train and the platform." },
+        { "clave": "B", "texto": "To keep their tickets until the end of the journey." },
+        { "clave": "C", "texto": "To wait behind the yellow line." },
+        { "clave": "D", "texto": "To give their seat to elderly passengers." }
+      ],
+      "correcta": "A",
+      "justificacion": "«Mind» significa tener cuidado con algo y «gap» es el espacio o hueco: advierte sobre el vacío entre el tren y el andén.",
+      "justificaciones_incorrectas": {
+        "B": "Eso correspondería a un aviso como «Keep your ticket».",
+        "C": "Eso correspondería a «Stand behind the yellow line».",
+        "D": "Eso correspondería a «Please offer this seat»."
+      }
+    },
+    {
+      "id": "en_003",
+      "competencia": "part1",
+      "tema": "comunicacion_cotidiana",
+      "dificultad": 1,
+      "contexto_id": null,
+      "enunciado": "OUT OF ORDER — PLEASE USE THE STAIRS\n\nWhat does this sign mean?",
+      "opciones": [
+        { "clave": "A", "texto": "The lift is not working." },
+        { "clave": "B", "texto": "The stairs are closed for cleaning." },
+        { "clave": "C", "texto": "The building is closed today." },
+        { "clave": "D", "texto": "You must pay to use the lift." }
+      ],
+      "correcta": "A",
+      "justificacion": "«Out of order» significa fuera de servicio o averiado, y por eso se pide usar las escaleras.",
+      "justificaciones_incorrectas": {
+        "B": "El aviso invita a usar las escaleras, así que están abiertas.",
+        "C": "El edificio está abierto: hay una alternativa para subir.",
+        "D": "El aviso no menciona ningún pago."
+      }
+    },
+    {
+      "id": "en_004",
+      "competencia": "part1",
+      "tema": "comunicacion_cotidiana",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "KEEP REFRIGERATED AFTER OPENING — CONSUME WITHIN 3 DAYS\n\nWhere would you find this information?",
+      "opciones": [
+        { "clave": "A", "texto": "On a food product label." },
+        { "clave": "B", "texto": "On a hotel room door." },
+        { "clave": "C", "texto": "On a bus timetable." },
+        { "clave": "D", "texto": "On a library card." }
+      ],
+      "correcta": "A",
+      "justificacion": "La instrucción de refrigerar tras abrir y consumir en tres días corresponde a la etiqueta de un alimento.",
+      "justificaciones_incorrectas": {
+        "B": "En la puerta de un hotel se leerían avisos como «Do not disturb».",
+        "C": "Un horario de buses contiene horas y rutas.",
+        "D": "Un carné de biblioteca contiene datos del usuario."
+      }
+    },
+    {
+      "id": "en_005",
+      "competencia": "part1",
+      "tema": "comunicacion_cotidiana",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "NO VACANCIES\n\nWhat does this sign at a hotel mean?",
+      "opciones": [
+        { "clave": "A", "texto": "There are no rooms available." },
+        { "clave": "B", "texto": "The hotel is looking for new employees." },
+        { "clave": "C", "texto": "The hotel does not accept credit cards." },
+        { "clave": "D", "texto": "Children are not allowed." }
+      ],
+      "correcta": "A",
+      "justificacion": "En un hotel, «vacancies» son las habitaciones disponibles: «no vacancies» significa que está lleno.",
+      "justificaciones_incorrectas": {
+        "B": "«Vacancy» sí puede significar vacante laboral, pero en la fachada de un hotel se refiere a las habitaciones; para empleo se usaría «Now hiring».",
+        "C": "Eso se indicaría con «Cash only».",
+        "D": "Eso se indicaría con «Adults only»."
+      }
+    },
+    {
+      "id": "en_006",
+      "competencia": "part1",
+      "tema": "comunicacion_cotidiana",
+      "dificultad": 1,
+      "contexto_id": null,
+      "enunciado": "PLEASE QUEUE HERE\n\nWhat are people asked to do?",
+      "opciones": [
+        { "clave": "A", "texto": "To form a line at that point." },
+        { "clave": "B", "texto": "To keep quiet in that area." },
+        { "clave": "C", "texto": "To show their identity card." },
+        { "clave": "D", "texto": "To pay in advance." }
+      ],
+      "correcta": "A",
+      "justificacion": "«Queue» significa hacer fila: el aviso indica dónde debe formarse.",
+      "justificaciones_incorrectas": {
+        "B": "Para pedir silencio se usaría «Quiet please».",
+        "C": "Para pedir documento se usaría «Please show your ID».",
+        "D": "Para el pago anticipado se usaría «Pay in advance»."
+      }
+    },
+    {
+      "id": "en_007",
+      "competencia": "part2",
+      "tema": "vocabulario",
+      "dificultad": 1,
+      "contexto_id": null,
+      "enunciado": "A person who designs buildings.",
+      "opciones": [
+        { "clave": "A", "texto": "An engineer." },
+        { "clave": "B", "texto": "An architect." },
+        { "clave": "C", "texto": "A builder." },
+        { "clave": "D", "texto": "A designer." }
+      ],
+      "correcta": "B",
+      "justificacion": "«Architect» es específicamente quien diseña edificios.",
+      "justificaciones_incorrectas": {
+        "A": "«Engineer» es más amplio y no se limita al diseño de edificios.",
+        "C": "«Builder» es quien construye, no quien diseña.",
+        "D": "«Designer» es genérico: puede diseñar ropa, objetos o gráficas."
+      }
+    },
+    {
+      "id": "en_008",
+      "competencia": "part2",
+      "tema": "vocabulario",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "A long period of dry weather with little or no rain.",
+      "opciones": [
+        { "clave": "A", "texto": "A flood." },
+        { "clave": "B", "texto": "A storm." },
+        { "clave": "C", "texto": "A drought." },
+        { "clave": "D", "texto": "A breeze." }
+      ],
+      "correcta": "C",
+      "justificacion": "«Drought» es el periodo prolongado de sequía.",
+      "justificaciones_incorrectas": {
+        "A": "«Flood» es una inundación, lo contrario de la sequía.",
+        "B": "«Storm» es una tormenta.",
+        "D": "«Breeze» es una brisa suave."
+      }
+    },
+    {
+      "id": "en_009",
+      "competencia": "part2",
+      "tema": "vocabulario",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "The money you pay to travel on a bus, a train or a taxi.",
+      "opciones": [
+        { "clave": "A", "texto": "A fee." },
+        { "clave": "B", "texto": "A fare." },
+        { "clave": "C", "texto": "A fine." },
+        { "clave": "D", "texto": "A tip." }
+      ],
+      "correcta": "B",
+      "justificacion": "«Fare» es el pasaje o tarifa del transporte.",
+      "justificaciones_incorrectas": {
+        "A": "«Fee» es un honorario o cuota por un servicio o trámite.",
+        "C": "«Fine» es una multa.",
+        "D": "«Tip» es la propina."
+      }
+    },
+    {
+      "id": "en_010",
+      "competencia": "part2",
+      "tema": "vocabulario",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "A place where you can buy medicines.",
+      "opciones": [
+        { "clave": "A", "texto": "A surgery." },
+        { "clave": "B", "texto": "A laboratory." },
+        { "clave": "C", "texto": "A pharmacy." },
+        { "clave": "D", "texto": "A clinic." }
+      ],
+      "correcta": "C",
+      "justificacion": "«Pharmacy» (o «chemist's» en inglés británico) es el lugar donde se venden medicamentos.",
+      "justificaciones_incorrectas": {
+        "A": "«Surgery», en inglés británico, es el consultorio del médico.",
+        "B": "«Laboratory» es donde se hacen análisis o experimentos.",
+        "D": "«Clinic» es un centro de atención médica, no de venta de medicamentos."
+      }
+    },
+    {
+      "id": "en_011",
+      "competencia": "part2",
+      "tema": "vocabulario",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "A piece of paper that shows how much you have paid for something.",
+      "opciones": [
+        { "clave": "A", "texto": "A receipt." },
+        { "clave": "B", "texto": "A recipe." },
+        { "clave": "C", "texto": "A contract." },
+        { "clave": "D", "texto": "A label." }
+      ],
+      "correcta": "A",
+      "justificacion": "«Receipt» es el recibo o comprobante de pago.",
+      "justificaciones_incorrectas": {
+        "B": "«Recipe» es una receta de cocina: se parece en la escritura, pero no en el significado.",
+        "C": "«Contract» es un contrato.",
+        "D": "«Label» es una etiqueta."
+      }
+    },
+    {
+      "id": "en_012",
+      "competencia": "part2",
+      "tema": "vocabulario",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "A person who owns a house or a flat and rents it to someone else.",
+      "opciones": [
+        { "clave": "A", "texto": "A tenant." },
+        { "clave": "B", "texto": "A landlord." },
+        { "clave": "C", "texto": "A neighbour." },
+        { "clave": "D", "texto": "A guest." }
+      ],
+      "correcta": "B",
+      "justificacion": "«Landlord» es el arrendador, dueño del inmueble que lo alquila.",
+      "justificaciones_incorrectas": {
+        "A": "«Tenant» es el arrendatario, quien paga el alquiler.",
+        "C": "«Neighbour» es el vecino.",
+        "D": "«Guest» es el huésped o invitado."
+      }
+    },
+    {
+      "id": "en_013",
+      "competencia": "part3",
+      "tema": "comunicacion_cotidiana",
+      "dificultad": 1,
+      "contexto_id": null,
+      "enunciado": "A: I'm really sorry, I'm late.\nB: ______________",
+      "opciones": [
+        { "clave": "A", "texto": "Don't worry, we've just started." },
+        { "clave": "B", "texto": "Yes, I am." },
+        { "clave": "C", "texto": "How much is it?" },
+        { "clave": "D", "texto": "See you tomorrow." }
+      ],
+      "correcta": "A",
+      "justificacion": "Ante una disculpa, la respuesta natural es tranquilizar a la otra persona.",
+      "justificaciones_incorrectas": {
+        "B": "No responde a una disculpa, sino a una pregunta de confirmación.",
+        "C": "Pregunta por un precio, que no viene al caso.",
+        "D": "Es una despedida, no una respuesta a la disculpa."
+      }
+    },
+    {
+      "id": "en_014",
+      "competencia": "part3",
+      "tema": "comunicacion_cotidiana",
+      "dificultad": 1,
+      "contexto_id": null,
+      "enunciado": "A: Would you like some coffee?\nB: ______________",
+      "opciones": [
+        { "clave": "A", "texto": "Yes, I would like." },
+        { "clave": "B", "texto": "Yes, please. That would be nice." },
+        { "clave": "C", "texto": "No, I don't like you." },
+        { "clave": "D", "texto": "Yes, I do it." }
+      ],
+      "correcta": "B",
+      "justificacion": "Ante un ofrecimiento con «Would you like...?», la respuesta cortés es «Yes, please».",
+      "justificaciones_incorrectas": {
+        "A": "«I would like» está incompleto: necesita un objeto («I would like some»).",
+        "C": "Cambia el sentido y resulta descortés.",
+        "D": "La estructura no corresponde a la pregunta formulada."
+      }
+    },
+    {
+      "id": "en_015",
+      "competencia": "part3",
+      "tema": "comunicacion_cotidiana",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "A: How long does the trip take?\nB: ______________",
+      "opciones": [
+        { "clave": "A", "texto": "About three hours." },
+        { "clave": "B", "texto": "About three hundred kilometres." },
+        { "clave": "C", "texto": "It's very interesting." },
+        { "clave": "D", "texto": "Twice a week." }
+      ],
+      "correcta": "A",
+      "justificacion": "«How long does it take?» pregunta por la duración, así que la respuesta es una cantidad de tiempo.",
+      "justificaciones_incorrectas": {
+        "B": "Responde a «How far is it?», que pregunta por la distancia.",
+        "C": "Responde a una pregunta sobre la calidad del viaje.",
+        "D": "Responde a «How often?», que pregunta por la frecuencia."
+      }
+    },
+    {
+      "id": "en_016",
+      "competencia": "part3",
+      "tema": "comunicacion_cotidiana",
+      "dificultad": 1,
+      "contexto_id": null,
+      "enunciado": "A: Could you help me with this box, please?\nB: ______________",
+      "opciones": [
+        { "clave": "A", "texto": "Sure, no problem." },
+        { "clave": "B", "texto": "It's over there." },
+        { "clave": "C", "texto": "I'm twenty-two." },
+        { "clave": "D", "texto": "Yes, it is heavy." }
+      ],
+      "correcta": "A",
+      "justificacion": "Ante una petición de ayuda, la respuesta apropiada es aceptar o rechazar; «Sure, no problem» acepta.",
+      "justificaciones_incorrectas": {
+        "B": "Indica una ubicación, no responde a la petición.",
+        "C": "Responde a una pregunta sobre la edad.",
+        "D": "Comenta el peso de la caja, pero no dice si va a ayudar."
+      }
+    },
+    {
+      "id": "en_017",
+      "competencia": "part3",
+      "tema": "comunicacion_cotidiana",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "A: What do you do?\nB: ______________",
+      "opciones": [
+        { "clave": "A", "texto": "I'm fine, thank you." },
+        { "clave": "B", "texto": "I'm an accountant." },
+        { "clave": "C", "texto": "I'm doing my homework." },
+        { "clave": "D", "texto": "I'm from Medellín." }
+      ],
+      "correcta": "B",
+      "justificacion": "«What do you do?» en presente simple pregunta por la ocupación habitual, es decir, por la profesión.",
+      "justificaciones_incorrectas": {
+        "A": "Responde a «How are you?».",
+        "C": "Responde a «What are you doing?», en presente continuo, sobre este momento.",
+        "D": "Responde a «Where are you from?»."
+      }
+    },
+    {
+      "id": "en_018",
+      "competencia": "part3",
+      "tema": "comunicacion_cotidiana",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "A: I'm afraid I can't come to the meeting on Friday.\nB: ______________",
+      "opciones": [
+        { "clave": "A", "texto": "That's a pity. Shall we move it to Monday?" },
+        { "clave": "B", "texto": "Congratulations!" },
+        { "clave": "C", "texto": "You're welcome." },
+        { "clave": "D", "texto": "Here you are." }
+      ],
+      "correcta": "A",
+      "justificacion": "Ante la imposibilidad de asistir, la respuesta natural expresa contrariedad y propone una alternativa.",
+      "justificaciones_incorrectas": {
+        "B": "Felicitar no corresponde a una mala noticia.",
+        "C": "«You're welcome» responde a un agradecimiento.",
+        "D": "«Here you are» acompaña la entrega de un objeto."
+      }
+    },
+    {
+      "id": "en_019",
+      "competencia": "part4",
+      "tema": "comprension_lectura",
+      "dificultad": 1,
+      "contexto_id": "en_ctx_01",
+      "enunciado": "When does the course begin?",
+      "opciones": [
+        { "clave": "A", "texto": "On 20 June." },
+        { "clave": "B", "texto": "On 3 July." },
+        { "clave": "C", "texto": "On 25 August." },
+        { "clave": "D", "texto": "On 25 July." }
+      ],
+      "correcta": "B",
+      "justificacion": "El correo dice: «The summer intensive course begins on Monday, 3 July».",
+      "justificaciones_incorrectas": {
+        "A": "El 20 de junio es la fecha límite para obtener el descuento.",
+        "C": "El 25 de agosto es la fecha en que termina el curso.",
+        "D": "Esa fecha no aparece en el texto."
+      }
+    },
+    {
+      "id": "en_020",
+      "competencia": "part4",
+      "tema": "comprension_lectura",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_01",
+      "enunciado": "How much does a student pay if they register on 15 June?",
+      "opciones": [
+        { "clave": "A", "texto": "$400" },
+        { "clave": "B", "texto": "$435" },
+        { "clave": "C", "texto": "$480" },
+        { "clave": "D", "texto": "$515" }
+      ],
+      "correcta": "A",
+      "justificacion": "El 15 de junio es antes del 20 de junio, así que se aplica el precio con descuento de $400.",
+      "justificaciones_incorrectas": {
+        "B": "Resulta de sumar el costo de los libros al precio con descuento, y los libros no están incluidos en la matrícula.",
+        "C": "$480 es el precio completo, para quien se inscribe después del 20 de junio.",
+        "D": "Suma el precio completo y los libros, que se pagan aparte."
+      }
+    },
+    {
+      "id": "en_021",
+      "competencia": "part4",
+      "tema": "comprension_lectura",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_01",
+      "enunciado": "What must students do to receive the certificate?",
+      "opciones": [
+        { "clave": "A", "texto": "Buy the books at the campus bookshop." },
+        { "clave": "B", "texto": "Pay online instead of at the front desk." },
+        { "clave": "C", "texto": "Attend at least 80 % of the classes." },
+        { "clave": "D", "texto": "Register before 20 June." }
+      ],
+      "correcta": "C",
+      "justificacion": "El texto lo establece de forma explícita: «students must attend at least 80 % of the classes in order to receive the certificate».",
+      "justificaciones_incorrectas": {
+        "A": "Los libros son opcionales y no condicionan el certificado.",
+        "B": "Ambas formas de pago son válidas.",
+        "D": "Inscribirse antes del 20 de junio solo da derecho al descuento."
+      }
+    },
+    {
+      "id": "en_022",
+      "competencia": "part4",
+      "tema": "comprension_lectura",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_01",
+      "enunciado": "Where do the classes take place?",
+      "opciones": [
+        { "clave": "A", "texto": "At the front desk." },
+        { "clave": "B", "texto": "In Building C, room 204." },
+        { "clave": "C", "texto": "At the campus bookshop." },
+        { "clave": "D", "texto": "Online." }
+      ],
+      "correcta": "B",
+      "justificacion": "El primer párrafo indica el lugar: «in Building C, room 204».",
+      "justificaciones_incorrectas": {
+        "A": "En la recepción se realizan pagos, no clases.",
+        "C": "En la librería se compran los libros.",
+        "D": "El texto no menciona clases virtuales; solo el pago puede hacerse en línea."
+      }
+    },
+    {
+      "id": "en_023",
+      "competencia": "part4",
+      "tema": "comprension_lectura",
+      "dificultad": 3,
+      "contexto_id": "en_ctx_01",
+      "enunciado": "A student decides on 1 July that they cannot attend the course. According to the email, can they get a full refund?",
+      "opciones": [
+        { "clave": "A", "texto": "Yes, because the course has not started yet." },
+        { "clave": "B", "texto": "No, because the request must be made at least three days before the course starts." },
+        { "clave": "C", "texto": "Yes, but only if they bought the books." },
+        { "clave": "D", "texto": "No, because refunds are never given." }
+      ],
+      "correcta": "B",
+      "justificacion": "El curso empieza el 3 de julio y la solicitud debe hacerse con al menos tres días de anticipación, es decir, a más tardar el 30 de junio. El 1 de julio ya es tarde.",
+      "justificaciones_incorrectas": {
+        "A": "No basta con que el curso no haya empezado: hay un plazo mínimo de tres días.",
+        "C": "La compra de libros no tiene relación con el reembolso.",
+        "D": "El correo sí prevé reembolso completo, siempre que se pida a tiempo."
+      }
+    },
+    {
+      "id": "en_024",
+      "competencia": "part4",
+      "tema": "comprension_lectura",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_01",
+      "enunciado": "According to the email, the books",
+      "opciones": [
+        { "clave": "A", "texto": "are included in the price of the course." },
+        { "clave": "B", "texto": "cost $35 and are sold at the campus bookshop." },
+        { "clave": "C", "texto": "are given to students on the first day." },
+        { "clave": "D", "texto": "can only be bought online." }
+      ],
+      "correcta": "B",
+      "justificacion": "El texto dice: «Books are not included in the price and can be bought at the campus bookshop for $35».",
+      "justificaciones_incorrectas": {
+        "A": "El correo aclara expresamente que no están incluidos.",
+        "C": "No se menciona ninguna entrega gratuita.",
+        "D": "El texto indica la librería del campus como punto de venta."
+      }
+    },
+    {
+      "id": "en_025",
+      "competencia": "part4",
+      "tema": "comprension_lectura",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_02",
+      "enunciado": "At what time does the swimming pool close on Saturdays?",
+      "opciones": [
+        { "clave": "A", "texto": "At 7:30 p.m." },
+        { "clave": "B", "texto": "At 8:00 p.m." },
+        { "clave": "C", "texto": "At 9:30 p.m." },
+        { "clave": "D", "texto": "At 10:00 p.m." }
+      ],
+      "correcta": "A",
+      "justificacion": "El sábado el centro cierra a las 8:00 p.m. y la piscina cierra 30 minutos antes: a las 7:30 p.m.",
+      "justificaciones_incorrectas": {
+        "B": "8:00 p.m. es la hora de cierre del centro, no de la piscina.",
+        "C": "9:30 p.m. sería la piscina en un día de lunes a viernes.",
+        "D": "10:00 p.m. es el cierre del centro de lunes a viernes."
+      }
+    },
+    {
+      "id": "en_026",
+      "competencia": "part4",
+      "tema": "comprension_lectura",
+      "dificultad": 1,
+      "contexto_id": "en_ctx_02",
+      "enunciado": "What is compulsory in order to use the swimming pool?",
+      "opciones": [
+        { "clave": "A", "texto": "Booking through the app." },
+        { "clave": "B", "texto": "Wearing a swimming cap." },
+        { "clave": "C", "texto": "Bringing your own locker key." },
+        { "clave": "D", "texto": "Being over 12 years old." }
+      ],
+      "correcta": "B",
+      "justificacion": "El aviso dice: «A swimming cap is compulsory».",
+      "justificaciones_incorrectas": {
+        "A": "La reserva por la aplicación se exige para las clases, no para la piscina.",
+        "C": "Los casilleros son gratuitos y no se menciona ninguna llave propia.",
+        "D": "Los menores de 12 años sí pueden entrar, acompañados de un adulto."
+      }
+    },
+    {
+      "id": "en_027",
+      "competencia": "part4",
+      "tema": "comprension_lectura",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_02",
+      "enunciado": "A member wants to take a spinning class on Wednesday at 7:00 p.m. What is the latest time to book it?",
+      "opciones": [
+        { "clave": "A", "texto": "Wednesday at 6:00 p.m." },
+        { "clave": "B", "texto": "Tuesday at 7:00 a.m." },
+        { "clave": "C", "texto": "Tuesday at 7:00 p.m." },
+        { "clave": "D", "texto": "Wednesday at 12:00 p.m." }
+      ],
+      "correcta": "C",
+      "justificacion": "Las clases deben reservarse con al menos 12 horas de anticipación: 12 horas antes de las 7:00 p.m. del miércoles son las 7:00 a.m. del miércoles, así que reservar el martes a las 7:00 p.m. cumple el requisito.",
+      "justificaciones_incorrectas": {
+        "A": "Solo una hora antes: no cumple las 12 horas requeridas.",
+        "B": "Cumple el plazo, pero la pregunta pide la hora más tardía posible, y el martes a las 7:00 p.m. es más tarde.",
+        "D": "El miércoles al mediodía faltan siete horas, menos de las 12 exigidas."
+      }
+    },
+    {
+      "id": "en_028",
+      "competencia": "part4",
+      "tema": "comprension_lectura",
+      "dificultad": 3,
+      "contexto_id": "en_ctx_02",
+      "enunciado": "What happens to a member who books two classes in the same month and does not attend either of them?",
+      "opciones": [
+        { "clave": "A", "texto": "They have to pay a fine." },
+        { "clave": "B", "texto": "They cannot book classes for two weeks." },
+        { "clave": "C", "texto": "Their membership is cancelled." },
+        { "clave": "D", "texto": "They lose access to the swimming pool." }
+      ],
+      "correcta": "B",
+      "justificacion": "El aviso indica que quien reserva y no asiste dos veces en el mismo mes «lose the right to book for two weeks».",
+      "justificaciones_incorrectas": {
+        "A": "No se menciona ninguna multa por inasistencia.",
+        "C": "La sanción es temporal y afecta solo la reserva de clases.",
+        "D": "La piscina no se ve afectada por esta regla."
+      }
+    },
+    {
+      "id": "en_029",
+      "competencia": "part4",
+      "tema": "comprension_lectura",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_02",
+      "enunciado": "A member leaves a jacket in a locker overnight. According to the notice, the jacket",
+      "opciones": [
+        { "clave": "A", "texto": "stays in the locker until the member comes back." },
+        { "clave": "B", "texto": "is taken to lost property and kept for 15 days." },
+        { "clave": "C", "texto": "is given to another member." },
+        { "clave": "D", "texto": "is thrown away immediately." }
+      ],
+      "correcta": "B",
+      "justificacion": "El aviso dice: «Items left overnight are taken to lost property and kept for 15 days».",
+      "justificaciones_incorrectas": {
+        "A": "Los casilleros deben vaciarse antes del cierre.",
+        "C": "El texto no menciona que se entreguen a terceros.",
+        "D": "Se conservan quince días antes de cualquier otra disposición."
+      }
+    },
+    {
+      "id": "en_030",
+      "competencia": "part4",
+      "tema": "comprension_lectura",
+      "dificultad": 1,
+      "contexto_id": "en_ctx_02",
+      "enunciado": "On which day is the sports centre closed?",
+      "opciones": [
+        { "clave": "A", "texto": "Saturday." },
+        { "clave": "B", "texto": "Monday." },
+        { "clave": "C", "texto": "Sunday." },
+        { "clave": "D", "texto": "It is open every day." }
+      ],
+      "correcta": "C",
+      "justificacion": "El horario indica «Sunday: closed».",
+      "justificaciones_incorrectas": {
+        "A": "El sábado abre de 6:00 a.m. a 8:00 p.m.",
+        "B": "El lunes abre de 5:00 a.m. a 10:00 p.m.",
+        "D": "El domingo permanece cerrado."
+      }
+    },
+    {
+      "id": "en_031",
+      "competencia": "part5",
+      "tema": "gramatica",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_03",
+      "enunciado": "Choose the best option for blank (1).",
+      "opciones": [
+        { "clave": "A", "texto": "to" },
+        { "clave": "B", "texto": "for" },
+        { "clave": "C", "texto": "of" },
+        { "clave": "D", "texto": "at" }
+      ],
+      "correcta": "A",
+      "justificacion": "Tras «The first step is» se usa un infinitivo con «to»: «The first step is to separate...».",
+      "justificaciones_incorrectas": {
+        "B": "«For» exigiría un gerundio: «for separating».",
+        "C": "«Of» no introduce infinitivos en inglés.",
+        "D": "«At» es una preposición de lugar o tiempo, no de infinitivo."
+      }
+    },
+    {
+      "id": "en_032",
+      "competencia": "part5",
+      "tema": "gramatica",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_03",
+      "enunciado": "Choose the best option for blank (2).",
+      "opciones": [
+        { "clave": "A", "texto": "make" },
+        { "clave": "B", "texto": "do" },
+        { "clave": "C", "texto": "take" },
+        { "clave": "D", "texto": "give" }
+      ],
+      "correcta": "B",
+      "justificacion": "«Do this» es la colocación correcta para referirse a realizar una acción ya mencionada.",
+      "justificaciones_incorrectas": {
+        "A": "«Make this» sugiere fabricar o producir algo.",
+        "C": "«Take this» significa tomar o llevarse algo.",
+        "D": "«Give this» significa entregar algo."
+      }
+    },
+    {
+      "id": "en_033",
+      "competencia": "part5",
+      "tema": "gramatica",
+      "dificultad": 3,
+      "contexto_id": "en_ctx_03",
+      "enunciado": "Choose the best option for blank (3).",
+      "opciones": [
+        { "clave": "A", "texto": "many" },
+        { "clave": "B", "texto": "very" },
+        { "clave": "C", "texto": "much" },
+        { "clave": "D", "texto": "more" }
+      ],
+      "correcta": "C",
+      "justificacion": "«Much» intensifica comparativos: «much less garbage» significa mucho menos basura.",
+      "justificaciones_incorrectas": {
+        "A": "«Many» acompaña sustantivos contables en plural, y «garbage» es incontable.",
+        "B": "«Very» no puede modificar un comparativo como «less».",
+        "D": "«More less» es contradictorio."
+      }
+    },
+    {
+      "id": "en_034",
+      "competencia": "part5",
+      "tema": "gramatica",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_03",
+      "enunciado": "Choose the best option for blank (4).",
+      "opciones": [
+        { "clave": "A", "texto": "only" },
+        { "clave": "B", "texto": "never" },
+        { "clave": "C", "texto": "already" },
+        { "clave": "D", "texto": "always" }
+      ],
+      "correcta": "A",
+      "justificacion": "El sentido es que el reciclaje funciona únicamente bajo una condición: «recycling only works if the material is clean and dry».",
+      "justificaciones_incorrectas": {
+        "B": "«Never works» contradice todo el texto, que promueve el reciclaje.",
+        "C": "«Already» indica que algo ya ocurrió y no encaja con la condición.",
+        "D": "«Always works» contradice la restricción que introduce «if»."
+      }
+    },
+    {
+      "id": "en_035",
+      "competencia": "part5",
+      "tema": "gramatica",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_03",
+      "enunciado": "Choose the best option for blank (5).",
+      "opciones": [
+        { "clave": "A", "texto": "must" },
+        { "clave": "B", "texto": "cannot" },
+        { "clave": "C", "texto": "should" },
+        { "clave": "D", "texto": "will" }
+      ],
+      "correcta": "B",
+      "justificacion": "El ejemplo ilustra la regla anterior: un envase lleno de comida no está limpio, así que no puede reciclarse.",
+      "justificaciones_incorrectas": {
+        "A": "«Must be recycled» afirmaría lo contrario de lo que el ejemplo ilustra.",
+        "C": "«Should be recycled» también contradice la regla del párrafo.",
+        "D": "«Will be recycled» no expresa la imposibilidad que exige el contexto."
+      }
+    },
+    {
+      "id": "en_036",
+      "competencia": "part5",
+      "tema": "gramatica",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_03",
+      "enunciado": "Choose the best option for blank (6).",
+      "opciones": [
+        { "clave": "A", "texto": "Although" },
+        { "clave": "B", "texto": "Because" },
+        { "clave": "C", "texto": "If" },
+        { "clave": "D", "texto": "So" }
+      ],
+      "correcta": "C",
+      "justificacion": "La frase plantea una condición seguida de una recomendación: «If you have any doubts, ask your local waste collection service».",
+      "justificaciones_incorrectas": {
+        "A": "«Although» introduce una concesión, no una condición.",
+        "B": "«Because» introduce una causa, y aquí no se explica ninguna.",
+        "D": "«So» introduce una consecuencia de algo dicho antes."
+      }
+    },
+    {
+      "id": "en_037",
+      "competencia": "part5",
+      "tema": "gramatica",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_04",
+      "enunciado": "Choose the best option for blank (1).",
+      "opciones": [
+        { "clave": "A", "texto": "travel" },
+        { "clave": "B", "texto": "travelled" },
+        { "clave": "C", "texto": "am travelling" },
+        { "clave": "D", "texto": "have travelled" }
+      ],
+      "correcta": "B",
+      "justificacion": "«Last July» marca un momento pasado y terminado, lo que exige pasado simple.",
+      "justificaciones_incorrectas": {
+        "A": "El presente simple no concuerda con una referencia temporal pasada.",
+        "C": "El presente continuo describe lo que ocurre ahora.",
+        "D": "El presente perfecto no admite una expresión de tiempo pasado concreto como «last July»."
+      }
+    },
+    {
+      "id": "en_038",
+      "competencia": "part5",
+      "tema": "gramatica",
+      "dificultad": 3,
+      "contexto_id": "en_ctx_04",
+      "enunciado": "Choose the best option for blank (2).",
+      "opciones": [
+        { "clave": "A", "texto": "have" },
+        { "clave": "B", "texto": "has" },
+        { "clave": "C", "texto": "had" },
+        { "clave": "D", "texto": "were" }
+      ],
+      "correcta": "C",
+      "justificacion": "La planeación es anterior al viaje, que ya está en pasado: se requiere pasado perfecto continuo, «had been planning».",
+      "justificaciones_incorrectas": {
+        "A": "«Have been planning» situaría la acción en relación con el presente.",
+        "B": "Además del tiempo verbal, «has» no concuerda con el sujeto «we».",
+        "D": "«Were been» no es una construcción posible en inglés."
+      }
+    },
+    {
+      "id": "en_039",
+      "competencia": "part5",
+      "tema": "gramatica",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_04",
+      "enunciado": "Choose the best option for blank (3).",
+      "opciones": [
+        { "clave": "A", "texto": "in" },
+        { "clave": "B", "texto": "on" },
+        { "clave": "C", "texto": "at" },
+        { "clave": "D", "texto": "to" }
+      ],
+      "correcta": "C",
+      "justificacion": "Con horas exactas se usa «at»: «at six in the morning».",
+      "justificaciones_incorrectas": {
+        "A": "«In» se usa con partes del día, meses y años: «in the morning», «in July».",
+        "B": "«On» se usa con días y fechas: «on Monday».",
+        "D": "«To» indica dirección, no hora."
+      }
+    },
+    {
+      "id": "en_040",
+      "competencia": "part5",
+      "tema": "gramatica",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_04",
+      "enunciado": "Choose the best option for blank (4).",
+      "opciones": [
+        { "clave": "A", "texto": "so" },
+        { "clave": "B", "texto": "but" },
+        { "clave": "C", "texto": "because" },
+        { "clave": "D", "texto": "therefore" }
+      ],
+      "correcta": "B",
+      "justificacion": "Hay un contraste entre el buen estado de la vía y la lentitud del último tramo, y ese contraste lo marca «but».",
+      "justificaciones_incorrectas": {
+        "A": "«So» introduce una consecuencia, y la lentitud no se sigue del buen estado de la vía.",
+        "C": "«Because» introduciría una causa, pero la causa ya aparece al final con «because of the rain».",
+        "D": "«Therefore» también expresa consecuencia y además exige otra puntuación."
+      }
+    },
+    {
+      "id": "en_041",
+      "competencia": "part5",
+      "tema": "gramatica",
+      "dificultad": 3,
+      "contexto_id": "en_ctx_04",
+      "enunciado": "Choose the best option for blank (5).",
+      "opciones": [
+        { "clave": "A", "texto": "weren't" },
+        { "clave": "B", "texto": "wasn't" },
+        { "clave": "C", "texto": "aren't" },
+        { "clave": "D", "texto": "isn't" }
+      ],
+      "correcta": "A",
+      "justificacion": "«Tourists» es plural y el relato está en pasado: «There weren't many tourists».",
+      "justificaciones_incorrectas": {
+        "B": "«Wasn't» es singular y no concuerda con «tourists».",
+        "C": "«Aren't» está en presente, incompatible con el relato en pasado.",
+        "D": "«Isn't» es singular y está en presente: falla en ambos aspectos."
+      }
+    },
+    {
+      "id": "en_042",
+      "competencia": "part5",
+      "tema": "gramatica",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_04",
+      "enunciado": "Choose the best option for blank (6).",
+      "opciones": [
+        { "clave": "A", "texto": "since" },
+        { "clave": "B", "texto": "during" },
+        { "clave": "C", "texto": "for" },
+        { "clave": "D", "texto": "from" }
+      ],
+      "correcta": "C",
+      "justificacion": "«For» indica la duración de un periodo: «for three nights».",
+      "justificaciones_incorrectas": {
+        "A": "«Since» indica el punto de inicio: «since Monday».",
+        "B": "«During» va con un sustantivo que nombra un periodo: «during the holidays».",
+        "D": "«From» requiere un punto de partida y suele ir con «to»."
+      }
+    },
+    {
+      "id": "en_043",
+      "competencia": "part6",
+      "tema": "comprension_lectura",
+      "dificultad": 3,
+      "contexto_id": "en_ctx_05",
+      "enunciado": "What is the main idea of the text?",
+      "opciones": [
+        { "clave": "A", "texto": "Phone use is driven by internal states rather than by incoming messages, so solutions based on distance work better than those based on notifications." },
+        { "clave": "B", "texto": "Phones are dangerous and should be avoided by students." },
+        { "clave": "C", "texto": "Turning off notifications is the most effective way to reduce phone use." },
+        { "clave": "D", "texto": "People receive too many messages every day." }
+      ],
+      "correcta": "A",
+      "justificacion": "El texto sostiene que el disparador es interno (aburrimiento, ansiedad) y que por eso funciona la fricción —la distancia física— y no el silenciar las alertas.",
+      "justificaciones_incorrectas": {
+        "B": "El último párrafo afirma expresamente que los teléfonos no son el enemigo.",
+        "C": "El texto muestra que apagar las notificaciones produce solo una reducción leve.",
+        "D": "La cantidad de mensajes no es el tema; el texto sostiene justamente que no son la causa."
+      }
+    },
+    {
+      "id": "en_044",
+      "competencia": "part6",
+      "tema": "comprension_lectura",
+      "dificultad": 3,
+      "contexto_id": "en_ctx_05",
+      "enunciado": "According to the text, why does turning off notifications have a limited effect?",
+      "opciones": [
+        { "clave": "A", "texto": "Because most people forget to turn them off again." },
+        { "clave": "B", "texto": "Because it removes the external signal but not the internal trigger of the habit." },
+        { "clave": "C", "texto": "Because applications turn the notifications on automatically." },
+        { "clave": "D", "texto": "Because people receive more messages afterwards." }
+      ],
+      "correcta": "B",
+      "justificacion": "El segundo párrafo lo explica: apagar las alertas elimina la señal externa, pero si el disparador real es un estado interno la conducta continúa «even in complete silence».",
+      "justificaciones_incorrectas": {
+        "A": "El texto no menciona el olvido de los usuarios.",
+        "C": "No se afirma que las aplicaciones reactiven las alertas solas.",
+        "D": "El número de mensajes recibidos no se discute en ese párrafo."
+      }
+    },
+    {
+      "id": "en_045",
+      "competencia": "part6",
+      "tema": "comprension_lectura",
+      "dificultad": 3,
+      "contexto_id": "en_ctx_05",
+      "enunciado": "In the third paragraph, the word «friction» refers to",
+      "opciones": [
+        { "clave": "A", "texto": "conflict between people who use phones too much." },
+        { "clave": "B", "texto": "obstacles that make an automatic action difficult to perform." },
+        { "clave": "C", "texto": "the heat produced by a mobile device." },
+        { "clave": "D", "texto": "the effort needed to concentrate on a task." }
+      ],
+      "correcta": "B",
+      "justificacion": "Los ejemplos que siguen —dejar el teléfono en otro cuarto, borrar una aplicación— son obstáculos deliberados que impiden el gesto automático.",
+      "justificaciones_incorrectas": {
+        "A": "El texto no habla de conflictos entre personas.",
+        "C": "El sentido físico del término no corresponde al uso del texto.",
+        "D": "La fricción se aplica al acceso al dispositivo, no al esfuerzo mental de concentrarse."
+      }
+    },
+    {
+      "id": "en_046",
+      "competencia": "part6",
+      "tema": "comprension_lectura",
+      "dificultad": 3,
+      "contexto_id": "en_ctx_05",
+      "enunciado": "What is the author's attitude towards mobile phones?",
+      "opciones": [
+        { "clave": "A", "texto": "Completely negative: phones destroy communication." },
+        { "clave": "B", "texto": "Balanced: phones can be useful, and what matters is whether their use is deliberate." },
+        { "clave": "C", "texto": "Enthusiastic: phones solve most educational problems." },
+        { "clave": "D", "texto": "Indifferent: the author gives no opinion." }
+      ],
+      "correcta": "B",
+      "justificacion": "El último párrafo reconoce un uso valioso —un estudiante rural que asiste a clase— y desplaza la pregunta hacia si el uso es elegido o automático.",
+      "justificaciones_incorrectas": {
+        "A": "El autor niega expresamente que los teléfonos sean el enemigo.",
+        "C": "El ejemplo educativo es una matización, no un entusiasmo general.",
+        "D": "El autor sí toma posición a lo largo de todo el texto."
+      }
+    },
+    {
+      "id": "en_047",
+      "competencia": "part6",
+      "tema": "comprension_lectura",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_05",
+      "enunciado": "According to the text, which of the following is an example of «friction»?",
+      "opciones": [
+        { "clave": "A", "texto": "Silencing all alerts on the phone." },
+        { "clave": "B", "texto": "Deleting an application so that using it requires downloading it again." },
+        { "clave": "C", "texto": "Reading fewer messages every day." },
+        { "clave": "D", "texto": "Buying a phone with a smaller screen." }
+      ],
+      "correcta": "B",
+      "justificacion": "El texto lo menciona como ejemplo directo de fricción, junto con dejar el teléfono en otra habitación.",
+      "justificaciones_incorrectas": {
+        "A": "Silenciar las alertas es precisamente la estrategia que el texto considera insuficiente.",
+        "C": "Leer menos mensajes es un resultado posible, no un obstáculo introducido a propósito.",
+        "D": "El tamaño de la pantalla no aparece en el texto."
+      }
+    },
+    {
+      "id": "en_048",
+      "competencia": "part6",
+      "tema": "comprension_lectura",
+      "dificultad": 3,
+      "contexto_id": "en_ctx_05",
+      "enunciado": "It can be inferred from the text that the author would probably agree that",
+      "opciones": [
+        { "clave": "A", "texto": "willpower alone is not the most effective way to change a habit." },
+        { "clave": "B", "texto": "students should not be allowed to own phones." },
+        { "clave": "C", "texto": "notifications should be made louder." },
+        { "clave": "D", "texto": "habits cannot be changed at all." }
+      ],
+      "correcta": "A",
+      "justificacion": "El texto lo formula casi literalmente: «The habit is not broken by willpower but by distance».",
+      "justificaciones_incorrectas": {
+        "B": "Contradice el reconocimiento del valor educativo del teléfono.",
+        "C": "Aumentar las alertas iría en contra de todo el planteamiento del texto.",
+        "D": "El texto propone estrategias concretas para cambiar el hábito."
+      }
+    },
+    {
+      "id": "en_049",
+      "competencia": "part6",
+      "tema": "comprension_lectura",
+      "dificultad": 3,
+      "contexto_id": "en_ctx_06",
+      "enunciado": "What is the main point of the text?",
+      "opciones": [
+        { "clave": "A", "texto": "Urban gardens produce large amounts of food for poor families." },
+        { "clave": "B", "texto": "The most important result of urban gardens is social rather than economic, and they should be evaluated accordingly." },
+        { "clave": "C", "texto": "City governments should stop investing in urban gardens." },
+        { "clave": "D", "texto": "Growing tomatoes is the best way to save money in a city." }
+      ],
+      "correcta": "B",
+      "justificacion": "El texto muestra que el ahorro es escaso pero que aumentan la confianza y la participación, y concluye que los indicadores deberían ser sociales.",
+      "justificaciones_incorrectas": {
+        "A": "El texto dice lo contrario: rara vez producen lo suficiente para cambiar el presupuesto familiar.",
+        "C": "El texto propone evaluarlos mejor, no dejar de invertir en ellos.",
+        "D": "El ahorro económico es justamente lo que el texto matiza."
+      }
+    },
+    {
+      "id": "en_050",
+      "competencia": "part6",
+      "tema": "comprension_lectura",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_06",
+      "enunciado": "According to the text, what did the researchers find in neighbourhoods with gardens?",
+      "opciones": [
+        { "clave": "A", "texto": "Lower food prices in local shops." },
+        { "clave": "B", "texto": "More trust among neighbours and more participation in community activities." },
+        { "clave": "C", "texto": "A significant reduction in household expenses." },
+        { "clave": "D", "texto": "An increase in the number of agricultural jobs." }
+      ],
+      "correcta": "B",
+      "justificacion": "El tercer párrafo lo señala expresamente, e incluye participación en actividades sin relación con la agricultura.",
+      "justificaciones_incorrectas": {
+        "A": "El texto no menciona precios en los comercios del barrio.",
+        "C": "El texto afirma que el efecto sobre el presupuesto familiar es poco significativo.",
+        "D": "No se habla de creación de empleo agrícola."
+      }
+    },
+    {
+      "id": "en_051",
+      "competencia": "part6",
+      "tema": "comprension_lectura",
+      "dificultad": 3,
+      "contexto_id": "en_ctx_06",
+      "enunciado": "In the second paragraph, «What it does produce is contact» means that the garden",
+      "opciones": [
+        { "clave": "A", "texto": "creates opportunities for neighbours to meet and interact regularly." },
+        { "clave": "B", "texto": "produces vegetables that neighbours can touch." },
+        { "clave": "C", "texto": "requires physical contact with the soil." },
+        { "clave": "D", "texto": "connects the neighbourhood with the city government." }
+      ],
+      "correcta": "A",
+      "justificacion": "La frase siguiente lo explica: personas que antes no se hablaban ahora se encuentran dos veces por semana para regar y decidir qué sembrar.",
+      "justificaciones_incorrectas": {
+        "B": "«Contact» se usa aquí en sentido social, no físico con los productos.",
+        "C": "El contacto con la tierra no es lo que el texto destaca.",
+        "D": "La relación con el gobierno se menciona en el último párrafo y con otro propósito."
+      }
+    },
+    {
+      "id": "en_052",
+      "competencia": "part6",
+      "tema": "comprension_lectura",
+      "dificultad": 3,
+      "contexto_id": "en_ctx_06",
+      "enunciado": "What does the author recommend to city governments?",
+      "opciones": [
+        { "clave": "A", "texto": "To measure the success of gardens with social indicators, not only with production figures." },
+        { "clave": "B", "texto": "To build gardens only on rooftops." },
+        { "clave": "C", "texto": "To increase the number of kilograms of tomatoes produced." },
+        { "clave": "D", "texto": "To let neighbours sell their vegetables in local markets." }
+      ],
+      "correcta": "A",
+      "justificacion": "El cierre lo dice de manera directa: si el principal resultado es social, los indicadores también deberían serlo.",
+      "justificaciones_incorrectas": {
+        "B": "Los techos son uno de los lugares mencionados, no una recomendación.",
+        "C": "Es justamente el criterio que el autor considera insuficiente.",
+        "D": "La venta se menciona al describir la práctica, no como recomendación."
+      }
+    },
+    {
+      "id": "en_053",
+      "competencia": "part6",
+      "tema": "comprension_lectura",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_06",
+      "enunciado": "How often do the neighbours meet in the gardens, according to the text?",
+      "opciones": [
+        { "clave": "A", "texto": "Every day." },
+        { "clave": "B", "texto": "Twice a week." },
+        { "clave": "C", "texto": "Once a month." },
+        { "clave": "D", "texto": "Twice a season." }
+      ],
+      "correcta": "B",
+      "justificacion": "El segundo párrafo indica que se encuentran «twice a week» para regar las plantas y decidir qué sembrar.",
+      "justificaciones_incorrectas": {
+        "A": "El texto no menciona encuentros diarios.",
+        "C": "No aparece ninguna frecuencia mensual.",
+        "D": "La temporada se menciona respecto de lo que se va a sembrar, no de la frecuencia de los encuentros."
+      }
+    },
+    {
+      "id": "en_054",
+      "competencia": "part6",
+      "tema": "comprension_lectura",
+      "dificultad": 3,
+      "contexto_id": "en_ctx_06",
+      "enunciado": "The expression «the evidence points somewhere else» suggests that",
+      "opciones": [
+        { "clave": "A", "texto": "the research was carried out in a different country." },
+        { "clave": "B", "texto": "the real benefits of the gardens are not the ones people usually mention." },
+        { "clave": "C", "texto": "there is no evidence about urban gardens." },
+        { "clave": "D", "texto": "the gardens should be moved to another part of the city." }
+      ],
+      "correcta": "B",
+      "justificacion": "La frase contrasta los beneficios que suelen mencionarse —comida y ahorro— con lo que muestran los datos: el efecto social.",
+      "justificaciones_incorrectas": {
+        "A": "«Somewhere else» no se refiere a un lugar geográfico.",
+        "C": "El texto cita un estudio de doce huertas en tres ciudades.",
+        "D": "No se plantea ningún traslado de las huertas."
+      }
+    },
+    {
+      "id": "en_055",
+      "competencia": "part7",
+      "tema": "vocabulario",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_07",
+      "enunciado": "Choose the word from the list for blank (1).",
+      "opciones": [
+        { "clave": "A", "texto": "reduce" },
+        { "clave": "B", "texto": "save" },
+        { "clave": "C", "texto": "arrive" },
+        { "clave": "D", "texto": "crowded" }
+      ],
+      "correcta": "A",
+      "justificacion": "«Reduce the number of cars» es la única combinación que tiene sentido: disminuir la cantidad de carros.",
+      "justificaciones_incorrectas": {
+        "B": "«Save the number of cars» no es una expresión válida en inglés.",
+        "C": "«Arrive» es intransitivo y no admite ese objeto directo.",
+        "D": "«Crowded» es adjetivo y el espacio requiere un verbo."
+      }
+    },
+    {
+      "id": "en_056",
+      "competencia": "part7",
+      "tema": "vocabulario",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_07",
+      "enunciado": "Choose the word from the list for blank (2).",
+      "opciones": [
+        { "clave": "A", "texto": "reduce" },
+        { "clave": "B", "texto": "save" },
+        { "clave": "C", "texto": "journey" },
+        { "clave": "D", "texto": "expensive" }
+      ],
+      "correcta": "B",
+      "justificacion": "«Save money» es la colocación habitual para ahorrar dinero, y encaja con que el transporte público sea más barato.",
+      "justificaciones_incorrectas": {
+        "A": "«Reduce money» no es una colocación natural en inglés.",
+        "C": "«Journey» es sustantivo y aquí se necesita un verbo.",
+        "D": "«Expensive» es adjetivo y no completa «helps people ___ money»."
+      }
+    },
+    {
+      "id": "en_057",
+      "competencia": "part7",
+      "tema": "vocabulario",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_07",
+      "enunciado": "Choose the word from the list for blank (3).",
+      "opciones": [
+        { "clave": "A", "texto": "healthy" },
+        { "clave": "B", "texto": "crowded" },
+        { "clave": "C", "texto": "expensive" },
+        { "clave": "D", "texto": "traffic" }
+      ],
+      "correcta": "A",
+      "justificacion": "La razón que se da —«because passengers walk more»— apunta a un beneficio para la salud: «more healthy».",
+      "justificaciones_incorrectas": {
+        "B": "«More crowded» sería un inconveniente, no un beneficio, y contradice la frase.",
+        "C": "«More expensive» contradice que el transporte público sea más barato.",
+        "D": "«Traffic» es sustantivo y no puede seguir a «more» en esta estructura comparativa."
+      }
+    },
+    {
+      "id": "en_058",
+      "competencia": "part7",
+      "tema": "vocabulario",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_07",
+      "enunciado": "Choose the word from the list for blank (4).",
+      "opciones": [
+        { "clave": "A", "texto": "healthy" },
+        { "clave": "B", "texto": "crowded" },
+        { "clave": "C", "texto": "available" },
+        { "clave": "D", "texto": "reduce" }
+      ],
+      "correcta": "B",
+      "justificacion": "«Buses are often crowded during rush hour» describe el problema anunciado con «The main problem is that».",
+      "justificaciones_incorrectas": {
+        "A": "«Healthy» no describe un problema del servicio.",
+        "C": "«Available» diría lo contrario de un problema.",
+        "D": "«Reduce» es un verbo y el espacio exige un adjetivo."
+      }
+    },
+    {
+      "id": "en_059",
+      "competencia": "part7",
+      "tema": "vocabulario",
+      "dificultad": 3,
+      "contexto_id": "en_ctx_07",
+      "enunciado": "Choose the word from the list for blank (5).",
+      "opciones": [
+        { "clave": "A", "texto": "journey" },
+        { "clave": "B", "texto": "traffic" },
+        { "clave": "C", "texto": "arrive" },
+        { "clave": "D", "texto": "healthy" }
+      ],
+      "correcta": "A",
+      "justificacion": "«The journey from home to work» es el trayecto o recorrido, que es lo que puede tardar más de dos horas.",
+      "justificaciones_incorrectas": {
+        "B": "«The traffic from home to work» no es una expresión idiomática.",
+        "C": "«Arrive» es verbo y el artículo «the» exige un sustantivo.",
+        "D": "«Healthy» es adjetivo y no encaja tras el artículo."
+      }
+    },
+    {
+      "id": "en_060",
+      "competencia": "part7",
+      "tema": "vocabulario",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_07",
+      "enunciado": "Choose the word from the list for blank (6).",
+      "opciones": [
+        { "clave": "A", "texto": "journey" },
+        { "clave": "B", "texto": "traffic" },
+        { "clave": "C", "texto": "save" },
+        { "clave": "D", "texto": "expensive" }
+      ],
+      "correcta": "B",
+      "justificacion": "«Traffic will get worse every year» cierra el texto retomando el problema del exceso de carros en la ciudad.",
+      "justificaciones_incorrectas": {
+        "A": "«Journey» ya se usó en el espacio anterior y no encaja como sujeto general aquí.",
+        "C": "«Save» es un verbo y el espacio ocupa la posición de sujeto.",
+        "D": "«Expensive» es adjetivo y no puede ser sujeto de «will get worse»."
+      }
+    },
+    {
+      "id": "en_061",
+      "competencia": "part7",
+      "tema": "vocabulario",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_08",
+      "enunciado": "Choose the word from the list for blank (1).",
+      "opciones": [
+        { "clave": "A", "texto": "borrow" },
+        { "clave": "B", "texto": "return" },
+        { "clave": "C", "texto": "research" },
+        { "clave": "D", "texto": "available" }
+      ],
+      "correcta": "A",
+      "justificacion": "«Borrow» es tomar prestado, que es lo que hacen los estudiantes con los libros de la biblioteca.",
+      "justificaciones_incorrectas": {
+        "B": "«Return» es devolver, y eso se menciona en la frase siguiente.",
+        "C": "«Research» no admite «up to five books» como objeto en esta estructura.",
+        "D": "«Available» es adjetivo y aquí se requiere un verbo."
+      }
+    },
+    {
+      "id": "en_062",
+      "competencia": "part7",
+      "tema": "vocabulario",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_08",
+      "enunciado": "Choose the word from the list for blank (2).",
+      "opciones": [
+        { "clave": "A", "texto": "staff" },
+        { "clave": "B", "texto": "deadline" },
+        { "clave": "C", "texto": "fine" },
+        { "clave": "D", "texto": "research" }
+      ],
+      "correcta": "B",
+      "justificacion": "«Deadline» es la fecha límite impresa en el recibo, antes de la cual debe devolverse el libro.",
+      "justificaciones_incorrectas": {
+        "A": "«Staff» es el personal de la biblioteca.",
+        "C": "«Fine» es la multa, que aparece más adelante en el texto.",
+        "D": "«Research» es investigación y no es algo que se imprima como plazo."
+      }
+    },
+    {
+      "id": "en_063",
+      "competencia": "part7",
+      "tema": "vocabulario",
+      "dificultad": 3,
+      "contexto_id": "en_ctx_08",
+      "enunciado": "Choose the word from the list for blank (3).",
+      "opciones": [
+        { "clave": "A", "texto": "borrow" },
+        { "clave": "B", "texto": "return" },
+        { "clave": "C", "texto": "quiet" },
+        { "clave": "D", "texto": "available" }
+      ],
+      "correcta": "B",
+      "justificacion": "«If you return it late» retoma la devolución mencionada antes y explica la consecuencia de hacerla tarde.",
+      "justificaciones_incorrectas": {
+        "A": "«Borrow it late» no tiene sentido: prestar tarde no genera multa.",
+        "C": "«Quiet» es adjetivo y el espacio exige un verbo.",
+        "D": "«Available» tampoco es un verbo."
+      }
+    },
+    {
+      "id": "en_064",
+      "competencia": "part7",
+      "tema": "vocabulario",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_08",
+      "enunciado": "Choose the word from the list for blank (4).",
+      "opciones": [
+        { "clave": "A", "texto": "fine" },
+        { "clave": "B", "texto": "deadline" },
+        { "clave": "C", "texto": "staff" },
+        { "clave": "D", "texto": "research" }
+      ],
+      "correcta": "A",
+      "justificacion": "«Pay a small fine» es pagar una multa pequeña, la consecuencia de devolver el libro tarde.",
+      "justificaciones_incorrectas": {
+        "B": "Un plazo no se paga.",
+        "C": "«Staff» designa al personal, no una suma de dinero.",
+        "D": "«Research» no es algo que se pague en este contexto."
+      }
+    },
+    {
+      "id": "en_065",
+      "competencia": "part7",
+      "tema": "vocabulario",
+      "dificultad": 2,
+      "contexto_id": "en_ctx_08",
+      "enunciado": "Choose the word from the list for blank (5).",
+      "opciones": [
+        { "clave": "A", "texto": "available" },
+        { "clave": "B", "texto": "quiet" },
+        { "clave": "C", "texto": "borrow" },
+        { "clave": "D", "texto": "fine" }
+      ],
+      "correcta": "B",
+      "justificacion": "«Quiet study» concuerda con la frase siguiente: allí no se permiten conversaciones.",
+      "justificaciones_incorrectas": {
+        "A": "«Available study» no es una expresión con sentido.",
+        "C": "«Borrow» es verbo y el espacio requiere un adjetivo.",
+        "D": "«Fine study» no describe un tipo de estudio."
+      }
+    }
+  ]
+}
