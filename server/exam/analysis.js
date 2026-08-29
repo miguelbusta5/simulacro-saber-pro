@@ -1,6 +1,6 @@
 'use strict';
 
-const { db } = require('../db');
+const { consulta } = require('../db');
 const estudio = require('../../data/estudio.json');
 const { NOMBRES_MODULO, nombreCompetencia } = require('./blueprint');
 
@@ -20,7 +20,7 @@ const SQL_DETALLE = `
     FROM intento_preguntas ip
     JOIN preguntas p ON p.id = ip.pregunta_id
     LEFT JOIN respuestas r ON r.intento_id = ip.intento_id AND r.pregunta_id = p.id
-   WHERE ip.intento_id = ?
+   WHERE ip.intento_id = $1
    ORDER BY ip.orden
 `;
 
@@ -53,10 +53,10 @@ function agrupar(filas, clave) {
   return grupos;
 }
 
-// Diagnostico completo de un intento finalizado: en que competencias y temas
-// esta fallando y que debe estudiar.
-function analizarIntento(intentoId) {
-  const filas = db.prepare(SQL_DETALLE).all(intentoId);
+// Diagnóstico completo de un intento finalizado: en qué competencias y temas
+// está fallando y qué debe estudiar.
+async function analizarIntento(intentoId) {
+  const filas = await consulta(SQL_DETALLE, [intentoId]);
 
   const porCompetencia = [];
   for (const [clave, g] of agrupar(filas, (f) => `${f.modulo}.${f.competencia}`)) {
@@ -100,7 +100,7 @@ function analizarIntento(intentoId) {
   }
   porTema.sort((a, b) => a.porcentaje - b.porcentaje);
 
-  // Senal de gestion del tiempo: donde quedaron preguntas en blanco.
+  // Señal de gestión del tiempo: dónde quedaron preguntas en blanco.
   const sinResponderPorModulo = {};
   let sinResponder = 0;
   for (const f of filas) {

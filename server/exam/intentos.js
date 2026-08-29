@@ -1,6 +1,6 @@
 'use strict';
 
-const { db, ahora } = require('../db');
+const { consulta, uno, ejecutar, enTransaccion, ahora } = require('../db');
 const { armarSimulacro } = require('./selection');
 const { DURACION_MINUTOS, MODULOS, NOMBRES_MODULO, nombreCompetencia } = require('./blueprint');
 const { calificarModulo, promedioGlobal, DESCRIPCION_NIVEL } = require('./scoring');
@@ -17,25 +17,30 @@ function segundosRestantes(intento) {
   return Math.max(0, Math.round((new Date(intento.vence_en).getTime() - Date.now()) / 1000));
 }
 
-// Cierra de forma perezosa cualquier intento cuyo plazo ya vencio. Se llama en
-// cada request autenticado: por eso cerrar el navegador no regala tiempo y el
+// Cierra de forma perezosa cualquier intento cuyo plazo ya venció. Se llama en
+// cada petición autenticada: por eso cerrar el navegador no regala tiempo y el
 // examen se autoentrega cuando se acaba el reloj.
-function cerrarVencidos(userId) {
-  const vencidos = db
-    .prepare("SELECT id FROM intentos WHERE user_id = ? AND estado = 'en_curso' AND vence_en <= ?")
-    .all(userId, ahora());
+async function cerrarVencidos(userId) {
+  const vencidos = await consulta(
+    "SELECT id FROM intentos WHERE user_id = $1 AND estado = 'en_curso' AND vence_en <= $2",
+    [userId, ahora()]
+  );
   for (const v of vencidos) {
-    finalizarIntento(v.id, userId, 'tiempo_agotado');
+    await finalizarIntento(v.id, userId, 'tiempo_agotado');
   }
   return vencidos.length;
 }
 
-function intentoActivoDe(userId) {
-  return db.prepare("SELECT * FROM intentos WHERE user_id = ? AND estado = 'en_curso'").get(userId) || null;
+async function intentoActivoDe(userId) {
+  return uno("SELECT * FROM intentos WHERE user_id = $1 AND estado = 'en_curso'", [userId]);
 }
 
-function obtenerIntento(id, userId) {
-  const intento = db.prepare('SELECT * FROM intentos WHERE id = ?').get(Number(id));
+async function obtenerIntento(id, userId) {
+  const numero = Number(id);
+  if (!Number.isInteger(numero)) {
+    throw new ErrorApp(404, 'NO_ENCONTRADO', 'Ese intento no existe.');
+  }
+  const intento = await uno('SELECT * FROM intentos WHERE id = $1', [numero]);
   if (!intento) throw new ErrorApp(404, 'NO_ENCONTRADO', 'Ese intento no existe.');
   if (intento.user_id !== userId) {
     throw new ErrorApp(403, 'AJENO', 'Ese intento pertenece a otro usuario.');
@@ -43,9 +48,9 @@ function obtenerIntento(id, userId) {
   return intento;
 }
 
-function crearIntento(userId) {
-  cerrarVencidos(userId);
-  if (intentoActivoDe(userId)) {
+async function crearIntento(userId) {
+  await cerrarVencidos(userId);
+  if (await intentoActivoDe(userId)) {
     throw new ErrorApp(
       409,
       'INTENTO_EN_CURSO',
@@ -53,28 +58,39 @@ function crearIntento(userId) {
     );
   }
 
-  const preguntas = armarSimulacro(userId);
+  const preguntas = await armarSimulacro(userId);
   const inicio = new Date();
   const vence = new Date(inicio.getTime() + DURACION_MINUTOS * 60 * 1000);
 
-  db.exec('BEGIN');
   try {
-    const info = db
-      .prepare(
-        "INSERT INTO intentos (user_id, estado, iniciado_en, vence_en) VALUES (?, 'en_curso', ?, ?)"
-      )
-      .run(userId, inicio.toISOString(), vence.toISOString());
-    const intentoId = Number(info.lastInsertRowid);
+    return await enTransaccion(async (cliente) => {
+      const filas = await consulta(
+        `INSERT INTO intentos (user_id, estado, iniciado_en, vence_en)
+         VALUES ($1, 'en_curso', $2, $3) RETURNING id`,
+        [userId, inicio.toISOString(), vence.toISOString()],
+        cliente
+      );
+      const intentoId = filas[0].id;
 
-    const ins = db.prepare(
-      'INSERT INTO intento_preguntas (intento_id, orden, pregunta_id, modulo) VALUES (?, ?, ?, ?)'
-    );
-    preguntas.forEach((p, i) => ins.run(intentoId, i + 1, p.pregunta_id, p.modulo));
-    db.exec('COMMIT');
-    return intentoId;
+      // Una sola inserción con arreglos paralelos: 160 viajes de ida y vuelta
+      // a la base serían muy lentos contra un Postgres remoto.
+      await ejecutar(
+        `INSERT INTO intento_preguntas (intento_id, orden, pregunta_id, modulo)
+         SELECT $1, orden, pregunta_id, modulo
+           FROM unnest($2::int[], $3::text[], $4::text[]) AS t(orden, pregunta_id, modulo)`,
+        [
+          intentoId,
+          preguntas.map((_, i) => i + 1),
+          preguntas.map((p) => p.pregunta_id),
+          preguntas.map((p) => p.modulo),
+        ],
+        cliente
+      );
+
+      return intentoId;
+    });
   } catch (e) {
-    db.exec('ROLLBACK');
-    // El indice unico parcial es la ultima defensa contra dos intentos activos.
+    // El índice único parcial es la última defensa contra dos intentos activos.
     if (String(e.message).includes('idx_un_intento_activo')) {
       throw new ErrorApp(409, 'INTENTO_EN_CURSO', 'Ya tienes un simulacro en curso.');
     }
@@ -90,14 +106,14 @@ const SQL_PREGUNTAS_EXAMEN = `
     JOIN preguntas p ON p.id = ip.pregunta_id
     LEFT JOIN contextos c ON c.id = p.contexto_id
     LEFT JOIN respuestas r ON r.intento_id = ip.intento_id AND r.pregunta_id = p.id
-   WHERE ip.intento_id = ?
+   WHERE ip.intento_id = $1
    ORDER BY ip.orden
 `;
 
 // Cuadernillo para presentar el examen. NUNCA incluye la respuesta correcta ni
-// las justificaciones: eso solo aparece en la revision posterior.
-function cuadernillo(intento) {
-  const filas = db.prepare(SQL_PREGUNTAS_EXAMEN).all(intento.id);
+// las justificaciones: eso solo aparece en la revisión posterior.
+async function cuadernillo(intento) {
+  const filas = await consulta(SQL_PREGUNTAS_EXAMEN, [intento.id]);
   return {
     intento_id: intento.id,
     estado: intento.estado,
@@ -131,55 +147,55 @@ function cuadernillo(intento) {
   };
 }
 
-function guardarRespuesta(intentoId, userId, preguntaId, opcion, revisar) {
-  const intento = obtenerIntento(intentoId, userId);
+async function guardarRespuesta(intentoId, userId, preguntaId, opcion, revisar) {
+  const intento = await obtenerIntento(intentoId, userId);
   if (intento.estado !== 'en_curso') {
     throw new ErrorApp(409, 'INTENTO_FINALIZADO', 'Este simulacro ya fue finalizado.');
   }
   if (new Date(intento.vence_en).getTime() <= Date.now()) {
-    finalizarIntento(intento.id, userId, 'tiempo_agotado');
-    throw new ErrorApp(409, 'TIEMPO_AGOTADO', 'Se acabo el tiempo: el simulacro se entrego solo.');
+    await finalizarIntento(intento.id, userId, 'tiempo_agotado');
+    throw new ErrorApp(409, 'TIEMPO_AGOTADO', 'Se acabó el tiempo: el simulacro se entregó solo.');
   }
 
-  const pertenece = db
-    .prepare('SELECT 1 AS ok FROM intento_preguntas WHERE intento_id = ? AND pregunta_id = ?')
-    .get(intento.id, preguntaId);
+  const pertenece = await uno(
+    'SELECT 1 AS ok FROM intento_preguntas WHERE intento_id = $1 AND pregunta_id = $2',
+    [intento.id, preguntaId]
+  );
   if (!pertenece) {
-    throw new ErrorApp(404, 'NO_ENCONTRADO', 'Esa pregunta no esta en este simulacro.');
+    throw new ErrorApp(404, 'NO_ENCONTRADO', 'Esa pregunta no está en este simulacro.');
   }
 
-  const validas = JSON.parse(
-    db.prepare('SELECT opciones FROM preguntas WHERE id = ?').get(preguntaId).opciones
-  ).map((o) => o.clave);
+  const pregunta = await uno('SELECT opciones FROM preguntas WHERE id = $1', [preguntaId]);
+  const validas = JSON.parse(pregunta.opciones).map((o) => o.clave);
   if (opcion !== null && !validas.includes(opcion)) {
-    throw new ErrorApp(400, 'OPCION_INVALIDA', 'Esa opcion no existe en la pregunta.');
+    throw new ErrorApp(400, 'OPCION_INVALIDA', 'Esa opción no existe en la pregunta.');
   }
 
-  db.prepare(
+  await ejecutar(
     `INSERT INTO respuestas (intento_id, pregunta_id, opcion, marcada, respondido_en)
-     VALUES (?, ?, ?, ?, ?)
-     ON CONFLICT(intento_id, pregunta_id) DO UPDATE SET
-       opcion = excluded.opcion,
-       marcada = excluded.marcada,
-       respondido_en = excluded.respondido_en`
-  ).run(intento.id, preguntaId, opcion, revisar ? 1 : 0, ahora());
+     VALUES ($1, $2, $3, $4, $5)
+     ON CONFLICT (intento_id, pregunta_id) DO UPDATE SET
+       opcion = EXCLUDED.opcion,
+       marcada = EXCLUDED.marcada,
+       respondido_en = EXCLUDED.respondido_en`,
+    [intento.id, preguntaId, opcion, revisar ? 1 : 0, ahora()]
+  );
 
   return { segundos_restantes: segundosRestantes(intento) };
 }
 
-function finalizarIntento(intentoId, userId, motivo = 'entregado') {
-  const intento = obtenerIntento(intentoId, userId);
+async function finalizarIntento(intentoId, userId, motivo = 'entregado') {
+  const intento = await obtenerIntento(intentoId, userId);
   if (intento.estado === 'finalizado') return intento.id;
 
-  const filas = db
-    .prepare(
-      `SELECT ip.modulo, p.correcta, r.opcion AS marcada
-         FROM intento_preguntas ip
-         JOIN preguntas p ON p.id = ip.pregunta_id
-         LEFT JOIN respuestas r ON r.intento_id = ip.intento_id AND r.pregunta_id = p.id
-        WHERE ip.intento_id = ?`
-    )
-    .all(intento.id);
+  const filas = await consulta(
+    `SELECT ip.modulo, p.correcta, r.opcion AS marcada
+       FROM intento_preguntas ip
+       JOIN preguntas p ON p.id = ip.pregunta_id
+       LEFT JOIN respuestas r ON r.intento_id = ip.intento_id AND r.pregunta_id = p.id
+      WHERE ip.intento_id = $1`,
+    [intento.id]
+  );
 
   const acumulado = new Map();
   for (const f of filas) {
@@ -189,37 +205,34 @@ function finalizarIntento(intentoId, userId, motivo = 'entregado') {
     if (f.marcada != null && f.marcada === f.correcta) a.aciertos++;
   }
 
-  db.exec('BEGIN');
-  try {
-    const ins = db.prepare(
-      `INSERT INTO resultados (intento_id, modulo, aciertos, total, puntaje, nivel)
-       VALUES (?, ?, ?, ?, ?, ?)
-       ON CONFLICT(intento_id, modulo) DO UPDATE SET
-         aciertos = excluded.aciertos, total = excluded.total,
-         puntaje = excluded.puntaje, nivel = excluded.nivel`
-    );
+  await enTransaccion(async (cliente) => {
     for (const m of MODULOS) {
       const a = acumulado.get(m.id) || { aciertos: 0, total: 0 };
       const r = calificarModulo(m.id, a.aciertos, a.total);
-      ins.run(intento.id, m.id, r.aciertos, r.total, r.puntaje, r.nivel);
+      await ejecutar(
+        `INSERT INTO resultados (intento_id, modulo, aciertos, total, puntaje, nivel)
+         VALUES ($1, $2, $3, $4, $5, $6)
+         ON CONFLICT (intento_id, modulo) DO UPDATE SET
+           aciertos = EXCLUDED.aciertos, total = EXCLUDED.total,
+           puntaje = EXCLUDED.puntaje, nivel = EXCLUDED.nivel`,
+        [intento.id, m.id, r.aciertos, r.total, r.puntaje, r.nivel],
+        cliente
+      );
     }
-    db.prepare(
-      "UPDATE intentos SET estado = 'finalizado', finalizado_en = ?, motivo_cierre = ? WHERE id = ?"
-    ).run(ahora(), motivo, intento.id);
-    db.exec('COMMIT');
-  } catch (e) {
-    db.exec('ROLLBACK');
-    throw e;
-  }
+    await ejecutar(
+      "UPDATE intentos SET estado = 'finalizado', finalizado_en = $1, motivo_cierre = $2 WHERE id = $3",
+      [ahora(), motivo, intento.id],
+      cliente
+    );
+  });
+
   return intento.id;
 }
 
-function resultadosDe(intentoId) {
-  const intento = db.prepare('SELECT * FROM intentos WHERE id = ?').get(intentoId);
-  const filas = db
-    .prepare('SELECT * FROM resultados WHERE intento_id = ?')
-    .all(intentoId)
-    .map((r) => ({
+async function resultadosDe(intentoId) {
+  const intento = await uno('SELECT * FROM intentos WHERE id = $1', [intentoId]);
+  const filas = (await consulta('SELECT * FROM resultados WHERE intento_id = $1', [intentoId])).map(
+    (r) => ({
       modulo: r.modulo,
       modulo_nombre: NOMBRES_MODULO[r.modulo] || r.modulo,
       aciertos: r.aciertos,
@@ -228,16 +241,18 @@ function resultadosDe(intentoId) {
       puntaje: r.puntaje,
       nivel: r.nivel,
       descripcion_nivel: DESCRIPCION_NIVEL[r.nivel] || '',
-    }));
+    })
+  );
   // Se respeta el orden del blueprint, no el de la base de datos.
   filas.sort(
     (a, b) =>
       MODULOS.findIndex((m) => m.id === a.modulo) - MODULOS.findIndex((m) => m.id === b.modulo)
   );
 
-  const respondidas = db
-    .prepare('SELECT COUNT(*) AS n FROM respuestas WHERE intento_id = ? AND opcion IS NOT NULL')
-    .get(intentoId).n;
+  const { n: respondidas } = await uno(
+    'SELECT COUNT(*)::int AS n FROM respuestas WHERE intento_id = $1 AND opcion IS NOT NULL',
+    [intentoId]
+  );
 
   const duracionSeg = intento.finalizado_en
     ? Math.round(
@@ -269,54 +284,49 @@ const SQL_REVISION = `
     JOIN preguntas p ON p.id = ip.pregunta_id
     LEFT JOIN contextos c ON c.id = p.contexto_id
     LEFT JOIN respuestas r ON r.intento_id = ip.intento_id AND r.pregunta_id = p.id
-   WHERE ip.intento_id = ?
+   WHERE ip.intento_id = $1
    ORDER BY ip.orden
 `;
 
-function revisionDe(intentoId) {
-  return db
-    .prepare(SQL_REVISION)
-    .all(intentoId)
-    .map((f) => ({
-      numero: f.orden,
-      id: f.id,
-      modulo: f.modulo,
-      modulo_nombre: NOMBRES_MODULO[f.modulo] || f.modulo,
-      competencia: f.competencia,
-      competencia_nombre: nombreCompetencia(f.competencia),
-      tema: f.tema,
-      enunciado: f.enunciado,
-      opciones: JSON.parse(f.opciones),
-      contexto: f.contexto_id
-        ? { titulo: f.contexto_titulo, contenido: f.contexto_contenido, fuente: f.contexto_fuente }
-        : null,
-      marcada: f.marcada ?? null,
-      correcta: f.correcta,
-      estado:
-        f.marcada == null ? 'sin_responder' : f.marcada === f.correcta ? 'correcta' : 'incorrecta',
-      justificacion: f.justificacion,
-      justificacion_error:
-        f.marcada && f.marcada !== f.correcta
-          ? JSON.parse(f.justificaciones_incorrectas)[f.marcada] || ''
-          : '',
-    }));
+async function revisionDe(intentoId) {
+  const filas = await consulta(SQL_REVISION, [intentoId]);
+  return filas.map((f) => ({
+    numero: f.orden,
+    id: f.id,
+    modulo: f.modulo,
+    modulo_nombre: NOMBRES_MODULO[f.modulo] || f.modulo,
+    competencia: f.competencia,
+    competencia_nombre: nombreCompetencia(f.competencia),
+    tema: f.tema,
+    enunciado: f.enunciado,
+    opciones: JSON.parse(f.opciones),
+    contexto: f.contexto_id
+      ? { titulo: f.contexto_titulo, contenido: f.contexto_contenido, fuente: f.contexto_fuente }
+      : null,
+    marcada: f.marcada ?? null,
+    correcta: f.correcta,
+    estado:
+      f.marcada == null ? 'sin_responder' : f.marcada === f.correcta ? 'correcta' : 'incorrecta',
+    justificacion: f.justificacion,
+    justificacion_error:
+      f.marcada && f.marcada !== f.correcta
+        ? JSON.parse(f.justificaciones_incorrectas)[f.marcada] || ''
+        : '',
+  }));
 }
 
-function historialDe(userId) {
-  return db
-    .prepare(
-      `SELECT i.id, i.estado, i.iniciado_en, i.finalizado_en, i.motivo_cierre,
-              (SELECT SUM(aciertos) FROM resultados WHERE intento_id = i.id) AS aciertos,
-              (SELECT SUM(total) FROM resultados WHERE intento_id = i.id) AS total
-         FROM intentos i
-        WHERE i.user_id = ?
-        ORDER BY i.iniciado_en DESC`
-    )
-    .all(userId)
-    .map((i) => {
-      const puntajes = db.prepare('SELECT puntaje FROM resultados WHERE intento_id = ?').all(i.id);
-      return { ...i, puntaje_global: promedioGlobal(puntajes) };
-    });
+async function historialDe(userId) {
+  return consulta(
+    `SELECT i.id, i.estado, i.iniciado_en, i.finalizado_en, i.motivo_cierre,
+            (SELECT SUM(aciertos)::int FROM resultados WHERE intento_id = i.id) AS aciertos,
+            (SELECT SUM(total)::int FROM resultados WHERE intento_id = i.id) AS total,
+            COALESCE((SELECT ROUND(AVG(puntaje))::int FROM resultados WHERE intento_id = i.id), 0)
+              AS puntaje_global
+       FROM intentos i
+      WHERE i.user_id = $1
+      ORDER BY i.iniciado_en DESC`,
+    [userId]
+  );
 }
 
 module.exports = {

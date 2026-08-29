@@ -1,17 +1,27 @@
 'use strict';
 
-// Prueba de extremo a extremo del flujo completo, contra una base de datos temporal.
+// Prueba de extremo a extremo del flujo completo, contra un esquema temporal de
+// la misma base de Postgres, que se crea al empezar y se borra al terminar.
+// Nunca toca los datos reales del esquema "public".
+//
 // Verifica sobre todo las dos reglas que gobiernan la app:
 //   1. un usuario no puede tener dos simulacros corriendo;
 //   2. no se pueden ver respuestas mientras haya un simulacro en curso.
+//
 // Uso: npm run smoke
 
-const fs = require('node:fs');
-const os = require('node:os');
-const path = require('node:path');
+const ESQUEMA = `smoke_${process.pid}_${Date.now().toString(36)}`;
+process.env.SIMULACRO_ESQUEMA = ESQUEMA;
 
-const RUTA_DB = path.join(os.tmpdir(), `simulacro-smoke-${process.pid}.db`);
-process.env.SIMULACRO_DB = RUTA_DB;
+if (!process.env.DATABASE_URL) {
+  console.error(
+    'Falta DATABASE_URL. Copia .env.example a .env y pega la cadena de conexión de Supabase.'
+  );
+  process.exit(1);
+}
+
+const { consulta, ejecutar, pool, cerrar } = require('../server/db');
+const seed = require('./seed.js');
 
 let fallos = 0;
 let pruebas = 0;
@@ -25,24 +35,6 @@ function check(nombre, condicion, detalle = '') {
     console.error(`  FALLA ${nombre}${detalle ? ` — ${detalle}` : ''}`);
   }
 }
-
-function limpiar() {
-  for (const sufijo of ['', '-wal', '-shm', '-journal']) {
-    try {
-      fs.unlinkSync(RUTA_DB + sufijo);
-    } catch {
-      /* puede no existir */
-    }
-  }
-}
-
-limpiar();
-
-// Carga el banco en la base temporal (imprime su propio reporte).
-require('./seed.js');
-
-const { db } = require('../server/db');
-const app = require('../server/index');
 
 let cookie = '';
 let base = '';
@@ -68,10 +60,14 @@ async function pedir(ruta, opciones = {}) {
 }
 
 async function main() {
+  console.log(`Esquema temporal: ${ESQUEMA}\n`);
+  await seed.main();
+
+  const app = require('../server/index');
   const server = app.listen(0);
   await new Promise((r) => server.once('listening', r));
   base = `http://127.0.0.1:${server.address().port}`;
-  console.log(`\nServidor de prueba en ${base}\n`);
+  console.log(`Servidor de prueba en ${base}\n`);
 
   console.log('Autenticación');
   const usuario = `smoke_${Date.now()}`;
@@ -83,9 +79,13 @@ async function main() {
 
   r = await pedir('/api/auth/register', {
     method: 'POST',
-    body: { usuario, password: 'secreta123' },
+    body: { usuario: usuario.toUpperCase(), password: 'secreta123' },
   });
-  check('registro duplicado devuelve 409', r.status === 409, `status ${r.status}`);
+  check(
+    'registro duplicado devuelve 409 sin distinguir mayúsculas',
+    r.status === 409,
+    `status ${r.status}`
+  );
 
   r = await pedir('/api/auth/login', { method: 'POST', body: { usuario, password: 'incorrecta' } });
   check('login con clave errada devuelve 401', r.status === 401, `status ${r.status}`);
@@ -118,7 +118,11 @@ async function main() {
   console.log('\nCuadernillo del examen');
   r = await pedir(`/api/intentos/${intentoId}`);
   const examen = r.datos;
-  check('el cuadernillo trae 160 preguntas', examen.preguntas.length === 160, `trae ${examen.preguntas.length}`);
+  check(
+    'el cuadernillo trae 160 preguntas',
+    examen.preguntas.length === 160,
+    `trae ${examen.preguntas?.length}`
+  );
 
   const serializado = JSON.stringify(examen);
   check(
@@ -141,13 +145,11 @@ async function main() {
   // Responde correctamente la mitad y deja unas cuantas en blanco, para que el
   // análisis tenga aciertos, errores y preguntas sin responder.
   const correctasReales = new Map(
-    db
-      .prepare('SELECT id, correcta FROM preguntas')
-      .all()
-      .map((p) => [p.id, p.correcta])
+    (await consulta('SELECT id, correcta FROM preguntas')).map((p) => [p.id, p.correcta])
   );
 
   let esperadas = 0;
+  let errorAlGuardar = null;
   for (const [i, p] of examen.preguntas.entries()) {
     if (i % 10 === 9) continue; // 16 preguntas quedan en blanco
     const correcta = correctasReales.get(p.id);
@@ -159,11 +161,11 @@ async function main() {
       body: { opcion: elegida, revisar: i % 25 === 0 },
     });
     if (res.status !== 200) {
-      check(`guardar la respuesta ${p.numero}`, false, `status ${res.status}`);
+      errorAlGuardar = `pregunta ${p.numero}: status ${res.status}`;
       break;
     }
   }
-  check('todas las respuestas se guardaron', true);
+  check('todas las respuestas se guardaron', errorAlGuardar === null, errorAlGuardar || '');
 
   r = await pedir(`/api/intentos/${intentoId}/respuestas/${examen.preguntas[0].id}`, {
     method: 'PUT',
@@ -222,18 +224,26 @@ async function main() {
     analisis.plan_de_estudio.every((p) => p.que_estudiar.length > 0 && p.como_practicar)
   );
 
+  console.log('\nHistorial');
+  r = await pedir('/api/intentos');
+  check('el historial lista el intento finalizado', r.datos.intentos.length === 1);
+  check(
+    'el historial calcula el puntaje global',
+    r.datos.intentos[0].puntaje_global === resultados.puntaje_global,
+    `historial ${r.datos.intentos[0].puntaje_global}, resultados ${resultados.puntaje_global}`
+  );
+
   console.log('\nVencimiento del tiempo');
   r = await pedir('/api/intentos', { method: 'POST' });
   check('se puede iniciar otro simulacro tras finalizar', r.status === 201, `status ${r.status}`);
   const segundoId = r.datos.intento_id;
 
-  // Se fuerza el vencimiento en la base: la siguiente petición debe cerrarlo sola.
-  db.prepare('UPDATE intentos SET vence_en = ? WHERE id = ?').run(
+  // Se fuerza el vencimiento en la base: la siguiente petición debe cerrarlo solo.
+  await ejecutar('UPDATE intentos SET vence_en = $1 WHERE id = $2', [
     new Date(Date.now() - 1000).toISOString(),
-    segundoId
-  );
+    segundoId,
+  ]);
 
-  const primera = (await pedir(`/api/intentos/${segundoId}`)).datos;
   r = await pedir('/api/auth/me');
   check(
     'un intento vencido se cierra solo en la siguiente petición',
@@ -245,11 +255,7 @@ async function main() {
     method: 'PUT',
     body: { opcion: 'A' },
   });
-  check(
-    'ya no se aceptan respuestas en un intento vencido',
-    r.status === 409,
-    `status ${r.status}`
-  );
+  check('ya no se aceptan respuestas en un intento vencido', r.status === 409, `status ${r.status}`);
 
   r = await pedir(`/api/intentos/${segundoId}/resultados`);
   check(
@@ -258,7 +264,6 @@ async function main() {
     `motivo ${r.datos?.motivo_cierre}`
   );
   check('el intento vencido se calificó igual', r.datos.total === 160, `total ${r.datos?.total}`);
-  check('el cuadernillo vencido seguía respondiendo antes del cierre', primera != null);
 
   console.log('\nAislamiento entre usuarios');
   const otro = `smoke_otro_${Date.now()}`;
@@ -275,10 +280,17 @@ async function main() {
 
   server.close();
   console.log(`\n${pruebas - fallos}/${pruebas} verificaciones pasaron.`);
-  if (fallos) {
-    console.error(`${fallos} verificaciones fallaron.`);
-    process.exitCode = 1;
+  if (fallos) process.exitCode = 1;
+}
+
+async function limpiar() {
+  try {
+    await pool.query(`DROP SCHEMA IF EXISTS ${ESQUEMA} CASCADE`);
+    console.log(`Esquema temporal ${ESQUEMA} eliminado.`);
+  } catch (e) {
+    console.error(`No se pudo eliminar el esquema ${ESQUEMA}: ${e.message}`);
   }
+  await cerrar();
 }
 
 main()
@@ -286,6 +298,4 @@ main()
     console.error(e);
     process.exitCode = 1;
   })
-  .finally(() => {
-    setTimeout(limpiar, 100);
-  });
+  .finally(limpiar);

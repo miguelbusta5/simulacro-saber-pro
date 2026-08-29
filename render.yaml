@@ -1,0 +1,17 @@
+# Despliegue en Render. Al conectar el repositorio, Render lee este archivo.
+# DATABASE_URL se configura a mano en el panel (Environment), no aquí:
+# es un secreto y no debe quedar en el repositorio.
+services:
+  - type: web
+    name: simulacro-saber-pro
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm ci && npm run seed
+    startCommand: npm start
+    healthCheckPath: /api/salud
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false

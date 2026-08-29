@@ -4,27 +4,55 @@ Aplicación web para presentar simulacros de las **competencias genéricas de se
 múltiple** del Saber Pro (ICFES), con cronómetro controlado por el servidor, resultado por
 módulo, revisión de respuestas y análisis de qué estudiar.
 
-## Cómo ejecutarla
+Node + Express + Postgres (Supabase). El frontend es HTML, CSS y JavaScript sin paso de build.
+
+## Puesta en marcha
+
+**1. Crea la base de datos.** En [supabase.com](https://supabase.com) crea un proyecto. Ve a
+*Project Settings → Database → Connection string → URI*, copia la del *Session pooler* y
+reemplaza `[YOUR-PASSWORD]` por la contraseña de la base de datos.
+
+**2. Configura el proyecto.** Copia `.env.example` como `.env` y pega ahí tu URI en
+`DATABASE_URL`. Ese archivo está en `.gitignore` y nunca se sube al repositorio.
 
 ```bash
 npm install
 ```
 
+**3. Crea las tablas y carga el banco de preguntas.**
+
 ```bash
 npm run seed
 ```
+
+**4. Levanta la aplicación.**
 
 ```bash
 npm start
 ```
 
-Luego abre <http://localhost:3000>, crea una cuenta y empieza.
+Abre <http://localhost:3000>, crea una cuenta y empieza.
 
 Para verificar que todo funciona de extremo a extremo:
 
 ```bash
 npm run smoke
 ```
+
+La prueba crea un esquema temporal en la misma base, corre el flujo completo y lo borra al
+terminar. Nunca toca tus datos reales.
+
+## Despliegue en Render
+
+El repositorio incluye `render.yaml`. En Render: *New → Blueprint*, conecta este repositorio y
+en *Environment* agrega la variable `DATABASE_URL` con la misma URI de Supabase. El plan
+gratuito basta, porque los datos viven en Supabase y no en el disco del servidor.
+
+Cada despliegue ejecuta `npm run seed`, así que los cambios que hagas al banco de preguntas
+llegan solos a producción. Como la carga es un *upsert* por `id`, no se duplica nada.
+
+Ten en cuenta que el servicio gratuito de Render se duerme tras un rato sin tráfico y la
+primera petición después tarda unos segundos.
 
 ## Cómo está armada la prueba
 
@@ -89,7 +117,7 @@ todo antes de escribir y al final imprime la cobertura frente al blueprint.
 ```
 server/
   index.js            servidor Express
-  db.js               esquema SQLite (node:sqlite, sin dependencias nativas)
+  db.js               pool de Postgres, esquema y helpers de consulta
   auth.js             scrypt + sesiones en cookie
   routes/             auth.js, intentos.js
   exam/               blueprint, selección, calificación, análisis, lógica de intentos
@@ -97,6 +125,15 @@ data/banco/           banco de preguntas por módulo
 data/estudio.json     recomendaciones de estudio por competencia y tema
 public/               interfaz (HTML + CSS + JS sin build)
 scripts/              seed.js, smoke.js
+render.yaml           configuración de despliegue
 ```
 
-La base de datos (`simulacro.db`) se crea sola en la raíz del proyecto y está en `.gitignore`.
+## Seguridad
+
+- Las contraseñas se guardan con `scrypt` y sal por usuario; nunca en texto plano.
+- Las sesiones son cookies `HttpOnly` con `SameSite=Lax`, y `Secure` en producción.
+- El navegador **nunca** recibe la respuesta correcta de una pregunta que esté en curso: el
+  cuadernillo se arma en el servidor sin esos campos. Por eso la app habla con Postgres
+  únicamente a través del Express, y no expone la base directamente al cliente.
+- `.env` está en `.gitignore`. La `DATABASE_URL` se configura como variable de entorno en el
+  proveedor de hosting, nunca dentro del repositorio.

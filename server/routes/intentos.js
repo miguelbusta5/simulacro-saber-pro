@@ -23,60 +23,85 @@ const router = express.Router();
 router.use(exigirUsuario);
 
 // Todo lo que sigue depende del reloj: antes de responder nada, se cierran los
-// intentos cuyo plazo ya vencio.
-router.use((req, _res, next) => {
-  cerrarVencidos(req.usuario.id);
-  next();
+// intentos cuyo plazo ya venció.
+router.use(async (req, _res, next) => {
+  try {
+    await cerrarVencidos(req.usuario.id);
+    next();
+  } catch (e) {
+    next(e);
+  }
 });
 
 // Bloqueo central: mientras haya un simulacro corriendo no se pueden ver
-// respuestas buenas/malas ni el analisis de ningun intento anterior.
-function exigirSinIntentoEnCurso(req, res, next) {
-  const activo = intentoActivoDe(req.usuario.id);
-  if (activo) {
-    return res.status(409).json({
-      error: 'REVISION_BLOQUEADA',
-      mensaje:
-        'No puedes ver las respuestas mientras tengas un simulacro en curso. Termínalo o espera a que se acabe el tiempo.',
-      intento_activo: { id: activo.id, segundos_restantes: segundosRestantes(activo) },
-    });
+// respuestas buenas/malas ni el análisis de ningún intento anterior.
+async function exigirSinIntentoEnCurso(req, res, next) {
+  try {
+    const activo = await intentoActivoDe(req.usuario.id);
+    if (activo) {
+      return res.status(409).json({
+        error: 'REVISION_BLOQUEADA',
+        mensaje:
+          'No puedes ver las respuestas mientras tengas un simulacro en curso. Termínalo o espera a que se acabe el tiempo.',
+        intento_activo: { id: activo.id, segundos_restantes: segundosRestantes(activo) },
+      });
+    }
+    next();
+  } catch (e) {
+    next(e);
   }
-  next();
 }
 
-router.get('/', (req, res) => {
-  res.json({
-    intentos: historialDe(req.usuario.id),
-    revision_bloqueada: !!intentoActivoDe(req.usuario.id),
-  });
+// Exige que el intento exista, sea del usuario y esté finalizado.
+async function intentoFinalizado(req) {
+  const intento = await obtenerIntento(req.params.id, req.usuario.id);
+  if (intento.estado !== 'finalizado') {
+    throw new ErrorApp(409, 'INTENTO_EN_CURSO', 'Este simulacro todavía no ha terminado.');
+  }
+  return intento;
+}
+
+router.get('/', async (req, res, next) => {
+  try {
+    res.json({
+      intentos: await historialDe(req.usuario.id),
+      revision_bloqueada: !!(await intentoActivoDe(req.usuario.id)),
+    });
+  } catch (e) {
+    next(e);
+  }
 });
 
-router.post('/', (req, res, next) => {
+router.post('/', async (req, res, next) => {
   try {
-    const id = crearIntento(req.usuario.id);
+    const id = await crearIntento(req.usuario.id);
     res.status(201).json({ intento_id: id });
   } catch (e) {
     next(e);
   }
 });
 
-router.get('/activo', (req, res) => {
-  const activo = intentoActivoDe(req.usuario.id);
-  res.json(
-    activo
-      ? {
-          intento_id: activo.id,
-          iniciado_en: activo.iniciado_en,
-          vence_en: activo.vence_en,
-          segundos_restantes: segundosRestantes(activo),
-        }
-      : { intento_id: null }
-  );
+router.get('/activo', async (req, res, next) => {
+  try {
+    const activo = await intentoActivoDe(req.usuario.id);
+    res.json(
+      activo
+        ? {
+            intento_id: activo.id,
+            iniciado_en: activo.iniciado_en,
+            vence_en: activo.vence_en,
+            segundos_restantes: segundosRestantes(activo),
+          }
+        : { intento_id: null }
+    );
+  } catch (e) {
+    next(e);
+  }
 });
 
-router.get('/:id', (req, res, next) => {
+router.get('/:id', async (req, res, next) => {
   try {
-    const intento = obtenerIntento(req.params.id, req.usuario.id);
+    const intento = await obtenerIntento(req.params.id, req.usuario.id);
     if (intento.estado !== 'en_curso') {
       throw new ErrorApp(
         409,
@@ -84,69 +109,61 @@ router.get('/:id', (req, res, next) => {
         'Este simulacro ya fue finalizado. Consulta sus resultados.'
       );
     }
-    res.json(cuadernillo(intento));
+    res.json(await cuadernillo(intento));
   } catch (e) {
     next(e);
   }
 });
 
-router.put('/:id/respuestas/:preguntaId', (req, res, next) => {
+router.put('/:id/respuestas/:preguntaId', async (req, res, next) => {
   try {
     const { opcion = null, revisar = false } = req.body || {};
-    const r = guardarRespuesta(
-      req.params.id,
-      req.usuario.id,
-      req.params.preguntaId,
-      opcion === '' ? null : opcion,
-      revisar
+    res.json(
+      await guardarRespuesta(
+        req.params.id,
+        req.usuario.id,
+        req.params.preguntaId,
+        opcion === '' ? null : opcion,
+        revisar
+      )
     );
-    res.json(r);
   } catch (e) {
     next(e);
   }
 });
 
-router.post('/:id/finalizar', (req, res, next) => {
+router.post('/:id/finalizar', async (req, res, next) => {
   try {
-    const intento = obtenerIntento(req.params.id, req.usuario.id);
-    finalizarIntento(intento.id, req.usuario.id, 'entregado');
+    const intento = await obtenerIntento(req.params.id, req.usuario.id);
+    await finalizarIntento(intento.id, req.usuario.id, 'entregado');
     res.json({ intento_id: intento.id });
   } catch (e) {
     next(e);
   }
 });
 
-router.get('/:id/resultados', exigirSinIntentoEnCurso, (req, res, next) => {
+router.get('/:id/resultados', exigirSinIntentoEnCurso, async (req, res, next) => {
   try {
-    const intento = obtenerIntento(req.params.id, req.usuario.id);
-    if (intento.estado !== 'finalizado') {
-      throw new ErrorApp(409, 'INTENTO_EN_CURSO', 'Este simulacro todavía no ha terminado.');
-    }
-    res.json(resultadosDe(intento.id));
+    const intento = await intentoFinalizado(req);
+    res.json(await resultadosDe(intento.id));
   } catch (e) {
     next(e);
   }
 });
 
-router.get('/:id/revision', exigirSinIntentoEnCurso, (req, res, next) => {
+router.get('/:id/revision', exigirSinIntentoEnCurso, async (req, res, next) => {
   try {
-    const intento = obtenerIntento(req.params.id, req.usuario.id);
-    if (intento.estado !== 'finalizado') {
-      throw new ErrorApp(409, 'INTENTO_EN_CURSO', 'Este simulacro todavía no ha terminado.');
-    }
-    res.json({ intento_id: intento.id, preguntas: revisionDe(intento.id) });
+    const intento = await intentoFinalizado(req);
+    res.json({ intento_id: intento.id, preguntas: await revisionDe(intento.id) });
   } catch (e) {
     next(e);
   }
 });
 
-router.get('/:id/analisis', exigirSinIntentoEnCurso, (req, res, next) => {
+router.get('/:id/analisis', exigirSinIntentoEnCurso, async (req, res, next) => {
   try {
-    const intento = obtenerIntento(req.params.id, req.usuario.id);
-    if (intento.estado !== 'finalizado') {
-      throw new ErrorApp(409, 'INTENTO_EN_CURSO', 'Este simulacro todavía no ha terminado.');
-    }
-    res.json(analizarIntento(intento.id));
+    const intento = await intentoFinalizado(req);
+    res.json(await analizarIntento(intento.id));
   } catch (e) {
     next(e);
   }
