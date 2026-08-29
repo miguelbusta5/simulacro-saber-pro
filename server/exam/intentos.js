@@ -76,7 +76,7 @@ async function crearIntento(userId) {
       // a la base serían muy lentos contra un Postgres remoto.
       await ejecutar(
         `INSERT INTO intento_preguntas (intento_id, orden, pregunta_id, modulo)
-         SELECT $1, orden, pregunta_id, modulo
+         SELECT $1::int, orden, pregunta_id, modulo
            FROM unnest($2::int[], $3::text[], $4::text[]) AS t(orden, pregunta_id, modulo)`,
         [
           intentoId,

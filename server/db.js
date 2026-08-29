@@ -24,10 +24,11 @@ const pool = new Pool({
   // un certificado que no encadena con las CA del sistema.
   ssl: esLocal ? false : { rejectUnauthorized: false },
   max: Number(process.env.PG_MAX_CONEXIONES) || 8,
-});
-
-pool.on('connect', (cliente) => {
-  cliente.query(`SET search_path TO ${ESQUEMA}`);
+  // El search_path se fija al abrir la conexión, no con un SET posterior: así no
+  // hay ventana en la que una consulta apunte al esquema equivocado. Solo hace
+  // falta para las pruebas; en producción el esquema es "public", que ya es el
+  // valor por defecto, y así no se envía un parámetro que algunos poolers rechazan.
+  ...(ESQUEMA === 'public' ? {} : { options: `-c search_path=${ESQUEMA}` }),
 });
 
 pool.on('error', (e) => {
