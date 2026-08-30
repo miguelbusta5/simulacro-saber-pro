@@ -11,7 +11,8 @@ Node + Express + Postgres. El frontend es HTML, CSS y JavaScript sin paso de bui
 **1. Crea la base de datos.** Sirve cualquier Postgres; la app no depende de ningún proveedor.
 
 - **[Neon](https://neon.tech)** — recomendado: el proyecto despierta solo tras la inactividad.
-  Copia la *Connection string* del panel.
+  Copia la *Connection string* del panel, o deja que el CLI escriba el `.env` por ti:
+  `npx neon@latest auth` y luego `npx neon@latest env pull`.
 - **[Supabase](https://supabase.com)** — *Project Settings → Database → Connection string → URI*.
   Usa la del **Session pooler**, no la *Direct connection*: esa última solo responde por IPv6 y
   falla desde Render.
@@ -56,6 +57,11 @@ npm run smoke
 
 La prueba crea un esquema temporal en la misma base, corre el flujo completo y lo borra al
 terminar. Nunca toca tus datos reales.
+
+Fijar ese esquema es una operación de sesión, y las conexiones agrupadas no las admiten (en
+Neon, el host con sufijo `-pooler`; en Supabase, el *transaction pooler*). Si tu `.env` define
+`DATABASE_URL_UNPOOLED`, la prueba la usa automáticamente. La aplicación en producción sí debe
+usar la agrupada.
 
 ## Despliegue en Render
 

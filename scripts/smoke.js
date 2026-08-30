@@ -13,9 +13,17 @@
 const ESQUEMA = `smoke_${process.pid}_${Date.now().toString(36)}`;
 process.env.SIMULACRO_ESQUEMA = ESQUEMA;
 
+// Esta prueba crea un esquema propio y lo fija en la conexión, que es una
+// operación de sesión. Las conexiones agrupadas (PgBouncer en modo transacción,
+// como el endpoint "-pooler" de Neon) no las admiten, así que si hay una URL
+// directa disponible se usa esa. La app en producción sí usa la agrupada.
+if (process.env.DATABASE_URL_UNPOOLED) {
+  process.env.DATABASE_URL = process.env.DATABASE_URL_UNPOOLED;
+}
+
 if (!process.env.DATABASE_URL) {
   console.error(
-    'Falta DATABASE_URL. Copia .env.example a .env y pega la cadena de conexión de Supabase.'
+    'Falta DATABASE_URL. Copia .env.example a .env y pega ahí la cadena de conexión de tu Postgres.'
   );
   process.exit(1);
 }

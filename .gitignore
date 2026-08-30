@@ -5,3 +5,6 @@ node_modules/
 *.db-wal
 *.db-shm
 *.db-journal
+
+# Enlaces que el instalador de skills crea por agente; se regeneran solos.
+.claude/skills/
