@@ -20,9 +20,13 @@ const esLocal = /localhost|127\.0\.0\.1/.test(URL_BD);
 
 const pool = new Pool({
   connectionString: URL_BD,
-  // Supabase y la mayoría de proveedores administrados exigen TLS, pero presentan
-  // un certificado que no encadena con las CA del sistema.
-  ssl: esLocal ? false : { rejectUnauthorized: false },
+  // Por esta conexión viajan hashes de contraseñas, tokens de sesión y las
+  // respuestas correctas del examen, así que se valida el certificado del
+  // servidor: sin validar, cualquiera que intercepte la red podría hacerse pasar
+  // por la base de datos. Neon y Supabase usan certificados de una CA pública y
+  // la validación funciona sin configuración extra. La variable de escape es
+  // para un Postgres propio con certificado autofirmado.
+  ssl: esLocal ? false : { rejectUnauthorized: process.env.PG_SSL_SIN_VERIFICAR !== '1' },
   max: Number(process.env.PG_MAX_CONEXIONES) || 8,
   // El search_path se fija al abrir la conexión, no con un SET posterior: así no
   // hay ventana en la que una consulta apunte al esquema equivocado. Solo hace

@@ -161,3 +161,8 @@ render.yaml           configuración de despliegue
   únicamente a través del Express, y no expone la base directamente al cliente.
 - `.env` está en `.gitignore`. La `DATABASE_URL` se configura como variable de entorno en el
   proveedor de hosting, nunca dentro del repositorio.
+- La conexión a Postgres **valida el certificado del servidor**. Por ahí viajan hashes de
+  contraseñas, tokens de sesión y las respuestas correctas del examen, así que no se acepta un
+  certificado cualquiera. Neon y Supabase usan una CA pública y funciona sin configuración. Solo
+  si conectas a un Postgres propio con certificado autofirmado, agrega `PG_SSL_SIN_VERIFICAR=1`
+  al `.env`.

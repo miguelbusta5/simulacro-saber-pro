@@ -43,10 +43,12 @@ const PISTAS = [
     texto: 'La base de datos indicada al final de la URL no existe. En Supabase y Neon suele ser "postgres".',
   },
   {
-    coincide: (e) => /self.signed certificate|certificate/i.test(e.message),
+    coincide: (e) => /self.signed certificate|certificate|unable to verify/i.test(e.message),
     texto:
-      'Problema con el certificado TLS. La app ya acepta los certificados de los proveedores\n' +
-      'administrados, así que revisa que la URL no traiga parámetros de sslmode contradictorios.',
+      'No se pudo validar el certificado TLS del servidor. Neon y Supabase usan certificados de\n' +
+      'una CA pública, así que esto no debería pasar: confirma que el host sea el correcto antes\n' +
+      'de saltarte la validación. Si es un Postgres propio con certificado autofirmado, agrega\n' +
+      'PG_SSL_SIN_VERIFICAR=1 a tu .env.',
   },
   {
     coincide: (e) => /timeout|ETIMEDOUT/i.test(e.message) || e.code === 'ETIMEDOUT',
@@ -78,7 +80,9 @@ async function main() {
 
   const cliente = new Client({
     connectionString: URL_BD,
-    ssl: /localhost|127\.0\.0\.1/.test(URL_BD) ? false : { rejectUnauthorized: false },
+    ssl: /localhost|127\.0\.0\.1/.test(URL_BD)
+      ? false
+      : { rejectUnauthorized: process.env.PG_SSL_SIN_VERIFICAR !== '1' },
     connectionTimeoutMillis: 15000,
   });
 
