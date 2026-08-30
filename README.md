@@ -69,7 +69,12 @@ GitHub guarda el código y dispara el despliegue, pero no ejecuta la app: GitHub
 archivos estáticos y aquí hace falta un proceso Node y una base de datos.
 
 En Render: *New → Blueprint*, conecta este repositorio (lee `render.yaml`) y en *Environment*
-agrega la variable `DATABASE_URL` con la misma URI del paso 1. El plan gratuito basta, porque los
+agrega la variable `DATABASE_URL` con la misma URI del paso 1 (la agrupada, la del host con
+`-pooler`).
+
+`render.yaml` fija la región en **ohio**, que es la más cercana a la región `us-east-2` de la
+base. Si creas tu base en otra región, cambia esa línea: cada consulta cruza esa distancia y con
+160 preguntas por simulacro la diferencia se nota. El plan gratuito basta, porque los
 datos viven en el Postgres administrado y no en el disco del servidor.
 
 Cada despliegue ejecuta `npm run seed`, así que los cambios que hagas al banco de preguntas

@@ -6,7 +6,7 @@ services:
     name: simulacro-saber-pro
     runtime: node
     plan: free
-    region: oregon
+    region: ohio
     buildCommand: npm ci && npm run seed
     startCommand: npm start
     healthCheckPath: /api/salud
