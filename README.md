@@ -72,6 +72,10 @@ En Render: *New → Blueprint*, conecta este repositorio (lee `render.yaml`) y e
 agrega la variable `DATABASE_URL` con la misma URI del paso 1 (la agrupada, la del host con
 `-pooler`).
 
+Un detalle fácil de pasar por alto: `neon env pull` escribe los valores **entre comillas** en el
+`.env`. Node las quita al leer el archivo, pero el panel de Render guarda lo que pegues tal cual,
+así que copia el valor **sin las comillas** o la conexión fallará.
+
 `render.yaml` fija la región en **ohio**, que es la más cercana a la región `us-east-2` de la
 base. Si creas tu base en otra región, cambia esa línea: cada consulta cruza esa distancia y con
 160 preguntas por simulacro la diferencia se nota. El plan gratuito basta, porque los
