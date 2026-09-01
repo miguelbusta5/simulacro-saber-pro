@@ -29,7 +29,17 @@ if (!process.env.DATABASE_URL) {
 }
 
 const { consulta, ejecutar, pool, cerrar } = require('../server/db');
+const {
+  VERSION_ACTIVA,
+  modulosDe,
+  duracionDe,
+  totalPreguntasDe,
+} = require('../server/exam/blueprint');
 const seed = require('./seed.js');
+
+const TOTAL = totalPreguntasDe(VERSION_ACTIVA);
+const MODULOS = modulosDe(VERSION_ACTIVA);
+const DURACION = duracionDe(VERSION_ACTIVA);
 
 let fallos = 0;
 let pruebas = 0;
@@ -127,9 +137,19 @@ async function main() {
   r = await pedir(`/api/intentos/${intentoId}`);
   const examen = r.datos;
   check(
-    'el cuadernillo trae 160 preguntas',
-    examen.preguntas.length === 160,
+    `el cuadernillo trae ${TOTAL} preguntas`,
+    examen.preguntas.length === TOTAL,
     `trae ${examen.preguntas?.length}`
+  );
+  check(
+    `el cuadernillo trae los ${MODULOS.length} módulos de la versión activa`,
+    MODULOS.every((m) => examen.preguntas.filter((p) => p.modulo === m.id).length === m.preguntas),
+    MODULOS.map((m) => `${m.id}:${examen.preguntas.filter((p) => p.modulo === m.id).length}`).join(' ')
+  );
+  check(
+    'el cuadernillo informa la versión que se está presentando',
+    examen.version === VERSION_ACTIVA && !!examen.version_nombre,
+    `version ${examen.version}, nombre ${examen.version_nombre}`
   );
 
   const serializado = JSON.stringify(examen);
@@ -144,8 +164,8 @@ async function main() {
     'aparece una justificación en el payload del examen'
   );
   check(
-    'quedan alrededor de 270 minutos',
-    examen.segundos_restantes > 269 * 60 && examen.segundos_restantes <= 270 * 60,
+    `quedan alrededor de ${DURACION} minutos`,
+    examen.segundos_restantes > (DURACION - 1) * 60 && examen.segundos_restantes <= DURACION * 60,
     `${examen.segundos_restantes} s`
   );
 
@@ -157,9 +177,13 @@ async function main() {
   );
 
   let esperadas = 0;
+  let enBlanco = 0;
   let errorAlGuardar = null;
   for (const [i, p] of examen.preguntas.entries()) {
-    if (i % 10 === 9) continue; // 16 preguntas quedan en blanco
+    if (i % 10 === 9) {
+      enBlanco++;
+      continue;
+    }
     const correcta = correctasReales.get(p.id);
     const otra = p.opciones.find((o) => o.clave !== correcta).clave;
     const elegida = i % 2 === 0 ? correcta : otra;
@@ -197,7 +221,23 @@ async function main() {
     resultados.aciertos === esperadas,
     `servidor ${resultados.aciertos}, esperado ${esperadas}`
   );
-  check('los módulos suman 160 preguntas', resultados.total === 160, `total ${resultados.total}`);
+  check(
+    `los módulos suman ${TOTAL} preguntas`,
+    resultados.total === TOTAL,
+    `total ${resultados.total}`
+  );
+  check(
+    'los resultados informan la versión y las fechas',
+    resultados.version === VERSION_ACTIVA &&
+      !!resultados.version_nombre &&
+      !!resultados.iniciado_en &&
+      !!resultados.finalizado_en,
+    JSON.stringify({
+      version: resultados.version,
+      iniciado: resultados.iniciado_en,
+      finalizado: resultados.finalizado_en,
+    })
+  );
   check(
     'el puntaje global está en la escala 0-300',
     resultados.puntaje_global >= 0 && resultados.puntaje_global <= 300,
@@ -212,8 +252,8 @@ async function main() {
     revision.every((p) => p.correcta && p.justificacion)
   );
   check(
-    'la revisión marca 16 preguntas sin responder',
-    revision.filter((p) => p.estado === 'sin_responder').length === 16,
+    `la revisión marca ${enBlanco} preguntas sin responder`,
+    revision.filter((p) => p.estado === 'sin_responder').length === enBlanco,
     `${revision.filter((p) => p.estado === 'sin_responder').length} sin responder`
   );
 
@@ -224,7 +264,7 @@ async function main() {
   check('el análisis agrupa por tema', analisis.por_tema.length > 0);
   check(
     'el análisis reporta las preguntas en blanco',
-    analisis.sin_responder === 16,
+    analisis.sin_responder === enBlanco,
     `reporta ${analisis.sin_responder}`
   );
   check(
@@ -271,7 +311,7 @@ async function main() {
     r.status === 200 && r.datos.motivo_cierre === 'tiempo_agotado',
     `motivo ${r.datos?.motivo_cierre}`
   );
-  check('el intento vencido se calificó igual', r.datos.total === 160, `total ${r.datos?.total}`);
+  check('el intento vencido se calificó igual', r.datos.total === TOTAL, `total ${r.datos?.total}`);
 
   console.log('\nAislamiento entre usuarios');
   const otro = `smoke_otro_${Date.now()}`;

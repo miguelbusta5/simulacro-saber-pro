@@ -1,61 +1,89 @@
 'use strict';
 
-// Estructura oficial de la sesion de competencias genericas de seleccion multiple
-// del Saber Pro. Comunicacion escrita y los modulos especificos quedan fuera
-// porque no son calificables automaticamente / dependen del programa academico.
+// Estructura de las competencias genéricas del Saber Pro.
+//
+// Los cuatro módulos de selección múltiple oficiales conservan sus cifras
+// exactas. Comunicación escrita se incluye también en selección múltiple, que
+// NO es su formato real: en el examen oficial es una única pregunta abierta que
+// califican lectores humanos. Aquí se evalúan las mismas competencias que ese
+// módulo mide, pero el formato es una adaptación, y la app lo advierte en los
+// resultados.
 
-const DURACION_MINUTOS = 270; // 4 h 30 min, igual que una sesion real
+// Los módulos se declaran una sola vez y las versiones los componen: la
+// estructura del ICFES es la misma para todas, lo único que cambia entre una
+// versión y otra son las preguntas del banco.
 
-const MODULOS = [
+const LECTURA_CRITICA = {
+  id: 'lectura_critica',
+  nombre: 'Lectura crítica',
+  preguntas: 35,
+  // La suma de las competencias debe dar el total de preguntas del módulo.
+  competencias: { literal: 9, articulacion: 13, reflexion: 13 },
+};
+
+const RAZONAMIENTO_CUANTITATIVO = {
+  id: 'razonamiento_cuantitativo',
+  nombre: 'Razonamiento cuantitativo',
+  preguntas: 35,
+  competencias: { interpretacion: 13, formulacion: 13, argumentacion: 9 },
+};
+
+const COMPETENCIAS_CIUDADANAS = {
+  id: 'competencias_ciudadanas',
+  nombre: 'Competencias ciudadanas',
+  preguntas: 35,
+  competencias: {
+    conocimientos: 9,
+    argumentacion: 9,
+    multiperspectivismo: 9,
+    pensamiento_sistemico: 8,
+  },
+};
+
+const COMUNICACION_ESCRITA = {
+  id: 'comunicacion_escrita',
+  nombre: 'Comunicación escrita',
+  preguntas: 35,
+  competencias: { planteamiento: 11, organizacion: 13, uso_lenguaje: 11 },
+};
+
+const INGLES = {
+  id: 'ingles',
+  nombre: 'Inglés',
+  preguntas: 55,
+  competencias: { part1: 5, part2: 5, part3: 5, part4: 10, part5: 10, part6: 10, part7: 10 },
+};
+
+// Cada versión declara su propia estructura, porque los intentos ya presentados
+// deben poder consultarse tal como se presentaron.
+const VERSIONES = [
   {
-    id: 'lectura_critica',
-    nombre: 'Lectura crítica',
-    preguntas: 35,
-    // La suma de las competencias debe dar el total de preguntas del modulo.
-    competencias: {
-      literal: 9,
-      articulacion: 13,
-      reflexion: 13,
-    },
+    id: 'v1',
+    nombre: 'Versión 1',
+    descripcion: 'Primera forma del simulacro, con cuatro módulos de selección múltiple.',
+    duracion_minutos: 270,
+    modulos: [LECTURA_CRITICA, RAZONAMIENTO_CUANTITATIVO, COMPETENCIAS_CIUDADANAS, INGLES],
   },
   {
-    id: 'razonamiento_cuantitativo',
-    nombre: 'Razonamiento cuantitativo',
-    preguntas: 35,
-    competencias: {
-      interpretacion: 13,
-      formulacion: 13,
-      argumentacion: 9,
-    },
-  },
-  {
-    id: 'competencias_ciudadanas',
-    nombre: 'Competencias ciudadanas',
-    preguntas: 35,
-    competencias: {
-      conocimientos: 9,
-      argumentacion: 9,
-      multiperspectivismo: 9,
-      pensamiento_sistemico: 8,
-    },
-  },
-  {
-    id: 'ingles',
-    nombre: 'Inglés',
-    preguntas: 55,
-    competencias: {
-      part1: 5,
-      part2: 5,
-      part3: 5,
-      part4: 10,
-      part5: 10,
-      part6: 10,
-      part7: 10,
-    },
+    id: 'v2',
+    nombre: 'Versión 2',
+    descripcion:
+      'Segunda forma, con cinco módulos y textos de mayor extensión en varias preguntas.',
+    duracion_minutos: 270,
+    modulos: [
+      LECTURA_CRITICA,
+      RAZONAMIENTO_CUANTITATIVO,
+      COMPETENCIAS_CIUDADANAS,
+      COMUNICACION_ESCRITA,
+      INGLES,
+    ],
   },
 ];
 
-// Nombres legibles para resultados, revision y analisis.
+// Los simulacros nuevos siempre usan la versión más reciente.
+const VERSION_ACTIVA = VERSIONES[VERSIONES.length - 1].id;
+
+// Nombres legibles para resultados, revisión y análisis.
 const NOMBRES_COMPETENCIA = {
   literal: 'Identificar contenidos explícitos del texto',
   articulacion: 'Comprender la articulación y el sentido global del texto',
@@ -66,6 +94,9 @@ const NOMBRES_COMPETENCIA = {
   conocimientos: 'Conocimientos de la Constitución y el Estado',
   multiperspectivismo: 'Multiperspectivismo (reconocer varias posturas)',
   pensamiento_sistemico: 'Pensamiento sistémico (causas y consecuencias)',
+  planteamiento: 'Planteamiento: tesis, propósito y destinatario',
+  organizacion: 'Organización: estructura, coherencia y cohesión',
+  uso_lenguaje: 'Uso del lenguaje: léxico, registro y corrección',
   part1: 'Part 1 — Avisos y letreros',
   part2: 'Part 2 — Definiciones y vocabulario',
   part3: 'Part 3 — Conversaciones cortas',
@@ -75,12 +106,41 @@ const NOMBRES_COMPETENCIA = {
   part7: 'Part 7 — Completar con lista de palabras',
 };
 
-const NOMBRES_MODULO = Object.fromEntries(MODULOS.map((m) => [m.id, m.nombre]));
+const TODOS_LOS_MODULOS = [
+  LECTURA_CRITICA,
+  RAZONAMIENTO_CUANTITATIVO,
+  COMPETENCIAS_CIUDADANAS,
+  COMUNICACION_ESCRITA,
+  INGLES,
+];
 
-const TOTAL_PREGUNTAS = MODULOS.reduce((n, m) => n + m.preguntas, 0);
+const NOMBRES_MODULO = Object.fromEntries(TODOS_LOS_MODULOS.map((m) => [m.id, m.nombre]));
 
-function modulo(id) {
-  return MODULOS.find((m) => m.id === id) || null;
+function version(id) {
+  return VERSIONES.find((v) => v.id === id) || null;
+}
+
+// Las funciones que dependen de la versión caen en la activa si no se indica
+// otra, para que quien solo quiera armar un simulacro nuevo no tenga que
+// pasarla en cada llamada.
+function modulosDe(versionId = VERSION_ACTIVA) {
+  return version(versionId)?.modulos || [];
+}
+
+function duracionDe(versionId = VERSION_ACTIVA) {
+  return version(versionId)?.duracion_minutos || 0;
+}
+
+function totalPreguntasDe(versionId = VERSION_ACTIVA) {
+  return modulosDe(versionId).reduce((n, m) => n + m.preguntas, 0);
+}
+
+function moduloDe(versionId, moduloId) {
+  return modulosDe(versionId).find((m) => m.id === moduloId) || null;
+}
+
+function nombreVersion(versionId) {
+  return version(versionId)?.nombre || versionId;
 }
 
 function nombreCompetencia(clave) {
@@ -88,11 +148,15 @@ function nombreCompetencia(clave) {
 }
 
 module.exports = {
-  DURACION_MINUTOS,
-  MODULOS,
+  VERSIONES,
+  VERSION_ACTIVA,
   NOMBRES_MODULO,
   NOMBRES_COMPETENCIA,
-  TOTAL_PREGUNTAS,
-  modulo,
+  version,
+  modulosDe,
+  duracionDe,
+  totalPreguntasDe,
+  moduloDe,
+  nombreVersion,
   nombreCompetencia,
 };

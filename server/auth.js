@@ -49,7 +49,7 @@ async function borrarSesion(token) {
 async function usuarioDeToken(token) {
   if (!token) return null;
   const fila = await uno(
-    `SELECT u.id, u.usuario, u.nombre, s.expira_en
+    `SELECT u.id, u.usuario, u.nombre, u.rol, s.expira_en
        FROM sesiones s JOIN usuarios u ON u.id = s.user_id
       WHERE s.token = $1`,
     [token]
@@ -59,7 +59,7 @@ async function usuarioDeToken(token) {
     await borrarSesion(token);
     return null;
   }
-  return { id: fila.id, usuario: fila.usuario, nombre: fila.nombre };
+  return { id: fila.id, usuario: fila.usuario, nombre: fila.nombre, rol: fila.rol };
 }
 
 function ponerCookie(res, token) {
@@ -90,8 +90,20 @@ function exigirUsuario(req, res, next) {
   next();
 }
 
+// Exige rol de administrador. Va siempre después de exigirUsuario.
+function exigirAdmin(req, res, next) {
+  if (req.usuario?.rol !== 'admin') {
+    return res.status(403).json({
+      error: 'NO_AUTORIZADO',
+      mensaje: 'Esta sección es solo para administradores.',
+    });
+  }
+  next();
+}
+
 module.exports = {
   COOKIE,
+  exigirAdmin,
   crearUsuario,
   buscarUsuario,
   passwordValida,

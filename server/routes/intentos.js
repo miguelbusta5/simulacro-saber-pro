@@ -4,7 +4,6 @@ const express = require('express');
 const { exigirUsuario } = require('../auth');
 const {
   ErrorApp,
-  cerrarVencidos,
   intentoActivoDe,
   obtenerIntento,
   crearIntento,
@@ -17,40 +16,13 @@ const {
   segundosRestantes,
 } = require('../exam/intentos');
 const { analizarIntento } = require('../exam/analysis');
+const { cerrarIntentosVencidos, exigirSinIntentoEnCurso } = require('./middleware');
 
 const router = express.Router();
 
 router.use(exigirUsuario);
 
-// Todo lo que sigue depende del reloj: antes de responder nada, se cierran los
-// intentos cuyo plazo ya venció.
-router.use(async (req, _res, next) => {
-  try {
-    await cerrarVencidos(req.usuario.id);
-    next();
-  } catch (e) {
-    next(e);
-  }
-});
-
-// Bloqueo central: mientras haya un simulacro corriendo no se pueden ver
-// respuestas buenas/malas ni el análisis de ningún intento anterior.
-async function exigirSinIntentoEnCurso(req, res, next) {
-  try {
-    const activo = await intentoActivoDe(req.usuario.id);
-    if (activo) {
-      return res.status(409).json({
-        error: 'REVISION_BLOQUEADA',
-        mensaje:
-          'No puedes ver las respuestas mientras tengas un simulacro en curso. Termínalo o espera a que se acabe el tiempo.',
-        intento_activo: { id: activo.id, segundos_restantes: segundosRestantes(activo) },
-      });
-    }
-    next();
-  } catch (e) {
-    next(e);
-  }
-}
+router.use(cerrarIntentosVencidos);
 
 // Exige que el intento exista, sea del usuario y esté finalizado.
 async function intentoFinalizado(req) {

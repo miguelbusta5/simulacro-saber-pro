@@ -10,6 +10,9 @@ const tbody = document.getElementById('historial');
 let intervaloReloj = null;
 
 document.getElementById('btn-salir').addEventListener('click', cerrarSesion);
+document.getElementById('btn-admin').addEventListener('click', () => {
+  location.href = '/admin.html';
+});
 
 btnContinuar.addEventListener('click', () => {
   location.href = '/examen.html';
@@ -54,7 +57,8 @@ function filaHistorial(i, bloqueada) {
       : 'Finalizado';
 
   const celdas = [
-    formatearFecha(i.iniciado_en),
+    enCurso ? formatearFecha(i.iniciado_en) : formatearFecha(i.finalizado_en),
+    i.version_nombre || i.version,
     estado,
     enCurso ? '—' : `${i.aciertos ?? 0} / ${i.total ?? 0}`,
     enCurso ? '—' : String(i.puntaje_global ?? 0),
@@ -95,12 +99,14 @@ async function cargar() {
   ]);
 
   document.getElementById('saludo').textContent = me.usuario.nombre || me.usuario.usuario;
+  // El servidor verifica el rol en cada petición; esto solo muestra el enlace.
+  document.getElementById('btn-admin').classList.toggle('oculto', me.usuario.rol !== 'admin');
 
   const horas = Math.floor(blueprint.duracion_minutos / 60);
   const minutos = blueprint.duracion_minutos % 60;
   const detalle = blueprint.modulos.map((m) => `${m.nombre} (${m.preguntas})`).join(', ');
   document.getElementById('descripcion-prueba').textContent =
-    `${blueprint.total_preguntas} preguntas en ${horas} h ${minutos} min: ${detalle}.`;
+    `${blueprint.version_nombre}: ${blueprint.total_preguntas} preguntas en ${horas} h ${minutos} min. ${detalle}.`;
 
   if (blueprint.banco_incompleto.length) {
     mostrarAviso(
@@ -133,7 +139,7 @@ async function cargar() {
   tbody.replaceChildren();
   if (!historial.intentos.length) {
     const tr = document.createElement('tr');
-    tr.innerHTML = '<td colspan="5" class="silencio">Todavía no has presentado ningún simulacro.</td>';
+    tr.innerHTML = '<td colspan="6" class="silencio">Todavía no has presentado ningún simulacro.</td>';
     tbody.appendChild(tr);
   } else {
     for (const i of historial.intentos) {

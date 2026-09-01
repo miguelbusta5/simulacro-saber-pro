@@ -540,3 +540,33 @@ th {
 .lista-limpia li {
   margin-bottom: 0.25rem;
 }
+
+/* ---------- ficha de datos ---------- */
+
+.ficha {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.35rem 1.2rem;
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.ficha dt {
+  font-weight: 600;
+  color: var(--texto-suave);
+}
+
+.ficha dd {
+  margin: 0;
+}
+
+@media (max-width: 520px) {
+  .ficha {
+    grid-template-columns: 1fr;
+    gap: 0 0;
+  }
+
+  .ficha dd {
+    margin-bottom: 0.5rem;
+  }
+}

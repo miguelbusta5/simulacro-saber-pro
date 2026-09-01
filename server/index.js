@@ -7,7 +7,14 @@ const cookieParser = require('cookie-parser');
 const { inicializar } = require('./db');
 const { cargarUsuario } = require('./auth');
 const { faltantesPorModulo } = require('./exam/selection');
-const { DURACION_MINUTOS, TOTAL_PREGUNTAS, MODULOS } = require('./exam/blueprint');
+const {
+  VERSIONES,
+  VERSION_ACTIVA,
+  modulosDe,
+  duracionDe,
+  totalPreguntasDe,
+  nombreVersion,
+} = require('./exam/blueprint');
 
 const app = express();
 
@@ -20,14 +27,28 @@ app.use(cargarUsuario);
 
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/intentos', require('./routes/intentos'));
+app.use('/api/admin', require('./routes/admin'));
 
 app.get('/api/blueprint', async (_req, res, next) => {
   try {
     res.json({
-      duracion_minutos: DURACION_MINUTOS,
-      total_preguntas: TOTAL_PREGUNTAS,
-      modulos: MODULOS.map((m) => ({ id: m.id, nombre: m.nombre, preguntas: m.preguntas })),
-      banco_incompleto: await faltantesPorModulo(),
+      version_activa: VERSION_ACTIVA,
+      version_nombre: nombreVersion(VERSION_ACTIVA),
+      duracion_minutos: duracionDe(VERSION_ACTIVA),
+      total_preguntas: totalPreguntasDe(VERSION_ACTIVA),
+      modulos: modulosDe(VERSION_ACTIVA).map((m) => ({
+        id: m.id,
+        nombre: m.nombre,
+        preguntas: m.preguntas,
+      })),
+      versiones: VERSIONES.map((v) => ({
+        id: v.id,
+        nombre: v.nombre,
+        descripcion: v.descripcion,
+        duracion_minutos: v.duracion_minutos,
+        total_preguntas: totalPreguntasDe(v.id),
+      })),
+      banco_incompleto: await faltantesPorModulo(VERSION_ACTIVA),
     });
   } catch (e) {
     next(e);
@@ -58,9 +79,11 @@ const PUERTO = Number(process.env.PORT) || 3000;
 async function arrancar() {
   await inicializar();
 
-  const faltan = await faltantesPorModulo();
+  const faltan = await faltantesPorModulo(VERSION_ACTIVA);
   if (faltan.length) {
-    console.warn('AVISO: el banco de preguntas está incompleto. Ejecuta: npm run seed');
+    console.warn(
+      `AVISO: el banco de la ${VERSION_ACTIVA} está incompleto. Ejecuta: npm run seed`
+    );
     for (const f of faltan) console.warn(`  - ${f.nombre}: hay ${f.hay}, se necesitan ${f.necesita}`);
   }
 

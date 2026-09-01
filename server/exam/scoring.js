@@ -43,6 +43,15 @@ const CORTES = {
     [191, 'Nivel 3'],
     [Infinity, 'Nivel 4'],
   ],
+  // El módulo oficial de Comunicación escrita es una pregunta abierta calificada
+  // con rúbrica, así que no existen puntos de corte para una versión de
+  // selección múltiple. Se usan los mismos cuatro niveles que Lectura crítica.
+  comunicacion_escrita: [
+    [126, 'Nivel 1'],
+    [156, 'Nivel 2'],
+    [191, 'Nivel 3'],
+    [Infinity, 'Nivel 4'],
+  ],
   razonamiento_cuantitativo: [
     [126, 'Nivel 1'],
     [156, 'Nivel 2'],

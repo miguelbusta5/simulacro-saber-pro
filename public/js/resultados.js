@@ -45,7 +45,7 @@ function celdaPorcentaje(porcentaje) {
 }
 
 function pintarResultados(r) {
-  document.getElementById('fecha').textContent = formatearFecha(r.finalizado_en);
+  document.getElementById('fecha').textContent = `${r.version_nombre} · ${formatearFecha(r.finalizado_en)}`;
   document.getElementById('puntaje-global').textContent = r.puntaje_global;
 
   const duracion = r.duracion_segundos != null ? formatearDuracion(r.duracion_segundos) : '—';
@@ -55,6 +55,27 @@ function pintarResultados(r) {
       : '';
   document.getElementById('resumen').textContent =
     `${r.aciertos} de ${r.total} respuestas correctas · ${r.respondidas} preguntas respondidas · tiempo empleado ${duracion}${cierre}`;
+
+  const ficha = document.getElementById('ficha');
+  ficha.replaceChildren();
+  const datos = [
+    ['Versión de la prueba', r.version_nombre],
+    ['Fecha de inicio', formatearFecha(r.iniciado_en)],
+    ['Fecha de finalización', formatearFecha(r.finalizado_en)],
+    ['Tiempo empleado', `${duracion} de ${Math.floor(r.duracion_minutos_permitidos / 60)} h ${r.duracion_minutos_permitidos % 60} min disponibles`],
+  ];
+  for (const [etiqueta, valor] of datos) {
+    const dt = document.createElement('dt');
+    dt.textContent = etiqueta;
+    const dd = document.createElement('dd');
+    dd.textContent = valor;
+    ficha.append(dt, dd);
+  }
+
+  // La nota sobre Comunicación escrita solo aplica si el intento la incluyó.
+  document
+    .getElementById('nota-escrita')
+    .classList.toggle('oculto', !r.modulos.some((m) => m.modulo === 'comunicacion_escrita'));
 
   const tbody = document.getElementById('tabla-modulos');
   const descripciones = document.getElementById('descripciones-nivel');

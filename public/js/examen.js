@@ -99,7 +99,7 @@ function pintarPregunta() {
   const p = preguntaActual();
   moduloVisible = p.modulo;
 
-  elModuloActual.textContent = p.modulo_nombre;
+  elModuloActual.textContent = `${examen.version_nombre} · ${p.modulo_nombre}`;
   const delModulo = examen.preguntas.filter((q) => q.modulo === p.modulo);
   const posicion = delModulo.findIndex((q) => q.numero === p.numero) + 1;
   elUbicacion.textContent =

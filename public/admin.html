@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Administración — Simulacro Saber Pro</title>
+<link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+<header class="barra">
+  <div class="marca">Administración<small id="saludo"></small></div>
+  <button id="btn-inicio" type="button">Volver al inicio</button>
+  <button id="btn-salir" type="button">Cerrar sesión</button>
+</header>
+
+<div class="contenedor">
+  <div id="aviso" class="aviso oculto"></div>
+
+  <div id="contenido" class="oculto">
+    <section class="tarjeta">
+      <h2>Resumen</h2>
+      <dl class="ficha" id="ficha-resumen"></dl>
+      <div id="resumen-versiones" style="margin-top:1rem"></div>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Usuarios</h2>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Usuario</th>
+              <th>Nombre</th>
+              <th>Rol</th>
+              <th>Pruebas</th>
+              <th>Mejor puntaje</th>
+              <th>Último intento</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tabla-usuarios"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Pruebas presentadas</h2>
+      <div class="filtros" id="filtros-usuario"></div>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Estudiante</th>
+              <th>Versión</th>
+              <th>Inicio</th>
+              <th>Finalización</th>
+              <th>Duración</th>
+              <th>Aciertos</th>
+              <th>Puntaje</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tabla-intentos"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="detalle"></section>
+  </div>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>

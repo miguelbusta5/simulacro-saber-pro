@@ -2,7 +2,14 @@
 
 const { consulta, uno, ejecutar, enTransaccion, ahora } = require('../db');
 const { armarSimulacro } = require('./selection');
-const { DURACION_MINUTOS, MODULOS, NOMBRES_MODULO, nombreCompetencia } = require('./blueprint');
+const {
+  VERSION_ACTIVA,
+  NOMBRES_MODULO,
+  modulosDe,
+  duracionDe,
+  nombreVersion,
+  nombreCompetencia,
+} = require('./blueprint');
 const { calificarModulo, promedioGlobal, DESCRIPCION_NIVEL } = require('./scoring');
 
 class ErrorApp extends Error {
@@ -58,16 +65,18 @@ async function crearIntento(userId) {
     );
   }
 
-  const preguntas = await armarSimulacro(userId);
+  // Los simulacros nuevos siempre se arman con la versión más reciente.
+  const version = VERSION_ACTIVA;
+  const preguntas = await armarSimulacro(userId, version);
   const inicio = new Date();
-  const vence = new Date(inicio.getTime() + DURACION_MINUTOS * 60 * 1000);
+  const vence = new Date(inicio.getTime() + duracionDe(version) * 60 * 1000);
 
   try {
     return await enTransaccion(async (cliente) => {
       const filas = await consulta(
-        `INSERT INTO intentos (user_id, estado, iniciado_en, vence_en)
-         VALUES ($1, 'en_curso', $2, $3) RETURNING id`,
-        [userId, inicio.toISOString(), vence.toISOString()],
+        `INSERT INTO intentos (user_id, estado, version, iniciado_en, vence_en)
+         VALUES ($1, 'en_curso', $2, $3, $4) RETURNING id`,
+        [userId, version, inicio.toISOString(), vence.toISOString()],
         cliente
       );
       const intentoId = filas[0].id;
@@ -117,11 +126,13 @@ async function cuadernillo(intento) {
   return {
     intento_id: intento.id,
     estado: intento.estado,
+    version: intento.version,
+    version_nombre: nombreVersion(intento.version),
     iniciado_en: intento.iniciado_en,
     vence_en: intento.vence_en,
-    duracion_minutos: DURACION_MINUTOS,
+    duracion_minutos: duracionDe(intento.version),
     segundos_restantes: segundosRestantes(intento),
-    modulos: MODULOS.map((m) => ({
+    modulos: modulosDe(intento.version).map((m) => ({
       id: m.id,
       nombre: m.nombre,
       preguntas: filas.filter((f) => f.modulo === m.id).length,
@@ -206,7 +217,7 @@ async function finalizarIntento(intentoId, userId, motivo = 'entregado') {
   }
 
   await enTransaccion(async (cliente) => {
-    for (const m of MODULOS) {
+    for (const m of modulosDe(intento.version)) {
       const a = acumulado.get(m.id) || { aciertos: 0, total: 0 };
       const r = calificarModulo(m.id, a.aciertos, a.total);
       await ejecutar(
@@ -243,10 +254,12 @@ async function resultadosDe(intentoId) {
       descripcion_nivel: DESCRIPCION_NIVEL[r.nivel] || '',
     })
   );
-  // Se respeta el orden del blueprint, no el de la base de datos.
+  // Se respeta el orden del blueprint de la versión con la que se presentó el
+  // intento, no el de la base de datos.
+  const modulos = modulosDe(intento.version);
   filas.sort(
     (a, b) =>
-      MODULOS.findIndex((m) => m.id === a.modulo) - MODULOS.findIndex((m) => m.id === b.modulo)
+      modulos.findIndex((m) => m.id === a.modulo) - modulos.findIndex((m) => m.id === b.modulo)
   );
 
   const { n: respondidas } = await uno(
@@ -262,11 +275,13 @@ async function resultadosDe(intentoId) {
 
   return {
     intento_id: intentoId,
+    version: intento.version,
+    version_nombre: nombreVersion(intento.version),
     iniciado_en: intento.iniciado_en,
     finalizado_en: intento.finalizado_en,
     motivo_cierre: intento.motivo_cierre,
     duracion_segundos: duracionSeg,
-    duracion_minutos_permitidos: DURACION_MINUTOS,
+    duracion_minutos_permitidos: duracionDe(intento.version),
     respondidas,
     aciertos: filas.reduce((s, r) => s + r.aciertos, 0),
     total: filas.reduce((s, r) => s + r.total, 0),
@@ -316,8 +331,8 @@ async function revisionDe(intentoId) {
 }
 
 async function historialDe(userId) {
-  return consulta(
-    `SELECT i.id, i.estado, i.iniciado_en, i.finalizado_en, i.motivo_cierre,
+  const filas = await consulta(
+    `SELECT i.id, i.estado, i.version, i.iniciado_en, i.finalizado_en, i.motivo_cierre,
             (SELECT SUM(aciertos)::int FROM resultados WHERE intento_id = i.id) AS aciertos,
             (SELECT SUM(total)::int FROM resultados WHERE intento_id = i.id) AS total,
             COALESCE((SELECT ROUND(AVG(puntaje))::int FROM resultados WHERE intento_id = i.id), 0)
@@ -327,6 +342,7 @@ async function historialDe(userId) {
       ORDER BY i.iniciado_en DESC`,
     [userId]
   );
+  return filas.map((i) => ({ ...i, version_nombre: nombreVersion(i.version) }));
 }
 
 module.exports = {

@@ -162,12 +162,29 @@ CREATE TABLE IF NOT EXISTS resultados (
 );
 `;
 
+// Columnas añadidas después de la primera versión. Van aparte del bloque de
+// CREATE TABLE porque ese solo actúa cuando la tabla no existe, y estas tienen
+// que aplicarse también sobre una base que ya está en uso. Los valores por
+// defecto etiquetan correctamente lo que ya hay: todo lo anterior es de la V1 y
+// todos los usuarios existentes son estudiantes.
+const MIGRACIONES = `
+ALTER TABLE usuarios  ADD COLUMN IF NOT EXISTS rol     TEXT NOT NULL DEFAULT 'estudiante';
+ALTER TABLE preguntas ADD COLUMN IF NOT EXISTS version TEXT NOT NULL DEFAULT 'v1';
+ALTER TABLE contextos ADD COLUMN IF NOT EXISTS version TEXT NOT NULL DEFAULT 'v1';
+ALTER TABLE intentos  ADD COLUMN IF NOT EXISTS version TEXT NOT NULL DEFAULT 'v1';
+
+CREATE INDEX IF NOT EXISTS idx_preguntas_version
+  ON preguntas(version, modulo, competencia);
+CREATE INDEX IF NOT EXISTS idx_usuarios_rol ON usuarios(rol) WHERE rol <> 'estudiante';
+`;
+
 // Crea el esquema si no existe. Es idempotente: se puede llamar en cada arranque.
 async function inicializar() {
   if (ESQUEMA !== 'public') {
     await pool.query(`CREATE SCHEMA IF NOT EXISTS ${ESQUEMA}`);
   }
   await pool.query(DDL);
+  await pool.query(MIGRACIONES);
 }
 
 function ahora() {

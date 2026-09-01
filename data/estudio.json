@@ -166,6 +166,39 @@
         "Coherencia léxica dentro de un párrafo"
       ],
       "como_practicar": "Marca en cada espacio si falta sustantivo, verbo, adjetivo o adverbio antes de escoger de la lista."
+    },
+    "comunicacion_escrita.planteamiento": {
+      "que_mide": "Definir qué se quiere decir y para quién: la tesis o propósito del texto, la selección de las ideas que lo sostienen y su ajuste al destinatario y a la situación.",
+      "que_estudiar": [
+        "Diferencia entre tema, tesis y propósito comunicativo",
+        "Formular una tesis discutible, no una obviedad ni una descripción",
+        "Seleccionar las ideas que sostienen la tesis y descartar las que no aportan",
+        "Ajustar el contenido al destinatario: qué sabe, qué necesita y qué espera",
+        "Adecuación del texto a su situación: carta, informe, correo, columna"
+      ],
+      "como_practicar": "Antes de escribir cualquier texto, escribe en una sola frase qué quieres que piense quien lo lea. Si no puedes, todavía no tienes tesis: tienes tema."
+    },
+    "comunicacion_escrita.organizacion": {
+      "que_mide": "Ordenar el texto para que se entienda: estructura de las partes, progresión de las ideas, y los conectores y referencias que las enlazan.",
+      "que_estudiar": [
+        "Estructura básica: introducción que plantea, desarrollo que sostiene, cierre que concluye",
+        "Progresión temática: cada párrafo una idea, y cada idea preparando la siguiente",
+        "Conectores según su función: causa, consecuencia, oposición, adición, concesión, ejemplo",
+        "Cohesión por referencia: pronombres y sinónimos que evitan la repetición sin perder claridad",
+        "Detectar la oración que rompe la unidad de un párrafo"
+      ],
+      "como_practicar": "Toma un texto tuyo y ponle un título a cada párrafo. Si dos párrafos reciben el mismo título, sobra uno; si a alguno no puedes ponerle título, no tiene una idea clara."
+    },
+    "comunicacion_escrita.uso_lenguaje": {
+      "que_mide": "Escribir con precisión: la palabra exacta, el registro adecuado, la construcción correcta y sin rodeos innecesarios.",
+      "que_estudiar": [
+        "Precisión léxica: elegir la palabra que dice exactamente eso y no una aproximada",
+        "Registro formal e informal, y cuándo corresponde cada uno",
+        "Concisión: eliminar muletillas, redundancias y rodeos que no agregan información",
+        "Concordancia de género, número y persona, y régimen de las preposiciones",
+        "Puntuación que separa ideas: coma, punto y coma, dos puntos"
+      ],
+      "como_practicar": "Reescribe cada párrafo que escribas quitándole una cuarta parte de las palabras sin perder nada de lo que dice. Lo que sobrevive es lo que de verdad estabas diciendo."
     }
   },
   "temas": {
@@ -184,6 +217,11 @@
     "vocabulario": "Ampliación de vocabulario en inglés por campos semánticos.",
     "gramatica": "Tiempos verbales, preposiciones, cuantificadores y conectores en inglés.",
     "comprension_lectura": "Comprensión de lectura en inglés: idea principal, detalle e inferencia.",
-    "comunicacion_cotidiana": "Lenguaje funcional en inglés para situaciones cotidianas."
+    "comunicacion_cotidiana": "Lenguaje funcional en inglés para situaciones cotidianas.",
+    "tesis_proposito": "Definición de la tesis, el propósito comunicativo y el destinatario del texto.",
+    "estructura_texto": "Organización de las partes del texto y progresión de las ideas entre párrafos.",
+    "coherencia_cohesion": "Conectores, referencias y unidad temática que enlazan las oraciones.",
+    "lexico_registro": "Precisión de las palabras y adecuación del registro a la situación.",
+    "normativa": "Concordancia, puntuación y construcción correcta de las oraciones."
   }
 }

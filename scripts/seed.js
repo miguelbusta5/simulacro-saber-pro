@@ -1,22 +1,38 @@
 'use strict';
 
-// Carga el banco de data/banco/*.json a la base de datos.
+// Carga los bancos de data/banco/<version>/*.json a la base de datos.
 // Valida todo antes de escribir: si algo falla, no toca la base.
 
 const fs = require('node:fs');
 const path = require('node:path');
 const { consulta, uno, ejecutar, enTransaccion, inicializar, cerrar, ESQUEMA } = require('../server/db');
-const { MODULOS, modulo: buscarModulo } = require('../server/exam/blueprint');
+const {
+  VERSIONES,
+  VERSION_ACTIVA,
+  modulosDe,
+  moduloDe,
+  version: buscarVersion,
+} = require('../server/exam/blueprint');
 
 const DIR = path.join(__dirname, '..', 'data', 'banco');
 const CLAVES_OPCION = ['A', 'B', 'C', 'D'];
 
+// Cada subdirectorio de data/banco es una versión de la prueba.
 function cargarArchivos() {
   if (!fs.existsSync(DIR)) return [];
-  return fs
-    .readdirSync(DIR)
-    .filter((f) => f.endsWith('.json'))
-    .map((f) => ({ archivo: f, datos: JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8')) }));
+  const salida = [];
+  for (const version of fs.readdirSync(DIR)) {
+    const dirVersion = path.join(DIR, version);
+    if (!fs.statSync(dirVersion).isDirectory()) continue;
+    for (const archivo of fs.readdirSync(dirVersion).filter((f) => f.endsWith('.json'))) {
+      salida.push({
+        version,
+        archivo: `${version}/${archivo}`,
+        datos: JSON.parse(fs.readFileSync(path.join(dirVersion, archivo), 'utf8')),
+      });
+    }
+  }
+  return salida;
 }
 
 function validar(archivos) {
@@ -24,10 +40,18 @@ function validar(archivos) {
   const idsPregunta = new Map();
   const idsContexto = new Map();
 
-  for (const { archivo, datos } of archivos) {
-    const m = buscarModulo(datos.modulo);
+  for (const { version, archivo, datos } of archivos) {
+    if (!buscarVersion(version)) {
+      errores.push(
+        `${archivo}: la versión "${version}" no está declarada en blueprint.js (válidas: ${VERSIONES.map((v) => v.id).join(', ')})`
+      );
+      continue;
+    }
+    const m = moduloDe(version, datos.modulo);
     if (!m) {
-      errores.push(`${archivo}: modulo desconocido "${datos.modulo}"`);
+      errores.push(
+        `${archivo}: el módulo "${datos.modulo}" no pertenece a la ${version} (válidos: ${modulosDe(version).map((x) => x.id).join(', ')})`
+      );
       continue;
     }
     const competenciasValidas = Object.keys(m.competencias);
@@ -84,23 +108,24 @@ function validar(archivos) {
 // Inserta todo en dos sentencias con arreglos, en vez de una por fila: contra un
 // Postgres remoto la diferencia es de minutos a menos de un segundo.
 async function escribir(archivos) {
-  const contextos = archivos.flatMap(({ datos }) =>
-    (datos.contextos || []).map((c) => ({ ...c, modulo: datos.modulo }))
+  const contextos = archivos.flatMap(({ version, datos }) =>
+    (datos.contextos || []).map((c) => ({ ...c, version, modulo: datos.modulo }))
   );
-  const preguntas = archivos.flatMap(({ datos }) =>
-    (datos.preguntas || []).map((p) => ({ ...p, modulo: datos.modulo }))
+  const preguntas = archivos.flatMap(({ version, datos }) =>
+    (datos.preguntas || []).map((p) => ({ ...p, version, modulo: datos.modulo }))
   );
 
   await enTransaccion(async (cliente) => {
     await ejecutar(
-      `INSERT INTO contextos (id, modulo, titulo, contenido, fuente)
-       SELECT * FROM unnest($1::text[], $2::text[], $3::text[], $4::text[], $5::text[])
+      `INSERT INTO contextos (id, modulo, version, titulo, contenido, fuente)
+       SELECT * FROM unnest($1::text[], $2::text[], $3::text[], $4::text[], $5::text[], $6::text[])
        ON CONFLICT (id) DO UPDATE SET
-         modulo = EXCLUDED.modulo, titulo = EXCLUDED.titulo,
+         modulo = EXCLUDED.modulo, version = EXCLUDED.version, titulo = EXCLUDED.titulo,
          contenido = EXCLUDED.contenido, fuente = EXCLUDED.fuente`,
       [
         contextos.map((c) => c.id),
         contextos.map((c) => c.modulo),
+        contextos.map((c) => c.version),
         contextos.map((c) => c.titulo || ''),
         contextos.map((c) => c.contenido),
         contextos.map((c) => c.fuente || ''),
@@ -109,14 +134,15 @@ async function escribir(archivos) {
     );
 
     await ejecutar(
-      `INSERT INTO preguntas (id, modulo, competencia, tema, dificultad, contexto_id,
+      `INSERT INTO preguntas (id, modulo, version, competencia, tema, dificultad, contexto_id,
                               enunciado, opciones, correcta, justificacion,
                               justificaciones_incorrectas)
-       SELECT * FROM unnest($1::text[], $2::text[], $3::text[], $4::text[], $5::int[],
-                            $6::text[], $7::text[], $8::text[], $9::text[], $10::text[],
-                            $11::text[])
+       SELECT * FROM unnest($1::text[], $2::text[], $3::text[], $4::text[], $5::text[],
+                            $6::int[], $7::text[], $8::text[], $9::text[], $10::text[],
+                            $11::text[], $12::text[])
        ON CONFLICT (id) DO UPDATE SET
-         modulo = EXCLUDED.modulo, competencia = EXCLUDED.competencia, tema = EXCLUDED.tema,
+         modulo = EXCLUDED.modulo, version = EXCLUDED.version,
+         competencia = EXCLUDED.competencia, tema = EXCLUDED.tema,
          dificultad = EXCLUDED.dificultad, contexto_id = EXCLUDED.contexto_id,
          enunciado = EXCLUDED.enunciado, opciones = EXCLUDED.opciones,
          correcta = EXCLUDED.correcta, justificacion = EXCLUDED.justificacion,
@@ -124,6 +150,7 @@ async function escribir(archivos) {
       [
         preguntas.map((p) => p.id),
         preguntas.map((p) => p.modulo),
+        preguntas.map((p) => p.version),
         preguntas.map((p) => p.competencia),
         preguntas.map((p) => p.tema),
         preguntas.map((p) => p.dificultad || 2),
@@ -142,43 +169,52 @@ async function escribir(archivos) {
 }
 
 async function reporte() {
-  console.log('\nCobertura del banco frente al blueprint:');
-  let completo = true;
-  for (const m of MODULOS) {
-    const { n: total } = await uno('SELECT COUNT(*)::int AS n FROM preguntas WHERE modulo = $1', [
-      m.id,
-    ]);
-    const ok = total >= m.preguntas;
-    if (!ok) completo = false;
-    console.log(
-      `\n  ${m.nombre}: ${total} en banco / ${m.preguntas} por simulacro ${ok ? 'OK' : 'INSUFICIENTE'}`
-    );
+  console.log('\nCobertura de los bancos frente al blueprint:');
+  let activaCompleta = true;
 
-    const porCompetencia = await consulta(
-      'SELECT competencia, COUNT(*)::int AS n FROM preguntas WHERE modulo = $1 GROUP BY competencia',
-      [m.id]
-    );
-    const conteo = Object.fromEntries(porCompetencia.map((c) => [c.competencia, c.n]));
-    for (const [comp, need] of Object.entries(m.competencias)) {
-      const n = conteo[comp] || 0;
-      const okc = n >= need;
-      if (!okc) completo = false;
-      console.log(
-        `      ${comp.padEnd(22)} ${String(n).padStart(3)} / ${String(need).padStart(3)} ${okc ? '' : '<-- faltan'}`
+  for (const v of VERSIONES) {
+    const esActiva = v.id === VERSION_ACTIVA;
+    console.log(`\n${v.nombre} (${v.id})${esActiva ? '  <- versión activa' : '  (solo historial)'}`);
+
+    for (const m of modulosDe(v.id)) {
+      const { n: total } = await uno(
+        'SELECT COUNT(*)::int AS n FROM preguntas WHERE version = $1 AND modulo = $2',
+        [v.id, m.id]
       );
+      const ok = total >= m.preguntas;
+      if (!ok && esActiva) activaCompleta = false;
+      console.log(
+        `  ${m.nombre}: ${total} en banco / ${m.preguntas} por simulacro ${ok ? 'OK' : 'INSUFICIENTE'}`
+      );
+
+      const porCompetencia = await consulta(
+        `SELECT competencia, COUNT(*)::int AS n FROM preguntas
+          WHERE version = $1 AND modulo = $2 GROUP BY competencia`,
+        [v.id, m.id]
+      );
+      const conteo = Object.fromEntries(porCompetencia.map((c) => [c.competencia, c.n]));
+      for (const [comp, need] of Object.entries(m.competencias)) {
+        const n = conteo[comp] || 0;
+        const okc = n >= need;
+        if (!okc && esActiva) activaCompleta = false;
+        console.log(
+          `      ${comp.padEnd(22)} ${String(n).padStart(3)} / ${String(need).padStart(3)} ${okc ? '' : '<-- faltan'}`
+        );
+      }
     }
   }
+
   console.log(
-    completo
-      ? '\nEl banco cubre un simulacro completo.\n'
-      : '\nATENCION: el banco no alcanza para un simulacro completo.\n'
+    activaCompleta
+      ? `\nEl banco de la versión activa (${VERSION_ACTIVA}) cubre un simulacro completo.\n`
+      : `\nATENCION: el banco de la versión activa (${VERSION_ACTIVA}) no alcanza para un simulacro completo.\n`
   );
 }
 
 async function main() {
   const archivos = cargarArchivos();
   if (!archivos.length) {
-    console.error(`No hay archivos .json en ${DIR}`);
+    console.error(`No hay archivos .json en los subdirectorios de ${DIR}`);
     process.exit(1);
   }
 
@@ -194,8 +230,9 @@ async function main() {
 
   await inicializar();
   const { contextos, preguntas } = await escribir(archivos);
+  const versiones = [...new Set(archivos.map((a) => a.version))].join(', ');
   console.log(
-    `Cargados ${preguntas} preguntas y ${contextos} contextos desde ${archivos.length} archivos (esquema "${ESQUEMA}").`
+    `Cargadas ${preguntas} preguntas y ${contextos} contextos de ${archivos.length} archivos (versiones: ${versiones}, esquema "${ESQUEMA}").`
   );
   await reporte();
 }
