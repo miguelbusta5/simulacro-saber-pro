@@ -1,0 +1,988 @@
+{
+  "modulo": "competencias_ciudadanas",
+  "contextos": [
+    {
+      "id": "cc2_ctx_01",
+      "titulo": "Caso: la vía que parte el resguardo",
+      "contenido": "Un departamento proyecta una carretera de 60 kilómetros que conectaría tres municipios hoy separados por seis horas de trocha. El trazado más corto y más barato atraviesa 12 kilómetros de un resguardo indígena.\n\nLA GOBERNACIÓN sostiene que la vía es indispensable: los tres municipios suman 45.000 habitantes que hoy no pueden sacar sus productos ni llegar a un hospital de segundo nivel en menos de seis horas. Calcula que el trazado alternativo, que bordea el resguardo, cuesta 40 % más y tardaría dos años adicionales.\n\nLA COMUNIDAD INDÍGENA, de unas 900 personas, se opone al trazado que cruza su territorio. Señala que la franja afectada incluye un sitio de pagamento de importancia ceremonial y una zona de nacimientos de agua de la que dependen sus cultivos. Exige que se realice la consulta previa antes de cualquier decisión.\n\nLOS CAMPESINOS de las veredas vecinas, unas 3.000 personas, apoyan la vía y están impacientes: llevan quince años oyendo promesas. Algunos dirigentes han dicho públicamente que «una minoría no puede frenar el progreso de miles».\n\nEL CONTRATISTA advierte que un cambio de trazado a esta altura obligaría a rehacer los estudios y podría dejar sin ejecutar los recursos, que provienen de una vigencia que vence en dieciocho meses.\n\nUNA ORGANIZACIÓN AMBIENTAL señala que el trazado alternativo, aunque más largo, atraviesa una zona ya intervenida por ganadería, mientras que el trazado corto cruza bosque en buen estado de conservación.",
+      "fuente": "Caso elaborado para el simulacro."
+    },
+    {
+      "id": "cc2_ctx_02",
+      "titulo": "Caso: el supervisor y los turnos",
+      "contenido": "Marcela trabaja hace cuatro años en una empresa de servicios generales, con contrato a término indefinido. Desde que su supervisor cambió, ocurre lo siguiente:\n\n— Le asignan sistemáticamente los turnos de la madrugada, mientras que a sus compañeros de la misma antigüedad se los rotan.\n— En las reuniones de equipo, el supervisor se refiere a sus propuestas como «ideas de la señora» y no las registra en el acta.\n— Le negaron dos veces el permiso para asistir a citas médicas de control, pese a haberlas solicitado con la anticipación que exige el reglamento.\n— Cuando Marcela pidió por escrito una explicación sobre la asignación de turnos, recibió como respuesta que «la organización del trabajo es facultad exclusiva del empleador».\n\nMarcela no ha sido despedida y su salario no ha cambiado. Ha empezado a presentar insomnio y ansiedad, y su médico le ordenó incapacidad por tres días.\n\nEn la empresa existe un comité de convivencia laboral, integrado por representantes de los trabajadores y del empleador, que Marcela no ha utilizado.",
+      "fuente": "Caso elaborado para el simulacro."
+    },
+    {
+      "id": "cc2_ctx_03",
+      "titulo": "Caso: el presupuesto participativo de la comuna 8",
+      "contenido": "La alcaldía destinó 2.000 millones de pesos para que los habitantes de la comuna 8 decidan en qué invertirlos. El proceso funcionó así:\n\nFASE 1. Asambleas barriales abiertas para proponer proyectos. Asistieron 340 personas de una población de 62.000.\n\nFASE 2. Un comité técnico evaluó la viabilidad de las 47 propuestas y dejó 9 en la votación final.\n\nFASE 3. Votación abierta a mayores de 14 años residentes en la comuna. Votaron 4.100 personas.\n\nRESULTADOS DE LA VOTACIÓN\nParque y cancha sintética .............. 1.850 votos\nMejoramiento de la vía principal ....... 1.020 votos\nCentro de atención para adultos mayores .. 480 votos\nBiblioteca comunitaria ................... 310 votos\nOtros cinco proyectos .................... 440 votos\n\nDATOS ADICIONALES\n— El 68 % de quienes votaron tiene entre 14 y 35 años.\n— Los barrios de la parte alta de la comuna, donde vive el 40 % de la población, aportaron el 12 % de los votos. Son los barrios sin transporte público directo al sitio de votación.\n— El proyecto de la vía principal, segundo en votos, beneficiaría el acceso justamente a esa parte alta.",
+      "fuente": "Caso elaborado para el simulacro."
+    },
+    {
+      "id": "cc2_ctx_04",
+      "titulo": "Caso: la mina de arena del río",
+      "contenido": "En un municipio ribereño opera desde hace treinta años la extracción artesanal de arena del río. La actividad involucra a 180 familias que la ejercen de manera informal, sin título minero.\n\nLA AUTORIDAD AMBIENTAL ordenó suspender la extracción. Un estudio técnico documentó que el cauce se ha profundizado 1,4 metros en una década, que dos puentes muestran socavación en sus bases y que la captación del acueducto municipal quedó por encima del nivel del agua en época seca.\n\nLOS ARENEROS responden que llevan tres generaciones en esa actividad, que nunca se les ofreció una alternativa y que el daño mayor no lo causan ellos sino una empresa con título minero que opera aguas arriba con maquinaria pesada.\n\nLA EMPRESA CON TÍTULO señala que cumple su plan de manejo ambiental y que la extracción informal, al no estar regulada ni monitoreada, es la que carece de control.\n\nLA ALCALDÍA reconoce que no tiene recursos para un programa de reconversión laboral y que el municipio depende del acueducto amenazado.\n\nLOS HABITANTES DE LA CABECERA, 24.000 personas, dependen de ese acueducto y del puente principal para salir del municipio.\n\nUN GRUPO DE ARENEROS JÓVENES ha propuesto organizarse en cooperativa, solicitar un título de pequeña minería y aceptar cupos de extracción con monitoreo, a cambio de un plazo de transición.",
+      "fuente": "Caso elaborado para el simulacro."
+    },
+    {
+      "id": "cc2_ctx_05",
+      "titulo": "Caso: el manual y la estudiante embarazada",
+      "contenido": "Daniela cursa décimo grado en un colegio privado con orientación religiosa. Tiene 16 años y está embarazada de cinco meses.\n\nLa rectoría le comunicó a su familia que, «por el bien de la estudiante y para evitar la alteración del ambiente escolar», Daniela deberá continuar el año en modalidad domiciliaria: recibiría guías y presentaría evaluaciones los sábados, sin asistir a clases ni a la ceremonia de grado.\n\nEl manual de convivencia, firmado por los padres al matricular, incluye una cláusula según la cual «los estudiantes deberán mantener una conducta acorde con los principios de la institución».\n\nLa familia sostiene que Daniela quiere seguir asistiendo, que su médico no ha ordenado ninguna restricción y que la medida la separa de sus compañeros en el momento en que más apoyo necesita.\n\nAlgunos padres de familia enviaron una carta a la rectoría respaldando la decisión, con el argumento de que pagaron por una formación con unos valores determinados.\n\nLa personera estudiantil pidió que el caso se lleve al consejo directivo antes de aplicar la medida.",
+      "fuente": "Caso elaborado para el simulacro."
+    },
+    {
+      "id": "cc2_ctx_06",
+      "titulo": "Caso: el toque de queda para menores",
+      "contenido": "Tras el homicidio de dos jóvenes en el parque central, una alcaldía decretó por tres meses las siguientes medidas:\n\n1. Prohibición de circulación de menores de 18 años entre las 10:00 p. m. y las 5:00 a. m., salvo que estén acompañados de un adulto responsable.\n2. Cierre de los parques públicos a partir de las 9:00 p. m.\n3. Instalación de cámaras de vigilancia en los ocho puntos con más reportes.\n\nA los dos meses, la administración presentó estos resultados:\n\n— Los homicidios en el municipio bajaron de 7 a 4 respecto del mismo periodo del año anterior.\n— Las riñas reportadas en el parque central bajaron un 60 %.\n— Los reportes de riñas en dos barrios periféricos subieron un 45 %.\n— Se impusieron 210 comparendos a menores, el 78 % de ellos en los tres barrios de menores ingresos.\n— La liga de fútbol juvenil, que entrenaba de 8:00 a 10:00 p. m. porque sus integrantes trabajan de día, suspendió sus actividades.",
+      "fuente": "Caso elaborado para el simulacro."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "cc2_001",
+      "competencia": "multiperspectivismo",
+      "tema": "convivencia_diversidad",
+      "dificultad": 2,
+      "contexto_id": "cc2_ctx_01",
+      "enunciado": "¿Cuál es el interés que sostiene la posición de la comunidad indígena?",
+      "opciones": [
+        { "clave": "A", "texto": "Obtener una compensación económica mayor por el paso de la vía." },
+        { "clave": "B", "texto": "Proteger un sitio de importancia ceremonial y los nacimientos de agua de los que dependen sus cultivos." },
+        { "clave": "C", "texto": "Impedir que los municipios vecinos se comuniquen entre sí." },
+        { "clave": "D", "texto": "Conseguir que la obra se ejecute con mano de obra de la comunidad." }
+      ],
+      "correcta": "B",
+      "justificacion": "El caso enuncia sus dos razones concretas: el sitio de pagamento y la zona de nacimientos de agua. No se opone a la vía en abstracto, sino a ese trazado.",
+      "justificaciones_incorrectas": {
+        "A": "El caso no menciona ninguna pretensión económica.",
+        "C": "La comunidad cuestiona el trazado, no la conexión entre municipios.",
+        "D": "No hay ninguna referencia a contratación de mano de obra."
+      }
+    },
+    {
+      "id": "cc2_002",
+      "competencia": "multiperspectivismo",
+      "tema": "convivencia_diversidad",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_01",
+      "enunciado": "Algunos dirigentes campesinos afirman que «una minoría no puede frenar el progreso de miles». ¿Qué falla en ese razonamiento?",
+      "opciones": [
+        { "clave": "A", "texto": "Nada: en una democracia las decisiones se toman por mayoría." },
+        { "clave": "B", "texto": "Convierte una cuestión de derechos en una cuenta de personas, cuando lo que está en juego es si se afecta un territorio protegido sin surtir el procedimiento que la ley exige." },
+        { "clave": "C", "texto": "Los campesinos son en realidad menos que los habitantes del resguardo." },
+        { "clave": "D", "texto": "Ignora que la vía beneficiaría también a la comunidad indígena." }
+      ],
+      "correcta": "B",
+      "justificacion": "Los derechos territoriales de los pueblos indígenas no se someten a votación por su número. La objeción de la comunidad no pide vetar la obra: pide que se realice la consulta previa antes de decidir el trazado.",
+      "justificaciones_incorrectas": {
+        "A": "Las mayorías deciden, pero no pueden desconocer derechos fundamentales ni procedimientos legales.",
+        "C": "Son 3.000 campesinos frente a 900 indígenas: la mayoría numérica está del lado que invoca el argumento.",
+        "D": "Puede que se beneficie, pero eso no responde a la objeción sobre el procedimiento."
+      }
+    },
+    {
+      "id": "cc2_003",
+      "competencia": "multiperspectivismo",
+      "tema": "convivencia_diversidad",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_01",
+      "enunciado": "¿Qué posición del caso resulta más difícil de encasillar en el esquema «desarrollo contra ambiente»?",
+      "opciones": [
+        { "clave": "A", "texto": "La de la gobernación, que defiende la obra por razones de salud y de acceso a mercados." },
+        { "clave": "B", "texto": "La de la organización ambiental, porque señala que el trazado alternativo es mejor ambientalmente aunque sea más largo y costoso." },
+        { "clave": "C", "texto": "La de los campesinos, que llevan quince años esperando." },
+        { "clave": "D", "texto": "La del contratista, que advierte sobre el vencimiento de la vigencia." }
+      ],
+      "correcta": "B",
+      "justificacion": "Su posición no es «obra sí u obra no»: acepta la vía y discute por dónde. Muestra que las alternativas técnicas pueden reordenar un conflicto que parecía de dos bandos.",
+      "justificaciones_incorrectas": {
+        "A": "La gobernación encaja bien en el polo del desarrollo.",
+        "C": "Los campesinos también se ubican claramente en ese polo.",
+        "D": "El contratista aporta una restricción administrativa, no una postura sobre el dilema."
+      }
+    },
+    {
+      "id": "cc2_004",
+      "competencia": "pensamiento_sistemico",
+      "tema": "dimension_politica",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_01",
+      "enunciado": "¿Qué elemento del caso explica mejor la presión para decidir rápido, aunque no sea una razón sobre el fondo del asunto?",
+      "opciones": [
+        { "clave": "A", "texto": "La distancia de seis horas entre los municipios." },
+        { "clave": "B", "texto": "La vigencia presupuestal que vence en dieciocho meses." },
+        { "clave": "C", "texto": "El número de habitantes del resguardo." },
+        { "clave": "D", "texto": "El estado de conservación del bosque." }
+      ],
+      "correcta": "B",
+      "justificacion": "El calendario presupuestal impone un plazo que nada tiene que ver con cuál trazado es mejor, pero que en la práctica empuja a cerrar la discusión. Reconocer esa presión permite no confundirla con un argumento.",
+      "justificaciones_incorrectas": {
+        "A": "La distancia justifica la obra, pero no la prisa por un trazado concreto.",
+        "C": "El tamaño de la comunidad no genera urgencia temporal.",
+        "D": "El estado del bosque es un criterio de fondo, no una presión de calendario."
+      }
+    },
+    {
+      "id": "cc2_005",
+      "competencia": "pensamiento_sistemico",
+      "tema": "dimension_politica",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_01",
+      "enunciado": "Si la gobernación ejecuta el trazado corto sin realizar la consulta previa, ¿cuál es el riesgo más previsible?",
+      "opciones": [
+        { "clave": "A", "texto": "Que la obra sea suspendida judicialmente, con lo que se perderían tiempo y recursos y la vía tardaría aún más." },
+        { "clave": "B", "texto": "Que los campesinos retiren su apoyo al proyecto." },
+        { "clave": "C", "texto": "Que el contratista aumente el valor del contrato." },
+        { "clave": "D", "texto": "Que la organización ambiental proponga un tercer trazado." }
+      ],
+      "correcta": "A",
+      "justificacion": "La consulta previa es un derecho fundamental de las comunidades étnicas y su omisión es la causa más frecuente de suspensión de obras por vía de tutela. Saltarse el procedimiento para ganar tiempo suele costar más tiempo del que ahorra.",
+      "justificaciones_incorrectas": {
+        "B": "Los campesinos apoyan justamente ese trazado.",
+        "C": "El caso no sugiere que omitir la consulta encarezca el contrato.",
+        "D": "La organización ambiental ya se pronunció a favor del trazado alternativo."
+      }
+    },
+    {
+      "id": "cc2_006",
+      "competencia": "argumentacion",
+      "tema": "dimension_politica",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_01",
+      "enunciado": "¿Cuál sería la actuación más razonable de la gobernación frente al conjunto del caso?",
+      "opciones": [
+        { "clave": "A", "texto": "Ejecutar el trazado corto de inmediato, dado que beneficia a 45.000 personas frente a 900." },
+        { "clave": "B", "texto": "Abandonar el proyecto para evitar el conflicto." },
+        { "clave": "C", "texto": "Iniciar la consulta previa de inmediato y en paralelo actualizar los estudios del trazado alternativo, para que la decisión llegue con las dos opciones evaluadas antes de que venza la vigencia." },
+        { "clave": "D", "texto": "Someter el trazado a votación entre los habitantes de los tres municipios." }
+      ],
+      "correcta": "C",
+      "justificacion": "Es la única opción que atiende a la vez la urgencia real, el derecho de la comunidad y la restricción de calendario. Hacer las dos cosas en paralelo es lo que convierte un plazo corto en un plazo suficiente.",
+      "justificaciones_incorrectas": {
+        "A": "Omitir la consulta expone la obra a suspensión y desconoce un derecho fundamental.",
+        "B": "Abandonar el proyecto sacrifica una necesidad documentada de salud y de acceso.",
+        "D": "Los derechos territoriales de un pueblo indígena no se deciden por votación de terceros."
+      }
+    },
+    {
+      "id": "cc2_007",
+      "competencia": "conocimientos",
+      "tema": "constitucion_derechos",
+      "dificultad": 2,
+      "contexto_id": "cc2_ctx_02",
+      "enunciado": "La respuesta que recibió Marcela a su solicitud escrita resulta problemática porque",
+      "opciones": [
+        { "clave": "A", "texto": "no resuelve de fondo lo preguntado, y el derecho de petición exige una respuesta clara y de fondo, no una fórmula general." },
+        { "clave": "B", "texto": "fue entregada por escrito y debía darse verbalmente." },
+        { "clave": "C", "texto": "el empleador no está obligado a responder solicitudes de sus trabajadores." },
+        { "clave": "D", "texto": "Marcela debió dirigirla al Ministerio de Trabajo y no a la empresa." }
+      ],
+      "correcta": "A",
+      "justificacion": "Invocar que «la organización del trabajo es facultad exclusiva del empleador» no responde por qué a ella no se le rota el turno como a sus compañeros. Una respuesta que no resuelve lo preguntado equivale a no responder.",
+      "justificaciones_incorrectas": {
+        "B": "La forma escrita es la adecuada; el problema es el contenido.",
+        "C": "El derecho de petición también opera frente a particulares en las condiciones que fija la ley, y la relación laboral impone deberes de información.",
+        "D": "Podía dirigirla a su empleador; acudir al Ministerio es una vía adicional."
+      }
+    },
+    {
+      "id": "cc2_008",
+      "competencia": "conocimientos",
+      "tema": "constitucion_derechos",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_02",
+      "enunciado": "Antes de acudir a instancias externas, ¿qué mecanismo interno previsto en el caso debería activar Marcela?",
+      "opciones": [
+        { "clave": "A", "texto": "La acción de tutela ante un juez." },
+        { "clave": "B", "texto": "El comité de convivencia laboral de la empresa." },
+        { "clave": "C", "texto": "Una demanda de nulidad del reglamento interno." },
+        { "clave": "D", "texto": "La acción popular por afectación de un derecho colectivo." }
+      ],
+      "correcta": "B",
+      "justificacion": "El caso menciona expresamente que existe un comité de convivencia laboral, integrado por representantes de ambas partes, y que Marcela no lo ha usado. Es la instancia diseñada para conocer estas situaciones dentro de la empresa.",
+      "justificaciones_incorrectas": {
+        "A": "La tutela es un mecanismo subsidiario: procede cuando no hay otro medio idóneo o para evitar un perjuicio irremediable.",
+        "C": "El problema no es el reglamento, que ella misma invoca a su favor, sino su aplicación.",
+        "D": "La acción popular protege derechos colectivos, no una situación laboral individual."
+      }
+    },
+    {
+      "id": "cc2_009",
+      "competencia": "argumentacion",
+      "tema": "convivencia_diversidad",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_02",
+      "enunciado": "La empresa sostiene que no hay acoso porque Marcela «no fue despedida ni le bajaron el sueldo». ¿Qué objeción es más sólida?",
+      "opciones": [
+        { "clave": "A", "texto": "Que el acoso laboral no requiere despido ni reducción salarial: se configura por conductas persistentes que afectan la dignidad y las condiciones de trabajo." },
+        { "clave": "B", "texto": "Que Marcela lleva cuatro años en la empresa y eso le da inmunidad." },
+        { "clave": "C", "texto": "Que el supervisor es nuevo en el cargo." },
+        { "clave": "D", "texto": "Que la empresa no tiene comité de convivencia laboral." }
+      ],
+      "correcta": "A",
+      "justificacion": "El daño está en el patrón: turnos asignados de manera desigual, descalificación pública, omisión de sus aportes en el acta y negación reiterada de permisos médicos. Que el contrato siga vigente no dice nada sobre si hubo hostigamiento.",
+      "justificaciones_incorrectas": {
+        "B": "La antigüedad no confiere inmunidad ni es lo que está en discusión.",
+        "C": "Que el supervisor sea nuevo explica el inicio del patrón, no lo justifica.",
+        "D": "El caso dice expresamente que el comité sí existe."
+      }
+    },
+    {
+      "id": "cc2_010",
+      "competencia": "argumentacion",
+      "tema": "convivencia_diversidad",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_02",
+      "enunciado": "¿Cuál de los hechos descritos resulta más difícil de justificar como simple facultad de organización del empleador?",
+      "opciones": [
+        { "clave": "A", "texto": "La asignación de turnos de madrugada." },
+        { "clave": "B", "texto": "La negación reiterada de permisos para citas médicas de control solicitadas conforme al reglamento." },
+        { "clave": "C", "texto": "La distribución de tareas dentro del equipo." },
+        { "clave": "D", "texto": "La convocatoria de reuniones de equipo." }
+      ],
+      "correcta": "B",
+      "justificacion": "Organizar turnos y tareas cabe dentro de la facultad del empleador, aunque su uso desigual pueda ser indicio de hostigamiento. Negar permisos médicos pedidos con la anticipación reglamentaria toca el derecho a la salud y no se ampara en esa facultad.",
+      "justificaciones_incorrectas": {
+        "A": "Los turnos sí caen en principio dentro de esa facultad; lo cuestionable es que no se roten como a los demás.",
+        "C": "La distribución de tareas es una facultad ordinaria de dirección.",
+        "D": "Convocar reuniones es una atribución normal del supervisor."
+      }
+    },
+    {
+      "id": "cc2_011",
+      "competencia": "multiperspectivismo",
+      "tema": "convivencia_diversidad",
+      "dificultad": 2,
+      "contexto_id": "cc2_ctx_02",
+      "enunciado": "Un compañero le dice a Marcela: «No exageres, a todos nos ha tocado madrugar alguna vez». ¿Qué desconoce esa respuesta?",
+      "opciones": [
+        { "clave": "A", "texto": "Que lo que Marcela describe no es un turno difícil, sino un patrón sostenido que a ella se le aplica y a sus compañeros no." },
+        { "clave": "B", "texto": "Que Marcela tiene más antigüedad que el resto del equipo." },
+        { "clave": "C", "texto": "Que los turnos de madrugada están prohibidos por la ley." },
+        { "clave": "D", "texto": "Que el supervisor no tiene autoridad para asignar turnos." }
+      ],
+      "correcta": "A",
+      "justificacion": "El compañero compara una experiencia puntual con una situación continuada y desigual. Reducir el caso al turno aislado hace desaparecer justamente lo que Marcela denuncia: el trato diferenciado.",
+      "justificaciones_incorrectas": {
+        "B": "El caso dice que tiene la misma antigüedad que quienes sí rotan.",
+        "C": "Los turnos nocturnos son legales, con los recargos que correspondan.",
+        "D": "El supervisor sí tiene esa atribución; se discute cómo la ejerce."
+      }
+    },
+    {
+      "id": "cc2_012",
+      "competencia": "pensamiento_sistemico",
+      "tema": "mecanismos_participacion",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_03",
+      "enunciado": "¿Qué dato del caso pone más en duda que el resultado represente a la comuna?",
+      "opciones": [
+        { "clave": "A", "texto": "Que votaran 4.100 personas de 62.000 habitantes." },
+        { "clave": "B", "texto": "Que la parte alta, donde vive el 40 % de la población, aportara apenas el 12 % de los votos, y que no tenga transporte directo al sitio de votación." },
+        { "clave": "C", "texto": "Que el comité técnico dejara solo 9 de las 47 propuestas." },
+        { "clave": "D", "texto": "Que el proyecto ganador fuera un parque y no una obra de infraestructura." }
+      ],
+      "correcta": "B",
+      "justificacion": "La subrepresentación no es aleatoria: coincide con una barrera de acceso concreta. Un resultado donde el 40 % de la población aporta el 12 % de los votos mide sobre todo quién pudo llegar a votar.",
+      "justificaciones_incorrectas": {
+        "A": "Una participación del 6,6 % es baja, pero por sí sola no indica sesgo territorial.",
+        "C": "El filtro técnico de viabilidad es parte legítima del proceso.",
+        "D": "Que gane un parque es una preferencia, no un problema de representación."
+      }
+    },
+    {
+      "id": "cc2_013",
+      "competencia": "pensamiento_sistemico",
+      "tema": "mecanismos_participacion",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_03",
+      "enunciado": "El proyecto de la vía principal quedó segundo pese a beneficiar el acceso a la parte alta. ¿Cómo se explica mejor ese resultado?",
+      "opciones": [
+        { "clave": "A", "texto": "Porque los habitantes de la parte alta no consideran prioritaria esa obra." },
+        { "clave": "B", "texto": "Porque quienes más se beneficiarían de ella son precisamente los que menos pudieron votar, en parte por la falta de transporte que la obra resolvería." },
+        { "clave": "C", "texto": "Porque el comité técnico lo evaluó como inviable." },
+        { "clave": "D", "texto": "Porque los votantes jóvenes no usan vías." }
+      ],
+      "correcta": "B",
+      "justificacion": "Es un círculo que se refuerza a sí mismo: la carencia que el proyecto busca resolver es la misma que impidió a sus beneficiarios votar por él. El mecanismo termina favoreciendo a quienes ya tienen mejor acceso.",
+      "justificaciones_incorrectas": {
+        "A": "No hay ningún dato sobre sus prioridades; lo que consta es que casi no votaron.",
+        "C": "El proyecto llegó a la votación final, así que fue declarado viable.",
+        "D": "Es una explicación superficial que ignora el dato de acceso."
+      }
+    },
+    {
+      "id": "cc2_014",
+      "competencia": "pensamiento_sistemico",
+      "tema": "mecanismos_participacion",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_03",
+      "enunciado": "¿Qué ajuste corregiría mejor el problema detectado, sin anular el resultado de la votación?",
+      "opciones": [
+        { "clave": "A", "texto": "Elevar a 18 años la edad mínima para votar." },
+        { "clave": "B", "texto": "Habilitar puntos de votación en la parte alta y transporte gratuito en la próxima edición, y evaluar si el reparto territorial de los recursos exige una cuota mínima por sector." },
+        { "clave": "C", "texto": "Reducir el número de proyectos que llegan a la votación final." },
+        { "clave": "D", "texto": "Entregar el presupuesto al comité técnico para que decida sin votación." }
+      ],
+      "correcta": "B",
+      "justificacion": "Ataca la causa identificada —la barrera de acceso— sin desconocer lo ya votado, y añade un correctivo estructural para que el resultado no dependa de quién puede desplazarse.",
+      "justificaciones_incorrectas": {
+        "A": "Excluir a los jóvenes agrega un sesgo nuevo en lugar de corregir el existente.",
+        "C": "El número de proyectos no tiene relación con el desequilibrio territorial.",
+        "D": "Eliminar la votación desmonta el mecanismo participativo en vez de mejorarlo."
+      }
+    },
+    {
+      "id": "cc2_015",
+      "competencia": "argumentacion",
+      "tema": "mecanismos_participacion",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_03",
+      "enunciado": "Un concejal afirma: «El parque ganó con el 45 % de los votos, así que es lo que la comuna quiere». ¿Qué debilita esa afirmación?",
+      "opciones": [
+        { "clave": "A", "texto": "Que 1.850 votos equivalen al 3 % de la población de la comuna, y que quienes votaron no representan proporcionalmente a todos sus sectores." },
+        { "clave": "B", "texto": "Que el parque es más costoso que los otros proyectos." },
+        { "clave": "C", "texto": "Que la votación se abrió a mayores de 14 años." },
+        { "clave": "D", "texto": "Que el comité técnico prefería otro proyecto." }
+      ],
+      "correcta": "A",
+      "justificacion": "El 45 % lo es de quienes votaron, no de la comuna. Cuando la participación es baja y además sesgada por territorio y edad, el resultado no autoriza a hablar en nombre de todos.",
+      "justificaciones_incorrectas": {
+        "B": "El caso no informa los costos de cada proyecto.",
+        "C": "Incluir a los mayores de 14 amplía la participación; no es un defecto en sí.",
+        "D": "No consta ninguna preferencia del comité, cuya función fue evaluar viabilidad."
+      }
+    },
+    {
+      "id": "cc2_016",
+      "competencia": "argumentacion",
+      "tema": "mecanismos_participacion",
+      "dificultad": 2,
+      "contexto_id": "cc2_ctx_03",
+      "enunciado": "¿Qué función cumple el comité técnico de la Fase 2 dentro del proceso?",
+      "opciones": [
+        { "clave": "A", "texto": "Decidir en qué se invierten los recursos." },
+        { "clave": "B", "texto": "Verificar que las propuestas sean ejecutables antes de someterlas a votación, para que la ciudadanía no vote proyectos irrealizables." },
+        { "clave": "C", "texto": "Representar a los barrios que no asistieron a las asambleas." },
+        { "clave": "D", "texto": "Contar los votos de la Fase 3." }
+      ],
+      "correcta": "B",
+      "justificacion": "El filtro es de viabilidad, no de preferencia: someter a votación algo que no se puede ejecutar convertiría el ejercicio en una promesa incumplible.",
+      "justificaciones_incorrectas": {
+        "A": "La decisión la toma la votación ciudadana de la Fase 3.",
+        "C": "El comité no cumple función de representación territorial.",
+        "D": "El conteo no es su función según la descripción del proceso."
+      }
+    },
+    {
+      "id": "cc2_017",
+      "competencia": "multiperspectivismo",
+      "tema": "dimension_politica",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_03",
+      "enunciado": "Un habitante de la parte alta dice: «Ese presupuesto participativo no es para nosotros». ¿Cómo debería tomarse esa afirmación?",
+      "opciones": [
+        { "clave": "A", "texto": "Como una queja infundada, ya que el mecanismo estaba abierto a toda la comuna." },
+        { "clave": "B", "texto": "Como una lectura razonable: formalmente podían participar, pero las condiciones materiales de acceso hicieron que su voto pesara tres veces menos que su población." },
+        { "clave": "C", "texto": "Como una crítica al comité técnico." },
+        { "clave": "D", "texto": "Como una petición de que se elimine el presupuesto participativo." }
+      ],
+      "correcta": "B",
+      "justificacion": "La apertura formal y el acceso real no son lo mismo. Reconocer esa distancia es lo que permite entender la afirmación como un diagnóstico y no como un resentimiento.",
+      "justificaciones_incorrectas": {
+        "A": "La apertura formal no basta cuando hay una barrera concreta documentada.",
+        "C": "La queja apunta al acceso, no a la evaluación de viabilidad.",
+        "D": "Señalar un defecto no equivale a pedir que se elimine el mecanismo."
+      }
+    },
+    {
+      "id": "cc2_018",
+      "competencia": "multiperspectivismo",
+      "tema": "convivencia_diversidad",
+      "dificultad": 2,
+      "contexto_id": "cc2_ctx_04",
+      "enunciado": "¿Cuál es el interés que sostiene la posición de los areneros?",
+      "opciones": [
+        { "clave": "A", "texto": "Obtener el título minero que tiene la empresa que opera aguas arriba." },
+        { "clave": "B", "texto": "Conservar el único medio de vida que han tenido durante tres generaciones, ante la falta de una alternativa laboral." },
+        { "clave": "C", "texto": "Impedir que se repare el puente principal." },
+        { "clave": "D", "texto": "Aumentar el volumen de extracción por encima del actual." }
+      ],
+      "correcta": "B",
+      "justificacion": "El caso lo enuncia: llevan tres generaciones en la actividad y nunca se les ofreció una alternativa. Su posición no defiende el daño ambiental, sino su subsistencia.",
+      "justificaciones_incorrectas": {
+        "A": "Los areneros jóvenes proponen un título propio de pequeña minería, no el de la empresa.",
+        "C": "El puente les sirve a ellos también; no hay tal interés en el caso.",
+        "D": "El grupo joven propone aceptar cupos, es decir, extraer menos y de forma regulada."
+      }
+    },
+    {
+      "id": "cc2_019",
+      "competencia": "multiperspectivismo",
+      "tema": "convivencia_diversidad",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_04",
+      "enunciado": "Los areneros sostienen que el daño mayor lo causa la empresa con título, y la empresa responde que la extracción informal es la que no tiene control. ¿Cómo debería tratarse ese intercambio?",
+      "opciones": [
+        { "clave": "A", "texto": "Dando la razón a los areneros, porque son los más vulnerables." },
+        { "clave": "B", "texto": "Dando la razón a la empresa, porque cuenta con un plan de manejo ambiental aprobado." },
+        { "clave": "C", "texto": "Reconociendo que ambas afirmaciones pueden ser parcialmente ciertas y que determinar el aporte de cada fuente al daño es una cuestión técnica que el estudio citado no resuelve." },
+        { "clave": "D", "texto": "Descartando ambas, porque cada parte defiende su interés." }
+      ],
+      "correcta": "C",
+      "justificacion": "El estudio documenta el daño acumulado, no su atribución por fuente. Sin esa medición, elegir culpable es una decisión política disfrazada de técnica, y las dos afirmaciones pueden coexistir.",
+      "justificaciones_incorrectas": {
+        "A": "La vulnerabilidad obliga a considerar el impacto de la medida, no a atribuir la causa del daño.",
+        "B": "Tener un plan aprobado no prueba que se cumpla ni mide su efecto real.",
+        "D": "Que cada parte defienda su interés no convierte sus afirmaciones en falsas."
+      }
+    },
+    {
+      "id": "cc2_020",
+      "competencia": "multiperspectivismo",
+      "tema": "convivencia_diversidad",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_04",
+      "enunciado": "¿Qué tiene de distinto la propuesta de los areneros jóvenes frente a la posición del resto de su gremio?",
+      "opciones": [
+        { "clave": "A", "texto": "Niega que exista un problema ambiental en el río." },
+        { "clave": "B", "texto": "Acepta el diagnóstico ambiental y busca una salida que preserve el empleo dentro de un marco regulado, en vez de exigir que todo siga igual." },
+        { "clave": "C", "texto": "Propone trasladar la extracción a otro municipio." },
+        { "clave": "D", "texto": "Renuncia a la actividad a cambio de una indemnización." }
+      ],
+      "correcta": "B",
+      "justificacion": "Organizarse en cooperativa, pedir título y aceptar cupos con monitoreo supone reconocer el límite ambiental. Convierte una oposición frontal en una negociación con condiciones verificables.",
+      "justificaciones_incorrectas": {
+        "A": "Aceptar cupos y monitoreo implica reconocer el problema.",
+        "C": "No se menciona ningún traslado.",
+        "D": "No se plantea abandonar la actividad ni pedir indemnización."
+      }
+    },
+    {
+      "id": "cc2_021",
+      "competencia": "pensamiento_sistemico",
+      "tema": "dimension_politica",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_04",
+      "enunciado": "Si la autoridad ambiental hace cumplir la suspensión sin ninguna medida complementaria, ¿cuál es el efecto no deseado más probable?",
+      "opciones": [
+        { "clave": "A", "texto": "Que la extracción continúe de manera clandestina, sin control alguno, y que 180 familias queden sin ingreso." },
+        { "clave": "B", "texto": "Que la empresa con título cierre sus operaciones." },
+        { "clave": "C", "texto": "Que el acueducto municipal deba trasladarse igualmente." },
+        { "clave": "D", "texto": "Que los habitantes de la cabecera abandonen el municipio." }
+      ],
+      "correcta": "A",
+      "justificacion": "Prohibir sin alternativa no elimina la necesidad que sostiene la actividad: la empuja a la clandestinidad, donde ya no hay ni cupos ni monitoreo posibles. El resultado puede ser peor para el río que una extracción regulada.",
+      "justificaciones_incorrectas": {
+        "B": "La orden recae sobre la extracción informal; la empresa tiene título.",
+        "C": "El traslado del acueducto depende del nivel del cauce, no directamente de la suspensión.",
+        "D": "Es una consecuencia desproporcionada que el caso no sugiere."
+      }
+    },
+    {
+      "id": "cc2_022",
+      "competencia": "pensamiento_sistemico",
+      "tema": "dimension_politica",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_04",
+      "enunciado": "¿Qué dato del caso muestra que el problema ya dejó de ser solo ambiental?",
+      "opciones": [
+        { "clave": "A", "texto": "Que la extracción se realiza de manera artesanal." },
+        { "clave": "B", "texto": "Que la socavación amenaza dos puentes y dejó la captación del acueducto por encima del agua en época seca, lo que afecta a las 24.000 personas de la cabecera." },
+        { "clave": "C", "texto": "Que los areneros llevan tres generaciones en la actividad." },
+        { "clave": "D", "texto": "Que la alcaldía no tiene recursos para la reconversión." }
+      ],
+      "correcta": "B",
+      "justificacion": "El daño al cauce pasó a comprometer infraestructura crítica y el suministro de agua potable. Deja de ser un asunto de conservación para convertirse en uno de seguridad y salud pública.",
+      "justificaciones_incorrectas": {
+        "A": "El carácter artesanal describe la actividad, no su alcance.",
+        "C": "La tradición es un elemento social del conflicto, no la extensión del daño.",
+        "D": "La falta de recursos es una restricción para la solución, no una consecuencia del daño."
+      }
+    },
+    {
+      "id": "cc2_023",
+      "competencia": "argumentacion",
+      "tema": "dimension_politica",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_04",
+      "enunciado": "¿Cuál sería la respuesta institucional más completa frente al caso?",
+      "opciones": [
+        { "clave": "A", "texto": "Levantar la suspensión hasta que la alcaldía consiga recursos para la reconversión." },
+        { "clave": "B", "texto": "Mantener la protección del cauce y, en paralelo, abrir la ruta de formalización que proponen los areneros jóvenes, con cupos y monitoreo, y priorizar la protección de los puentes y la captación." },
+        { "clave": "C", "texto": "Suspender también a la empresa con título, para que la medida sea equitativa." },
+        { "clave": "D", "texto": "Trasladar la captación del acueducto y permitir que la extracción continúe como hasta ahora." }
+      ],
+      "correcta": "B",
+      "justificacion": "Atiende la urgencia física —puentes y acueducto—, no ignora el problema social de las 180 familias y aprovecha una propuesta que ya viene de los propios afectados, lo que la hace más viable.",
+      "justificaciones_incorrectas": {
+        "A": "Aplaza la protección de infraestructura crítica a la espera de recursos inciertos.",
+        "C": "Suspender a quien cumple su plan de manejo no repara nada; la equidad no consiste en sancionar a todos por igual sin evaluar aportes al daño.",
+        "D": "Trasladar la captación sin frenar la profundización del cauce solo pospone el problema."
+      }
+    },
+    {
+      "id": "cc2_024",
+      "competencia": "conocimientos",
+      "tema": "constitucion_derechos",
+      "dificultad": 2,
+      "contexto_id": "cc2_ctx_05",
+      "enunciado": "La medida de la rectoría compromete principalmente el derecho de Daniela a",
+      "opciones": [
+        { "clave": "A", "texto": "la educación, en condiciones de igualdad y sin discriminación por su estado de embarazo." },
+        { "clave": "B", "texto": "la libertad de cultos." },
+        { "clave": "C", "texto": "la propiedad privada." },
+        { "clave": "D", "texto": "la libre asociación." }
+      ],
+      "correcta": "A",
+      "justificacion": "Separar a una estudiante de las clases presenciales y de la ceremonia de grado por estar embarazada la excluye del servicio educativo en las condiciones en que lo reciben sus compañeros, sin que medie una razón médica.",
+      "justificaciones_incorrectas": {
+        "B": "No se le impone ni se le impide ninguna práctica religiosa.",
+        "C": "No hay ninguna afectación patrimonial.",
+        "D": "No se le impide pertenecer a organización alguna."
+      }
+    },
+    {
+      "id": "cc2_025",
+      "competencia": "conocimientos",
+      "tema": "constitucion_derechos",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_05",
+      "enunciado": "El colegio invoca la cláusula del manual sobre «conducta acorde con los principios de la institución». ¿Cuál es el límite de esa cláusula?",
+      "opciones": [
+        { "clave": "A", "texto": "No tiene límites: los padres la firmaron al matricular." },
+        { "clave": "B", "texto": "Los manuales de convivencia obligan, pero no pueden aplicarse de modo que desconozcan derechos fundamentales, y el embarazo no es una falta disciplinaria." },
+        { "clave": "C", "texto": "Solo aplica a los estudiantes mayores de edad." },
+        { "clave": "D", "texto": "Solo puede invocarse si el consejo directivo la ratifica cada año." }
+      ],
+      "correcta": "B",
+      "justificacion": "La autonomía de un colegio privado es real pero no ilimitada: no puede convertir una condición protegida en causal de exclusión. Estar embarazada no es una conducta sancionable.",
+      "justificaciones_incorrectas": {
+        "A": "La firma de un contrato de matrícula no habilita a renunciar a derechos fundamentales.",
+        "C": "La edad no determina la vigencia del manual.",
+        "D": "La ratificación anual no es lo que fija el límite: lo fijan los derechos fundamentales."
+      }
+    },
+    {
+      "id": "cc2_026",
+      "competencia": "argumentacion",
+      "tema": "convivencia_diversidad",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_05",
+      "enunciado": "La rectoría justifica la medida diciendo que es «por el bien de la estudiante». ¿Qué debilita ese argumento?",
+      "opciones": [
+        { "clave": "A", "texto": "Que ni Daniela ni su médico piden esa restricción, y que la medida coincide exactamente con lo que le conviene al colegio: que no se la vea en el plantel." },
+        { "clave": "B", "texto": "Que el embarazo es de cinco meses y no de ocho." },
+        { "clave": "C", "texto": "Que el colegio es privado y no público." },
+        { "clave": "D", "texto": "Que otros padres enviaron una carta de respaldo." }
+      ],
+      "correcta": "A",
+      "justificacion": "Un argumento paternalista pierde fuerza cuando la persona a quien dice proteger no lo pide y cuando quien lo formula obtiene un beneficio propio. La segunda razón de la rectoría —«evitar la alteración del ambiente escolar»— revela el interés real.",
+      "justificaciones_incorrectas": {
+        "B": "El tiempo de gestación no es lo que hace débil el argumento.",
+        "C": "El carácter privado amplía la autonomía, pero no valida el argumento del bien de la estudiante.",
+        "D": "La carta muestra apoyo, pero no responde a si la medida la beneficia a ella."
+      }
+    },
+    {
+      "id": "cc2_027",
+      "competencia": "argumentacion",
+      "tema": "convivencia_diversidad",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_05",
+      "enunciado": "Los padres que respaldan la decisión argumentan que «pagaron por una formación con unos valores determinados». ¿Cuál es la respuesta más sólida?",
+      "opciones": [
+        { "clave": "A", "texto": "Que los padres no tienen derecho a opinar sobre el colegio de sus hijos." },
+        { "clave": "B", "texto": "Que elegir una formación en ciertos valores es legítimo, pero ese derecho no alcanza a exigir que se excluya del plantel a otra estudiante." },
+        { "clave": "C", "texto": "Que los valores religiosos no tienen cabida en la educación." },
+        { "clave": "D", "texto": "Que el colegio debería devolverles el dinero de la matrícula." }
+      ],
+      "correcta": "B",
+      "justificacion": "El derecho de los padres a escoger el tipo de educación de sus hijos está reconocido, pero se ejerce sobre la formación que reciben los propios hijos, no sobre la permanencia de terceros en la institución.",
+      "justificaciones_incorrectas": {
+        "A": "Los padres sí tienen derecho a opinar; el punto es hasta dónde llega ese derecho.",
+        "C": "La educación con orientación religiosa es legítima en Colombia.",
+        "D": "La devolución del dinero no responde al argumento planteado."
+      }
+    },
+    {
+      "id": "cc2_028",
+      "competencia": "multiperspectivismo",
+      "tema": "convivencia_diversidad",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_05",
+      "enunciado": "¿Qué actor del caso propone una salida procedimental antes de que la medida se aplique?",
+      "opciones": [
+        { "clave": "A", "texto": "La rectoría, al ofrecer la modalidad domiciliaria." },
+        { "clave": "B", "texto": "La personera estudiantil, al pedir que el caso pase al consejo directivo." },
+        { "clave": "C", "texto": "Los padres que firmaron la carta." },
+        { "clave": "D", "texto": "El médico de Daniela." }
+      ],
+      "correcta": "B",
+      "justificacion": "La personera no toma partido por el fondo: pide que la decisión pase por el órgano colegiado antes de ejecutarse. Es exactamente la función de representación estudiantil que el cargo tiene.",
+      "justificaciones_incorrectas": {
+        "A": "La rectoría propone la medida cuestionada, no un procedimiento para revisarla.",
+        "C": "La carta respalda la decisión ya tomada.",
+        "D": "El médico solo constató que no hay restricción para asistir."
+      }
+    },
+    {
+      "id": "cc2_029",
+      "competencia": "pensamiento_sistemico",
+      "tema": "dimension_politica",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_06",
+      "enunciado": "¿Qué dato sugiere que el problema se desplazó en lugar de resolverse?",
+      "opciones": [
+        { "clave": "A", "texto": "Que los homicidios bajaron de 7 a 4." },
+        { "clave": "B", "texto": "Que las riñas en el parque central bajaron un 60 % mientras subían un 45 % en dos barrios periféricos." },
+        { "clave": "C", "texto": "Que se instalaron cámaras en ocho puntos." },
+        { "clave": "D", "texto": "Que se impusieron 210 comparendos." }
+      ],
+      "correcta": "B",
+      "justificacion": "La caída y el alza ocurren al mismo tiempo y en sentidos opuestos: es el patrón típico del desplazamiento. Cerrar el parque no elimina la conducta, la traslada a donde no hay vigilancia.",
+      "justificaciones_incorrectas": {
+        "A": "La caída de homicidios es un resultado favorable, aunque su atribución sea discutible.",
+        "C": "Las cámaras son una medida, no un indicador de desplazamiento.",
+        "D": "Los comparendos indican aplicación de la norma, no traslado del problema."
+      }
+    },
+    {
+      "id": "cc2_030",
+      "competencia": "pensamiento_sistemico",
+      "tema": "dimension_politica",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_06",
+      "enunciado": "¿Qué revela que el 78 % de los comparendos se haya impuesto en los tres barrios de menores ingresos?",
+      "opciones": [
+        { "clave": "A", "texto": "Que en esos barrios los jóvenes incumplen más las normas." },
+        { "clave": "B", "texto": "Que la carga de la medida no se repartió por igual, y que puede reflejar tanto dónde se concentró la vigilancia como quiénes dependen más de la calle y del transporte nocturno." },
+        { "clave": "C", "texto": "Que la policía trabaja mejor en esos barrios." },
+        { "clave": "D", "texto": "Que los otros barrios no tienen menores de edad." }
+      ],
+      "correcta": "B",
+      "justificacion": "Una cifra de sanciones mide dos cosas mezcladas: la conducta y el control. Concluir solo lo primero ignora que la vigilancia no se distribuye al azar y que la exposición a la calle depende de las condiciones de vida.",
+      "justificaciones_incorrectas": {
+        "A": "Es la lectura que el dato no permite hacer por sí solo.",
+        "C": "Más comparendos no equivale a mejor trabajo policial.",
+        "D": "Es una conclusión absurda que el caso no respalda."
+      }
+    },
+    {
+      "id": "cc2_031",
+      "competencia": "pensamiento_sistemico",
+      "tema": "dimension_politica",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_06",
+      "enunciado": "La suspensión de la liga de fútbol juvenil ilustra",
+      "opciones": [
+        { "clave": "A", "texto": "un efecto no deseado que golpea justamente una actividad que aleja a los jóvenes de la situación que la medida quería evitar." },
+        { "clave": "B", "texto": "que los jóvenes no estaban interesados en el deporte." },
+        { "clave": "C", "texto": "que la liga incumplía el reglamento municipal." },
+        { "clave": "D", "texto": "un beneficio de la medida, porque reduce la circulación nocturna." }
+      ],
+      "correcta": "A",
+      "justificacion": "La liga entrenaba de noche porque sus integrantes trabajan de día. La restricción eliminó una alternativa organizada de uso del tiempo, que es lo contrario de lo que una política de convivencia debería lograr.",
+      "justificaciones_incorrectas": {
+        "B": "La liga existía y funcionaba: el interés estaba probado.",
+        "C": "La liga operaba con normalidad antes del decreto.",
+        "D": "Reducir esa circulación concreta no es un beneficio: elimina una actividad protectora."
+      }
+    },
+    {
+      "id": "cc2_032",
+      "competencia": "argumentacion",
+      "tema": "dimension_politica",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_06",
+      "enunciado": "La alcaldía afirma que las medidas «funcionaron» porque los homicidios bajaron de 7 a 4. ¿Cuál es la principal debilidad de esa conclusión?",
+      "opciones": [
+        { "clave": "A", "texto": "Que tres homicidios de diferencia, sobre cifras tan pequeñas y sin comparación con municipios similares, no permiten descartar que la variación sea normal entre un año y otro." },
+        { "clave": "B", "texto": "Que las cifras de homicidios no son confiables." },
+        { "clave": "C", "texto": "Que el periodo evaluado fue de dos meses y no de tres." },
+        { "clave": "D", "texto": "Que los homicidios deberían haber bajado a cero." }
+      ],
+      "correcta": "A",
+      "justificacion": "Con números tan bajos, la fluctuación entre periodos es esperable incluso sin intervención alguna. Sin un grupo de comparación no se puede saber qué habría pasado sin las medidas.",
+      "justificaciones_incorrectas": {
+        "B": "El caso no da razones para dudar del registro.",
+        "C": "El corte a los dos meses es una limitación menor frente al problema de atribución.",
+        "D": "Exigir cero homicidios no es un criterio razonable de evaluación."
+      }
+    },
+    {
+      "id": "cc2_033",
+      "competencia": "argumentacion",
+      "tema": "dimension_politica",
+      "dificultad": 3,
+      "contexto_id": "cc2_ctx_06",
+      "enunciado": "¿Qué ajuste conservaría el objetivo de la política corrigiendo los problemas detectados?",
+      "opciones": [
+        { "clave": "A", "texto": "Extender el toque de queda a los mayores de 18 años." },
+        { "clave": "B", "texto": "Prever excepciones para actividades organizadas como la liga juvenil, reforzar la presencia en los barrios donde subieron las riñas y revisar por qué la sanción se concentra en tres barrios." },
+        { "clave": "C", "texto": "Retirar las cámaras de vigilancia." },
+        { "clave": "D", "texto": "Aumentar el valor de los comparendos." }
+      ],
+      "correcta": "B",
+      "justificacion": "Cada componente responde a un hallazgo concreto: la excepción evita destruir una actividad protectora, el refuerzo atiende el desplazamiento y la revisión aborda la distribución desigual de la sanción.",
+      "justificaciones_incorrectas": {
+        "A": "Amplía la restricción sin corregir ninguno de los problemas identificados.",
+        "C": "Las cámaras no aparecen entre los efectos problemáticos.",
+        "D": "Encarecer la sanción agrava la carga sobre los barrios que ya concentran el 78 %."
+      }
+    },
+    {
+      "id": "cc2_034",
+      "competencia": "conocimientos",
+      "tema": "constitucion_derechos",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Una comunidad étnica va a ser afectada directamente por un proyecto de infraestructura en su territorio. El mecanismo que el Estado debe surtir antes de decidir es",
+      "opciones": [
+        { "clave": "A", "texto": "la consulta previa." },
+        { "clave": "B", "texto": "el referendo derogatorio." },
+        { "clave": "C", "texto": "la acción de cumplimiento." },
+        { "clave": "D", "texto": "el cabildo abierto." }
+      ],
+      "correcta": "A",
+      "justificacion": "La consulta previa es un derecho fundamental de los pueblos indígenas y las comunidades étnicas, reconocido a partir del Convenio 169 de la OIT, incorporado al ordenamiento colombiano mediante la Ley 21 de 1991.",
+      "justificaciones_incorrectas": {
+        "B": "El referendo derogatorio sirve para dejar sin efecto una norma ya expedida.",
+        "C": "La acción de cumplimiento exige que se cumpla una ley o un acto administrativo.",
+        "D": "El cabildo abierto es una sesión pública de una corporación, no un procedimiento específico para comunidades étnicas."
+      }
+    },
+    {
+      "id": "cc2_035",
+      "competencia": "conocimientos",
+      "tema": "organizacion_estado",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "¿Qué órgano tiene a su cargo la guarda de la integridad y supremacía de la Constitución?",
+      "opciones": [
+        { "clave": "A", "texto": "La Corte Suprema de Justicia." },
+        { "clave": "B", "texto": "La Corte Constitucional." },
+        { "clave": "C", "texto": "El Consejo de Estado." },
+        { "clave": "D", "texto": "La Procuraduría General de la Nación." }
+      ],
+      "correcta": "B",
+      "justificacion": "Es la función que la Constitución le asigna expresamente a la Corte Constitucional, que además revisa las sentencias de tutela.",
+      "justificaciones_incorrectas": {
+        "A": "La Corte Suprema es el máximo tribunal de la jurisdicción ordinaria.",
+        "C": "El Consejo de Estado encabeza la jurisdicción de lo contencioso administrativo.",
+        "D": "La Procuraduría ejerce el control disciplinario y representa a la sociedad."
+      }
+    },
+    {
+      "id": "cc2_036",
+      "competencia": "conocimientos",
+      "tema": "mecanismos_participacion",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "Un grupo de ciudadanos quiere que el Congreso discuta un proyecto de ley que ellos mismos redactaron. El mecanismo indicado es",
+      "opciones": [
+        { "clave": "A", "texto": "la iniciativa legislativa popular." },
+        { "clave": "B", "texto": "la consulta popular." },
+        { "clave": "C", "texto": "el plebiscito." },
+        { "clave": "D", "texto": "la revocatoria del mandato." }
+      ],
+      "correcta": "A",
+      "justificacion": "La iniciativa popular legislativa permite a un grupo de ciudadanos, con el respaldo de firmas, presentar proyectos de ley o de acto legislativo ante la corporación correspondiente.",
+      "justificaciones_incorrectas": {
+        "B": "La consulta popular somete a votación una pregunta general, no un texto de ley redactado por los ciudadanos.",
+        "C": "El plebiscito es el pronunciamiento del pueblo sobre una decisión del Presidente.",
+        "D": "La revocatoria da por terminado el mandato de un alcalde o gobernador."
+      }
+    },
+    {
+      "id": "cc2_037",
+      "competencia": "conocimientos",
+      "tema": "constitucion_derechos",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "Un grupo de consumidores sufrió el mismo daño por un producto defectuoso y quiere obtener la reparación económica de todos los afectados en un solo proceso. El mecanismo adecuado es",
+      "opciones": [
+        { "clave": "A", "texto": "la acción popular." },
+        { "clave": "B", "texto": "la acción de grupo." },
+        { "clave": "C", "texto": "la acción de tutela." },
+        { "clave": "D", "texto": "el habeas data." }
+      ],
+      "correcta": "B",
+      "justificacion": "La acción de grupo procede cuando un número plural de personas sufre un daño de origen común y busca la indemnización de los perjuicios.",
+      "justificaciones_incorrectas": {
+        "A": "La acción popular protege derechos colectivos y busca evitar o cesar el daño, no indemnizar.",
+        "C": "La tutela protege derechos fundamentales y no es la vía para reclamar perjuicios patrimoniales de un grupo.",
+        "D": "El habeas data se refiere a la información personal en bases de datos."
+      }
+    },
+    {
+      "id": "cc2_038",
+      "competencia": "conocimientos",
+      "tema": "organizacion_estado",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "La Defensoría del Pueblo tiene como función principal",
+      "opciones": [
+        { "clave": "A", "texto": "promover y proteger los derechos humanos, y velar por su ejercicio efectivo." },
+        { "clave": "B", "texto": "investigar y acusar a los responsables de delitos." },
+        { "clave": "C", "texto": "vigilar el manejo de los recursos públicos." },
+        { "clave": "D", "texto": "organizar las elecciones y el registro civil." }
+      ],
+      "correcta": "A",
+      "justificacion": "La Defensoría forma parte del Ministerio Público y su misión es la promoción, el ejercicio y la divulgación de los derechos humanos.",
+      "justificaciones_incorrectas": {
+        "B": "Investigar y acusar corresponde a la Fiscalía General de la Nación.",
+        "C": "La vigilancia de los recursos públicos es del control fiscal, a cargo de la Contraloría.",
+        "D": "Las elecciones y el registro civil corresponden a la Registraduría."
+      }
+    },
+    {
+      "id": "cc2_039",
+      "competencia": "conocimientos",
+      "tema": "constitucion_derechos",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "Una entidad bancaria mantiene reportado a una persona en una central de riesgo pese a que la deuda fue pagada hace dos años. El mecanismo específico para corregir esa información es",
+      "opciones": [
+        { "clave": "A", "texto": "el habeas data." },
+        { "clave": "B", "texto": "el habeas corpus." },
+        { "clave": "C", "texto": "la acción popular." },
+        { "clave": "D", "texto": "la acción de cumplimiento." }
+      ],
+      "correcta": "A",
+      "justificacion": "El habeas data protege el derecho a conocer, actualizar y rectificar la información personal recogida en bancos de datos, que es exactamente lo que está en juego.",
+      "justificaciones_incorrectas": {
+        "B": "El habeas corpus protege la libertad personal de quien está privado de ella ilegalmente.",
+        "C": "La acción popular protege derechos colectivos, no un dato personal.",
+        "D": "La acción de cumplimiento exige acatar una norma o acto administrativo."
+      }
+    },
+    {
+      "id": "cc2_040",
+      "competencia": "conocimientos",
+      "tema": "organizacion_estado",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "¿Cuál de las siguientes entidades NO pertenece a ninguna de las tres ramas del poder público, sino a los órganos autónomos de control?",
+      "opciones": [
+        { "clave": "A", "texto": "El Consejo de Estado." },
+        { "clave": "B", "texto": "La Contraloría General de la República." },
+        { "clave": "C", "texto": "El Senado de la República." },
+        { "clave": "D", "texto": "El Ministerio de Educación." }
+      ],
+      "correcta": "B",
+      "justificacion": "La Contraloría es un órgano de control autónomo e independiente, igual que el Ministerio Público. No forma parte de la rama ejecutiva, legislativa ni judicial.",
+      "justificaciones_incorrectas": {
+        "A": "El Consejo de Estado pertenece a la rama judicial.",
+        "C": "El Senado integra la rama legislativa.",
+        "D": "Los ministerios hacen parte de la rama ejecutiva."
+      }
+    },
+    {
+      "id": "cc2_041",
+      "competencia": "conocimientos",
+      "tema": "constitucion_derechos",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "El artículo 13 de la Constitución consagra el derecho a la igualdad. Además de prohibir la discriminación, ese artículo",
+      "opciones": [
+        { "clave": "A", "texto": "ordena al Estado promover condiciones para que la igualdad sea real y efectiva, y adoptar medidas a favor de grupos discriminados o marginados." },
+        { "clave": "B", "texto": "prohíbe cualquier trato diferenciado, incluso el que busca favorecer a un grupo desaventajado." },
+        { "clave": "C", "texto": "se aplica únicamente a las relaciones entre el Estado y los ciudadanos." },
+        { "clave": "D", "texto": "establece que todos deben recibir exactamente los mismos servicios públicos." }
+      ],
+      "correcta": "A",
+      "justificacion": "La Constitución no se limita a la igualdad formal: obliga al Estado a promover la igualdad material y habilita medidas afirmativas en favor de grupos discriminados o marginados.",
+      "justificaciones_incorrectas": {
+        "B": "Es lo contrario: el propio artículo autoriza expresamente esas medidas.",
+        "C": "El derecho a la igualdad también rige entre particulares en múltiples ámbitos, como el laboral y el educativo.",
+        "D": "La igualdad no exige uniformidad de prestaciones, sino ausencia de discriminación y promoción de condiciones reales."
+      }
+    },
+    {
+      "id": "cc2_042",
+      "competencia": "argumentacion",
+      "tema": "dimension_politica",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "En un debate sobre el aumento del salario mínimo, un participante dice: «Los economistas que se oponen están pagados por los empresarios, así que sus estudios no valen». Este razonamiento",
+      "opciones": [
+        { "clave": "A", "texto": "descalifica al autor en lugar de examinar los datos y el método de los estudios, aunque un posible conflicto de interés sea razón para revisarlos con más cuidado, no para descartarlos sin leerlos." },
+        { "clave": "B", "texto": "es válido, porque los conflictos de interés invalidan cualquier investigación." },
+        { "clave": "C", "texto": "constituye una generalización apresurada a partir de un caso." },
+        { "clave": "D", "texto": "confunde correlación con causalidad." }
+      ],
+      "correcta": "A",
+      "justificacion": "Es una falacia ad hominem de tipo circunstancial. Señalar la fuente de financiación es legítimo como alerta, pero refutar un estudio exige mostrar dónde falla su método o sus datos.",
+      "justificaciones_incorrectas": {
+        "B": "Un conflicto de interés obliga a más escrutinio, no a descartar automáticamente el contenido.",
+        "C": "No hay generalización desde un caso particular.",
+        "D": "No se afirma ninguna relación causal entre variables."
+      }
+    },
+    {
+      "id": "cc2_043",
+      "competencia": "argumentacion",
+      "tema": "dimension_politica",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "Un alcalde defiende una obra afirmando: «O construimos este centro comercial, o el municipio se queda sin empleo». Esta forma de argumentar",
+      "opciones": [
+        { "clave": "A", "texto": "plantea un falso dilema, porque presenta dos únicas salidas y excluye cualquier alternativa intermedia o distinta." },
+        { "clave": "B", "texto": "es una apelación legítima a las consecuencias." },
+        { "clave": "C", "texto": "constituye un argumento de autoridad." },
+        { "clave": "D", "texto": "es una generalización apresurada." }
+      ],
+      "correcta": "A",
+      "justificacion": "Reducir el problema del empleo a una sola obra elimina del debate otras políticas posibles y presiona a aceptar la propuesta como si no hubiera opciones.",
+      "justificaciones_incorrectas": {
+        "B": "Apelar a consecuencias sería legítimo si no cerrara artificialmente el abanico de opciones.",
+        "C": "No se invoca la opinión de ninguna autoridad.",
+        "D": "No se generaliza a partir de casos particulares."
+      }
+    },
+    {
+      "id": "cc2_044",
+      "competencia": "multiperspectivismo",
+      "tema": "convivencia_diversidad",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "Un municipio debate si permitir el paso de motos por una vía peatonal del centro histórico. ¿Qué actitud refleja mejor el reconocimiento de las distintas perspectivas?",
+      "opciones": [
+        { "clave": "A", "texto": "Sostener que los motociclistas solo piensan en su comodidad." },
+        { "clave": "B", "texto": "Reconocer que los comerciantes necesitan abastecerse, que los peatones necesitan seguridad y que los domiciliarios dependen de esa vía para trabajar, y buscar horarios y condiciones que atiendan a los tres." },
+        { "clave": "C", "texto": "Decidir según lo que opine la mayoría de los residentes del centro histórico." },
+        { "clave": "D", "texto": "Mantener la prohibición sin discusión, porque la vía es peatonal por definición." }
+      ],
+      "correcta": "B",
+      "justificacion": "Identifica tres intereses legítimos y distintos y busca un arreglo que los contemple, en vez de asignar la razón a uno solo. Los horarios diferenciados son la herramienta típica para eso.",
+      "justificaciones_incorrectas": {
+        "A": "Atribuye una intención en lugar de examinar razones.",
+        "C": "Consultar a los residentes es útil, pero deja fuera a domiciliarios y comerciantes que también dependen de la vía.",
+        "D": "Cerrar la discusión por definición impide considerar necesidades reales."
+      }
+    },
+    {
+      "id": "cc2_045",
+      "competencia": "multiperspectivismo",
+      "tema": "convivencia_diversidad",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "En una universidad se discute si las clases deben grabarse. ¿Qué afirmación reconoce mejor que un mismo hecho se vive de manera distinta según la posición de cada persona?",
+      "opciones": [
+        { "clave": "A", "texto": "«Grabar las clases beneficia a todos por igual, no hay nada que discutir»." },
+        { "clave": "B", "texto": "«La grabación le resuelve el problema a quien trabaja o vive lejos, y al mismo tiempo puede desincentivar la asistencia de quien sí podía ir, con lo que se empobrece la clase para todos»." },
+        { "clave": "C", "texto": "«Quien pide grabaciones es porque no quiere esforzarse»." },
+        { "clave": "D", "texto": "«La decisión le corresponde solo a los profesores, que son los expertos»." }
+      ],
+      "correcta": "B",
+      "justificacion": "Reconoce que la misma medida produce efectos opuestos según la situación de cada estudiante, y que esos efectos interactúan entre sí. Es lo que exige considerar varias perspectivas a la vez.",
+      "justificaciones_incorrectas": {
+        "A": "Supone una uniformidad que las distintas situaciones desmienten.",
+        "C": "Atribuye una intención en lugar de examinar circunstancias.",
+        "D": "Excluye de la deliberación a quienes resultan afectados por la decisión."
+      }
+    }
+  ]
+}

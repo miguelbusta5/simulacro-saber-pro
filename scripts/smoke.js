@@ -326,6 +326,73 @@ async function main() {
     `status ${r.status}, error ${r.datos?.error}`
   );
 
+  console.log('\nPanel de administración');
+  // La sesión activa es la del segundo usuario, que no es administrador.
+  for (const ruta of ['/usuarios', '/intentos', '/resumen', `/intentos/${intentoId}`]) {
+    r = await pedir(`/api/admin${ruta}`);
+    check(
+      `un usuario normal recibe 403 en /api/admin${ruta}`,
+      r.status === 403 && r.datos.error === 'NO_AUTORIZADO',
+      `status ${r.status}, error ${r.datos?.error}`
+    );
+  }
+
+  // Se promueve al primer usuario, igual que hace npm run admin.
+  await ejecutar("UPDATE usuarios SET rol = 'admin' WHERE lower(usuario) = lower($1)", [usuario]);
+  await pedir('/api/auth/login', { method: 'POST', body: { usuario, password: 'secreta123' } });
+
+  r = await pedir('/api/auth/me');
+  check('el rol de administrador llega en /api/auth/me', r.datos.usuario.rol === 'admin');
+
+  r = await pedir('/api/admin/usuarios');
+  check(
+    'el administrador ve la lista de usuarios',
+    r.status === 200 && r.datos.usuarios.length >= 2,
+    `status ${r.status}`
+  );
+  check(
+    'la lista de usuarios NO expone hashes de contraseña',
+    !JSON.stringify(r.datos).includes('pass_hash') && !JSON.stringify(r.datos).includes('pass_salt')
+  );
+
+  r = await pedir('/api/admin/intentos');
+  const listado = r.datos.intentos || [];
+  check(
+    'el administrador ve los intentos de otros usuarios con versión y fechas',
+    r.status === 200 &&
+      listado.length >= 2 &&
+      listado.every((i) => i.version && i.version_nombre && i.iniciado_en && i.usuario),
+    `status ${r.status}, ${listado.length} intentos`
+  );
+
+  r = await pedir(`/api/admin/intentos/${intentoId}`);
+  check(
+    'el detalle trae los resultados y el diagnóstico del estudiante',
+    r.status === 200 &&
+      r.datos.estudiante.usuario === usuario &&
+      r.datos.resultados.total === TOTAL &&
+      r.datos.analisis.por_competencia.length > 0,
+    `status ${r.status}`
+  );
+
+  r = await pedir('/api/admin/resumen');
+  check(
+    'el resumen agrega por versión',
+    r.status === 200 && Array.isArray(r.datos.versiones) && r.datos.usuarios >= 2,
+    `status ${r.status}`
+  );
+
+  // Con un simulacro corriendo, el panel expone respuestas correctas: se bloquea.
+  r = await pedir('/api/intentos', { method: 'POST' });
+  const intentoAdmin = r.datos.intento_id;
+  r = await pedir('/api/admin/intentos');
+  check(
+    'con un simulacro en curso el administrador recibe 409 en /api/admin',
+    r.status === 409 && r.datos.error === 'REVISION_BLOQUEADA',
+    `status ${r.status}, error ${r.datos?.error}`
+  );
+  await pedir(`/api/intentos/${intentoAdmin}/finalizar`, { method: 'POST' });
+
   server.close();
   console.log(`\n${pruebas - fallos}/${pruebas} verificaciones pasaron.`);
   if (fallos) process.exitCode = 1;

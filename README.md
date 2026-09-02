@@ -89,21 +89,69 @@ primera petición después tarda unos segundos.
 
 ## Cómo está armada la prueba
 
-Una sesión de **4 h 30 min** con **160 preguntas**, con navegación libre entre módulos:
+Una sesión de **4 h 30 min** con **195 preguntas**, con navegación libre entre módulos:
 
 | Módulo | Preguntas |
 |---|---|
 | Lectura crítica | 35 |
 | Razonamiento cuantitativo | 35 |
 | Competencias ciudadanas | 35 |
+| Comunicación escrita | 35 |
 | Inglés | 55 |
 
 Cada simulacro se arma respetando la cobertura por competencia definida en
 [blueprint.js](server/exam/blueprint.js), y prioriza preguntas que ese usuario no ha visto antes.
-El banco tiene 200 preguntas, así que dos simulacros seguidos no son iguales.
+El banco de la versión activa tiene 245 preguntas, así que dos simulacros seguidos no son iguales.
 
-No se incluyen Comunicación escrita (no es calificable automáticamente) ni los módulos
-específicos por programa académico.
+No se incluyen los módulos específicos por programa académico.
+
+### Dos advertencias sobre Comunicación escrita
+
+En el Saber Pro real, Comunicación escrita es **una única pregunta abierta**: un texto que el
+estudiante redacta y que califican lectores humanos con rúbrica. Aquí se evalúa en **selección
+múltiple**, con preguntas sobre las mismas competencias que el módulo mide —planteamiento,
+organización y uso del lenguaje—. Sirve para practicarlas, pero no reproduce el formato oficial,
+y la app lo advierte en la pantalla de resultados.
+
+Su número de preguntas (35) y los puntos de corte de sus niveles son una calibración propia,
+porque no existe una versión oficial de selección múltiple de ese módulo. Los otros cuatro
+módulos conservan sus cifras oficiales exactas.
+
+## Versiones de la prueba
+
+Cada versión declara su propia estructura, porque los intentos ya presentados deben poder
+consultarse tal como se presentaron:
+
+| Versión | Módulos | Preguntas | Duración |
+|---|---|---|---|
+| Versión 1 | 4 (sin Comunicación escrita) | 160 | 4 h 30 min |
+| **Versión 2** (activa) | 5 | 195 | 4 h 30 min |
+
+Los simulacros nuevos usan **siempre la versión más reciente**. Las preguntas de la V1 permanecen
+en la base porque los intentos antiguos las referencian y su revisión debe seguir funcionando.
+La versión se muestra durante todo el examen y queda registrada en el intento y en los resultados.
+
+Para añadir una V3: agrega una entrada a `VERSIONES` en
+[blueprint.js](server/exam/blueprint.js) y un directorio `data/banco/v3/`.
+
+## Administración
+
+El rol de administrador se otorga **solo desde el servidor**; ninguna ruta web lo concede:
+
+```bash
+npm run admin -- <usuario>
+```
+
+Sin argumentos lista los administradores actuales, y con `--quitar` devuelve la cuenta a
+estudiante. La cuenta debe estar registrada previamente en la aplicación.
+
+El panel (`/admin.html`) muestra los usuarios con sus pruebas y su mejor puntaje, todas las
+pruebas presentadas con versión, fechas y duración, el detalle de cada intento con su diagnóstico
+por competencia y tema, y promedios por módulo y versión.
+
+El panel se bloquea si el propio administrador tiene un simulacro en curso: el diagnóstico
+incluye respuestas correctas y todos los estudiantes comparten banco, así que podría leer ahí
+preguntas que tiene delante. Es la misma regla que gobierna la revisión propia.
 
 ## Las dos reglas de bloqueo
 
@@ -142,8 +190,10 @@ reporta cuántas preguntas quedaron en blanco, como señal de gestión del tiemp
 ## Ampliar el banco de preguntas
 
 El formato está documentado en [data/schema-pregunta.md](data/schema-pregunta.md). Agrega
-preguntas a los archivos de `data/banco/` y vuelve a ejecutar `npm run seed`: el script valida
-todo antes de escribir y al final imprime la cobertura frente al blueprint.
+preguntas al archivo del módulo dentro de `data/banco/<version>/` y vuelve a ejecutar
+`npm run seed`: el script deduce la versión del directorio, valida que los `id` no se repitan
+entre versiones y que las competencias existan en el blueprint de esa versión, y al final imprime
+la cobertura por versión señalando cuál es la activa.
 
 ## Estructura
 
@@ -152,12 +202,12 @@ server/
   index.js            servidor Express
   db.js               pool de Postgres, esquema y helpers de consulta
   auth.js             scrypt + sesiones en cookie
-  routes/             auth.js, intentos.js
+  routes/             auth.js, intentos.js, admin.js, middleware.js
   exam/               blueprint, selección, calificación, análisis, lógica de intentos
-data/banco/           banco de preguntas por módulo
+data/banco/<version>/ banco de preguntas por versión y módulo
 data/estudio.json     recomendaciones de estudio por competencia y tema
 public/               interfaz (HTML + CSS + JS sin build)
-scripts/              verificar-conexion.js, seed.js, smoke.js
+scripts/              verificar-conexion.js, seed.js, admin.js, smoke.js
 render.yaml           configuración de despliegue
 ```
 

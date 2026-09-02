@@ -1,6 +1,10 @@
 # Formato del banco de preguntas
 
-Cada archivo de `data/banco/` corresponde a un módulo y tiene esta forma:
+Los bancos viven en `data/banco/<version>/`, un subdirectorio por versión de la prueba
+(`v1`, `v2`, …). El `seed` deduce la versión del nombre del directorio, así que un archivo no
+declara a qué versión pertenece: lo dice dónde está guardado.
+
+Cada archivo corresponde a un módulo de esa versión y tiene esta forma:
 
 ```json
 {
@@ -64,13 +68,20 @@ Cada archivo de `data/banco/` corresponde a un módulo y tiene esta forma:
 | `lectura_critica` | `literal`, `articulacion`, `reflexion` |
 | `razonamiento_cuantitativo` | `interpretacion`, `formulacion`, `argumentacion` |
 | `competencias_ciudadanas` | `conocimientos`, `argumentacion`, `multiperspectivismo`, `pensamiento_sistemico` |
+| `comunicacion_escrita` | `planteamiento`, `organizacion`, `uso_lenguaje` |
 | `ingles` | `part1` … `part7` |
+
+Cada versión declara en `blueprint.js` qué módulos incluye: la V1 no tiene Comunicación escrita,
+así que un archivo de ese módulo dentro de `data/banco/v1/` sería rechazado por el validador.
 
 ## Ampliar el banco
 
-1. Agrega preguntas nuevas al archivo del módulo respetando el formato.
+1. Agrega preguntas nuevas al archivo del módulo, dentro del directorio de su versión,
+   respetando el formato. Los `id` deben ser únicos **entre todas las versiones**: por eso los de
+   la V2 llevan el prefijo `lc2_`, `rc2_`, `cc2_`, `ce2_` y `en2_`.
 2. Ejecuta `npm run seed`. El script valida claves, competencias, que la
    respuesta correcta exista entre las opciones y que los `id` no choquen entre
    archivos; si algo falla, no escribe nada.
-3. `npm run seed` imprime al final el conteo por módulo y competencia frente a
-   lo que exige el blueprint.
+3. `npm run seed` imprime al final el conteo por módulo y competencia frente a lo que exige el
+   blueprint **de cada versión**, y señala cuál es la activa. Solo la versión activa necesita
+   cobertura completa: las anteriores quedan como historial.

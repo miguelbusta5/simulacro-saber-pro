@@ -1,0 +1,994 @@
+{
+  "modulo": "razonamiento_cuantitativo",
+  "contextos": [
+    {
+      "id": "rc2_ctx_01",
+      "titulo": "Presupuesto mensual de un hogar",
+      "contenido": "La tabla muestra el gasto mensual promedio de un hogar, en miles de pesos, en dos años consecutivos.\n\nCATEGORÍA .............. 2023 ...... 2024\nVivienda ...............  900 ..... 1.080\nAlimentación ...........  750 .......  870\nTransporte .............  300 .......  330\nEducación ..............  450 .......  450\nSalud ..................  180 .......  207\nServicios públicos .....  220 .......  253\nOcio ...................  200 .......  150\n\nTOTAL ................. 3.000 ..... 3.340\n\nEl ingreso mensual del hogar fue de $3.200.000 en 2023 y de $3.500.000 en 2024.",
+      "fuente": "Tabla elaborada para el simulacro."
+    },
+    {
+      "id": "rc2_ctx_02",
+      "titulo": "Tres líneas de producto",
+      "contenido": "Una empresa fabrica tres productos. La tabla resume las cifras del último trimestre.\n\nPRODUCTO ... UNIDADES VENDIDAS ... PRECIO DE VENTA ... COSTO DE PRODUCCIÓN\n                                      (por unidad)         (por unidad)\nA ...............  1.200 .......... $45.000 ........... $30.000\nB ...............    800 .......... $60.000 ........... $48.000\nC ...............  2.000 .......... $20.000 ........... $12.000\n\nEl margen unitario es la diferencia entre el precio de venta y el costo de producción. La tasa de margen es ese margen expresado como porcentaje del precio de venta.",
+      "fuente": "Tabla elaborada para el simulacro."
+    },
+    {
+      "id": "rc2_ctx_03",
+      "titulo": "Actividad física por grupo de edad",
+      "contenido": "Una encuesta aplicada a 2.000 personas clasificó a cada participante según su nivel de actividad física. Se entrevistó al mismo número de personas en cada grupo de edad.\n\nGRUPO DE EDAD ... SEDENTARIO ... ACTIVO MODERADO ... ACTIVO ALTO ... TOTAL\n18 a 29 años ......... 210 ............ 180 ............. 110 ........ 500\n30 a 44 años ......... 260 ............ 190 .............. 50 ........ 500\n45 a 59 años ......... 300 ............ 150 .............. 50 ........ 500\n60 años o más ........ 330 ............ 140 .............. 30 ........ 500\n\nTOTAL ............... 1.100 ............ 660 ............. 240 ...... 2.000",
+      "fuente": "Encuesta elaborada para el simulacro."
+    },
+    {
+      "id": "rc2_ctx_04",
+      "titulo": "Crédito de vivienda",
+      "contenido": "Una familia va a comprar un apartamento y le presentan las siguientes condiciones:\n\nValor del inmueble ............... $180.000.000\nCuota inicial .................... 20 % del valor\nMonto del crédito ................ el 80 % restante\nPlazo ............................ 15 años (180 cuotas mensuales)\nCuota mensual del crédito ........ $1.450.000\nSeguro mensual obligatorio ....... $95.000\n\nLa entidad exige que la cuota mensual total, incluido el seguro, no supere el 30 % del ingreso mensual del hogar.",
+      "fuente": "Situación elaborada para el simulacro."
+    },
+    {
+      "id": "rc2_ctx_05",
+      "titulo": "Rendimiento de cuatro jugadores",
+      "contenido": "La tabla resume el desempeño de cuatro jugadores de un equipo durante la temporada.\n\nJUGADOR ...... PARTIDOS ... GOLES ... MINUTOS JUGADOS\nRamírez .......... 20 ....... 12 ......... 1.600\nOrtiz ............ 25 ....... 10 ......... 2.100\nSalas ............ 15 ........ 9 ..........  900\nPeña ............. 28 ........ 8 ......... 2.520",
+      "fuente": "Tabla elaborada para el simulacro."
+    },
+    {
+      "id": "rc2_ctx_06",
+      "titulo": "Consumo eléctrico de una vivienda",
+      "contenido": "La tabla registra los aparatos eléctricos de una vivienda, su potencia y su uso habitual.\n\nAPARATO .............. POTENCIA ... HORAS AL DÍA ... DÍAS AL MES\nNevera ................  150 W ......... 24 ............ 30\nTelevisor .............  100 W .......... 5 ............ 30\nComputador ............  200 W .......... 6 ............ 22\nPlancha ............... 1.000 W ........ 0,5 ........... 8\nBombillos (6 de 60 W) .. 360 W .......... 5 ............ 30\n\nLa tarifa de energía es de $700 por kilovatio-hora (kWh). El consumo en kWh se obtiene multiplicando la potencia en vatios por las horas de uso totales del mes y dividiendo entre 1.000.",
+      "fuente": "Tabla elaborada para el simulacro."
+    },
+    {
+      "id": "rc2_ctx_07",
+      "titulo": "Producción agrícola en cuatro municipios",
+      "contenido": "La tabla presenta datos de la última cosecha en cuatro municipios de la misma región.\n\nMUNICIPIO ... ÁREA CULTIVADA ... PRODUCCIÓN ... NÚMERO DE\n                    (hectáreas)     (toneladas)    PRODUCTORES\nAurora ............ 1.200 ........... 3.600 .......... 400\nBelén .............   800 ........... 2.800 .......... 500\nCaldas ............ 2.000 ........... 5.000 .......... 250\nDuarte ............   600 ........... 2.400 .......... 300",
+      "fuente": "Tabla elaborada para el simulacro."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "rc2_001",
+      "competencia": "interpretacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": "rc2_ctx_01",
+      "enunciado": "¿Qué categoría de gasto tuvo el mayor aumento porcentual entre 2023 y 2024?",
+      "opciones": [
+        { "clave": "A", "texto": "Alimentación, con un 16 %." },
+        { "clave": "B", "texto": "Vivienda, con un 20 %." },
+        { "clave": "C", "texto": "Salud, con un 15 %." },
+        { "clave": "D", "texto": "Servicios públicos, con un 15 %." }
+      ],
+      "correcta": "B",
+      "justificacion": "Vivienda pasó de 900 a 1.080: un aumento de 180 sobre 900, es decir, 20 %. Es el mayor de la tabla.",
+      "justificaciones_incorrectas": {
+        "A": "Alimentación creció 120 sobre 750, o sea 16 %: menos que vivienda.",
+        "C": "Salud creció 27 sobre 180, o sea 15 %.",
+        "D": "Servicios creció 33 sobre 220, también 15 %."
+      }
+    },
+    {
+      "id": "rc2_002",
+      "competencia": "interpretacion",
+      "tema": "numerico_variacional",
+      "dificultad": 1,
+      "contexto_id": "rc2_ctx_01",
+      "enunciado": "¿Qué categoría disminuyó su gasto de un año a otro?",
+      "opciones": [
+        { "clave": "A", "texto": "Educación." },
+        { "clave": "B", "texto": "Transporte." },
+        { "clave": "C", "texto": "Ocio." },
+        { "clave": "D", "texto": "Ninguna: todas aumentaron." }
+      ],
+      "correcta": "C",
+      "justificacion": "Ocio bajó de 200 a 150, una reducción de 50 mil pesos mensuales.",
+      "justificaciones_incorrectas": {
+        "A": "Educación se mantuvo igual en 450: no bajó.",
+        "B": "Transporte subió de 300 a 330.",
+        "D": "Ocio sí disminuyó."
+      }
+    },
+    {
+      "id": "rc2_003",
+      "competencia": "interpretacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_01",
+      "enunciado": "¿Qué proporción del gasto total representó la vivienda en 2024?",
+      "opciones": [
+        { "clave": "A", "texto": "Alrededor del 30 %." },
+        { "clave": "B", "texto": "Alrededor del 32 %." },
+        { "clave": "C", "texto": "Alrededor del 36 %." },
+        { "clave": "D", "texto": "Alrededor del 27 %." }
+      ],
+      "correcta": "B",
+      "justificacion": "1.080 sobre un total de 3.340 equivale a 0,323, es decir, cerca del 32 %.",
+      "justificaciones_incorrectas": {
+        "A": "El 30 % de 3.340 sería 1.002, menos que el gasto real en vivienda.",
+        "C": "El 36 % de 3.340 sería 1.202, más de lo que muestra la tabla.",
+        "D": "27 % corresponde aproximadamente a la proporción de vivienda si se calculara sobre el ingreso y no sobre el gasto."
+      }
+    },
+    {
+      "id": "rc2_004",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": "rc2_ctx_01",
+      "enunciado": "¿Cuánto pudo ahorrar el hogar en 2024, si se define el ahorro como la diferencia entre el ingreso y el gasto total?",
+      "opciones": [
+        { "clave": "A", "texto": "$160.000 mensuales." },
+        { "clave": "B", "texto": "$200.000 mensuales." },
+        { "clave": "C", "texto": "$340.000 mensuales." },
+        { "clave": "D", "texto": "No hubo ahorro: el gasto superó al ingreso." }
+      ],
+      "correcta": "A",
+      "justificacion": "El ingreso de 2024 fue $3.500.000 y el gasto $3.340.000. La diferencia es $160.000.",
+      "justificaciones_incorrectas": {
+        "B": "$200.000 fue el ahorro de 2023: 3.200.000 menos 3.000.000.",
+        "C": "$340.000 es el aumento del gasto entre los dos años, no el ahorro.",
+        "D": "El gasto quedó por debajo del ingreso en ambos años."
+      }
+    },
+    {
+      "id": "rc2_005",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_01",
+      "enunciado": "El ingreso creció entre 2023 y 2024. ¿Ese crecimiento fue mayor o menor que el del gasto?",
+      "opciones": [
+        { "clave": "A", "texto": "Mayor: el ingreso creció 11,3 % y el gasto 9,4 %." },
+        { "clave": "B", "texto": "Menor: el ingreso creció 9,4 % y el gasto 11,3 %." },
+        { "clave": "C", "texto": "Igual: ambos crecieron un 10 %." },
+        { "clave": "D", "texto": "No se puede comparar porque están en unidades distintas." }
+      ],
+      "correcta": "B",
+      "justificacion": "El ingreso subió 300.000 sobre 3.200.000, o sea 9,4 %. El gasto subió 340 sobre 3.000, o sea 11,3 %. El gasto creció más rápido, y por eso el ahorro cayó de 200.000 a 160.000.",
+      "justificaciones_incorrectas": {
+        "A": "Invierte los dos porcentajes.",
+        "C": "Ninguno de los dos creció exactamente un 10 %.",
+        "D": "Ambas cantidades están en pesos y sus variaciones porcentuales son perfectamente comparables."
+      }
+    },
+    {
+      "id": "rc2_006",
+      "competencia": "argumentacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_01",
+      "enunciado": "Un miembro del hogar afirma: «Este año le dimos menos importancia a la educación». Frente a los datos, ¿cómo debería evaluarse esa afirmación?",
+      "opciones": [
+        { "clave": "A", "texto": "Es falsa sin más: el gasto en educación se mantuvo idéntico en 450." },
+        { "clave": "B", "texto": "Es discutible: en pesos el gasto no cambió, pero pasó del 15 % al 13,5 % del presupuesto, así que perdió peso relativo." },
+        { "clave": "C", "texto": "Es verdadera: el gasto en educación disminuyó en términos absolutos." },
+        { "clave": "D", "texto": "Es imposible de evaluar sin conocer el número de hijos del hogar." }
+      ],
+      "correcta": "B",
+      "justificacion": "450 sobre 3.000 es 15 %; 450 sobre 3.340 es 13,5 %. La misma cifra puede significar «igual» o «menos» según se mire en pesos o como parte del total, y ambas lecturas son legítimas.",
+      "justificaciones_incorrectas": {
+        "A": "Descarta la lectura relativa, que es la que probablemente sostiene quien habla.",
+        "C": "En términos absolutos no disminuyó: se mantuvo exactamente igual.",
+        "D": "La afirmación se puede evaluar con los datos de la tabla."
+      }
+    },
+    {
+      "id": "rc2_007",
+      "competencia": "interpretacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": "rc2_ctx_02",
+      "enunciado": "¿Qué producto tiene el mayor margen unitario?",
+      "opciones": [
+        { "clave": "A", "texto": "A, con $15.000 por unidad." },
+        { "clave": "B", "texto": "B, con $12.000 por unidad." },
+        { "clave": "C", "texto": "C, con $8.000 por unidad." },
+        { "clave": "D", "texto": "B, porque tiene el precio de venta más alto." }
+      ],
+      "correcta": "A",
+      "justificacion": "El margen unitario es precio menos costo: A da 45.000 − 30.000 = 15.000; B da 12.000; C da 8.000.",
+      "justificaciones_incorrectas": {
+        "B": "El margen de B es de $12.000, menor que el de A.",
+        "C": "C tiene el margen unitario más bajo de los tres.",
+        "D": "Un precio alto no implica margen alto: depende también del costo."
+      }
+    },
+    {
+      "id": "rc2_008",
+      "competencia": "interpretacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_02",
+      "enunciado": "¿Qué producto tiene la mayor tasa de margen?",
+      "opciones": [
+        { "clave": "A", "texto": "A, con 33,3 %." },
+        { "clave": "B", "texto": "B, con 20 %." },
+        { "clave": "C", "texto": "C, con 40 %." },
+        { "clave": "D", "texto": "Los tres tienen la misma tasa de margen." }
+      ],
+      "correcta": "C",
+      "justificacion": "La tasa se calcula sobre el precio: C da 8.000 ÷ 20.000 = 40 %, frente al 33,3 % de A y el 20 % de B. El producto con el menor margen en pesos es el que deja más por cada peso vendido.",
+      "justificaciones_incorrectas": {
+        "A": "33,3 % es la tasa de A, pero no es la mayor.",
+        "B": "20 % es la tasa más baja de las tres.",
+        "D": "Las tasas son distintas: 33,3 %, 20 % y 40 %."
+      }
+    },
+    {
+      "id": "rc2_009",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_02",
+      "enunciado": "¿Cuál fue la utilidad total del trimestre, sumando los tres productos?",
+      "opciones": [
+        { "clave": "A", "texto": "$35.000.000" },
+        { "clave": "B", "texto": "$43.600.000" },
+        { "clave": "C", "texto": "$98.400.000" },
+        { "clave": "D", "texto": "$142.000.000" }
+      ],
+      "correcta": "B",
+      "justificacion": "A aporta 1.200 × 15.000 = 18.000.000; B aporta 800 × 12.000 = 9.600.000; C aporta 2.000 × 8.000 = 16.000.000. La suma es $43.600.000.",
+      "justificaciones_incorrectas": {
+        "A": "No corresponde a la suma de los tres márgenes.",
+        "C": "$98.400.000 es el costo total de producción.",
+        "D": "$142.000.000 es el ingreso total por ventas, antes de descontar costos."
+      }
+    },
+    {
+      "id": "rc2_010",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_02",
+      "enunciado": "Si la empresa quisiera aumentar su utilidad en $4.000.000 vendiendo más unidades de un solo producto, ¿cuál exigiría el menor incremento en unidades?",
+      "opciones": [
+        { "clave": "A", "texto": "A: bastarían unas 267 unidades adicionales." },
+        { "clave": "B", "texto": "B: bastarían unas 333 unidades adicionales." },
+        { "clave": "C", "texto": "C: bastarían unas 500 unidades adicionales." },
+        { "clave": "D", "texto": "Los tres exigirían el mismo número de unidades." }
+      ],
+      "correcta": "A",
+      "justificacion": "Se divide la meta entre el margen unitario: 4.000.000 ÷ 15.000 = 267 unidades de A, frente a 333 de B y 500 de C. Aquí manda el margen en pesos, no la tasa.",
+      "justificaciones_incorrectas": {
+        "B": "B requiere 333 unidades, más que A.",
+        "C": "C requiere 500 unidades pese a tener la mejor tasa de margen: su margen unitario es el más bajo.",
+        "D": "Los márgenes unitarios son distintos, así que las cantidades también."
+      }
+    },
+    {
+      "id": "rc2_011",
+      "competencia": "argumentacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_02",
+      "enunciado": "El gerente afirma: «El producto C es el menos rentable, porque es el que deja menos plata por unidad». ¿Qué objeción es válida?",
+      "opciones": [
+        { "clave": "A", "texto": "Ninguna: si deja menos por unidad, es efectivamente el menos rentable." },
+        { "clave": "B", "texto": "Que C tiene la mayor tasa de margen (40 %) y aporta $16.000.000 de utilidad, más que B." },
+        { "clave": "C", "texto": "Que C es el producto con el precio de venta más alto." },
+        { "clave": "D", "texto": "Que el costo de producción de C es el más alto de los tres." }
+      ],
+      "correcta": "B",
+      "justificacion": "«Rentable» puede medirse por unidad, por peso vendido o por aporte total, y C queda último solo en la primera medida. En las otras dos supera a B.",
+      "justificaciones_incorrectas": {
+        "A": "Toma una sola medida de rentabilidad como si fuera la única.",
+        "C": "C tiene el precio más bajo: $20.000.",
+        "D": "C tiene el costo unitario más bajo: $12.000."
+      }
+    },
+    {
+      "id": "rc2_012",
+      "competencia": "argumentacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_02",
+      "enunciado": "Un analista propone descontinuar el producto B. ¿Qué información adicional resulta indispensable antes de decidirlo?",
+      "opciones": [
+        { "clave": "A", "texto": "El color y el empaque de cada producto." },
+        { "clave": "B", "texto": "Si los costos fijos que hoy absorbe B se repartirían entre A y C, y si B atrae clientes que también compran los otros productos." },
+        { "clave": "C", "texto": "El número de empleados de la empresa." },
+        { "clave": "D", "texto": "El precio de venta que tiene la competencia." }
+      ],
+      "correcta": "B",
+      "justificacion": "El margen de la tabla es unitario y no dice qué pasa con los costos fijos ni con las ventas cruzadas. Quitar la línea de menor tasa puede empeorar el resultado si sus costos se trasladan o si arrastraba ventas de las otras.",
+      "justificaciones_incorrectas": {
+        "A": "El empaque no incide en la decisión económica planteada.",
+        "C": "El número de empleados no se relaciona con el margen de una línea concreta.",
+        "D": "El precio de la competencia importa para fijar precios, no para saber si B sostiene costos comunes."
+      }
+    },
+    {
+      "id": "rc2_013",
+      "competencia": "interpretacion",
+      "tema": "aleatorio",
+      "dificultad": 2,
+      "contexto_id": "rc2_ctx_03",
+      "enunciado": "¿Qué porcentaje de las personas de 60 años o más es sedentario?",
+      "opciones": [
+        { "clave": "A", "texto": "30 %" },
+        { "clave": "B", "texto": "55 %" },
+        { "clave": "C", "texto": "66 %" },
+        { "clave": "D", "texto": "16,5 %" }
+      ],
+      "correcta": "C",
+      "justificacion": "330 de las 500 personas de ese grupo son sedentarias: 330 ÷ 500 = 0,66.",
+      "justificaciones_incorrectas": {
+        "A": "30 % es la proporción que ese grupo representa dentro del total de sedentarios (330 de 1.100).",
+        "B": "55 % es la tasa de sedentarismo del total de la muestra.",
+        "D": "16,5 % es la proporción de los 330 sobre las 2.000 personas encuestadas."
+      }
+    },
+    {
+      "id": "rc2_014",
+      "competencia": "interpretacion",
+      "tema": "aleatorio",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_03",
+      "enunciado": "Del total de personas sedentarias, ¿qué porcentaje tiene 60 años o más?",
+      "opciones": [
+        { "clave": "A", "texto": "66 %" },
+        { "clave": "B", "texto": "30 %" },
+        { "clave": "C", "texto": "25 %" },
+        { "clave": "D", "texto": "55 %" }
+      ],
+      "correcta": "B",
+      "justificacion": "Aquí la base cambia: son 330 sobre los 1.100 sedentarios totales, es decir, el 30 %. Es la misma casilla de la pregunta anterior leída por columna en vez de por fila.",
+      "justificaciones_incorrectas": {
+        "A": "66 % responde a la pregunta inversa: qué proporción de ese grupo de edad es sedentaria.",
+        "C": "25 % sería el resultado si los cuatro grupos aportaran la misma cantidad de sedentarios.",
+        "D": "55 % es la tasa general de sedentarismo de la muestra."
+      }
+    },
+    {
+      "id": "rc2_015",
+      "competencia": "interpretacion",
+      "tema": "aleatorio",
+      "dificultad": 2,
+      "contexto_id": "rc2_ctx_03",
+      "enunciado": "¿Cuántas personas de la muestra tienen algún nivel de actividad, es decir, no son sedentarias?",
+      "opciones": [
+        { "clave": "A", "texto": "660" },
+        { "clave": "B", "texto": "240" },
+        { "clave": "C", "texto": "900" },
+        { "clave": "D", "texto": "1.100" }
+      ],
+      "correcta": "C",
+      "justificacion": "Son los activos moderados más los activos altos: 660 + 240 = 900. También se obtiene restando 2.000 − 1.100.",
+      "justificaciones_incorrectas": {
+        "A": "660 son solo los activos moderados.",
+        "B": "240 son solo los activos altos.",
+        "D": "1.100 es el número de sedentarios."
+      }
+    },
+    {
+      "id": "rc2_016",
+      "competencia": "formulacion",
+      "tema": "aleatorio",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_03",
+      "enunciado": "Si se elige al azar una persona de la muestra, ¿cuál es la probabilidad de que sea activa alta y tenga entre 18 y 29 años?",
+      "opciones": [
+        { "clave": "A", "texto": "110/2.000 = 5,5 %" },
+        { "clave": "B", "texto": "110/240 = 45,8 %" },
+        { "clave": "C", "texto": "110/500 = 22 %" },
+        { "clave": "D", "texto": "240/2.000 = 12 %" }
+      ],
+      "correcta": "A",
+      "justificacion": "Que cumpla las dos condiciones a la vez exige tomar la casilla que las cruza (110) sobre el total de la muestra (2.000).",
+      "justificaciones_incorrectas": {
+        "B": "Ese cálculo responde a: dado que es activa alta, qué probabilidad hay de que tenga 18 a 29 años.",
+        "C": "Ese cálculo responde a: dado que tiene 18 a 29 años, qué probabilidad hay de que sea activa alta.",
+        "D": "Es la probabilidad de ser activa alta, sin condicionar la edad."
+      }
+    },
+    {
+      "id": "rc2_017",
+      "competencia": "argumentacion",
+      "tema": "aleatorio",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_03",
+      "enunciado": "Un titular afirma: «El 66 % de los sedentarios del país son adultos mayores». Frente a la tabla, el titular",
+      "opciones": [
+        { "clave": "A", "texto": "es correcto, porque 330 de 500 personas mayores son sedentarias." },
+        { "clave": "B", "texto": "confunde la fila con la columna: el 66 % es la proporción de sedentarios dentro de ese grupo, no la proporción de mayores dentro de los sedentarios, que es el 30 %." },
+        { "clave": "C", "texto": "es correcto, pero solo si se excluye a los activos altos." },
+        { "clave": "D", "texto": "no puede evaluarse porque la tabla no informa el sexo de los participantes." }
+      ],
+      "correcta": "B",
+      "justificacion": "Es el error más frecuente al leer una tabla de doble entrada: cambiar la base del porcentaje. Los dos números existen, pero responden preguntas distintas.",
+      "justificaciones_incorrectas": {
+        "A": "Ese cálculo es cierto, pero no es lo que el titular afirma.",
+        "C": "Excluir a los activos altos no corrige el cambio de base.",
+        "D": "El sexo es irrelevante para evaluar esa afirmación."
+      }
+    },
+    {
+      "id": "rc2_018",
+      "competencia": "argumentacion",
+      "tema": "aleatorio",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_03",
+      "enunciado": "Alguien concluye que «envejecer causa sedentarismo». ¿Cuál es la principal limitación de esa conclusión a partir de estos datos?",
+      "opciones": [
+        { "clave": "A", "texto": "Que la muestra es demasiado pequeña para cualquier conclusión." },
+        { "clave": "B", "texto": "Que la encuesta observa grupos distintos en un mismo momento, y la diferencia podría deberse a hábitos de generaciones distintas y no al paso de la edad." },
+        { "clave": "C", "texto": "Que la tabla no distingue entre actividad laboral y deportiva." },
+        { "clave": "D", "texto": "Que los grupos de edad no tienen el mismo número de personas." }
+      ],
+      "correcta": "B",
+      "justificacion": "Es un estudio transversal: compara personas distintas, no sigue a las mismas a lo largo del tiempo. Quienes hoy tienen 60 crecieron en otro contexto, así que la diferencia puede ser de cohorte y no efecto de envejecer.",
+      "justificaciones_incorrectas": {
+        "A": "Dos mil personas es una muestra considerable; el problema es de diseño, no de tamaño.",
+        "C": "Sería una precisión útil, pero no es lo que impide inferir causalidad.",
+        "D": "El enunciado aclara que se entrevistó al mismo número en cada grupo: 500."
+      }
+    },
+    {
+      "id": "rc2_019",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": "rc2_ctx_04",
+      "enunciado": "¿Cuánto debe pagar la familia como cuota inicial?",
+      "opciones": [
+        { "clave": "A", "texto": "$18.000.000" },
+        { "clave": "B", "texto": "$36.000.000" },
+        { "clave": "C", "texto": "$144.000.000" },
+        { "clave": "D", "texto": "$45.000.000" }
+      ],
+      "correcta": "B",
+      "justificacion": "El 20 % de $180.000.000 es $36.000.000.",
+      "justificaciones_incorrectas": {
+        "A": "$18.000.000 corresponde al 10 % del valor.",
+        "C": "$144.000.000 es el monto del crédito, el 80 % restante.",
+        "D": "$45.000.000 sería el 25 % del valor del inmueble."
+      }
+    },
+    {
+      "id": "rc2_020",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_04",
+      "enunciado": "¿Cuánto pagará la familia en total por concepto de cuotas del crédito durante los 15 años, sin contar el seguro?",
+      "opciones": [
+        { "clave": "A", "texto": "$144.000.000" },
+        { "clave": "B", "texto": "$261.000.000" },
+        { "clave": "C", "texto": "$278.100.000" },
+        { "clave": "D", "texto": "$180.000.000" }
+      ],
+      "correcta": "B",
+      "justificacion": "Son 180 cuotas de $1.450.000: 1.450.000 × 180 = $261.000.000.",
+      "justificaciones_incorrectas": {
+        "A": "$144.000.000 es el monto prestado, sin intereses.",
+        "C": "$278.100.000 incluye también el seguro mensual.",
+        "D": "$180.000.000 es el valor del inmueble."
+      }
+    },
+    {
+      "id": "rc2_021",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_04",
+      "enunciado": "¿Cuánto pagará la familia en intereses a lo largo del crédito?",
+      "opciones": [
+        { "clave": "A", "texto": "$81.000.000" },
+        { "clave": "B", "texto": "$117.000.000" },
+        { "clave": "C", "texto": "$134.100.000" },
+        { "clave": "D", "texto": "$261.000.000" }
+      ],
+      "correcta": "B",
+      "justificacion": "Los intereses son la diferencia entre lo pagado en cuotas y lo prestado: $261.000.000 − $144.000.000 = $117.000.000.",
+      "justificaciones_incorrectas": {
+        "A": "No corresponde a la diferencia entre lo pagado y lo prestado.",
+        "C": "$134.100.000 resultaría de incluir el seguro, que no es interés sino otro cobro.",
+        "D": "$261.000.000 es el total pagado en cuotas, no solo los intereses."
+      }
+    },
+    {
+      "id": "rc2_022",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_04",
+      "enunciado": "¿Cuál es el ingreso mensual mínimo que debe acreditar el hogar para que la entidad apruebe el crédito?",
+      "opciones": [
+        { "clave": "A", "texto": "$4.833.333" },
+        { "clave": "B", "texto": "$5.150.000" },
+        { "clave": "C", "texto": "$4.350.000" },
+        { "clave": "D", "texto": "$1.545.000" }
+      ],
+      "correcta": "B",
+      "justificacion": "La cuota total es $1.450.000 + $95.000 = $1.545.000, y no puede superar el 30 % del ingreso: 1.545.000 ÷ 0,30 = $5.150.000.",
+      "justificaciones_incorrectas": {
+        "A": "Resulta de dividir solo la cuota del crédito, sin sumar el seguro.",
+        "C": "Corresponde a tres veces la cuota del crédito, no a dividir entre 0,30.",
+        "D": "$1.545.000 es la cuota total mensual, no el ingreso requerido."
+      }
+    },
+    {
+      "id": "rc2_023",
+      "competencia": "interpretacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": "rc2_ctx_04",
+      "enunciado": "El seguro mensual representa, respecto de la cuota total, aproximadamente",
+      "opciones": [
+        { "clave": "A", "texto": "el 6 %." },
+        { "clave": "B", "texto": "el 9,5 %." },
+        { "clave": "C", "texto": "el 15 %." },
+        { "clave": "D", "texto": "el 30 %." }
+      ],
+      "correcta": "A",
+      "justificacion": "95.000 sobre la cuota total de 1.545.000 equivale a 0,0615, es decir, alrededor del 6 %.",
+      "justificaciones_incorrectas": {
+        "B": "9,5 % no corresponde a ninguna relación entre esas cifras.",
+        "C": "El 15 % de 1.545.000 sería cerca de $232.000.",
+        "D": "El 30 % es el tope de la cuota sobre el ingreso, no la proporción del seguro."
+      }
+    },
+    {
+      "id": "rc2_024",
+      "competencia": "argumentacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_04",
+      "enunciado": "Un asesor afirma: «Como van a pagar $117.000.000 de intereses, arrendar siempre les saldría más barato». ¿Qué falta para evaluar esa afirmación?",
+      "opciones": [
+        { "clave": "A", "texto": "El valor del arriendo durante esos 15 años y el valor del inmueble al final del periodo, que queda en poder de la familia." },
+        { "clave": "B", "texto": "El número de integrantes del hogar." },
+        { "clave": "C", "texto": "La tasa de interés exacta del crédito." },
+        { "clave": "D", "texto": "El estrato socioeconómico del barrio." }
+      ],
+      "correcta": "A",
+      "justificacion": "Comparar solo los intereses contra nada no es una comparación. Hay que poner del otro lado lo que costaría arrendar 180 meses, y del lado de la compra el activo que queda al final.",
+      "justificaciones_incorrectas": {
+        "B": "El tamaño del hogar no entra en la comparación financiera planteada.",
+        "C": "La tasa explicaría los intereses, pero estos ya están calculados.",
+        "D": "El estrato influye en los servicios, no en esta comparación."
+      }
+    },
+    {
+      "id": "rc2_025",
+      "competencia": "interpretacion",
+      "tema": "aleatorio",
+      "dificultad": 2,
+      "contexto_id": "rc2_ctx_05",
+      "enunciado": "¿Qué jugador tiene el mejor promedio de goles por partido?",
+      "opciones": [
+        { "clave": "A", "texto": "Ramírez y Salas, ambos con 0,6." },
+        { "clave": "B", "texto": "Ortiz, con 0,4." },
+        { "clave": "C", "texto": "Peña, con 0,29." },
+        { "clave": "D", "texto": "Salas, con 0,9." }
+      ],
+      "correcta": "A",
+      "justificacion": "Ramírez: 12 ÷ 20 = 0,6. Salas: 9 ÷ 15 = 0,6. Ambos empatan por encima de Ortiz (0,4) y Peña (0,29).",
+      "justificaciones_incorrectas": {
+        "B": "0,4 es el promedio de Ortiz, inferior al de Ramírez y Salas.",
+        "C": "Peña tiene el promedio más bajo de los cuatro.",
+        "D": "0,9 resultaría de dividir los goles de Salas entre 10, no entre sus 15 partidos."
+      }
+    },
+    {
+      "id": "rc2_026",
+      "competencia": "interpretacion",
+      "tema": "aleatorio",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_05",
+      "enunciado": "¿Qué jugador necesita menos minutos en cancha para anotar un gol?",
+      "opciones": [
+        { "clave": "A", "texto": "Ramírez, con 133 minutos por gol." },
+        { "clave": "B", "texto": "Salas, con 100 minutos por gol." },
+        { "clave": "C", "texto": "Ortiz, con 210 minutos por gol." },
+        { "clave": "D", "texto": "Peña, con 315 minutos por gol." }
+      ],
+      "correcta": "B",
+      "justificacion": "Salas: 900 ÷ 9 = 100 minutos por gol, el mejor registro. Ramírez necesita 133, Ortiz 210 y Peña 315.",
+      "justificaciones_incorrectas": {
+        "A": "Ramírez es el segundo mejor, con 133 minutos.",
+        "C": "Ortiz necesita más del doble de minutos que Salas.",
+        "D": "Peña tiene el peor registro de los cuatro."
+      }
+    },
+    {
+      "id": "rc2_027",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_05",
+      "enunciado": "Si Salas hubiera jugado los mismos 2.520 minutos de Peña manteniendo su ritmo de anotación, ¿cuántos goles habría hecho?",
+      "opciones": [
+        { "clave": "A", "texto": "Alrededor de 15." },
+        { "clave": "B", "texto": "Alrededor de 25." },
+        { "clave": "C", "texto": "Alrededor de 9." },
+        { "clave": "D", "texto": "Alrededor de 34." }
+      ],
+      "correcta": "B",
+      "justificacion": "Salas anota cada 100 minutos, así que en 2.520 minutos habría anotado 2.520 ÷ 100 ≈ 25 goles.",
+      "justificaciones_incorrectas": {
+        "A": "15 son los partidos que jugó Salas, no los goles proyectados.",
+        "C": "9 son los goles que efectivamente hizo en 900 minutos.",
+        "D": "34 excede la proyección: correspondería a un gol cada 74 minutos."
+      }
+    },
+    {
+      "id": "rc2_028",
+      "competencia": "argumentacion",
+      "tema": "aleatorio",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_05",
+      "enunciado": "El técnico afirma: «Ramírez fue el mejor delantero de la temporada porque anotó más goles que nadie». ¿Qué objeción es más pertinente?",
+      "opciones": [
+        { "clave": "A", "texto": "Que Ramírez jugó menos partidos que Ortiz y Peña." },
+        { "clave": "B", "texto": "Que el total de goles no controla el tiempo en cancha: Salas anotó uno cada 100 minutos frente a los 133 de Ramírez." },
+        { "clave": "C", "texto": "Que Peña jugó más minutos que todos los demás." },
+        { "clave": "D", "texto": "Que la tabla no informa cuántos goles fueron de penalti." }
+      ],
+      "correcta": "B",
+      "justificacion": "Comparar totales absolutos premia a quien tuvo más oportunidades. Al normalizar por minutos jugados, Salas es más eficiente pese a tener menos goles.",
+      "justificaciones_incorrectas": {
+        "A": "Es un dato cierto, pero por sí solo favorecería a Ramírez en vez de objetarlo.",
+        "C": "El tiempo de Peña no dice nada sobre la comparación entre Ramírez y Salas.",
+        "D": "Sería información útil, pero la objeción decisiva está en los datos disponibles."
+      }
+    },
+    {
+      "id": "rc2_029",
+      "competencia": "argumentacion",
+      "tema": "aleatorio",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_05",
+      "enunciado": "Un directivo propone: «Démosle a Salas los minutos de Peña y tendremos 25 goles más». ¿Cuál es el supuesto más frágil de ese razonamiento?",
+      "opciones": [
+        { "clave": "A", "texto": "Que el ritmo de anotación de Salas se mantendría igual al triplicar sus minutos, cuando su promedio se calculó sobre una muestra pequeña y en condiciones que podrían cambiar." },
+        { "clave": "B", "texto": "Que Peña no aceptaría perder su lugar en el equipo." },
+        { "clave": "C", "texto": "Que la temporada ya terminó y no se puede modificar." },
+        { "clave": "D", "texto": "Que el cálculo aritmético de la proyección está mal hecho." }
+      ],
+      "correcta": "A",
+      "justificacion": "Extrapolar 900 minutos a 2.520 supone que la eficiencia no depende del cansancio, del rival ni del rol táctico. Un promedio calculado sobre pocos minutos es además más inestable.",
+      "justificaciones_incorrectas": {
+        "B": "Es un asunto de gestión del plantel, no del razonamiento con los datos.",
+        "C": "La proyección es hipotética y eso no la invalida.",
+        "D": "La aritmética es correcta: el problema está en el supuesto que la sostiene."
+      }
+    },
+    {
+      "id": "rc2_030",
+      "competencia": "interpretacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": "rc2_ctx_06",
+      "enunciado": "¿Qué aparato consume más energía al mes?",
+      "opciones": [
+        { "clave": "A", "texto": "La plancha, porque tiene la mayor potencia." },
+        { "clave": "B", "texto": "La nevera, con 108 kWh." },
+        { "clave": "C", "texto": "El computador, con 26,4 kWh." },
+        { "clave": "D", "texto": "Los bombillos, con 54 kWh." }
+      ],
+      "correcta": "B",
+      "justificacion": "La nevera consume 150 W × 24 h × 30 días = 108.000 Wh, es decir, 108 kWh: más del doble que cualquier otro aparato de la casa.",
+      "justificaciones_incorrectas": {
+        "A": "La plancha tiene la mayor potencia pero se usa 4 horas al mes: solo 4 kWh.",
+        "C": "El computador consume 26,4 kWh.",
+        "D": "Los bombillos consumen 54 kWh, la mitad que la nevera."
+      }
+    },
+    {
+      "id": "rc2_031",
+      "competencia": "interpretacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_06",
+      "enunciado": "¿Qué explica que la plancha, con 1.000 W, consuma mucho menos que la nevera, con 150 W?",
+      "opciones": [
+        { "clave": "A", "texto": "Que la potencia de la plancha está mal medida." },
+        { "clave": "B", "texto": "Que el consumo depende de la potencia multiplicada por el tiempo de uso, y la nevera funciona 720 horas al mes frente a las 4 de la plancha." },
+        { "clave": "C", "texto": "Que la nevera tiene una tarifa distinta." },
+        { "clave": "D", "texto": "Que la plancha consume solo mientras se calienta." }
+      ],
+      "correcta": "B",
+      "justificacion": "La potencia es una tasa, no una cantidad. Multiplicada por 720 horas da 108 kWh; multiplicada por 4 horas da 4 kWh, aunque la tasa sea casi siete veces mayor.",
+      "justificaciones_incorrectas": {
+        "A": "Los datos de la tabla son consistentes.",
+        "C": "La tarifa es la misma, $700 por kWh, para toda la vivienda.",
+        "D": "Aunque así fuera, lo determinante es el número de horas de uso al mes."
+      }
+    },
+    {
+      "id": "rc2_032",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_06",
+      "enunciado": "¿Cuál es el consumo total mensual de la vivienda?",
+      "opciones": [
+        { "clave": "A", "texto": "181 kWh" },
+        { "clave": "B", "texto": "207,4 kWh" },
+        { "clave": "C", "texto": "253,4 kWh" },
+        { "clave": "D", "texto": "1.810 kWh" }
+      ],
+      "correcta": "B",
+      "justificacion": "Nevera 108 + televisor 15 + computador 26,4 + plancha 4 + bombillos 54 = 207,4 kWh.",
+      "justificaciones_incorrectas": {
+        "A": "Resulta de omitir algún aparato de la suma.",
+        "C": "Excede la suma real de los cinco consumos.",
+        "D": "Confunde vatios-hora con kilovatios-hora: falta dividir entre 1.000."
+      }
+    },
+    {
+      "id": "rc2_033",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": "rc2_ctx_06",
+      "enunciado": "¿Cuánto paga la vivienda al mes por la energía?",
+      "opciones": [
+        { "clave": "A", "texto": "$145.180" },
+        { "clave": "B", "texto": "$207.400" },
+        { "clave": "C", "texto": "$75.600" },
+        { "clave": "D", "texto": "$126.700" }
+      ],
+      "correcta": "A",
+      "justificacion": "207,4 kWh × $700 = $145.180.",
+      "justificaciones_incorrectas": {
+        "B": "Corresponde a multiplicar los kWh por 1.000 en vez de por la tarifa.",
+        "C": "$75.600 es lo que cuesta solo la nevera (108 kWh × $700).",
+        "D": "No corresponde al consumo total de la vivienda."
+      }
+    },
+    {
+      "id": "rc2_034",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_06",
+      "enunciado": "Si se reemplazan los seis bombillos de 60 W por bombillos LED de 10 W con el mismo uso, ¿cuánto se ahorra al mes?",
+      "opciones": [
+        { "clave": "A", "texto": "$31.500" },
+        { "clave": "B", "texto": "$37.800" },
+        { "clave": "C", "texto": "$6.300" },
+        { "clave": "D", "texto": "$54.000" }
+      ],
+      "correcta": "A",
+      "justificacion": "Los LED consumen 6 × 10 = 60 W, o sea 60 × 5 × 30 = 9.000 Wh = 9 kWh, frente a los 54 kWh actuales. El ahorro es de 45 kWh × $700 = $31.500.",
+      "justificaciones_incorrectas": {
+        "B": "$37.800 corresponde a 54 kWh completos, como si los nuevos bombillos no consumieran nada.",
+        "C": "$6.300 es lo que costarían los LED (9 kWh), no el ahorro.",
+        "D": "$54.000 confunde los kWh consumidos con pesos."
+      }
+    },
+    {
+      "id": "rc2_035",
+      "competencia": "argumentacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_06",
+      "enunciado": "Alguien propone dejar de planchar para reducir la factura. Con los datos de la tabla, esa medida",
+      "opciones": [
+        { "clave": "A", "texto": "ahorraría $2.800 al mes, menos del 2 % de la factura: el esfuerzo no se corresponde con el resultado." },
+        { "clave": "B", "texto": "ahorraría cerca de la mitad de la factura, porque la plancha es el aparato de mayor potencia." },
+        { "clave": "C", "texto": "no ahorraría nada, porque la plancha no consume energía." },
+        { "clave": "D", "texto": "es la medida más eficaz de todas las posibles." }
+      ],
+      "correcta": "A",
+      "justificacion": "La plancha consume 4 kWh al mes: 4 × $700 = $2.800 sobre una factura de $145.180. Cambiar los bombillos ahorra once veces más y no obliga a renunciar a nada.",
+      "justificaciones_incorrectas": {
+        "B": "Confunde potencia con consumo: la plancha se usa 4 horas al mes.",
+        "C": "Sí consume, pero muy poco por su escaso tiempo de uso.",
+        "D": "El cambio de bombillos ahorra $31.500, muy por encima de esta medida."
+      }
+    },
+    {
+      "id": "rc2_036",
+      "competencia": "interpretacion",
+      "tema": "numerico_variacional",
+      "dificultad": 2,
+      "contexto_id": "rc2_ctx_07",
+      "enunciado": "¿Qué municipio obtuvo el mayor rendimiento por hectárea?",
+      "opciones": [
+        { "clave": "A", "texto": "Caldas, con 2,5 toneladas por hectárea." },
+        { "clave": "B", "texto": "Duarte, con 4 toneladas por hectárea." },
+        { "clave": "C", "texto": "Aurora, con 3 toneladas por hectárea." },
+        { "clave": "D", "texto": "Belén, con 3,5 toneladas por hectárea." }
+      ],
+      "correcta": "B",
+      "justificacion": "Duarte produjo 2.400 toneladas en 600 hectáreas: 4 t/ha, por encima de Belén (3,5), Aurora (3) y Caldas (2,5).",
+      "justificaciones_incorrectas": {
+        "A": "Caldas tiene el rendimiento más bajo pese a ser el mayor productor total.",
+        "C": "Aurora rinde 3 t/ha.",
+        "D": "Belén rinde 3,5 t/ha, el segundo mejor."
+      }
+    },
+    {
+      "id": "rc2_037",
+      "competencia": "interpretacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_07",
+      "enunciado": "¿Qué municipio tiene la mayor producción por productor?",
+      "opciones": [
+        { "clave": "A", "texto": "Caldas, con 20 toneladas por productor." },
+        { "clave": "B", "texto": "Aurora, con 9 toneladas por productor." },
+        { "clave": "C", "texto": "Duarte, con 8 toneladas por productor." },
+        { "clave": "D", "texto": "Belén, con 5,6 toneladas por productor." }
+      ],
+      "correcta": "A",
+      "justificacion": "Caldas: 5.000 toneladas entre 250 productores da 20 t por productor, muy por encima del resto. Cada productor maneja además 8 hectáreas frente a 1,6 en Belén.",
+      "justificaciones_incorrectas": {
+        "B": "Aurora produce 9 t por productor.",
+        "C": "Duarte produce 8 t por productor.",
+        "D": "Belén tiene la menor producción por productor."
+      }
+    },
+    {
+      "id": "rc2_038",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_07",
+      "enunciado": "Si Caldas alcanzara el rendimiento por hectárea de Duarte manteniendo su área cultivada, ¿cuánto produciría?",
+      "opciones": [
+        { "clave": "A", "texto": "5.000 toneladas." },
+        { "clave": "B", "texto": "6.000 toneladas." },
+        { "clave": "C", "texto": "8.000 toneladas." },
+        { "clave": "D", "texto": "10.000 toneladas." }
+      ],
+      "correcta": "C",
+      "justificacion": "Duarte rinde 4 t/ha. Aplicado a las 2.000 hectáreas de Caldas: 4 × 2.000 = 8.000 toneladas, es decir, 3.000 más que su producción actual.",
+      "justificaciones_incorrectas": {
+        "A": "5.000 es su producción actual, con un rendimiento de 2,5 t/ha.",
+        "B": "6.000 correspondería a un rendimiento de 3 t/ha, el de Aurora.",
+        "D": "10.000 exigiría un rendimiento de 5 t/ha, superior al de cualquier municipio."
+      }
+    },
+    {
+      "id": "rc2_039",
+      "competencia": "argumentacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_07",
+      "enunciado": "Un funcionario afirma: «Caldas es el municipio más productivo de la región». Frente a los datos, esa afirmación",
+      "opciones": [
+        { "clave": "A", "texto": "es correcta bajo cualquier medida de productividad." },
+        { "clave": "B", "texto": "depende de la medida: Caldas lidera en producción total y por productor, pero es el último en rendimiento por hectárea." },
+        { "clave": "C", "texto": "es incorrecta, porque Duarte produce más toneladas que Caldas." },
+        { "clave": "D", "texto": "no puede evaluarse sin conocer el precio de venta de la cosecha." }
+      ],
+      "correcta": "B",
+      "justificacion": "«Productivo» no significa lo mismo por hectárea que por productor. Caldas concentra mucha tierra en pocos productores: eso lo hace primero en una medida y último en otra.",
+      "justificaciones_incorrectas": {
+        "A": "En rendimiento por hectárea, Caldas es el peor de los cuatro.",
+        "C": "Duarte produce 2.400 toneladas, menos de la mitad que Caldas.",
+        "D": "Las tres medidas de productividad se calculan con los datos disponibles."
+      }
+    },
+    {
+      "id": "rc2_040",
+      "competencia": "argumentacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": "rc2_ctx_07",
+      "enunciado": "Se quiere diseñar un programa de asistencia técnica para mejorar el rendimiento por hectárea. ¿Qué municipio debería priorizarse y por qué?",
+      "opciones": [
+        { "clave": "A", "texto": "Duarte, porque ya demostró que puede alcanzar altos rendimientos." },
+        { "clave": "B", "texto": "Caldas, porque tiene el menor rendimiento por hectárea sobre la mayor área cultivada, de modo que una mejora ahí rinde más toneladas adicionales." },
+        { "clave": "C", "texto": "Belén, porque tiene el mayor número de productores." },
+        { "clave": "D", "texto": "Aurora, porque está en el promedio de todos los indicadores." }
+      ],
+      "correcta": "B",
+      "justificacion": "Donde hay más brecha y más superficie está el mayor potencial: subir a Caldas de 2,5 a 4 t/ha sumaría 3.000 toneladas, más que la producción total de Duarte.",
+      "justificaciones_incorrectas": {
+        "A": "Duarte ya está en el techo del grupo: el margen de mejora es el menor.",
+        "C": "Muchos productores facilitan la cobertura, pero Belén tiene poca área y buen rendimiento.",
+        "D": "Estar en el promedio no es un criterio de priorización."
+      }
+    },
+    {
+      "id": "rc2_041",
+      "competencia": "formulacion",
+      "tema": "geometrico_metrico",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "Un tanque rectangular mide 3 m de largo, 2 m de ancho y 1,5 m de alto. Si se llena hasta el 80 % de su capacidad, ¿cuántos litros contiene? (1 m³ = 1.000 litros)",
+      "opciones": [
+        { "clave": "A", "texto": "7.200 litros" },
+        { "clave": "B", "texto": "9.000 litros" },
+        { "clave": "C", "texto": "720 litros" },
+        { "clave": "D", "texto": "1.800 litros" }
+      ],
+      "correcta": "A",
+      "justificacion": "El volumen total es 3 × 2 × 1,5 = 9 m³, es decir, 9.000 litros. El 80 % de 9.000 es 7.200 litros.",
+      "justificaciones_incorrectas": {
+        "B": "9.000 litros es la capacidad total, sin aplicar el 80 %.",
+        "C": "720 resulta de un error de una posición decimal.",
+        "D": "1.800 litros corresponde al 20 % que queda vacío."
+      }
+    },
+    {
+      "id": "rc2_042",
+      "competencia": "formulacion",
+      "tema": "aleatorio",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "En un curso de 40 estudiantes, 22 practican fútbol, 18 practican natación y 8 practican ambos deportes. ¿Cuántos no practican ninguno de los dos?",
+      "opciones": [
+        { "clave": "A", "texto": "0" },
+        { "clave": "B", "texto": "8" },
+        { "clave": "C", "texto": "12" },
+        { "clave": "D", "texto": "32" }
+      ],
+      "correcta": "B",
+      "justificacion": "Quienes practican al menos uno son 22 + 18 − 8 = 32, porque los 8 que hacen ambos se contaron dos veces. Los que no practican ninguno son 40 − 32 = 8.",
+      "justificaciones_incorrectas": {
+        "A": "Solo daría cero si nadie practicara ambos deportes: 22 + 18 = 40.",
+        "C": "12 resultaría de restar mal la intersección.",
+        "D": "32 es el número de quienes practican al menos un deporte."
+      }
+    },
+    {
+      "id": "rc2_043",
+      "competencia": "formulacion",
+      "tema": "numerico_variacional",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "Un producto sube de precio un 25 % y, meses después, baja un 20 %. ¿Cómo queda respecto del precio original?",
+      "opciones": [
+        { "clave": "A", "texto": "Un 5 % por encima." },
+        { "clave": "B", "texto": "Exactamente igual." },
+        { "clave": "C", "texto": "Un 5 % por debajo." },
+        { "clave": "D", "texto": "Un 45 % por encima." }
+      ],
+      "correcta": "B",
+      "justificacion": "Equivale a multiplicar por 1,25 y luego por 0,80: 1,25 × 0,80 = 1. El precio vuelve exactamente al punto de partida, porque la bajada se aplica sobre una base mayor.",
+      "justificaciones_incorrectas": {
+        "A": "Resulta de restar los porcentajes (25 − 20) en vez de multiplicar los factores.",
+        "C": "No hay ninguna operación que dé ese resultado con estos datos.",
+        "D": "45 % sería sumar ambos porcentajes, que no es como se componen."
+      }
+    },
+    {
+      "id": "rc2_044",
+      "competencia": "interpretacion",
+      "tema": "aleatorio",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "Un examen tiene una media de 3,2 y una mediana de 3,8, sobre 5,0. ¿Qué se puede concluir sobre la distribución de las notas?",
+      "opciones": [
+        { "clave": "A", "texto": "Que hay un grupo de notas muy bajas que arrastra el promedio por debajo de la mediana." },
+        { "clave": "B", "texto": "Que la mayoría de los estudiantes sacó exactamente 3,2." },
+        { "clave": "C", "texto": "Que hubo un error de cálculo: la media siempre debe superar a la mediana." },
+        { "clave": "D", "texto": "Que todas las notas están entre 3,2 y 3,8." }
+      ],
+      "correcta": "A",
+      "justificacion": "La mediana parte al grupo en dos mitades y no se mueve con los extremos; la media sí. Que la media quede por debajo indica una cola de valores bajos que tira de ella.",
+      "justificaciones_incorrectas": {
+        "B": "La media es un promedio, no el valor más frecuente.",
+        "C": "Es perfectamente posible: ocurre siempre que la distribución tiene cola hacia abajo.",
+        "D": "Nada impide que existan notas fuera de ese rango; de hecho la diferencia sugiere que las hay."
+      }
+    },
+    {
+      "id": "rc2_045",
+      "competencia": "argumentacion",
+      "tema": "aleatorio",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "Un colegio informa que el 90 % de sus egresados ingresa a la universidad, y lo presenta como prueba de la calidad de su enseñanza. ¿Qué información resulta más pertinente para evaluar esa afirmación?",
+      "opciones": [
+        { "clave": "A", "texto": "El número total de egresados en el último año." },
+        { "clave": "B", "texto": "Los criterios de admisión del propio colegio: si selecciona a los estudiantes con mejor desempeño previo, el resultado podría explicarse por a quién admite y no por lo que enseña." },
+        { "clave": "C", "texto": "El nombre de las universidades a las que ingresan." },
+        { "clave": "D", "texto": "El número de profesores con posgrado." }
+      ],
+      "correcta": "B",
+      "justificacion": "Es un problema de selección: si el colegio admite solo a estudiantes que ya venían bien preparados, la tasa mide su filtro de entrada y no el valor que agrega. Habría que comparar con estudiantes de perfil similar en otros colegios.",
+      "justificaciones_incorrectas": {
+        "A": "El tamaño de la cohorte afecta la precisión del dato, pero no el problema de fondo.",
+        "C": "Es información interesante, pero no distingue entre selección y enseñanza.",
+        "D": "La formación docente es un insumo, no una respuesta a la objeción."
+      }
+    }
+  ]
+}

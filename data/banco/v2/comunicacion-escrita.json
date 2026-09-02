@@ -1,0 +1,1024 @@
+{
+  "modulo": "comunicacion_escrita",
+  "contextos": [
+    {
+      "id": "ce2_ctx_01",
+      "titulo": "Situación 1 — Carta al rector sobre el horario de la biblioteca",
+      "contenido": "SITUACIÓN\n\nUsted es representante estudiantil. Los estudiantes de jornada nocturna se quejan de que la biblioteca cierra a las 6:00 p. m., cuando ellos apenas están entrando a clase. Debe escribir una carta al rector para pedir que se amplíe el horario. La rectoría ya ha dicho en otras ocasiones que el presupuesto está ajustado.\n\nBORRADOR\n\n(1) Respetado señor rector:\n\n(2) Le escribo porque la biblioteca cierra muy temprano y eso es un problema grave para muchos de nosotros.\n\n(3) Los estudiantes de la jornada nocturna entramos a clase a las 6:00 p. m., que es exactamente la hora en que la biblioteca cierra sus puertas. En la práctica, esto significa que quienes estudiamos de noche no tenemos acceso a las salas de lectura, a los computadores ni al préstamo de libros en ningún momento de la semana.\n\n(4) Según los datos de la oficina de registro, la jornada nocturna reúne a 1.340 estudiantes, es decir, el 38 % de la matrícula total de la universidad.\n\n(5) Somos conscientes de que ampliar el horario tiene un costo. Por eso proponemos empezar con una extensión de dos horas los martes y jueves, que son los días de mayor carga académica, y evaluar el uso al cabo de un semestre antes de decidir si conviene extenderla a toda la semana.\n\n(6) Quedamos atentos a su respuesta.",
+      "fuente": "Situación elaborada para el simulacro."
+    },
+    {
+      "id": "ce2_ctx_02",
+      "titulo": "Situación 2 — Correo a un cliente por un retraso",
+      "contenido": "SITUACIÓN\n\nUsted trabaja en una empresa que fabrica muebles por encargo. Un pedido que debía entregarse el 12 de marzo se retrasará hasta el 26 de marzo porque el proveedor de la madera incumplió. El cliente ya pagó el 50 %. Debe escribirle un correo.\n\nBORRADOR\n\n(1) Buenas tardes, señora Restrepo:\n\n(2) Le escribo para informarle sobre el estado de su pedido n.º 4871.\n\n(3) Lamentablemente nos vimos en la penosa obligación de tener que proceder a efectuar un aplazamiento de la fecha de entrega, debido a circunstancias de fuerza mayor completamente ajenas a nuestra voluntad y control.\n\n(4) El proveedor que nos suministra la madera de nogal no cumplió con el despacho programado para el 28 de febrero. Ya conseguimos el material con un segundo proveedor y la fabricación comenzó el 5 de marzo.\n\n(5) La nueva fecha de entrega es el 26 de marzo. No habrá ningún cobro adicional y asumiremos el costo del transporte, que originalmente estaba a su cargo.\n\n(6) Entendemos que este cambio le genera un inconveniente y le ofrecemos nuestras disculpas.",
+      "fuente": "Situación elaborada para el simulacro."
+    },
+    {
+      "id": "ce2_ctx_03",
+      "titulo": "Situación 3 — Columna para el periódico universitario",
+      "contenido": "SITUACIÓN\n\nEl periódico de su universidad abrió una sección de opinión estudiantil. Usted quiere escribir sobre las clases grabadas: la universidad empezó a grabar y publicar todas las clases, y ahora la asistencia presencial cayó a la mitad. Los lectores son estudiantes y profesores.\n\nBORRADOR\n\n(1) Desde que la universidad empezó a publicar las grabaciones, los salones se vaciaron. Los profesores lo notan y algunos ya hablan de suspender la medida.\n\n(2) Quienes defienden las grabaciones tienen razones de peso: hay estudiantes que trabajan, que viven a dos horas del campus o que se enferman, y para ellos la grabación es la diferencia entre perder una clase y no perderla.\n\n(3) Quienes las critican también las tienen: una clase no es solo la exposición del profesor, es también la pregunta que a uno no se le habría ocurrido y que hizo el compañero de atrás.\n\n(4) ____________________\n\n(5) El problema no es que existan las grabaciones. El problema es que las clases se diseñaron para ser presenciales y ahora compiten con su propia versión grabada, que además se puede ver al doble de velocidad.\n\n(6) Si la universidad quiere que los salones vuelvan a llenarse, la salida no es quitar las grabaciones, sino cambiar lo que pasa en el salón para que valga la pena estar ahí.",
+      "fuente": "Situación elaborada para el simulacro."
+    },
+    {
+      "id": "ce2_ctx_04",
+      "titulo": "Situación 4 — Informe de práctica profesional",
+      "contenido": "SITUACIÓN\n\nUsted terminó su práctica en una empresa de logística y debe entregar el informe final a su tutor académico. El informe se evalúa por su precisión y su capacidad de sustentar lo que afirma.\n\nBORRADOR (fragmento)\n\n(1) Durante la práctica se identificó que el proceso de alistamiento de pedidos presentaba demoras.\n\n(2) Se midieron los tiempos de alistamiento durante cuatro semanas, con una muestra de 240 pedidos. El tiempo promedio fue de 47 minutos por pedido, frente a la meta interna de 30 minutos.\n\n(3) El análisis mostró que el 62 % del tiempo se consumía en el desplazamiento entre estanterías, y no en el empaque ni en la verificación.\n\n(4) Se propuso reorganizar la bodega agrupando los veinte productos de mayor rotación en la zona cercana al punto de despacho.\n\n(5) La propuesta se implementó en la semana 12 y el tiempo promedio bajó a 34 minutos, medido sobre 60 pedidos de la semana 13.\n\n(6) Esto demuestra de manera concluyente que la reorganización de bodegas es la mejor estrategia para cualquier empresa de logística del país.",
+      "fuente": "Situación elaborada para el simulacro."
+    },
+    {
+      "id": "ce2_ctx_05",
+      "titulo": "Situación 5 — Carta de presentación para una vacante",
+      "contenido": "SITUACIÓN\n\nUsted se va a postular a una vacante de analista junior en una empresa de investigación de mercados. La convocatoria pide «capacidad analítica, manejo de datos y buena comunicación escrita». Usted es recién egresado: tiene una práctica de seis meses y un trabajo de grado sobre análisis de encuestas, pero no tiene experiencia laboral formal en el cargo.\n\nBORRADOR\n\n(1) Estimado equipo de selección:\n\n(2) Me dirijo a ustedes con el fin de postularme a la vacante de analista junior publicada en su portal.\n\n(3) Soy una persona proactiva, responsable, dinámica y con muchas ganas de aprender y de crecer profesionalmente en una empresa como la suya.\n\n(4) Durante mi práctica en la Secretaría de Planeación procesé las respuestas de una encuesta de movilidad aplicada a 3.200 hogares y construí los tableros que usó el equipo para priorizar rutas.\n\n(5) Mi trabajo de grado analizó el sesgo de no respuesta en encuestas telefónicas y propuso un método de ponderación que redujo el error estimado en cuatro puntos.\n\n(6) Agradezco su atención y quedo atento a la posibilidad de una entrevista.",
+      "fuente": "Situación elaborada para el simulacro."
+    },
+    {
+      "id": "ce2_ctx_06",
+      "titulo": "Situación 6 — Instructivo para una cafetera industrial",
+      "contenido": "SITUACIÓN\n\nUsted debe redactar el instructivo de limpieza de una cafetera industrial. Lo van a leer los empleados del turno de la noche, algunos recién contratados. El instructivo se pegará en la pared, junto a la máquina.\n\nBORRADOR\n\n(1) LIMPIEZA DIARIA DE LA CAFETERA\n\n(2) En primer lugar habrá de procederse a la desconexión del suministro eléctrico del aparato.\n\n(3) Espere 20 minutos a que la máquina se enfríe. No la toque antes: el grupo de café supera los 90 °C.\n\n(4) Retire el portafiltro y el filtro. Enjuáguelos con agua caliente y frótelos con el cepillo azul.\n\n(5) Se recomienda que sea considerada la posibilidad de una revisión de la bandeja de goteo.\n\n(6) Vacíe la bandeja de goteo y lávela con agua y jabón.\n\n(7) Vuelva a montar las piezas y conecte la máquina.",
+      "fuente": "Situación elaborada para el simulacro."
+    },
+    {
+      "id": "ce2_ctx_07",
+      "titulo": "Situación 7 — Reseña de un libro",
+      "contenido": "SITUACIÓN\n\nEl periódico universitario le pidió una reseña de 400 palabras sobre un libro de divulgación científica. La reseña debe orientar al lector sobre si le conviene leerlo, no resumirlo entero.\n\nBORRADOR\n\n(1) «El cuerpo que somos» es un libro de divulgación sobre fisiología humana publicado este año.\n\n(2) El libro tiene doce capítulos. El primero habla del corazón. El segundo, de los pulmones. El tercero, del hígado. El cuarto, de los riñones. El quinto, del cerebro.\n\n(3) La mayor virtud del libro es que explica procesos complejos sin caricaturizarlos: cuando simplifica, avisa que está simplificando y remite a la fuente completa.\n\n(4) Su mayor defecto es el desequilibrio: dedica ochenta páginas al cerebro y apenas seis al sistema inmune, que hoy es justamente el campo donde más está cambiando el conocimiento.\n\n(5) Es recomendable para quien nunca ha leído sobre el tema y quiere una puerta de entrada honesta. Quien ya tenga formación en el área encontrará poco nuevo.",
+      "fuente": "Situación elaborada para el simulacro."
+    },
+    {
+      "id": "ce2_ctx_08",
+      "titulo": "Situación 8 — Solicitud a una entidad pública",
+      "contenido": "SITUACIÓN\n\nEn su barrio hay un lote baldío que lleva ocho meses lleno de escombros. Usted debe escribir un derecho de petición a la alcaldía local. Un derecho de petición debe identificar al peticionario, exponer los hechos y formular una solicitud concreta.\n\nBORRADOR\n\n(1) Señores Alcaldía Local de San Cristóbal:\n\n(2) Yo, Laura Jiménez Ortiz, identificada con cédula de ciudadanía n.º 1.020.345.678, residente en la calle 34 sur n.º 12-40, en ejercicio del derecho consagrado en el artículo 23 de la Constitución Política, me permito presentar la siguiente petición.\n\n(3) HECHOS. El lote ubicado en la calle 34 sur con carrera 13 acumula escombros de construcción desde julio del año pasado. En el sector viven 42 familias y a menos de cien metros funciona el jardín infantil La Colina.\n\n(4) Los escombros han acumulado agua estancada. En las últimas seis semanas, tres niños del jardín han presentado infecciones respiratorias, según reportaron sus acudientes en la reunión de padres del 3 de mayo.\n\n(5) Esto es un desastre y a nadie parece importarle nada de lo que pasa en los barrios pobres de esta ciudad, mientras en el norte todo funciona perfectamente.\n\n(6) PETICIÓN. Solicito que se realice la limpieza del lote y que se informe qué entidad es responsable de su mantenimiento.",
+      "fuente": "Situación elaborada para el simulacro."
+    },
+    {
+      "id": "ce2_ctx_09",
+      "titulo": "Situación 9 — Ensayo académico con los párrafos desordenados",
+      "contenido": "SITUACIÓN\n\nUsted escribió un ensayo para la clase de Ética Profesional sobre la responsabilidad de quien diseña algoritmos. Al revisarlo nota que los párrafos quedaron desordenados. Estos son, en desorden:\n\n(P) Conviene distinguir dos cosas que suelen mezclarse: que un sistema sea técnicamente correcto y que su uso sea justo. Un algoritmo puede predecir con altísima precisión quién reincidirá en un delito y, aun así, ser inaceptable si esa predicción se apoya en el barrio donde alguien nació.\n\n(Q) Por eso la pregunta relevante no es si el algoritmo funciona, sino qué decidimos hacer con lo que predice, y quién responde cuando lo que predice arruina la vida de alguien.\n\n(R) Cada vez más decisiones que afectan a las personas —quién recibe un crédito, quién es llamado a una entrevista, quién obtiene un cupo escolar— las toma o las sugiere un sistema automatizado.\n\n(S) Quienes construyen esos sistemas suelen defenderse diciendo que ellos solo escriben el código y que las decisiones las toma quien lo usa. Es una respuesta cómoda y, en la mayoría de los casos, falsa: las decisiones ya están tomadas en qué datos se eligieron, qué se optimiza y qué error se consideró aceptable.",
+      "fuente": "Situación elaborada para el simulacro."
+    },
+    {
+      "id": "ce2_ctx_10",
+      "titulo": "Situación 10 — Publicación de una fundación en redes sociales",
+      "contenido": "SITUACIÓN\n\nUsted maneja las redes de una fundación que enseña lectura a niños en zonas rurales. Necesita una publicación para conseguir voluntarios. La leerán en su mayoría universitarios de ciudad que no conocen la fundación.\n\nBORRADOR\n\n(1) La Fundación Semilla, constituida mediante escritura pública en 2014, desarrolla actividades de fomento lector en el marco de su objeto social.\n\n(2) Actualmente operamos en once veredas de tres municipios.\n\n(3) Buscamos voluntarios.\n\n(4) El compromiso es de cuatro horas cada quince días, un sábado por medio, y nosotros ponemos el transporte y los materiales.",
+      "fuente": "Situación elaborada para el simulacro."
+    },
+    {
+      "id": "ce2_ctx_11",
+      "titulo": "Situación 11 — Acta de una reunión",
+      "contenido": "SITUACIÓN\n\nUsted es secretario del consejo estudiantil y debe redactar el acta de la última reunión. Un acta registra lo que ocurrió y lo que se decidió, no las opiniones del redactor.\n\nBORRADOR\n\n(1) ACTA N.º 07 — Consejo Estudiantil — 14 de septiembre\n\n(2) Asistentes: siete de los nueve consejeros. Ausencias justificadas: Ramírez y Peña.\n\n(3) Se discutió la propuesta de destinar el remanente del presupuesto al torneo deportivo o a la semana cultural.\n\n(4) La consejera Salazar defendió el torneo argumentando que involucra a más estudiantes. El consejero Duarte defendió la semana cultural señalando que el torneo ya recibió fondos en el primer semestre.\n\n(5) La verdad es que la propuesta de Duarte era claramente la más sensata y no se entiende por qué costó tanto aprobarla.\n\n(6) Se sometió a votación: cinco votos por la semana cultural, dos por el torneo. Se aprobó destinar el remanente a la semana cultural.\n\n(7) Se fijó como próxima reunión el 28 de septiembre.",
+      "fuente": "Situación elaborada para el simulacro."
+    },
+    {
+      "id": "ce2_ctx_12",
+      "titulo": "Situación 12 — Texto divulgativo sobre el agua",
+      "contenido": "SITUACIÓN\n\nUna revista de divulgación le pidió un texto corto sobre por qué el agua embotellada no es necesariamente más segura que la del acueducto. El lector no es especialista.\n\nBORRADOR\n\n(1) Mucha gente compra agua embotellada convencida de que es más segura que la del grifo.\n\n(2) En las ciudades con acueducto certificado, el agua de la red se somete a controles de calidad varias veces al día, con parámetros que están publicados y que cualquiera puede consultar.\n\n(3) El agua embotellada también se controla, pero con una frecuencia menor, y buena parte de lo que se vende como «agua de manantial» es agua tratada envasada en planta.\n\n(4) ____________________\n\n(5) Nada de esto significa que el agua embotellada sea peligrosa. Significa que la diferencia de seguridad que justifica pagar mil veces más por el mismo litro, en una ciudad con acueducto certificado, sencillamente no existe.",
+      "fuente": "Situación elaborada para el simulacro."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "ce2_001",
+      "competencia": "planteamiento",
+      "tema": "tesis_proposito",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_01",
+      "enunciado": "El párrafo (2) del borrador es el más débil de la carta. ¿Cuál sería la mejor reescritura?",
+      "opciones": [
+        { "clave": "A", "texto": "«Le escribo porque la biblioteca cierra muy temprano y eso nos afecta mucho a todos los estudiantes.»" },
+        { "clave": "B", "texto": "«Me dirijo a usted para solicitar la ampliación del horario de la biblioteca, que hoy deja sin servicio a toda la jornada nocturna.»" },
+        { "clave": "C", "texto": "«Le escribo para expresarle nuestra profunda preocupación por la difícil situación que atraviesa la biblioteca de nuestra institución.»" },
+        { "clave": "D", "texto": "«Quiero comentarle algunas ideas sobre el funcionamiento de la biblioteca que quizá le resulten de interés.»" }
+      ],
+      "correcta": "B",
+      "justificacion": "El párrafo de apertura de una solicitud debe decir qué se pide y por qué, en una frase. La opción B nombra la petición concreta (ampliar el horario) y el motivo (deja sin servicio a la jornada nocturna).",
+      "justificaciones_incorrectas": {
+        "A": "Repite la vaguedad del borrador: «muy temprano» y «nos afecta mucho» no dicen ni cuánto ni a quién.",
+        "C": "Suena formal pero no dice nada: no hay petición ni se identifica el problema.",
+        "D": "Anuncia «ideas» cuando lo que se hace es una solicitud, y deja al rector sin saber qué se le pide."
+      }
+    },
+    {
+      "id": "ce2_002",
+      "competencia": "planteamiento",
+      "tema": "tesis_proposito",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_01",
+      "enunciado": "Considerando que la rectoría ya ha alegado limitaciones de presupuesto, ¿qué párrafo del borrador resulta más eficaz para la petición?",
+      "opciones": [
+        { "clave": "A", "texto": "El (3), porque describe con precisión en qué consiste el problema." },
+        { "clave": "B", "texto": "El (4), porque muestra cuántos estudiantes están afectados." },
+        { "clave": "C", "texto": "El (5), porque se anticipa a la objeción del costo y propone una alternativa acotada y evaluable." },
+        { "clave": "D", "texto": "El (6), porque cierra la carta con cortesía." }
+      ],
+      "correcta": "C",
+      "justificacion": "Escribir bien para un destinatario concreto implica anticipar su objeción. El párrafo (5) reconoce el costo, reduce la petición a dos días y propone evaluar antes de comprometer más recursos: convierte una petición cara en una decisión de bajo riesgo.",
+      "justificaciones_incorrectas": {
+        "A": "Describir el problema es necesario, pero no responde a la objeción que se sabe que va a aparecer.",
+        "B": "La cifra fortalece el caso, pero un rector con presupuesto ajustado puede aceptarla y aun así negar la petición.",
+        "D": "La fórmula de cierre no aporta nada a la persuasión."
+      }
+    },
+    {
+      "id": "ce2_003",
+      "competencia": "organizacion",
+      "tema": "estructura_texto",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_01",
+      "enunciado": "¿Qué función cumple el párrafo (4) dentro de la carta?",
+      "opciones": [
+        { "clave": "A", "texto": "Aportar la evidencia que muestra la magnitud del problema descrito antes." },
+        { "clave": "B", "texto": "Formular la petición principal de la carta." },
+        { "clave": "C", "texto": "Anticipar la objeción presupuestal de la rectoría." },
+        { "clave": "D", "texto": "Introducir el tema que se va a tratar." }
+      ],
+      "correcta": "A",
+      "justificacion": "El párrafo (3) describe el problema y el (4) lo cuantifica: 1.340 estudiantes, el 38 % de la matrícula. Es la evidencia que impide leer el reclamo como el de un grupo pequeño.",
+      "justificaciones_incorrectas": {
+        "B": "La petición concreta aparece en el párrafo (5).",
+        "C": "La objeción presupuestal se aborda en el (5), no en el (4).",
+        "D": "La introducción es el párrafo (2)."
+      }
+    },
+    {
+      "id": "ce2_004",
+      "competencia": "uso_lenguaje",
+      "tema": "lexico_registro",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_01",
+      "enunciado": "En el párrafo (3), la expresión «En la práctica, esto significa que...» cumple la función de",
+      "opciones": [
+        { "clave": "A", "texto": "traducir el dato anterior a su consecuencia concreta para el lector." },
+        { "clave": "B", "texto": "introducir una opinión personal del autor." },
+        { "clave": "C", "texto": "matizar lo dicho antes para quitarle fuerza." },
+        { "clave": "D", "texto": "citar una fuente externa." }
+      ],
+      "correcta": "A",
+      "justificacion": "La frase enlaza el hecho —la biblioteca cierra a las 6:00 p. m., justo cuando entran a clase— con lo que eso implica: no tienen acceso en ningún momento de la semana. Convierte un dato en su efecto.",
+      "justificaciones_incorrectas": {
+        "B": "Lo que sigue es una consecuencia verificable, no una opinión.",
+        "C": "No atenúa nada: refuerza el planteamiento.",
+        "D": "No hay ninguna cita; la fuente aparece en el párrafo (4)."
+      }
+    },
+    {
+      "id": "ce2_005",
+      "competencia": "uso_lenguaje",
+      "tema": "lexico_registro",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_02",
+      "enunciado": "El párrafo (3) del correo debería reescribirse. ¿Cuál es la mejor versión?",
+      "opciones": [
+        { "clave": "A", "texto": "«Le escribo para comunicarle que, por causas ajenas a nuestra voluntad, nos hemos visto en la necesidad de proceder al aplazamiento de la entrega.»" },
+        { "clave": "B", "texto": "«La entrega se aplazó por un incumplimiento de nuestro proveedor de madera.»" },
+        { "clave": "C", "texto": "«Lamentamos profundamente tener que informarle que circunstancias imprevistas han afectado los tiempos previstos para su pedido.»" },
+        { "clave": "D", "texto": "«Hubo un problema con la entrega y por eso se corrió la fecha.»" }
+      ],
+      "correcta": "B",
+      "justificacion": "Dice la misma información en una línea, nombra la causa real y no se escuda en fórmulas. La concisión, en una disculpa, se lee como franqueza.",
+      "justificaciones_incorrectas": {
+        "A": "Conserva el rodeo del borrador y la fórmula defensiva «ajenas a nuestra voluntad».",
+        "C": "«Circunstancias imprevistas» oculta la causa, que es justamente lo que el cliente quiere saber.",
+        "D": "Es concisa pero demasiado informal para un cliente y sigue sin decir qué pasó."
+      }
+    },
+    {
+      "id": "ce2_006",
+      "competencia": "uso_lenguaje",
+      "tema": "lexico_registro",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_02",
+      "enunciado": "¿Qué tienen en común expresiones como «nos vimos en la penosa obligación de tener que proceder a efectuar» del párrafo (3)?",
+      "opciones": [
+        { "clave": "A", "texto": "Elevan el registro del correo y por eso resultan apropiadas en un contexto comercial." },
+        { "clave": "B", "texto": "Acumulan verbos y giros que no añaden información, y alargan la frase sin decir más." },
+        { "clave": "C", "texto": "Contienen errores de concordancia gramatical." },
+        { "clave": "D", "texto": "Son propias del lenguaje oral y no del escrito." }
+      ],
+      "correcta": "B",
+      "justificacion": "«Vernos en la obligación de tener que proceder a efectuar un aplazamiento» dice exactamente lo mismo que «aplazamos». Los verbos encadenados son relleno.",
+      "justificaciones_incorrectas": {
+        "A": "El registro elevado no consiste en usar más palabras, sino las precisas.",
+        "C": "La construcción es gramaticalmente correcta; el problema es de economía.",
+        "D": "Al contrario: son giros típicamente escritos y burocráticos."
+      }
+    },
+    {
+      "id": "ce2_007",
+      "competencia": "planteamiento",
+      "tema": "tesis_proposito",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_02",
+      "enunciado": "Desde el punto de vista de la clienta, ¿cuál es la información más valiosa del correo?",
+      "opciones": [
+        { "clave": "A", "texto": "Que el proveedor incumplió el despacho del 28 de febrero." },
+        { "clave": "B", "texto": "Que la empresa lamenta el inconveniente." },
+        { "clave": "C", "texto": "Que hay una nueva fecha cierta, sin cobro adicional y con el transporte asumido por la empresa." },
+        { "clave": "D", "texto": "Que la fabricación comenzó el 5 de marzo." }
+      ],
+      "correcta": "C",
+      "justificacion": "Quien ya pagó la mitad necesita saber cuándo recibirá y cuánto le costará el retraso. El párrafo (5) responde ambas y además compensa. Lo demás explica, pero no resuelve.",
+      "justificaciones_incorrectas": {
+        "A": "Explica la causa, pero a la clienta no le cambia nada saber de quién fue la culpa.",
+        "B": "La disculpa es necesaria por cortesía, pero no es información útil.",
+        "D": "Es un dato de respaldo que solo cobra sentido junto con la nueva fecha."
+      }
+    },
+    {
+      "id": "ce2_008",
+      "competencia": "organizacion",
+      "tema": "estructura_texto",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_02",
+      "enunciado": "Si hubiera que reordenar el correo para que la clienta encuentre primero lo que le importa, ¿qué párrafo debería ir inmediatamente después del (2)?",
+      "opciones": [
+        { "clave": "A", "texto": "El (3), para explicar antes que nada las razones del retraso." },
+        { "clave": "B", "texto": "El (5), con la nueva fecha y las condiciones." },
+        { "clave": "C", "texto": "El (6), con las disculpas." },
+        { "clave": "D", "texto": "El (4), con el detalle del proveedor." }
+      ],
+      "correcta": "B",
+      "justificacion": "En un correo de servicio, la información que el destinatario necesita para actuar va primero; la explicación de cómo se llegó ahí va después. Poner la fecha nueva al comienzo evita que tenga que leer tres párrafos para saberla.",
+      "justificaciones_incorrectas": {
+        "A": "La explicación importa, pero después de saber cuándo llega el pedido.",
+        "C": "La disculpa cierra bien, pero abrir con ella retrasa el dato que se busca.",
+        "D": "El detalle del proveedor es el nivel más fino de la explicación: va al final, no al principio."
+      }
+    },
+    {
+      "id": "ce2_009",
+      "competencia": "organizacion",
+      "tema": "estructura_texto",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_03",
+      "enunciado": "¿Cuál sería la mejor opción para completar el espacio (4) de la columna?",
+      "opciones": [
+        { "clave": "A", "texto": "«En conclusión, las grabaciones deberían eliminarse de inmediato.»" },
+        { "clave": "B", "texto": "«Las dos posiciones describen bien lo que ganan y lo que pierden, pero ninguna se pregunta por qué la grabación resultó ser un sustituto tan bueno de la clase.»" },
+        { "clave": "C", "texto": "«Además, muchos estudiantes prefieren estudiar en su casa porque allí se concentran mejor.»" },
+        { "clave": "D", "texto": "«Cabe recordar que la universidad fue fundada hace más de sesenta años.»" }
+      ],
+      "correcta": "B",
+      "justificacion": "El párrafo (4) es la bisagra: los párrafos (2) y (3) exponen las dos posturas y el (5) reformula el problema. La opción B cierra la exposición de ambas y abre la pregunta que el (5) responde.",
+      "justificaciones_incorrectas": {
+        "A": "Contradice la conclusión del texto, que en el (6) dice explícitamente que la salida no es quitar las grabaciones.",
+        "C": "Añade un argumento suelto a favor de un bando y rompe el equilibrio que el texto venía construyendo.",
+        "D": "Es un dato irrelevante que no se conecta con nada."
+      }
+    },
+    {
+      "id": "ce2_010",
+      "competencia": "organizacion",
+      "tema": "coherencia_cohesion",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_03",
+      "enunciado": "Los párrafos (2) y (3) empiezan con estructuras paralelas: «Quienes defienden... tienen razones de peso» y «Quienes las critican también las tienen». ¿Qué logra el autor con ese paralelismo?",
+      "opciones": [
+        { "clave": "A", "texto": "Presentar las dos posturas en igualdad de condiciones, sin caricaturizar ninguna." },
+        { "clave": "B", "texto": "Señalar que la segunda postura es más débil que la primera." },
+        { "clave": "C", "texto": "Alargar el texto para cumplir con la extensión pedida." },
+        { "clave": "D", "texto": "Indicar que ambas posturas dicen exactamente lo mismo." }
+      ],
+      "correcta": "A",
+      "justificacion": "La misma fórmula para los dos bandos comunica que ambos tienen argumentos legítimos. Es una decisión de escritura que sostiene la credibilidad del autor antes de tomar posición en el (5).",
+      "justificaciones_incorrectas": {
+        "B": "El «también las tienen» equipara, no jerarquiza.",
+        "C": "Cada párrafo aporta un argumento distinto y necesario.",
+        "D": "Dicen cosas opuestas: acceso frente a interacción."
+      }
+    },
+    {
+      "id": "ce2_011",
+      "competencia": "planteamiento",
+      "tema": "tesis_proposito",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_03",
+      "enunciado": "¿Cuál es la tesis de la columna?",
+      "opciones": [
+        { "clave": "A", "texto": "Las grabaciones son perjudiciales para el aprendizaje y deben suspenderse." },
+        { "clave": "B", "texto": "La asistencia presencial cayó a la mitad desde que se publican las grabaciones." },
+        { "clave": "C", "texto": "El problema no son las grabaciones sino unas clases presenciales que no ofrecen nada que la grabación no dé." },
+        { "clave": "D", "texto": "Los estudiantes que trabajan tienen derecho a acceder a las grabaciones." }
+      ],
+      "correcta": "C",
+      "justificacion": "Los párrafos (5) y (6) lo formulan: las clases compiten con su propia versión grabada, y la salida es cambiar lo que ocurre en el salón. Es la afirmación discutible que el texto defiende.",
+      "justificaciones_incorrectas": {
+        "A": "El texto rechaza expresamente esa salida en el párrafo (6).",
+        "B": "Es el hecho que motiva la columna, no la tesis: nadie lo discute.",
+        "D": "Es uno de los argumentos expuestos en el (2), no la posición del autor."
+      }
+    },
+    {
+      "id": "ce2_012",
+      "competencia": "uso_lenguaje",
+      "tema": "lexico_registro",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_03",
+      "enunciado": "En el párrafo (3), la frase «es también la pregunta que a uno no se le habría ocurrido y que hizo el compañero de atrás» funciona porque",
+      "opciones": [
+        { "clave": "A", "texto": "sustituye una idea abstracta por una escena concreta que el lector reconoce." },
+        { "clave": "B", "texto": "utiliza un vocabulario técnico preciso." },
+        { "clave": "C", "texto": "cita el testimonio de un estudiante real." },
+        { "clave": "D", "texto": "introduce una estadística sobre participación en clase." }
+      ],
+      "correcta": "A",
+      "justificacion": "En lugar de decir «la interacción entre pares aporta valor», muestra el momento exacto en que eso ocurre. Lo concreto se recuerda y lo abstracto se olvida.",
+      "justificaciones_incorrectas": {
+        "B": "El vocabulario es deliberadamente común, no técnico.",
+        "C": "No hay testimonio: es una situación genérica que el lector reconstruye.",
+        "D": "No aparece ninguna cifra en ese párrafo."
+      }
+    },
+    {
+      "id": "ce2_013",
+      "competencia": "planteamiento",
+      "tema": "tesis_proposito",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_04",
+      "enunciado": "El párrafo (6) debe corregirse antes de entregar el informe porque",
+      "opciones": [
+        { "clave": "A", "texto": "generaliza a todo el país un resultado obtenido en una sola bodega y en una sola semana de medición." },
+        { "clave": "B", "texto": "repite información que ya estaba en el párrafo (5)." },
+        { "clave": "C", "texto": "usa un vocabulario demasiado técnico para el tutor." },
+        { "clave": "D", "texto": "no menciona el nombre de la empresa donde se hizo la práctica." }
+      ],
+      "correcta": "A",
+      "justificacion": "El estudio midió 60 pedidos de una semana en una bodega. De ahí no se sigue nada sobre «cualquier empresa de logística del país», y menos «de manera concluyente». Un informe pierde credibilidad cuando su conclusión excede sus datos.",
+      "justificaciones_incorrectas": {
+        "B": "No repite el dato: extrae de él una conclusión que no lo resiste.",
+        "C": "El lenguaje del párrafo es general, no técnico.",
+        "D": "La identificación de la empresa iría en la portada, y no es lo que hace problemático el párrafo."
+      }
+    },
+    {
+      "id": "ce2_014",
+      "competencia": "organizacion",
+      "tema": "estructura_texto",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_04",
+      "enunciado": "El fragmento sigue una secuencia reconocible. ¿Cuál es?",
+      "opciones": [
+        { "clave": "A", "texto": "Problema, medición, causa, propuesta, resultado." },
+        { "clave": "B", "texto": "Propuesta, problema, resultado, medición, causa." },
+        { "clave": "C", "texto": "Resultado, causa, problema, propuesta, medición." },
+        { "clave": "D", "texto": "Causa, propuesta, problema, medición, resultado." }
+      ],
+      "correcta": "A",
+      "justificacion": "El (1) plantea el problema, el (2) lo mide, el (3) identifica la causa, el (4) propone y el (5) reporta el resultado. Es la estructura estándar de un informe técnico.",
+      "justificaciones_incorrectas": {
+        "B": "La propuesta aparece en cuarto lugar, no primero.",
+        "C": "El resultado es lo último que se reporta, en el párrafo (5).",
+        "D": "La causa aparece en el (3), después de la medición."
+      }
+    },
+    {
+      "id": "ce2_015",
+      "competencia": "organizacion",
+      "tema": "coherencia_cohesion",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_04",
+      "enunciado": "¿Qué relación establece el párrafo (3) con el (4)?",
+      "opciones": [
+        { "clave": "A", "texto": "El (3) identifica dónde se pierde el tiempo y el (4) propone una medida que actúa justamente sobre ese punto." },
+        { "clave": "B", "texto": "El (3) contradice lo afirmado en el (4)." },
+        { "clave": "C", "texto": "El (4) repite con otras palabras el contenido del (3)." },
+        { "clave": "D", "texto": "El (3) es un ejemplo de lo enunciado en el (4)." }
+      ],
+      "correcta": "A",
+      "justificacion": "Si el 62 % del tiempo se va en desplazamiento entre estanterías, acercar los productos de mayor rotación al despacho ataca esa causa. La propuesta se sigue del diagnóstico, y ese encadenamiento es lo que hace sólido el informe.",
+      "justificaciones_incorrectas": {
+        "B": "No hay contradicción: hay causa y remedio.",
+        "C": "Uno diagnostica y el otro interviene; no dicen lo mismo.",
+        "D": "La relación va en sentido contrario: el (4) se apoya en el (3)."
+      }
+    },
+    {
+      "id": "ce2_016",
+      "competencia": "uso_lenguaje",
+      "tema": "normativa",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_04",
+      "enunciado": "El informe está escrito en tercera persona impersonal («se identificó», «se midieron»). Esta elección",
+      "opciones": [
+        { "clave": "A", "texto": "es apropiada porque centra el texto en los procedimientos y no en quien los ejecutó." },
+        { "clave": "B", "texto": "es un error, porque un informe siempre debe escribirse en primera persona." },
+        { "clave": "C", "texto": "resulta incorrecta gramaticalmente en español." },
+        { "clave": "D", "texto": "hace el texto más difícil de leer que la voz activa en todos los casos." }
+      ],
+      "correcta": "A",
+      "justificacion": "En un informe técnico, lo relevante es qué se hizo y con qué resultado, no quién sostuvo el cronómetro. La impersonalidad es la convención del género y aquí se usa de forma consistente.",
+      "justificaciones_incorrectas": {
+        "B": "No hay tal regla; muchos informes admiten ambas y la primera persona suele reservarse para las reflexiones finales.",
+        "C": "La pasiva refleja con «se» es una construcción normal y correcta del español.",
+        "D": "Puede pesar si se abusa de ella, pero aquí las frases son cortas y claras."
+      }
+    },
+    {
+      "id": "ce2_017",
+      "competencia": "planteamiento",
+      "tema": "tesis_proposito",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_05",
+      "enunciado": "El párrafo (3) es el más prescindible de la carta. ¿Por qué?",
+      "opciones": [
+        { "clave": "A", "texto": "Porque enumera cualidades que cualquier candidato podría afirmar de sí mismo y que no se pueden verificar." },
+        { "clave": "B", "texto": "Porque el registro es demasiado formal para una carta de presentación." },
+        { "clave": "C", "texto": "Porque contradice lo que dicen los párrafos (4) y (5)." },
+        { "clave": "D", "texto": "Porque menciona la vacante, que ya se había nombrado en el párrafo (2)." }
+      ],
+      "correcta": "A",
+      "justificacion": "«Proactivo, responsable, dinámico» son autoadjetivaciones que no distinguen a nadie: no aportan información porque nadie escribe lo contrario. Los párrafos (4) y (5), en cambio, muestran hechos comprobables.",
+      "justificaciones_incorrectas": {
+        "B": "El problema no es el registro, sino la ausencia de contenido verificable.",
+        "C": "No contradice nada: simplemente no aporta.",
+        "D": "No repite la vacante; el defecto es otro."
+      }
+    },
+    {
+      "id": "ce2_018",
+      "competencia": "planteamiento",
+      "tema": "tesis_proposito",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_05",
+      "enunciado": "La convocatoria pide capacidad analítica, manejo de datos y comunicación escrita, y el candidato no tiene experiencia formal en el cargo. ¿Qué estrategia sigue mejor la carta?",
+      "opciones": [
+        { "clave": "A", "texto": "Disculparse por la falta de experiencia y prometer compensarla con esfuerzo." },
+        { "clave": "B", "texto": "Mostrar en la práctica y el trabajo de grado evidencias concretas de las tres capacidades pedidas." },
+        { "clave": "C", "texto": "Omitir cualquier referencia a la formación académica para que no se note que es recién egresado." },
+        { "clave": "D", "texto": "Enumerar todos los cursos y certificados obtenidos durante la carrera." }
+      ],
+      "correcta": "B",
+      "justificacion": "Los párrafos (4) y (5) hacen justamente eso: 3.200 hogares procesados y tableros construidos evidencian manejo de datos; el método de ponderación evidencia capacidad analítica. La experiencia formal se suple con evidencia equivalente, no con promesas.",
+      "justificaciones_incorrectas": {
+        "A": "Disculparse instala la carencia como el tema de la carta.",
+        "C": "Ocultar la formación elimina precisamente la evidencia disponible.",
+        "D": "Una lista de certificados no demuestra que sepa aplicarlos."
+      }
+    },
+    {
+      "id": "ce2_019",
+      "competencia": "organizacion",
+      "tema": "coherencia_cohesion",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_05",
+      "enunciado": "Si se elimina el párrafo (3), ¿qué ocurre con la carta?",
+      "opciones": [
+        { "clave": "A", "texto": "Pierde coherencia, porque el (4) necesita el (3) para entenderse." },
+        { "clave": "B", "texto": "Queda más sólida, porque pasa directamente de la postulación a las evidencias concretas." },
+        { "clave": "C", "texto": "Queda incompleta, porque desaparece la única mención al perfil buscado." },
+        { "clave": "D", "texto": "Cambia de destinatario, porque el (3) es lo que la dirige al equipo de selección." }
+      ],
+      "correcta": "B",
+      "justificacion": "El (2) anuncia la postulación y el (4) empieza a demostrar. El (3) solo interrumpe con adjetivos. Quitarlo mejora el texto: es la prueba de que no aportaba.",
+      "justificaciones_incorrectas": {
+        "A": "El (4) se entiende perfectamente sin el (3); no hay ninguna dependencia.",
+        "C": "El (3) no menciona el perfil buscado: habla del candidato en abstracto.",
+        "D": "El destinatario se fija en el saludo del párrafo (1)."
+      }
+    },
+    {
+      "id": "ce2_020",
+      "competencia": "uso_lenguaje",
+      "tema": "lexico_registro",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_05",
+      "enunciado": "¿Qué diferencia de escritura hay entre el párrafo (3) y el (5)?",
+      "opciones": [
+        { "clave": "A", "texto": "El (3) afirma cualidades y el (5) muestra un resultado medible que permite inferirlas." },
+        { "clave": "B", "texto": "El (3) usa un registro informal y el (5) uno formal." },
+        { "clave": "C", "texto": "El (3) está en primera persona y el (5) en tercera." },
+        { "clave": "D", "texto": "El (3) es más extenso y detallado que el (5)." }
+      ],
+      "correcta": "A",
+      "justificacion": "Decir «soy analítico» pide que le crean; decir «reduje el error estimado en cuatro puntos con un método de ponderación» permite comprobarlo. Es la diferencia entre declarar y demostrar.",
+      "justificaciones_incorrectas": {
+        "B": "Ambos mantienen el mismo registro formal.",
+        "C": "Los dos están en primera persona.",
+        "D": "El (5) es el que aporta detalle; el (3) es una enumeración vacía."
+      }
+    },
+    {
+      "id": "ce2_021",
+      "competencia": "uso_lenguaje",
+      "tema": "lexico_registro",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_06",
+      "enunciado": "El paso (2) dice: «En primer lugar habrá de procederse a la desconexión del suministro eléctrico del aparato». Considerando quién va a leer el instructivo, la mejor reescritura es",
+      "opciones": [
+        { "clave": "A", "texto": "«Desconecte la máquina de la corriente.»" },
+        { "clave": "B", "texto": "«Se deberá proceder a desconectar el suministro eléctrico.»" },
+        { "clave": "C", "texto": "«Es necesario que el operario efectúe la desconexión eléctrica correspondiente.»" },
+        { "clave": "D", "texto": "«La desconexión del aparato de la red eléctrica es el primer paso a seguir.»" }
+      ],
+      "correcta": "A",
+      "justificacion": "Un instructivo pegado en la pared se lee de pie y con prisa. El imperativo directo y las palabras comunes son lo que funciona: una orden, un verbo, sin rodeos.",
+      "justificaciones_incorrectas": {
+        "B": "Sigue en impersonal y conserva «proceder a», que no aporta nada.",
+        "C": "Nombra al operario en tercera persona, cuando el lector es el operario.",
+        "D": "Convierte la acción en un sustantivo («la desconexión»), que es justo lo contrario de lo que pide una instrucción."
+      }
+    },
+    {
+      "id": "ce2_022",
+      "competencia": "uso_lenguaje",
+      "tema": "lexico_registro",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_06",
+      "enunciado": "El paso (5) dice: «Se recomienda que sea considerada la posibilidad de una revisión de la bandeja de goteo». ¿Cuál es su principal problema en un instructivo?",
+      "opciones": [
+        { "clave": "A", "texto": "Convierte una instrucción en una sugerencia difusa, cuando el paso (6) muestra que la acción sí es obligatoria." },
+        { "clave": "B", "texto": "Repite información que ya aparecía en el paso (3)." },
+        { "clave": "C", "texto": "Utiliza un término técnico que el lector no puede conocer." },
+        { "clave": "D", "texto": "Está mal ubicado: debería ir antes del paso (2)." }
+      ],
+      "correcta": "A",
+      "justificacion": "El paso (6) ordena vaciar y lavar la bandeja. El (5) apenas «recomienda considerar la posibilidad» de revisarla: enuncia como opcional algo que es parte obligatoria del procedimiento, y encima con tres capas de atenuación.",
+      "justificaciones_incorrectas": {
+        "B": "El paso (3) habla de esperar el enfriamiento, no de la bandeja.",
+        "C": "«Bandeja de goteo» es la pieza y está a la vista de quien lee.",
+        "D": "Su posición es correcta; lo que falla es su formulación."
+      }
+    },
+    {
+      "id": "ce2_023",
+      "competencia": "planteamiento",
+      "tema": "tesis_proposito",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_06",
+      "enunciado": "El paso (3) incluye la advertencia «No la toque antes: el grupo de café supera los 90 °C». ¿Por qué es una buena decisión de escritura?",
+      "opciones": [
+        { "clave": "A", "texto": "Da la razón de la instrucción, lo que hace mucho más probable que se cumpla." },
+        { "clave": "B", "texto": "Añade un dato técnico que da autoridad al documento." },
+        { "clave": "C", "texto": "Alarga el paso para que se note más en la pared." },
+        { "clave": "D", "texto": "Traslada la responsabilidad de un accidente al empleado." }
+      ],
+      "correcta": "A",
+      "justificacion": "Una instrucción sin motivo se salta cuando hay prisa; una instrucción con el motivo a la vista —90 °C— se respeta. En textos de seguridad, explicar el porqué es lo que hace que se cumplan.",
+      "justificaciones_incorrectas": {
+        "B": "El dato no está para dar autoridad, sino para justificar la espera.",
+        "C": "La extensión no es el criterio: la advertencia es breve y funcional.",
+        "D": "Advertir un riesgo protege a quien lee; no es una cláusula de descargo."
+      }
+    },
+    {
+      "id": "ce2_024",
+      "competencia": "organizacion",
+      "tema": "estructura_texto",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_06",
+      "enunciado": "¿Qué criterio organiza los pasos del instructivo?",
+      "opciones": [
+        { "clave": "A", "texto": "El orden cronológico en que deben ejecutarse, con la seguridad primero." },
+        { "clave": "B", "texto": "El orden de importancia de cada pieza de la máquina." },
+        { "clave": "C", "texto": "El orden alfabético de los componentes." },
+        { "clave": "D", "texto": "El grado de dificultad de cada tarea, de la más fácil a la más difícil." }
+      ],
+      "correcta": "A",
+      "justificacion": "Desconectar, esperar el enfriamiento, desmontar, lavar y volver a montar es la secuencia real de ejecución, y arranca por lo que evita un accidente.",
+      "justificaciones_incorrectas": {
+        "B": "Las piezas aparecen según cuándo se manipulan, no según su importancia.",
+        "C": "No hay ningún criterio alfabético.",
+        "D": "La dificultad no ordena nada aquí: el paso más delicado es el primero."
+      }
+    },
+    {
+      "id": "ce2_025",
+      "competencia": "organizacion",
+      "tema": "estructura_texto",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_07",
+      "enunciado": "El párrafo (2) debería reescribirse. ¿Cuál es la razón de fondo?",
+      "opciones": [
+        { "clave": "A", "texto": "Enumera el contenido capítulo por capítulo sin valorar nada, que es justamente lo que una reseña no debe hacer." },
+        { "clave": "B", "texto": "Contiene errores de puntuación en la enumeración." },
+        { "clave": "C", "texto": "Menciona más capítulos de los que el libro tiene." },
+        { "clave": "D", "texto": "Repite información del párrafo (1)." }
+      ],
+      "correcta": "A",
+      "justificacion": "El encargo pide orientar al lector sobre si le conviene leer el libro. Un índice narrado no orienta: ocupa el espacio que necesitan el juicio y sus razones, que es lo que aportan los párrafos (3) y (4).",
+      "justificaciones_incorrectas": {
+        "B": "La puntuación de la enumeración es correcta.",
+        "C": "Menciona cinco de los doce capítulos que anuncia; no hay contradicción.",
+        "D": "El (1) identifica el libro; el (2) lista capítulos. No se repiten."
+      }
+    },
+    {
+      "id": "ce2_026",
+      "competencia": "organizacion",
+      "tema": "coherencia_cohesion",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_07",
+      "enunciado": "Los párrafos (3) y (4) se abren con «La mayor virtud del libro» y «Su mayor defecto». Ese emparejamiento sirve para",
+      "opciones": [
+        { "clave": "A", "texto": "organizar el juicio en dos caras explícitas, de modo que el lector pueda pesarlas." },
+        { "clave": "B", "texto": "evitar comprometerse con una valoración." },
+        { "clave": "C", "texto": "señalar que el libro no tiene otros defectos." },
+        { "clave": "D", "texto": "resumir el contenido de los doce capítulos." }
+      ],
+      "correcta": "A",
+      "justificacion": "Nombrar la virtud y el defecto con la misma fórmula ordena la reseña y le da al lector los dos elementos que necesita para decidir, cada uno con su razón.",
+      "justificaciones_incorrectas": {
+        "B": "Al contrario: el párrafo (5) toma una posición explícita sobre a quién le sirve.",
+        "C": "Decir «el mayor» no niega que existan otros; solo jerarquiza.",
+        "D": "El resumen del contenido es lo que hace el párrafo (2)."
+      }
+    },
+    {
+      "id": "ce2_027",
+      "competencia": "planteamiento",
+      "tema": "tesis_proposito",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_07",
+      "enunciado": "El párrafo (5) distingue dos tipos de lector. ¿Qué logra con eso?",
+      "opciones": [
+        { "clave": "A", "texto": "Responder la pregunta que motiva una reseña: no si el libro es bueno en abstracto, sino para quién lo es." },
+        { "clave": "B", "texto": "Evitar dar una recomendación clara." },
+        { "clave": "C", "texto": "Ampliar el público del periódico." },
+        { "clave": "D", "texto": "Justificar la extensión de 400 palabras." }
+      ],
+      "correcta": "A",
+      "justificacion": "«Bueno» depende de quién lea. Al separar al lector nuevo del ya formado, la reseña le permite a cada uno saber si el libro es para él, que es exactamente lo que el encargo pedía.",
+      "justificaciones_incorrectas": {
+        "B": "Es una recomendación clara, solo que condicionada al lector.",
+        "C": "No hay ninguna intención sobre el público del periódico.",
+        "D": "La extensión no tiene relación con esa distinción."
+      }
+    },
+    {
+      "id": "ce2_028",
+      "competencia": "uso_lenguaje",
+      "tema": "lexico_registro",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_07",
+      "enunciado": "En el párrafo (3), «cuando simplifica, avisa que está simplificando y remite a la fuente completa» resulta más eficaz que escribir «es un libro riguroso» porque",
+      "opciones": [
+        { "clave": "A", "texto": "sustituye la etiqueta por la conducta concreta que la justifica." },
+        { "clave": "B", "texto": "utiliza un registro más informal, adecuado al periódico universitario." },
+        { "clave": "C", "texto": "es una frase más corta y por tanto más clara." },
+        { "clave": "D", "texto": "cita textualmente un pasaje del libro." }
+      ],
+      "correcta": "A",
+      "justificacion": "«Riguroso» es un juicio que el lector tiene que aceptar por confianza. Describir qué hace el autor cuando simplifica le da al lector el criterio para juzgar por sí mismo.",
+      "justificaciones_incorrectas": {
+        "B": "El registro es el mismo; lo que cambia es el grado de concreción.",
+        "C": "Es más larga, no más corta: la ventaja está en el contenido.",
+        "D": "No hay ninguna cita textual."
+      }
+    },
+    {
+      "id": "ce2_029",
+      "competencia": "planteamiento",
+      "tema": "tesis_proposito",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_08",
+      "enunciado": "¿Cuál es el propósito comunicativo del párrafo (2)?",
+      "opciones": [
+        { "clave": "A", "texto": "Identificar a la peticionaria y el fundamento jurídico de la solicitud, como exige el género." },
+        { "clave": "B", "texto": "Describir los hechos que motivan la petición." },
+        { "clave": "C", "texto": "Formular la solicitud concreta a la entidad." },
+        { "clave": "D", "texto": "Expresar la inconformidad de la comunidad." }
+      ],
+      "correcta": "A",
+      "justificacion": "Un derecho de petición debe identificar a quien lo presenta y su fundamento. El párrafo (2) da nombre, cédula, dirección y la norma que lo ampara: sin eso, la entidad puede no darle trámite.",
+      "justificaciones_incorrectas": {
+        "B": "Los hechos se exponen en los párrafos (3) y (4).",
+        "C": "La petición concreta es el párrafo (6).",
+        "D": "La inconformidad aparece en el (5), que es justamente el párrafo problemático."
+      }
+    },
+    {
+      "id": "ce2_030",
+      "competencia": "planteamiento",
+      "tema": "lexico_registro",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_08",
+      "enunciado": "El párrafo (5) debe eliminarse del derecho de petición porque",
+      "opciones": [
+        { "clave": "A", "texto": "introduce una acusación general y un reclamo político que no sostiene la petición y que debilita un escrito que hasta ahí era verificable." },
+        { "clave": "B", "texto": "repite los hechos ya expuestos en el párrafo (4)." },
+        { "clave": "C", "texto": "contiene datos personales que no deben aparecer." },
+        { "clave": "D", "texto": "usa un vocabulario demasiado técnico para la alcaldía." }
+      ],
+      "correcta": "A",
+      "justificacion": "Los párrafos (3) y (4) aportan hechos comprobables: fechas, direcciones, número de familias, reporte de acudientes. El (5) cambia a un reproche general e inverificable, que no agrega fuerza jurídica y le da a la entidad un flanco para desviar la respuesta.",
+      "justificaciones_incorrectas": {
+        "B": "No repite hechos: introduce una afirmación distinta y sin respaldo.",
+        "C": "Los datos personales están en el (2) y ahí son obligatorios.",
+        "D": "El vocabulario del (5) es coloquial, no técnico."
+      }
+    },
+    {
+      "id": "ce2_031",
+      "competencia": "organizacion",
+      "tema": "estructura_texto",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_08",
+      "enunciado": "El borrador rotula explícitamente «HECHOS» y «PETICIÓN». ¿Qué aporta esa decisión?",
+      "opciones": [
+        { "clave": "A", "texto": "Permite que quien tramita el documento encuentre de inmediato lo que debe responder." },
+        { "clave": "B", "texto": "Aumenta la extensión del escrito, lo que le da más peso." },
+        { "clave": "C", "texto": "Sustituye la necesidad de identificar a la peticionaria." },
+        { "clave": "D", "texto": "Indica que el documento fue redactado por un abogado." }
+      ],
+      "correcta": "A",
+      "justificacion": "Los rótulos son señales de navegación: un funcionario que revisa decenas de escritos localiza al instante qué se le pide. En textos que alguien debe tramitar, la estructura visible es parte de la eficacia.",
+      "justificaciones_incorrectas": {
+        "B": "Los rótulos no alargan el texto ni la extensión da peso a una petición.",
+        "C": "La identificación sigue siendo obligatoria y está en el párrafo (2).",
+        "D": "Cualquier ciudadano puede y suele estructurar así su petición."
+      }
+    },
+    {
+      "id": "ce2_032",
+      "competencia": "uso_lenguaje",
+      "tema": "normativa",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_08",
+      "enunciado": "En el párrafo (4), la fórmula «según reportaron sus acudientes en la reunión de padres del 3 de mayo» cumple la función de",
+      "opciones": [
+        { "clave": "A", "texto": "atribuir la información a su fuente, de modo que la afirmación no quede como una suposición de la peticionaria." },
+        { "clave": "B", "texto": "suavizar la denuncia para no incomodar a la entidad." },
+        { "clave": "C", "texto": "cumplir con un requisito formal de los derechos de petición." },
+        { "clave": "D", "texto": "alargar la frase para darle formalidad." }
+      ],
+      "correcta": "A",
+      "justificacion": "La peticionaria no examinó a los niños: recoge lo que dijeron los acudientes y lo dice. Atribuir la fuente distingue lo que consta de lo que se supone, y eso sostiene la credibilidad del escrito.",
+      "justificaciones_incorrectas": {
+        "B": "No suaviza nada: precisa de dónde sale el dato.",
+        "C": "No es un requisito formal, es una buena práctica de escritura.",
+        "D": "La formalidad no viene de la longitud sino de la precisión."
+      }
+    },
+    {
+      "id": "ce2_033",
+      "competencia": "organizacion",
+      "tema": "estructura_texto",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_09",
+      "enunciado": "¿Cuál es el orden correcto de los párrafos del ensayo?",
+      "opciones": [
+        { "clave": "A", "texto": "R, S, P, Q" },
+        { "clave": "B", "texto": "P, R, S, Q" },
+        { "clave": "C", "texto": "R, P, Q, S" },
+        { "clave": "D", "texto": "S, R, P, Q" }
+      ],
+      "correcta": "A",
+      "justificacion": "R plantea el fenómeno (cada vez más decisiones las toma un sistema); S presenta y refuta la defensa de quienes los construyen; P introduce la distinción entre corrección técnica y justicia; Q concluye reformulando la pregunta relevante. El «Por eso» de Q solo funciona al final.",
+      "justificaciones_incorrectas": {
+        "B": "P abre con «Conviene distinguir dos cosas», que presupone un tema ya planteado; no puede ir primero.",
+        "C": "Q cierra con «Por eso la pregunta relevante...», así que no puede preceder a S.",
+        "D": "S responde a quienes construyen los sistemas, que solo se mencionan después de que R introduce el fenómeno."
+      }
+    },
+    {
+      "id": "ce2_034",
+      "competencia": "organizacion",
+      "tema": "coherencia_cohesion",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_09",
+      "enunciado": "¿Qué señal del propio texto indica que el párrafo Q debe ir al final?",
+      "opciones": [
+        { "clave": "A", "texto": "El conector «Por eso», que introduce una conclusión derivada de lo anterior." },
+        { "clave": "B", "texto": "Que es el párrafo más corto de los cuatro." },
+        { "clave": "C", "texto": "Que menciona ejemplos concretos de decisiones automatizadas." },
+        { "clave": "D", "texto": "Que formula una pregunta en lugar de una afirmación." }
+      ],
+      "correcta": "A",
+      "justificacion": "«Por eso» exige que algo lo anteceda: es un conector consecutivo. Los conectores son la marca más fiable para reconstruir el orden de un texto desarmado.",
+      "justificaciones_incorrectas": {
+        "B": "La extensión no determina la posición de un párrafo.",
+        "C": "Los ejemplos concretos están en R, no en Q.",
+        "D": "Una pregunta puede abrir o cerrar; la pista está en el conector."
+      }
+    },
+    {
+      "id": "ce2_035",
+      "competencia": "planteamiento",
+      "tema": "tesis_proposito",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_09",
+      "enunciado": "¿Cuál es la tesis del ensayo?",
+      "opciones": [
+        { "clave": "A", "texto": "Los algoritmos que deciden sobre personas deben prohibirse hasta que sean perfectos." },
+        { "clave": "B", "texto": "Quien diseña un sistema automatizado no puede desligarse de sus consecuencias, porque las decisiones ya están tomadas en el diseño." },
+        { "clave": "C", "texto": "La precisión técnica de un algoritmo es el criterio principal para evaluarlo." },
+        { "clave": "D", "texto": "Cada vez más decisiones sobre las personas están automatizadas." }
+      ],
+      "correcta": "B",
+      "justificacion": "Es lo que sostiene el párrafo S y desarrolla P: elegir los datos, qué se optimiza y qué error se acepta ya son decisiones morales, así que la defensa de «yo solo escribo el código» no se sostiene.",
+      "justificaciones_incorrectas": {
+        "A": "El ensayo no propone prohibir nada.",
+        "C": "El texto sostiene lo contrario: la corrección técnica no basta.",
+        "D": "Es el hecho de partida del párrafo R, no la posición defendida."
+      }
+    },
+    {
+      "id": "ce2_036",
+      "competencia": "uso_lenguaje",
+      "tema": "lexico_registro",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_09",
+      "enunciado": "En el párrafo S, calificar la defensa de los diseñadores como «cómoda y, en la mayoría de los casos, falsa» es preferible a llamarla simplemente «falsa» porque",
+      "opciones": [
+        { "clave": "A", "texto": "el matiz reconoce que puede haber casos en que sea cierta, lo que hace más difícil refutar el argumento." },
+        { "clave": "B", "texto": "suaviza la crítica para no ofender a los ingenieros." },
+        { "clave": "C", "texto": "aumenta la extensión del párrafo, que era demasiado corto." },
+        { "clave": "D", "texto": "introduce una duda que el autor resuelve más adelante." }
+      ],
+      "correcta": "A",
+      "justificacion": "Una afirmación absoluta cae con un solo contraejemplo. «En la mayoría de los casos» la vuelve defendible sin perder fuerza, y muestra que el autor conoce los límites de lo que sostiene.",
+      "justificaciones_incorrectas": {
+        "B": "El propósito no es la cortesía: sigue llamando falsa a la defensa.",
+        "C": "La extensión no tiene que ver con la solidez del argumento.",
+        "D": "No es una duda pendiente: es una calificación precisa."
+      }
+    },
+    {
+      "id": "ce2_037",
+      "competencia": "planteamiento",
+      "tema": "tesis_proposito",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_10",
+      "enunciado": "Considerando que los lectores son universitarios de ciudad que no conocen la fundación, ¿cómo debería empezar la publicación?",
+      "opciones": [
+        { "clave": "A", "texto": "Con el párrafo (1), porque la constitución legal da credibilidad a la organización." },
+        { "clave": "B", "texto": "Con algo que muestre a quién beneficia el trabajo y por qué importa, antes que los datos administrativos." },
+        { "clave": "C", "texto": "Con el párrafo (3), porque el objetivo es conseguir voluntarios." },
+        { "clave": "D", "texto": "Con el párrafo (2), porque la cobertura geográfica es el dato más importante." }
+      ],
+      "correcta": "B",
+      "justificacion": "Quien no conoce la fundación no tiene ninguna razón para seguir leyendo un dato de escritura pública. En una publicación para captar voluntarios, lo primero debe darle al lector un motivo para importarle.",
+      "justificaciones_incorrectas": {
+        "A": "La fecha de constitución es información administrativa: interesa a un auditor, no a un voluntario potencial.",
+        "C": "«Buscamos voluntarios» sin contexto no dice para qué ni por qué vale la pena.",
+        "D": "Once veredas es un dato útil, pero no explica qué se hace ni para quién."
+      }
+    },
+    {
+      "id": "ce2_038",
+      "competencia": "organizacion",
+      "tema": "estructura_texto",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_10",
+      "enunciado": "El párrafo (4) es el más eficaz del borrador. ¿Por qué?",
+      "opciones": [
+        { "clave": "A", "texto": "Responde por anticipado la objeción de quien duda: cuánto tiempo cuesta y qué gastos implica." },
+        { "clave": "B", "texto": "Es el más extenso de los cuatro." },
+        { "clave": "C", "texto": "Menciona los municipios donde opera la fundación." },
+        { "clave": "D", "texto": "Emplea un lenguaje jurídico preciso." }
+      ],
+      "correcta": "A",
+      "justificacion": "Lo que frena a un estudiante que quiere ayudar es no saber en qué se está metiendo. Cuatro horas cada quince días, con transporte y materiales incluidos, convierte una intención vaga en una decisión concreta.",
+      "justificaciones_incorrectas": {
+        "B": "La extensión no explica su eficacia.",
+        "C": "Los municipios se mencionan en el párrafo (2).",
+        "D": "Su lenguaje es deliberadamente sencillo, no jurídico."
+      }
+    },
+    {
+      "id": "ce2_039",
+      "competencia": "uso_lenguaje",
+      "tema": "lexico_registro",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_10",
+      "enunciado": "La expresión «desarrolla actividades de fomento lector en el marco de su objeto social» del párrafo (1) es inadecuada para este texto porque",
+      "opciones": [
+        { "clave": "A", "texto": "usa el registro de un documento legal ante un público que solo quiere saber qué hace la fundación." },
+        { "clave": "B", "texto": "contiene un error de concordancia gramatical." },
+        { "clave": "C", "texto": "exagera el alcance real del trabajo de la fundación." },
+        { "clave": "D", "texto": "repite lo que ya decía el párrafo (2)." }
+      ],
+      "correcta": "A",
+      "justificacion": "«Fomento lector en el marco de su objeto social» es lenguaje de estatutos. Un universitario en redes lo lee como ruido: «enseñamos a leer a niños del campo» dice lo mismo y lo dice a quien está leyendo.",
+      "justificaciones_incorrectas": {
+        "B": "La frase es gramaticalmente correcta.",
+        "C": "No exagera: describe con exactitud, pero en el registro equivocado.",
+        "D": "El (2) habla de cobertura; el (1), de la actividad."
+      }
+    },
+    {
+      "id": "ce2_040",
+      "competencia": "organizacion",
+      "tema": "coherencia_cohesion",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_11",
+      "enunciado": "El párrafo (5) debe eliminarse del acta porque",
+      "opciones": [
+        { "clave": "A", "texto": "introduce la opinión del secretario en un documento que solo debe registrar lo ocurrido y lo decidido." },
+        { "clave": "B", "texto": "contradice el resultado de la votación registrado en el párrafo (6)." },
+        { "clave": "C", "texto": "menciona a consejeros que no asistieron a la reunión." },
+        { "clave": "D", "texto": "repite el contenido del párrafo (4)." }
+      ],
+      "correcta": "A",
+      "justificacion": "Un acta es un registro, no una crónica de opinión. Calificar una propuesta de «claramente la más sensata» compromete la neutralidad del documento y le resta valor como constancia.",
+      "justificaciones_incorrectas": {
+        "B": "Coincide con el resultado, pero coincidir no lo hace admisible: el problema es que opina.",
+        "C": "Las ausencias están registradas en el (2) y son parte del acta.",
+        "D": "El (4) registra los argumentos de cada consejero; el (5) los juzga."
+      }
+    },
+    {
+      "id": "ce2_041",
+      "competencia": "organizacion",
+      "tema": "estructura_texto",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_11",
+      "enunciado": "¿Qué elemento del acta permite verificar después que la decisión fue válida?",
+      "opciones": [
+        { "clave": "A", "texto": "El registro de asistentes y ausencias del párrafo (2), junto con el conteo de votos del (6)." },
+        { "clave": "B", "texto": "La descripción de los argumentos del párrafo (4)." },
+        { "clave": "C", "texto": "La fecha de la próxima reunión del párrafo (7)." },
+        { "clave": "D", "texto": "El número de acta del párrafo (1)." }
+      ],
+      "correcta": "A",
+      "justificacion": "Saber cuántos había y cómo votaron es lo que permite comprobar que hubo quórum y que la mayoría fue real. Es la información que da valor probatorio al acta.",
+      "justificaciones_incorrectas": {
+        "B": "Los argumentos documentan la discusión, pero no la validez de la decisión.",
+        "C": "La próxima fecha organiza el trabajo futuro; no valida nada de esta sesión.",
+        "D": "El número identifica el documento, no acredita la decisión."
+      }
+    },
+    {
+      "id": "ce2_042",
+      "competencia": "uso_lenguaje",
+      "tema": "normativa",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_11",
+      "enunciado": "El párrafo (4) dice que Salazar «defendió el torneo argumentando que...» y que Duarte «defendió la semana cultural señalando que...». Este modo de redactar",
+      "opciones": [
+        { "clave": "A", "texto": "atribuye cada posición a quien la sostuvo, sin que el redactor la asuma como propia." },
+        { "clave": "B", "texto": "indica que el secretario está de acuerdo con ambos." },
+        { "clave": "C", "texto": "resume en exceso y hace incomprensible la discusión." },
+        { "clave": "D", "texto": "es incorrecto: un acta debe transcribir literalmente lo dicho." }
+      ],
+      "correcta": "A",
+      "justificacion": "Los verbos de atribución («argumentando», «señalando») dejan claro de quién es cada afirmación. El acta recoge las posturas sin hacerlas suyas, que es exactamente lo que el género exige.",
+      "justificaciones_incorrectas": {
+        "B": "Atribuir no implica compartir; justamente marca la distancia.",
+        "C": "El resumen es breve pero conserva el argumento de cada uno.",
+        "D": "Un acta registra lo sustancial; la transcripción literal corresponde a otro tipo de documento."
+      }
+    },
+    {
+      "id": "ce2_043",
+      "competencia": "organizacion",
+      "tema": "coherencia_cohesion",
+      "dificultad": 3,
+      "contexto_id": "ce2_ctx_12",
+      "enunciado": "¿Cuál sería la mejor opción para el espacio (4)?",
+      "opciones": [
+        { "clave": "A", "texto": "«Además, las botellas plásticas generan un impacto ambiental considerable que también conviene tener en cuenta.»" },
+        { "clave": "B", "texto": "«A esto se suma un dato incómodo: una botella de agua puede costar hasta mil veces más por litro que la del acueducto.»" },
+        { "clave": "C", "texto": "«El agua es una sustancia compuesta por dos átomos de hidrógeno y uno de oxígeno.»" },
+        { "clave": "D", "texto": "«En conclusión, el agua embotellada nunca debería consumirse.»" }
+      ],
+      "correcta": "B",
+      "justificacion": "El párrafo (5) cierra hablando de «pagar mil veces más por el mismo litro». El espacio (4) debe introducir ese dato para que el cierre tenga a qué referirse: es la pieza que enlaza la comparación de seguridad con la de precio.",
+      "justificaciones_incorrectas": {
+        "A": "Abre un tema nuevo, el impacto ambiental, que el texto no retoma en ninguna parte.",
+        "C": "Una definición química no viene al caso y rompe el hilo del texto.",
+        "D": "Contradice el párrafo (5), que dice expresamente que no significa que sea peligrosa."
+      }
+    },
+    {
+      "id": "ce2_044",
+      "competencia": "planteamiento",
+      "tema": "tesis_proposito",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_12",
+      "enunciado": "El párrafo (5) empieza con «Nada de esto significa que el agua embotellada sea peligrosa». ¿Qué consigue el autor con esa aclaración?",
+      "opciones": [
+        { "clave": "A", "texto": "Delimitar con precisión lo que afirma y lo que no, evitando que se le atribuya una alarma que no planteó." },
+        { "clave": "B", "texto": "Retractarse de lo dicho en los párrafos anteriores." },
+        { "clave": "C", "texto": "Dejar la conclusión abierta para que el lector decida." },
+        { "clave": "D", "texto": "Introducir un tema nuevo al final del texto." }
+      ],
+      "correcta": "A",
+      "justificacion": "En divulgación, la tentación del lector es leer «es peor» donde el texto dice «no es mejor». Marcar el límite protege la afirmación real, que es sobre la diferencia de seguridad, no sobre un riesgo.",
+      "justificaciones_incorrectas": {
+        "B": "No se retracta: sostiene su punto y precisa su alcance.",
+        "C": "La conclusión es explícita: la diferencia que justificaría el precio no existe.",
+        "D": "No introduce tema nuevo; acota el que venía tratando."
+      }
+    },
+    {
+      "id": "ce2_045",
+      "competencia": "uso_lenguaje",
+      "tema": "lexico_registro",
+      "dificultad": 2,
+      "contexto_id": "ce2_ctx_12",
+      "enunciado": "En el párrafo (3), las comillas en «agua de manantial» indican que el autor",
+      "opciones": [
+        { "clave": "A", "texto": "toma distancia de esa denominación comercial y sugiere que no describe lo que el producto es." },
+        { "clave": "B", "texto": "cita textualmente una norma técnica sobre envasado." },
+        { "clave": "C", "texto": "introduce un término extranjero." },
+        { "clave": "D", "texto": "señala que se trata de un error de escritura." }
+      ],
+      "correcta": "A",
+      "justificacion": "Las comillas marcan que el autor reproduce la etiqueta del mercado sin suscribirla, y la frase que sigue explica por qué: buena parte de esa agua es agua tratada envasada en planta.",
+      "justificaciones_incorrectas": {
+        "B": "No hay ninguna norma citada.",
+        "C": "«Agua de manantial» es español corriente.",
+        "D": "La expresión está bien escrita; lo que se cuestiona es su exactitud."
+      }
+    }
+  ]
+}
