@@ -1,8 +1,18 @@
-# Simulacro Saber Pro
+# Simulacros y pruebas
 
-Aplicación web para presentar simulacros de las **competencias genéricas de selección
-múltiple** del Saber Pro (ICFES), con cronómetro controlado por el servidor, resultado por
-módulo, revisión de respuestas y análisis de qué estudiar.
+Aplicación web para presentar pruebas de selección múltiple con cronómetro controlado por el
+servidor, resultado por módulo, revisión de respuestas y análisis de qué estudiar. Al entrar, el
+estudiante elige en un menú cuál presentar:
+
+| Prueba | De qué es | Preguntas | Duración |
+|---|---|---|---|
+| **Simulacro Saber Pro** | Competencias genéricas de selección múltiple del ICFES | 195 | 4 h 30 min |
+| **Prueba de enfermería** | Cardiología, electrocardiografía con imágenes, hemodinamia, ACV y edema cerebral, cetoacidosis y pediatría | 64 | 1 h 40 min |
+
+Las dos comparten el motor: cronómetro en el servidor, una sola prueba en curso por usuario,
+revisión bloqueada mientras haya una corriendo y diagnóstico por competencia al terminar. Lo que
+cambia entre ellas es el banco de preguntas, la estructura de módulos y la escala de
+calificación.
 
 Node + Express + Postgres. El frontend es HTML, CSS y JavaScript sin paso de build.
 
@@ -87,7 +97,7 @@ llegan solos a producción. Como la carga es un *upsert* por `id`, no se duplica
 Ten en cuenta que el servicio gratuito de Render se duerme tras un rato sin tráfico y la
 primera petición después tarda unos segundos.
 
-## Cómo está armada la prueba
+## Cómo está armado el simulacro Saber Pro
 
 Una sesión de **4 h 30 min** con **195 preguntas**, con navegación libre entre módulos:
 
@@ -101,7 +111,7 @@ Una sesión de **4 h 30 min** con **195 preguntas**, con navegación libre entre
 
 Cada simulacro se arma respetando la cobertura por competencia definida en
 [blueprint.js](server/exam/blueprint.js), y prioriza preguntas que ese usuario no ha visto antes.
-El banco de la versión activa tiene 245 preguntas, así que dos simulacros seguidos no son iguales.
+El banco de la versión activa tiene 269 preguntas, así que dos simulacros seguidos no son iguales.
 
 No se incluyen los módulos específicos por programa académico.
 
@@ -117,22 +127,67 @@ Su número de preguntas (35) y los puntos de corte de sus niveles son una calibr
 porque no existe una versión oficial de selección múltiple de ese módulo. Los otros cuatro
 módulos conservan sus cifras oficiales exactas.
 
-## Versiones de la prueba
+## Cómo está armada la prueba de enfermería
+
+No es una prueba del ICFES ni tiene equivalente oficial: es un banco propio de enfermería en
+cuidado cardiovascular y crítico. Una sesión de **1 h 40 min** con **64 preguntas**:
+
+| Módulo | Preguntas | Qué cubre |
+|---|---|---|
+| Cardiología clínica | 12 | Síndrome coronario agudo, falla cardiaca, edema agudo de pulmón, arritmias, farmacología |
+| Electrocardiografía | 12 | Trazados de patologías, con imagen: infarto con y sin elevación del ST, fibrilación y flúter auricular, taquicardia y fibrilación ventricular, bloqueos AV y de rama, hiperpotasemia, pericarditis |
+| Hemodinamia y monitoría invasiva | 12 | Funciones y cuidados de la línea arterial, curvas de presión, cateterismo, angioplastia y stent |
+| Neurología: ACV y edema cerebral | 12 | Tipos de ACV, tipos de edema cerebral, valoración neurológica, manejo neurocrítico |
+| Urgencias metabólicas | 8 | Cetoacidosis diabética: criterios, anión gap, secuencia de tratamiento y complicaciones |
+| Pediatría | 8 | Convulsión febril simple y compleja, epilepsia y estado epiléptico, educación a la familia |
+
+Se califica en **porcentaje de acierto**, con cuatro niveles propios (insuficiente, aceptable,
+bueno y sobresaliente), porque no existe una escala publicada que replicar. La app lo advierte en
+la pantalla de resultados.
+
+### Los trazados
+
+Las preguntas de electrocardiografía y de línea arterial vienen con imagen. Los trazados no son
+fotografías de pacientes ni imágenes de terceros: los **dibuja por código**
+[scripts/generar-imagenes.js](scripts/generar-imagenes.js) a partir de una descripción de la onda
+—amplitud de la P, ancho del QRS, desnivel del ST, frecuencia— y los escribe como SVG en
+`public/img/`. Corregir un trazado es cambiar un parámetro y volver a ejecutar:
+
+```bash
+node scripts/generar-imagenes.js
+```
+
+La salida está versionada en el repositorio, así que el despliegue no necesita ejecutarlo. El
+rótulo de la imagen y su texto alternativo no nombran el diagnóstico: la pregunta suele ser
+justamente reconocerlo. Durante el examen la descripción viaja solo como `alt`, para lectores de
+pantalla; en la revisión, cuando ya se muestra la respuesta, se imprime también como pie.
+
+## Versiones de cada prueba
 
 Cada versión declara su propia estructura, porque los intentos ya presentados deben poder
 consultarse tal como se presentaron:
 
-| Versión | Módulos | Preguntas | Duración |
-|---|---|---|---|
-| Versión 1 | 4 (sin Comunicación escrita) | 160 | 4 h 30 min |
-| **Versión 2** (activa) | 5 | 195 | 4 h 30 min |
+| Prueba | Versión | Módulos | Preguntas | Duración |
+|---|---|---|---|---|
+| Saber Pro | Versión 1 | 4 (sin Comunicación escrita) | 160 | 4 h 30 min |
+| Saber Pro | Versión 2 | 5 | 195 | 4 h 30 min |
+| Saber Pro | **Versión 2.1** (activa) | 5 | 195 | 4 h 30 min |
+| Enfermería | **Versión 1** (activa) | 6 | 64 | 1 h 40 min |
 
-Los simulacros nuevos usan **siempre la versión más reciente**. Las preguntas de la V1 permanecen
-en la base porque los intentos antiguos las referencian y su revisión debe seguir funcionando.
-La versión se muestra durante todo el examen y queda registrada en el intento y en los resultados.
+La **Versión 2.1** conserva la estructura de la 2 y cambia los textos: lectura crítica,
+competencias ciudadanas, comunicación escrita e inglés traen lecturas mucho más extensas —hasta
+6.500 caracteres en lectura crítica— y preguntas nuevas sobre ese material añadido, para que la
+lectura larga se practique como en la prueba real.
 
-Para añadir una V3: agrega una entrada a `VERSIONES` en
-[blueprint.js](server/exam/blueprint.js) y un directorio `data/banco/v3/`.
+Las pruebas nuevas usan **siempre la versión más reciente de su prueba**. Las preguntas de las
+versiones anteriores permanecen en la base porque los intentos antiguos las referencian y su
+revisión debe seguir funcionando. La versión se muestra durante todo el examen y queda registrada
+en el intento y en los resultados.
+
+Para añadir una versión: agrega una entrada a `VERSIONES` en
+[blueprint.js](server/exam/blueprint.js), con el `id` de su prueba, y un directorio
+`data/banco/<version>/`. Para añadir una prueba nueva: agrega también una entrada a `PRUEBAS`,
+con la escala en que se califica, y sus módulos.
 
 ## Administración
 
@@ -145,15 +200,19 @@ npm run admin -- <usuario>
 Sin argumentos lista los administradores actuales, y con `--quitar` devuelve la cuenta a
 estudiante. La cuenta debe estar registrada previamente en la aplicación.
 
-El panel (`/admin.html`) muestra los usuarios con sus pruebas y su mejor puntaje, todas las
-pruebas presentadas con versión, fechas y duración, el detalle de cada intento con su diagnóstico
-por competencia y tema, y promedios por módulo y versión.
+El panel (`/admin.html`) muestra los usuarios con su mejor puntaje en cada prueba —las escalas
+no son comparables entre sí, así que no se mezclan en una sola cifra—, todas las pruebas
+presentadas con su prueba, versión, fechas y duración, el detalle de cada intento con su
+diagnóstico por competencia y tema, y promedios por módulo y versión.
 
 El panel se bloquea si el propio administrador tiene un simulacro en curso: el diagnóstico
 incluye respuestas correctas y todos los estudiantes comparten banco, así que podría leer ahí
 preguntas que tiene delante. Es la misma regla que gobierna la revisión propia.
 
 ## Las dos reglas de bloqueo
+
+Valen para cualquiera de las dos pruebas: no se pueden tener a la vez un simulacro del Saber Pro y
+una prueba de enfermería.
 
 1. **Un solo simulacro a la vez por usuario.** Lo garantiza un índice único parcial en la base
    de datos, no solo una validación de la aplicación.
@@ -171,9 +230,16 @@ se cierran los intentos vencidos, de modo que:
 
 ## Calificación
 
-Los aciertos se convierten a la escala ICFES 0–300 mediante una interpolación lineal por tramos
-anclada en las fronteras de los niveles de desempeño, y se asigna el nivel con los puntos de
-corte oficiales de cada módulo (ver [scoring.js](server/exam/scoring.js)).
+Cada prueba declara su escala en [blueprint.js](server/exam/blueprint.js) y
+[scoring.js](server/exam/scoring.js) la aplica.
+
+En el **simulacro Saber Pro** los aciertos se convierten a la escala ICFES 0–300 mediante una
+interpolación lineal por tramos anclada en las fronteras de los niveles de desempeño, y se asigna
+el nivel con los puntos de corte oficiales de cada módulo.
+
+En la **prueba de enfermería** el puntaje es el porcentaje de acierto de cada módulo, con cuatro
+niveles propios: insuficiente (menos de 60 %), aceptable (60–74 %), bueno (75–89 %) y
+sobresaliente (90 % o más).
 
 **Es una aproximación.** El examen oficial califica con Teoría de Respuesta al Ítem, cuyos
 parámetros no son públicos. El puntaje sirve para medir progreso entre simulacros, no para
@@ -192,8 +258,9 @@ reporta cuántas preguntas quedaron en blanco, como señal de gestión del tiemp
 El formato está documentado en [data/schema-pregunta.md](data/schema-pregunta.md). Agrega
 preguntas al archivo del módulo dentro de `data/banco/<version>/` y vuelve a ejecutar
 `npm run seed`: el script deduce la versión del directorio, valida que los `id` no se repitan
-entre versiones y que las competencias existan en el blueprint de esa versión, y al final imprime
-la cobertura por versión señalando cuál es la activa.
+entre versiones, que las competencias existan en el blueprint de esa versión y que las imágenes
+que declares existan en `public/` y traigan su descripción, y al final imprime la cobertura por
+versión señalando cuáles son las activas (una por prueba).
 
 ## Estructura
 
@@ -207,7 +274,9 @@ server/
 data/banco/<version>/ banco de preguntas por versión y módulo
 data/estudio.json     recomendaciones de estudio por competencia y tema
 public/               interfaz (HTML + CSS + JS sin build)
-scripts/              verificar-conexion.js, seed.js, admin.js, smoke.js
+public/img/           trazados de ECG y curvas de presión, en SVG
+scripts/              verificar-conexion.js, seed.js, admin.js, smoke.js,
+                      generar-imagenes.js
 render.yaml           configuración de despliegue
 ```
 

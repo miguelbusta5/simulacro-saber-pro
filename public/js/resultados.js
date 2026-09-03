@@ -45,8 +45,23 @@ function celdaPorcentaje(porcentaje) {
 }
 
 function pintarResultados(r) {
-  document.getElementById('fecha').textContent = `${r.version_nombre} · ${formatearFecha(r.finalizado_en)}`;
-  document.getElementById('puntaje-global').textContent = r.puntaje_global;
+  document.getElementById('fecha').textContent =
+    `${r.prueba_nombre} · ${r.version_nombre} · ${formatearFecha(r.finalizado_en)}`;
+  document.getElementById('puntaje-global').textContent =
+    r.escala === 'porcentaje' ? `${r.puntaje_global} %` : r.puntaje_global;
+
+  // Cada prueba se reporta en su propia escala: la del ICFES va de 0 a 300 y la
+  // de enfermería, en porcentaje de acierto.
+  document.getElementById('etiqueta-global').textContent =
+    r.escala === 'porcentaje'
+      ? 'Puntaje global (promedio de los módulos, en porcentaje de acierto)'
+      : 'Puntaje global (promedio de competencias genéricas)';
+  document
+    .getElementById('nota-escala-icfes')
+    .classList.toggle('oculto', r.escala === 'porcentaje');
+  document
+    .getElementById('nota-escala-porcentaje')
+    .classList.toggle('oculto', r.escala !== 'porcentaje');
 
   const duracion = r.duracion_segundos != null ? formatearDuracion(r.duracion_segundos) : '—';
   const cierre =
@@ -59,7 +74,8 @@ function pintarResultados(r) {
   const ficha = document.getElementById('ficha');
   ficha.replaceChildren();
   const datos = [
-    ['Versión de la prueba', r.version_nombre],
+    ['Prueba', r.prueba_nombre],
+    ['Versión', r.version_nombre],
     ['Fecha de inicio', formatearFecha(r.iniciado_en)],
     ['Fecha de finalización', formatearFecha(r.finalizado_en)],
     ['Tiempo empleado', `${duracion} de ${Math.floor(r.duracion_minutos_permitidos / 60)} h ${r.duracion_minutos_permitidos % 60} min disponibles`],
@@ -109,7 +125,7 @@ function pintarAnalisis(a) {
   if (!a.plan_de_estudio.length) {
     const p = document.createElement('p');
     p.textContent =
-      'No hay competencias por debajo del 70 % de acierto: todas las áreas evaluadas están consolidadas. Repite el simulacro para confirmar el resultado con preguntas distintas.';
+      'No hay competencias por debajo del 70 % de acierto: todas las áreas evaluadas están consolidadas. Repite la prueba para confirmar el resultado con preguntas distintas.';
     plan.appendChild(p);
   }
 
@@ -183,7 +199,7 @@ function pintarAnalisis(a) {
 async function cargar() {
   await exigirSesion();
   if (!intentoId) {
-    mostrarAviso(aviso, 'No se indicó qué simulacro consultar.');
+    mostrarAviso(aviso, 'No se indicó qué prueba consultar.');
     return;
   }
   try {
@@ -196,7 +212,7 @@ async function cargar() {
     contenido.classList.remove('oculto');
   } catch (e) {
     if (e.codigo === 'REVISION_BLOQUEADA') {
-      mostrarAviso(aviso, `${e.message} Vuelve al inicio para continuar tu simulacro.`, 'alerta');
+      mostrarAviso(aviso, `${e.message} Vuelve al inicio para continuar tu prueba.`, 'alerta');
       return;
     }
     mostrarAviso(aviso, e.message);

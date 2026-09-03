@@ -1,0 +1,672 @@
+{
+  "modulo": "electrocardiografia",
+  "contextos": [
+    {
+      "id": "ecg_ctx_01",
+      "titulo": "Trazado 1 — Tira de ritmo de control",
+      "contenido": "Tira de ritmo de DII tomada a un paciente de 34 años en el control preoperatorio de una cirugía electiva. Está asintomático.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/ecg/ritmo-sinusal-normal.svg",
+      "imagen_alt": "Tira de ritmo regular a unos 75 complejos por minuto, con una onda P antes de cada QRS estrecho y segmento ST a la altura de la línea de base."
+    },
+    {
+      "id": "ecg_ctx_02",
+      "titulo": "Trazado 2 — Dolor torácico de 50 minutos",
+      "contenido": "Hombre de 61 años con dolor retroesternal opresivo de 50 minutos, diaforesis y náuseas. Tensión arterial 96/58 mmHg, frecuencia cardiaca 52 lpm. El trazado corresponde a DII; en DIII y aVF se observa el mismo patrón.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/ecg/iam-st-elevado-inferior.svg",
+      "imagen_alt": "Trazado regular a unos 78 por minuto con onda inicial negativa, segmento ST que asciende unos 4 mm desde el punto J y onda T ancha."
+    },
+    {
+      "id": "ecg_ctx_03",
+      "titulo": "Trazado 3 — Dolor torácico con disnea",
+      "contenido": "Mujer de 68 años, diabética, con dolor torácico y disnea de dos horas. El trazado corresponde a V3; el mismo patrón aparece en V2 a V5.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/ecg/iam-anterior-extenso.svg",
+      "imagen_alt": "Trazado precordial con segmento ST muy elevado que se funde con la onda T en una sola deflexión, sobre complejos de onda R pequeña."
+    },
+    {
+      "id": "ecg_ctx_04",
+      "titulo": "Trazado 4 — Palpitaciones de tres días",
+      "contenido": "Mujer de 74 años con palpitaciones desde hace tres días, sin dolor torácico. Tensión arterial 128/76 mmHg, consciente y orientada. Al tomar el pulso radial se encuentra irregular.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/ecg/fibrilacion-auricular.svg",
+      "imagen_alt": "Trazado sin ondas P, con línea de base ondulante y complejos QRS estrechos separados por intervalos irregulares."
+    },
+    {
+      "id": "ecg_ctx_05",
+      "titulo": "Trazado 5 — Taquicardia regular en el monitor",
+      "contenido": "Hombre de 66 años en posoperatorio de cirugía abdominal. El monitor muestra este ritmo con frecuencia ventricular cercana a 150 lpm, regular. Tensión arterial 122/74 mmHg.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/ecg/flutter-auricular.svg",
+      "imagen_alt": "Trazado con ondas auriculares regulares en diente de sierra a unos 300 por minuto y un complejo QRS estrecho por cada dos de esas ondas."
+    },
+    {
+      "id": "ecg_ctx_06",
+      "titulo": "Trazado 6 — Paciente con dolor torácico y mareo",
+      "contenido": "Hombre de 58 años con antecedente de infarto previo, refiere palpitaciones y mareo. Tensión arterial 84/50 mmHg, pálido y frío, consciente pero somnoliento.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/ecg/taquicardia-ventricular.svg",
+      "imagen_alt": "Trazado regular de complejo ancho a unos 170 por minuto, con complejos de igual morfología y ondas T opuestas al QRS."
+    },
+    {
+      "id": "ecg_ctx_07",
+      "titulo": "Trazado 7 — Colapso súbito en la sala",
+      "contenido": "Paciente que se desploma en la sala de hospitalización. No responde, no respira normalmente y no se palpa pulso central. El monitor muestra este trazado.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/ecg/fibrilacion-ventricular.svg",
+      "imagen_alt": "Trazado caótico, sin complejos identificables, con ondulaciones de amplitud y frecuencia variables."
+    },
+    {
+      "id": "ecg_ctx_08",
+      "titulo": "Trazado 8 — Bradicardia con síncope",
+      "contenido": "Mujer de 79 años que consulta por dos episodios de síncope. Frecuencia cardiaca 38 lpm, tensión arterial 88/52 mmHg, mareada al incorporarse.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/ecg/bloqueo-av-completo.svg",
+      "imagen_alt": "Ondas P regulares a unos 90 por minuto sin relación con complejos QRS anchos, regulares, a unos 38 por minuto."
+    },
+    {
+      "id": "ecg_ctx_09",
+      "titulo": "Trazado 9 — Hallazgo en monitorización",
+      "contenido": "Hombre de 55 años monitorizado tras un infarto inferior. Asintomático, tensión arterial 118/70 mmHg, frecuencia cardiaca 58 lpm.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/ecg/bloqueo-av-mobitz-i.svg",
+      "imagen_alt": "Ondas P regulares con intervalo PR que se alarga latido a latido hasta que una onda P no conduce y falta un complejo QRS."
+    },
+    {
+      "id": "ecg_ctx_10",
+      "titulo": "Trazado 10 — Paciente en diálisis que no asistió a su sesión",
+      "contenido": "Hombre de 47 años con enfermedad renal crónica en hemodiálisis; faltó a las dos últimas sesiones. Refiere debilidad muscular y parestesias. Potasio sérico 7,2 mEq/L.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/ecg/hiperpotasemia.svg",
+      "imagen_alt": "Ondas T altas, estrechas y picudas, con onda P de muy baja amplitud y complejo QRS algo ensanchado."
+    },
+    {
+      "id": "ecg_ctx_11",
+      "titulo": "Trazado 11 — Electrocardiograma de ingreso",
+      "contenido": "Mujer de 70 años que ingresa por disnea. El trazado corresponde a V6 y el QRS mide 0,16 s. No hay electrocardiogramas previos disponibles.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/ecg/bloqueo-rama-izquierda.svg",
+      "imagen_alt": "Complejos QRS de más de 0,12 s con onda R mellada y onda T opuesta a la deflexión principal."
+    },
+    {
+      "id": "ecg_ctx_12",
+      "titulo": "Trazado 12 — Dolor torácico que mejora al sentarse",
+      "contenido": "Hombre de 28 años con dolor torácico punzante de dos días, que empeora al acostarse y al inspirar profundo y mejora al sentarse e inclinarse hacia adelante. Cuadro viral la semana previa. Troponina levemente elevada.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/ecg/pericarditis-aguda.svg",
+      "imagen_alt": "Elevación pequeña del segmento ST con la concavidad hacia arriba, acompañada de descenso del segmento PR."
+    },
+    {
+      "id": "ecg_ctx_13",
+      "titulo": "Trazado 13 — Dolor con el esfuerzo",
+      "contenido": "Mujer de 63 años con dolor torácico durante una prueba de esfuerzo, que cede al detener el ejercicio. El trazado corresponde a V5 durante el esfuerzo.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/ecg/infradesnivel-st.svg",
+      "imagen_alt": "Trazado a unos 105 por minuto con el segmento ST descendido unos 2 mm de forma horizontal respecto de la línea de base."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "ecg_001",
+      "competencia": "reconocimiento",
+      "tema": "ritmo_normal",
+      "dificultad": 2,
+      "contexto_id": "ecg_ctx_01",
+      "enunciado": "El trazado corresponde a",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "ritmo sinusal normal."
+        },
+        {
+          "clave": "B",
+          "texto": "ritmo de la unión auriculoventricular."
+        },
+        {
+          "clave": "C",
+          "texto": "fibrilación auricular de respuesta controlada."
+        },
+        {
+          "clave": "D",
+          "texto": "ritmo idioventricular acelerado."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Hay una onda P delante de cada QRS, con intervalo PR constante, complejos estrechos y ritmo regular a una frecuencia dentro del rango normal.",
+      "justificaciones_incorrectas": {
+        "B": "En el ritmo de la unión no hay onda P delante del QRS, o es negativa y muy cercana a él.",
+        "C": "La fibrilación auricular no tiene ondas P y su ritmo es irregularmente irregular.",
+        "D": "El ritmo idioventricular tiene complejos anchos, sin ondas P y a frecuencias bajas."
+      }
+    },
+    {
+      "id": "ecg_002",
+      "competencia": "reconocimiento",
+      "tema": "isquemia_infarto",
+      "dificultad": 2,
+      "contexto_id": "ecg_ctx_02",
+      "enunciado": "El hallazgo electrocardiográfico principal del trazado es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "elevación del segmento ST con onda Q inicial."
+        },
+        {
+          "clave": "B",
+          "texto": "descenso horizontal del segmento ST."
+        },
+        {
+          "clave": "C",
+          "texto": "onda T negativa y simétrica sin desnivel del ST."
+        },
+        {
+          "clave": "D",
+          "texto": "complejo QRS ensanchado con onda R mellada."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "El segmento ST arranca elevado desde el punto J y se funde con una onda T ancha; además hay una onda Q inicial, que indica necrosis establecida.",
+      "justificaciones_incorrectas": {
+        "B": "El descenso del ST corresponde a isquemia subendocárdica y no es lo que muestra este trazado.",
+        "C": "La onda T es positiva y ancha; el desnivel del ST es evidente.",
+        "D": "El complejo QRS de este trazado es estrecho."
+      }
+    },
+    {
+      "id": "ecg_003",
+      "competencia": "reconocimiento",
+      "tema": "arritmias_supraventriculares",
+      "dificultad": 2,
+      "contexto_id": "ecg_ctx_04",
+      "enunciado": "¿Qué dos características del trazado permiten identificar una fibrilación auricular?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Ausencia de ondas P con línea de base ondulante e intervalos R-R irregulares."
+        },
+        {
+          "clave": "B",
+          "texto": "Ondas P picudas con intervalo PR prolongado de forma constante."
+        },
+        {
+          "clave": "C",
+          "texto": "Ondas en diente de sierra regulares con conducción 2:1."
+        },
+        {
+          "clave": "D",
+          "texto": "Complejos QRS anchos y regulares sin ondas P."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La fibrilación auricular se reconoce por dos rasgos simultáneos: no hay actividad auricular organizada (no hay P) y la respuesta ventricular es irregularmente irregular.",
+      "justificaciones_incorrectas": {
+        "B": "Eso describiría un bloqueo auriculoventricular de primer grado, donde sí hay ondas P.",
+        "C": "El diente de sierra regular es el flúter auricular.",
+        "D": "Complejos anchos y regulares sin P sugieren un ritmo ventricular."
+      }
+    },
+    {
+      "id": "ecg_004",
+      "competencia": "reconocimiento",
+      "tema": "arritmias_supraventriculares",
+      "dificultad": 2,
+      "contexto_id": "ecg_ctx_05",
+      "enunciado": "El trazado muestra ondas auriculares regulares a unos 300 por minuto con un complejo QRS por cada dos ondas. Se trata de",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "flúter auricular con conducción 2:1."
+        },
+        {
+          "clave": "B",
+          "texto": "fibrilación auricular con respuesta rápida."
+        },
+        {
+          "clave": "C",
+          "texto": "taquicardia sinusal a 150 lpm."
+        },
+        {
+          "clave": "D",
+          "texto": "taquicardia ventricular polimorfa."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La actividad auricular en diente de sierra a unos 300 por minuto con respuesta ventricular regular a 150 es el patrón clásico del flúter con bloqueo 2:1.",
+      "justificaciones_incorrectas": {
+        "B": "La fibrilación auricular es irregular y no tiene ondas auriculares organizadas.",
+        "C": "En la taquicardia sinusal hay una sola onda P por cada QRS, no dos ondas auriculares.",
+        "D": "La taquicardia ventricular polimorfa tiene complejos anchos de morfología cambiante."
+      }
+    },
+    {
+      "id": "ecg_005",
+      "competencia": "reconocimiento",
+      "tema": "bloqueos",
+      "dificultad": 2,
+      "contexto_id": "ecg_ctx_08",
+      "enunciado": "En el trazado, las ondas P aparecen a un ritmo regular y los complejos QRS a otro ritmo regular más lento, sin relación entre ellos. Esto corresponde a",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "bloqueo auriculoventricular de tercer grado (completo)."
+        },
+        {
+          "clave": "B",
+          "texto": "bloqueo auriculoventricular de primer grado."
+        },
+        {
+          "clave": "C",
+          "texto": "bloqueo auriculoventricular de segundo grado Mobitz I."
+        },
+        {
+          "clave": "D",
+          "texto": "bradicardia sinusal con extrasístoles."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La disociación completa entre la actividad auricular y la ventricular, cada una con su propia frecuencia regular, define el bloqueo completo.",
+      "justificaciones_incorrectas": {
+        "B": "En el de primer grado todas las P conducen, solo que con PR largo y constante.",
+        "C": "En Mobitz I el PR se alarga progresivamente hasta que una P no conduce, pero hay relación entre P y QRS.",
+        "D": "En la bradicardia sinusal cada P conduce a un QRS."
+      }
+    },
+    {
+      "id": "ecg_006",
+      "competencia": "reconocimiento",
+      "tema": "bloqueos",
+      "dificultad": 3,
+      "contexto_id": "ecg_ctx_09",
+      "enunciado": "El trazado muestra un intervalo PR que se alarga latido a latido hasta que una onda P no conduce. Corresponde a",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "bloqueo auriculoventricular de segundo grado Mobitz I (Wenckebach)."
+        },
+        {
+          "clave": "B",
+          "texto": "bloqueo auriculoventricular de segundo grado Mobitz II."
+        },
+        {
+          "clave": "C",
+          "texto": "bloqueo auriculoventricular completo."
+        },
+        {
+          "clave": "D",
+          "texto": "ritmo sinusal con pausa sinusal."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "El alargamiento progresivo del PR seguido de una P bloqueada es el fenómeno de Wenckebach; suele ser suprahisiano y de curso benigno, sobre todo tras un infarto inferior.",
+      "justificaciones_incorrectas": {
+        "B": "En Mobitz II el PR es constante y la P se bloquea de forma súbita.",
+        "C": "En el bloqueo completo no hay ninguna relación entre P y QRS.",
+        "D": "En la pausa sinusal falta también la onda P, y aquí la P está presente pero no conduce."
+      }
+    },
+    {
+      "id": "ecg_007",
+      "competencia": "interpretacion_clinica",
+      "tema": "isquemia_infarto",
+      "dificultad": 2,
+      "contexto_id": "ecg_ctx_02",
+      "enunciado": "La elevación del ST en DII, DIII y aVF localiza el infarto en la cara",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "inferior."
+        },
+        {
+          "clave": "B",
+          "texto": "anterior."
+        },
+        {
+          "clave": "C",
+          "texto": "lateral alta."
+        },
+        {
+          "clave": "D",
+          "texto": "posterior pura."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "DII, DIII y aVF miran la cara inferior del ventrículo izquierdo, irrigada en la mayoría de las personas por la coronaria derecha.",
+      "justificaciones_incorrectas": {
+        "B": "La cara anterior se explora con V1 a V4.",
+        "C": "La cara lateral alta corresponde a DI y aVL.",
+        "D": "El infarto posterior se sospecha por imagen en espejo en V1-V3 y se confirma con derivaciones posteriores."
+      }
+    },
+    {
+      "id": "ecg_008",
+      "competencia": "interpretacion_clinica",
+      "tema": "isquemia_infarto",
+      "dificultad": 3,
+      "contexto_id": "ecg_ctx_02",
+      "enunciado": "La hipotensión y la bradicardia de este paciente, con este trazado, deben hacer sospechar",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "compromiso del ventrículo derecho, por lo que se deben tomar derivaciones derechas antes de administrar nitratos."
+        },
+        {
+          "clave": "B",
+          "texto": "una reacción vagal sin importancia clínica que cede sola."
+        },
+        {
+          "clave": "C",
+          "texto": "un choque séptico de origen abdominal."
+        },
+        {
+          "clave": "D",
+          "texto": "un error de medición de la tensión arterial, que debe repetirse en el otro brazo únicamente."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Hasta un tercio de los infartos inferiores compromete el ventrículo derecho, que depende de la precarga: los nitratos pueden provocar hipotensión grave, y por eso se buscan primero las derivaciones derechas (V3R-V4R).",
+      "justificaciones_incorrectas": {
+        "B": "La bradicardia e hipotensión en un infarto inferior no pueden asumirse como banales.",
+        "C": "No hay ningún dato de infección; el cuadro es coronario agudo.",
+        "D": "Repetir la toma es razonable, pero no sustituye la sospecha de compromiso derecho."
+      }
+    },
+    {
+      "id": "ecg_009",
+      "competencia": "interpretacion_clinica",
+      "tema": "isquemia_infarto",
+      "dificultad": 2,
+      "contexto_id": "ecg_ctx_03",
+      "enunciado": "La elevación del ST de V2 a V5 en esta paciente indica",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "infarto anterior extenso, habitualmente por oclusión de la arteria descendente anterior."
+        },
+        {
+          "clave": "B",
+          "texto": "infarto inferior por oclusión de la coronaria derecha."
+        },
+        {
+          "clave": "C",
+          "texto": "pericarditis aguda, por la elevación en varias derivaciones."
+        },
+        {
+          "clave": "D",
+          "texto": "repolarización precoz, hallazgo benigno propio de esta edad."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Las derivaciones precordiales V2 a V5 exploran la cara anterior; su elevación con onda monofásica corresponde a la oclusión proximal de la descendente anterior.",
+      "justificaciones_incorrectas": {
+        "B": "La cara inferior se ve en DII, DIII y aVF.",
+        "C": "En la pericarditis la elevación es difusa, cóncava y se acompaña de descenso del PR, no localizada en el territorio de una arteria.",
+        "D": "La repolarización precoz no cursa con dolor torácico y disnea en una paciente diabética de 68 años."
+      }
+    },
+    {
+      "id": "ecg_010",
+      "competencia": "interpretacion_clinica",
+      "tema": "trastornos_electroliticos",
+      "dificultad": 2,
+      "contexto_id": "ecg_ctx_10",
+      "enunciado": "Las ondas T altas, estrechas y picudas de este trazado se explican por",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "la hiperpotasemia, que acelera la repolarización ventricular."
+        },
+        {
+          "clave": "B",
+          "texto": "la hipopotasemia, que produce ondas U prominentes."
+        },
+        {
+          "clave": "C",
+          "texto": "la hipercalcemia, que acorta el intervalo PR."
+        },
+        {
+          "clave": "D",
+          "texto": "la hipomagnesemia, que ensancha la onda P."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "El aumento del potasio extracelular acelera la fase 3 del potencial de acción: la onda T se vuelve alta, estrecha y de base angosta, y es el primer signo electrocardiográfico de la hiperpotasemia.",
+      "justificaciones_incorrectas": {
+        "B": "La hipopotasemia aplana la T y hace aparecer la onda U; el potasio de este paciente es de 7,2 mEq/L.",
+        "C": "La hipercalcemia acorta el QT, no produce T picudas.",
+        "D": "La hipomagnesemia se asocia a prolongación del QT y torsades de pointes."
+      }
+    },
+    {
+      "id": "ecg_011",
+      "competencia": "interpretacion_clinica",
+      "tema": "bloqueos",
+      "dificultad": 3,
+      "contexto_id": "ecg_ctx_11",
+      "enunciado": "Ante un bloqueo completo de rama izquierda de aparición no conocida en una paciente con síntomas compatibles con isquemia, la conducta correcta es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "tratarlo como equivalente de infarto con elevación del ST hasta demostrar lo contrario y activar el protocolo correspondiente."
+        },
+        {
+          "clave": "B",
+          "texto": "descartar isquemia, porque el bloqueo de rama izquierda impide cualquier interpretación."
+        },
+        {
+          "clave": "C",
+          "texto": "esperar 24 horas y repetir el electrocardiograma antes de tomar conductas."
+        },
+        {
+          "clave": "D",
+          "texto": "considerarlo un hallazgo benigno propio de la edad."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "El bloqueo de rama izquierda nuevo o presumiblemente nuevo, con clínica isquémica, se maneja con la misma urgencia que un infarto con elevación del ST, porque el trazado enmascara los cambios del ST.",
+      "justificaciones_incorrectas": {
+        "B": "Que dificulte la lectura no autoriza a descartar isquemia: obliga a apoyarse en la clínica y los marcadores.",
+        "C": "Esperar 24 horas ante un dolor isquémico con bloqueo nuevo pierde el tiempo de reperfusión.",
+        "D": "Un QRS de 0,16 s con este patrón no es un hallazgo benigno en una paciente sintomática."
+      }
+    },
+    {
+      "id": "ecg_012",
+      "competencia": "conducta",
+      "tema": "reanimacion",
+      "dificultad": 2,
+      "contexto_id": "ecg_ctx_07",
+      "enunciado": "¿Cuál es la conducta inmediata ante este trazado en un paciente sin pulso?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Iniciar compresiones y desfibrilar tan pronto esté disponible el desfibrilador, con descarga no sincronizada."
+        },
+        {
+          "clave": "B",
+          "texto": "Administrar adenosina en bolo rápido y observar la respuesta."
+        },
+        {
+          "clave": "C",
+          "texto": "Realizar cardioversión sincronizada a 50 J."
+        },
+        {
+          "clave": "D",
+          "texto": "Colocar marcapasos transcutáneo antes de iniciar compresiones."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La fibrilación ventricular es un ritmo desfibrilable: reanimación cardiopulmonar de alta calidad y descarga no sincronizada lo antes posible, porque la supervivencia cae con cada minuto de retraso.",
+      "justificaciones_incorrectas": {
+        "B": "La adenosina no tiene ningún papel en un paro por fibrilación ventricular.",
+        "C": "No se puede sincronizar una descarga sobre un trazado sin complejos QRS identificables.",
+        "D": "El marcapasos no sirve en fibrilación ventricular y retrasar las compresiones es letal."
+      }
+    },
+    {
+      "id": "ecg_013",
+      "competencia": "conducta",
+      "tema": "arritmias_ventriculares",
+      "dificultad": 3,
+      "contexto_id": "ecg_ctx_06",
+      "enunciado": "Este paciente presenta taquicardia de complejo ancho con hipotensión, palidez y somnolencia. La conducta indicada es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "cardioversión eléctrica sincronizada, previa sedación si el estado del paciente lo permite."
+        },
+        {
+          "clave": "B",
+          "texto": "maniobras vagales y, si no responde, adenosina."
+        },
+        {
+          "clave": "C",
+          "texto": "observación y control electrocardiográfico en dos horas."
+        },
+        {
+          "clave": "D",
+          "texto": "desfibrilación no sincronizada inmediata."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Es una taquicardia ventricular con pulso pero con signos de inestabilidad: la conducta es la cardioversión sincronizada, sedando al paciente si su estado hemodinámico lo permite.",
+      "justificaciones_incorrectas": {
+        "B": "Las maniobras vagales y la adenosina se reservan para taquicardias de complejo estrecho estables.",
+        "C": "Con hipotensión y alteración del estado de conciencia no hay margen para observar.",
+        "D": "La desfibrilación no sincronizada se usa cuando no hay pulso o el ritmo no permite sincronizar."
+      }
+    },
+    {
+      "id": "ecg_014",
+      "competencia": "conducta",
+      "tema": "trastornos_electroliticos",
+      "dificultad": 2,
+      "contexto_id": "ecg_ctx_10",
+      "enunciado": "Con potasio de 7,2 mEq/L y estos cambios electrocardiográficos, la primera medida es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "administrar gluconato de calcio intravenoso para estabilizar la membrana miocárdica."
+        },
+        {
+          "clave": "B",
+          "texto": "administrar cloruro de potasio diluido para corregir el desequilibrio."
+        },
+        {
+          "clave": "C",
+          "texto": "iniciar solución salina hipertónica al 3 %."
+        },
+        {
+          "clave": "D",
+          "texto": "esperar la sesión de hemodiálisis programada para mañana."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "El calcio no baja el potasio, pero antagoniza su efecto sobre el potencial de membrana y protege del paro en minutos; después se usan insulina con glucosa, beta-2 y finalmente diálisis, que es lo único que lo elimina.",
+      "justificaciones_incorrectas": {
+        "B": "Administrar potasio a un paciente hiperpotasémico es un error potencialmente mortal.",
+        "C": "La solución hipertónica se usa en la hiponatremia sintomática y en el edema cerebral, no aquí.",
+        "D": "Con cambios electrocardiográficos el riesgo de arritmia es inmediato: no puede esperar."
+      }
+    },
+    {
+      "id": "ecg_015",
+      "competencia": "conducta",
+      "tema": "bloqueos",
+      "dificultad": 2,
+      "contexto_id": "ecg_ctx_08",
+      "enunciado": "Mientras se define el implante de marcapasos definitivo, la conducta inmediata para esta paciente sintomática es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "atropina y preparar marcapasos transcutáneo, con monitorización continua."
+        },
+        {
+          "clave": "B",
+          "texto": "administrar un betabloqueador para regularizar el ritmo."
+        },
+        {
+          "clave": "C",
+          "texto": "iniciar digoxina para mejorar la contractilidad."
+        },
+        {
+          "clave": "D",
+          "texto": "realizar maniobras vagales para estimular el nodo auriculoventricular."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "En una bradiarritmia sintomática se intenta atropina y se prepara el marcapasos transcutáneo como puente; en el bloqueo completo la atropina suele ser poco eficaz, de ahí que el marcapasos deba estar listo.",
+      "justificaciones_incorrectas": {
+        "B": "Un betabloqueador agrava la bradicardia y el bloqueo.",
+        "C": "La digoxina enlentece la conducción auriculoventricular: está contraindicada aquí.",
+        "D": "Las maniobras vagales enlentecen aún más la conducción."
+      }
+    },
+    {
+      "id": "ecg_016",
+      "competencia": "interpretacion_clinica",
+      "tema": "pericarditis",
+      "dificultad": 3,
+      "contexto_id": "ecg_ctx_12",
+      "enunciado": "La elevación difusa del ST de concavidad superior con descenso del PR, en este paciente joven con dolor que mejora al inclinarse hacia adelante, corresponde a",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "pericarditis aguda."
+        },
+        {
+          "clave": "B",
+          "texto": "infarto agudo de miocardio con elevación del ST."
+        },
+        {
+          "clave": "C",
+          "texto": "tromboembolismo pulmonar masivo."
+        },
+        {
+          "clave": "D",
+          "texto": "hipertrofia ventricular izquierda con sobrecarga."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La combinación de dolor pleurítico que mejora al sentarse, antecedente viral, elevación difusa y cóncava del ST y descenso del PR es el cuadro típico de la pericarditis aguda.",
+      "justificaciones_incorrectas": {
+        "B": "En el infarto la elevación es convexa, se limita al territorio de una arteria y suele acompañarse de imagen en espejo.",
+        "C": "El tromboembolismo cursa con taquicardia sinusal y, a veces, patrón S1Q3T3, no con elevación difusa del ST.",
+        "D": "La hipertrofia produce aumento del voltaje del QRS con alteraciones secundarias de la repolarización, sin descenso del PR."
+      }
+    },
+    {
+      "id": "ecg_017",
+      "competencia": "conducta",
+      "tema": "isquemia_infarto",
+      "dificultad": 2,
+      "contexto_id": "ecg_ctx_13",
+      "enunciado": "Ante este descenso del ST que aparece durante la prueba de esfuerzo y cede al detenerla, la conducta es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "suspender la prueba, registrar el trazado y avisar al médico: es un resultado positivo para isquemia."
+        },
+        {
+          "clave": "B",
+          "texto": "continuar la prueba hasta alcanzar la frecuencia cardiaca máxima teórica."
+        },
+        {
+          "clave": "C",
+          "texto": "aumentar la carga para confirmar que el descenso es reproducible."
+        },
+        {
+          "clave": "D",
+          "texto": "ignorar el hallazgo, porque el descenso del ST durante el ejercicio es fisiológico."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Un descenso horizontal del ST igual o mayor de 1 mm con dolor durante el esfuerzo es criterio de prueba positiva y de suspensión: seguir aumentando la carga expone al paciente a un evento.",
+      "justificaciones_incorrectas": {
+        "B": "La prueba se detiene ante criterios clínicos o electrocardiográficos de isquemia, aunque no se haya alcanzado la frecuencia objetivo.",
+        "C": "Aumentar la carga ante un descenso sintomático del ST es peligroso.",
+        "D": "El ascenso ligero del punto J puede ser fisiológico; un descenso horizontal con dolor no lo es."
+      }
+    }
+  ]
+}

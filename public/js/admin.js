@@ -112,7 +112,11 @@ function pintarUsuarios() {
       celda(u.nombre || '—'),
       celda(u.rol === 'admin' ? 'Administrador' : 'Estudiante'),
       celda(pruebas),
-      celda(u.mejor_puntaje != null ? String(u.mejor_puntaje) : '—'),
+      celda(
+        (u.mejores_puntajes || [])
+          .map((m) => `${m.prueba_nombre}: ${m.puntaje}${m.escala === 'porcentaje' ? ' %' : ''}`)
+          .join(' · ') || '—'
+      ),
       celda(u.ultimo_intento ? formatearFecha(u.ultimo_intento) : '—')
     );
 
@@ -158,7 +162,7 @@ function pintarIntentos(intentos) {
 
   if (!intentos.length) {
     const tr = document.createElement('tr');
-    tr.innerHTML = '<td colspan="8" class="silencio">No hay pruebas para este filtro.</td>';
+    tr.innerHTML = '<td colspan="9" class="silencio">No hay pruebas para este filtro.</td>';
     tbody.appendChild(tr);
     return;
   }
@@ -168,6 +172,7 @@ function pintarIntentos(intentos) {
     const tr = document.createElement('tr');
     tr.append(
       celda(i.nombre ? `${i.usuario} (${i.nombre})` : i.usuario),
+      celda(i.prueba_nombre || ''),
       celda(i.version_nombre),
       celda(formatearFecha(i.iniciado_en)),
       celda(
@@ -202,7 +207,8 @@ async function verDetalle(id) {
     const cabeza = document.createElement('div');
     cabeza.className = 'rev-cabeza';
     const h = document.createElement('h2');
-    h.textContent = `${d.estudiante.nombre || d.estudiante.usuario} — ${d.resultados.version_nombre}`;
+    h.textContent =
+      `${d.estudiante.nombre || d.estudiante.usuario} — ${d.resultados.prueba_nombre}`;
     cabeza.append(h, boton('Cerrar', () => detalle.replaceChildren()));
     seccion.appendChild(cabeza);
 
@@ -214,11 +220,17 @@ async function verDetalle(id) {
         : '—';
     for (const [etiqueta, valor] of [
       ['Usuario', d.estudiante.usuario],
+      ['Prueba', d.resultados.prueba_nombre],
       ['Versión', d.resultados.version_nombre],
       ['Inicio', formatearFecha(d.resultados.iniciado_en)],
       ['Finalización', formatearFecha(d.resultados.finalizado_en)],
       ['Tiempo empleado', duracion],
-      ['Puntaje global', String(d.resultados.puntaje_global)],
+      [
+        'Puntaje global',
+        d.resultados.escala === 'porcentaje'
+          ? `${d.resultados.puntaje_global} %`
+          : String(d.resultados.puntaje_global),
+      ],
       ['Aciertos', `${d.resultados.aciertos} de ${d.resultados.total}`],
       ['Sin responder', String(d.analisis.sin_responder)],
     ]) {

@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Resultados — Simulacro Saber Pro</title>
+<title>Resultados de la prueba</title>
 <link rel="stylesheet" href="/css/estilo.css">
 </head>
 <body>
 <header class="barra">
-  <div class="marca">Resultados del simulacro<small id="fecha"></small></div>
+  <div class="marca">Resultados<small id="fecha"></small></div>
   <button id="btn-revision" type="button">Ver mis respuestas</button>
   <button id="btn-inicio" type="button">Volver al inicio</button>
 </header>
@@ -18,7 +18,7 @@
 
   <div id="contenido" class="oculto">
     <section class="tarjeta puntaje-global">
-      <p class="silencio">Puntaje global (promedio de competencias genéricas)</p>
+      <p class="silencio" id="etiqueta-global">Puntaje global</p>
       <p class="numero" id="puntaje-global">—</p>
       <p id="resumen" class="silencio"></p>
     </section>
@@ -36,10 +36,17 @@
       el formato oficial.
     </div>
 
-    <div class="aviso aviso-info">
+    <div class="aviso aviso-info oculto" id="nota-escala-icfes">
       El puntaje se calcula con una aproximación a la escala ICFES 0–300. El examen oficial usa
       Teoría de Respuesta al Ítem con parámetros no públicos, así que esta cifra sirve para medir tu
       progreso entre simulacros, no para predecir tu puntaje real.
+    </div>
+
+    <div class="aviso aviso-info oculto" id="nota-escala-porcentaje">
+      Esta prueba no tiene una versión oficial ni una escala publicada, así que el puntaje es
+      sencillamente el porcentaje de acierto de cada módulo y los niveles son una calibración propia
+      (insuficiente, aceptable, bueno y sobresaliente). Sirve para orientar el estudio, no para
+      certificar competencias.
     </div>
 
     <section class="tarjeta">

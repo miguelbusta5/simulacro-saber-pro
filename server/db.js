@@ -173,9 +173,21 @@ ALTER TABLE preguntas ADD COLUMN IF NOT EXISTS version TEXT NOT NULL DEFAULT 'v1
 ALTER TABLE contextos ADD COLUMN IF NOT EXISTS version TEXT NOT NULL DEFAULT 'v1';
 ALTER TABLE intentos  ADD COLUMN IF NOT EXISTS version TEXT NOT NULL DEFAULT 'v1';
 
+-- La prueba a la que pertenece el intento ('saber_pro', 'enfermeria'). Se puede
+-- deducir de la version, pero guardarla permite filtrar y agrupar en el panel de
+-- administracion sin cargar el blueprint en la consulta. Todo lo anterior es
+-- Saber Pro, que era la unica prueba que existia.
+ALTER TABLE intentos  ADD COLUMN IF NOT EXISTS prueba  TEXT NOT NULL DEFAULT 'saber_pro';
+
+-- Imagen que acompana al contexto (un trazado de ECG, una curva de presion).
+-- Es una ruta servida desde public/, no un archivo binario en la base.
+ALTER TABLE contextos ADD COLUMN IF NOT EXISTS imagen      TEXT NOT NULL DEFAULT '';
+ALTER TABLE contextos ADD COLUMN IF NOT EXISTS imagen_alt  TEXT NOT NULL DEFAULT '';
+
 CREATE INDEX IF NOT EXISTS idx_preguntas_version
   ON preguntas(version, modulo, competencia);
 CREATE INDEX IF NOT EXISTS idx_usuarios_rol ON usuarios(rol) WHERE rol <> 'estudiante';
+CREATE INDEX IF NOT EXISTS idx_intentos_prueba ON intentos(prueba, iniciado_en DESC);
 `;
 
 // Crea el esquema si no existe. Es idempotente: se puede llamar en cada arranque.

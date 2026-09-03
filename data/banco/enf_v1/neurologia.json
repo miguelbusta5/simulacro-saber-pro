@@ -1,0 +1,487 @@
+{
+  "modulo": "neurologia",
+  "contextos": [
+    {
+      "id": "neuro_ctx_01",
+      "titulo": "Caso 1 — Déficit neurológico súbito",
+      "contenido": "Mujer de 67 años llevada a urgencias por su hijo. Estaba desayunando cuando, de forma súbita, se le cayó la taza de la mano derecha y no pudo hablar con claridad. La última vez que se la vio sin síntomas fue a las 7:20 a. m. Llega a urgencias a las 8:05 a. m.\n\nANTECEDENTES: fibrilación auricular diagnosticada hace dos años; le formularon anticoagulante oral pero lo suspendió por su cuenta hace seis meses «porque le salían morados». Hipertensión arterial. No fuma.\n\nEXAMEN AL INGRESO\nTensión arterial 186/98 mmHg · Frecuencia cardiaca 96 lpm, irregular · Glucometría 132 mg/dL · Temperatura 36,8 °C · SatO2 95 %\nConsciente, obedece órdenes sencillas. Afasia de expresión. Desviación de la comisura labial hacia la izquierda. Hemiparesia derecha 2/5 en brazo y 4/5 en pierna. Hemianopsia derecha. NIHSS estimado: 12.\nTomografía simple de cráneo: sin sangrado; signos precoces de isquemia en el territorio de la arteria cerebral media izquierda.",
+      "fuente": "Caso elaborado para el simulacro."
+    },
+    {
+      "id": "neuro_ctx_02",
+      "titulo": "Caso 2 — Cefalea súbita de máxima intensidad",
+      "contenido": "Hombre de 52 años que consulta por cefalea de instauración súbita, «la peor de mi vida», que alcanzó su máxima intensidad en segundos mientras levantaba una caja. Presentó un vómito en proyectil y rigidez de nuca.\n\nEXAMEN: tensión arterial 198/104 mmHg, frecuencia cardiaca 62 lpm, Glasgow 14 (abre los ojos al llamado). Fotofobia intensa. Sin déficit motor focal. Signo de Kernig positivo.\n\nTOMOGRAFÍA SIMPLE: sangre en el espacio subaracnoideo de las cisternas basales.",
+      "fuente": "Caso elaborado para el simulacro."
+    },
+    {
+      "id": "neuro_ctx_03",
+      "titulo": "Caso 3 — Trauma craneoencefálico con deterioro",
+      "contenido": "Hombre de 24 años, motociclista, ingresa tras un accidente de tránsito con casco. Al ingreso: Glasgow 13. Cuatro horas después el personal de enfermería registra estos cambios:\n\nHORA 0: Glasgow 13 · TA 128/76 · FC 88 · pupilas isocóricas reactivas\nHORA 2: Glasgow 11 · TA 142/80 · FC 74 · pupilas isocóricas reactivas\nHORA 4: Glasgow 8 · TA 176/82 · FC 52 · pupila derecha de 5 mm, perezosa · respiración irregular\n\nTomografía de control: hematoma epidural derecho con desviación de la línea media de 8 mm y borramiento de los surcos.",
+      "fuente": "Caso elaborado para el simulacro."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "neuro_001",
+      "competencia": "clasificacion",
+      "tema": "acv_isquemico",
+      "dificultad": 2,
+      "contexto_id": "neuro_ctx_01",
+      "enunciado": "Por su mecanismo, el accidente cerebrovascular de esta paciente corresponde con mayor probabilidad a un ACV",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "isquémico de origen cardioembólico."
+        },
+        {
+          "clave": "B",
+          "texto": "isquémico lacunar por enfermedad de pequeño vaso."
+        },
+        {
+          "clave": "C",
+          "texto": "hemorrágico intraparenquimatoso."
+        },
+        {
+          "clave": "D",
+          "texto": "isquémico aterotrombótico de arteria grande."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Fibrilación auricular sin anticoagulación, inicio súbito con déficit máximo desde el comienzo y un síndrome extenso de arteria cerebral media componen el perfil cardioembólico.",
+      "justificaciones_incorrectas": {
+        "B": "Los infartos lacunares producen síndromes pequeños y puros (motor o sensitivo), sin afasia ni hemianopsia.",
+        "C": "La tomografía descarta sangrado y muestra signos precoces de isquemia.",
+        "D": "El aterotrombótico suele instaurarse de forma más escalonada y se asocia a estenosis carotídea, no a fibrilación auricular."
+      }
+    },
+    {
+      "id": "neuro_002",
+      "competencia": "clasificacion",
+      "tema": "acv_isquemico",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "¿Cuál es la diferencia entre un accidente isquémico transitorio y un ACV isquémico establecido?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "En el transitorio los síntomas se resuelven por completo y no hay infarto demostrable en la imagen."
+        },
+        {
+          "clave": "B",
+          "texto": "En el transitorio los síntomas duran menos de 24 horas aunque haya infarto en la resonancia."
+        },
+        {
+          "clave": "C",
+          "texto": "El transitorio solo afecta la circulación posterior."
+        },
+        {
+          "clave": "D",
+          "texto": "El transitorio no requiere estudio porque no aumenta el riesgo de un evento posterior."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La definición actual es tisular, no temporal: si hay lesión en la imagen se trata de un infarto, aunque los síntomas hayan cedido.",
+      "justificaciones_incorrectas": {
+        "B": "El criterio de las 24 horas quedó atrás precisamente porque muchos episodios breves dejan infarto.",
+        "C": "Puede afectar cualquier territorio vascular.",
+        "D": "El riesgo de un ACV en los días siguientes es alto: exige estudio y tratamiento urgentes."
+      }
+    },
+    {
+      "id": "neuro_003",
+      "competencia": "clasificacion",
+      "tema": "acv_hemorragico",
+      "dificultad": 2,
+      "contexto_id": "neuro_ctx_02",
+      "enunciado": "El cuadro descrito corresponde a",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "hemorragia subaracnoidea, probablemente por ruptura de un aneurisma."
+        },
+        {
+          "clave": "B",
+          "texto": "hemorragia intraparenquimatosa hipertensiva de ganglios basales."
+        },
+        {
+          "clave": "C",
+          "texto": "ACV isquémico de circulación posterior."
+        },
+        {
+          "clave": "D",
+          "texto": "migraña con aura de presentación atípica."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Cefalea en trueno que alcanza su máximo en segundos, vómito, signos meníngeos y sangre en las cisternas basales en la tomografía definen la hemorragia subaracnoidea aneurismática.",
+      "justificaciones_incorrectas": {
+        "B": "La hemorragia intraparenquimatosa suele dar déficit focal marcado y la sangre aparece dentro del parénquima.",
+        "C": "Un evento isquémico no explica la rigidez de nuca ni la sangre en el espacio subaracnoideo.",
+        "D": "La migraña no produce sangre en la tomografía ni signos meníngeos."
+      }
+    },
+    {
+      "id": "neuro_004",
+      "competencia": "clasificacion",
+      "tema": "edema_cerebral",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "El edema cerebral CITOTÓXICO se caracteriza porque",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "el agua se acumula dentro de las células por falla de la bomba sodio-potasio, con barrera hematoencefálica inicialmente íntegra."
+        },
+        {
+          "clave": "B",
+          "texto": "el líquido sale de los vasos hacia el intersticio por ruptura de la barrera hematoencefálica."
+        },
+        {
+          "clave": "C",
+          "texto": "el líquido cefalorraquídeo pasa al tejido periventricular por obstrucción del drenaje."
+        },
+        {
+          "clave": "D",
+          "texto": "se produce por caída brusca de la osmolaridad plasmática exclusivamente."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Es el edema típico de la isquemia y la hipoxia: sin ATP la bomba falla, entra sodio a la célula y el agua la sigue; la barrera está conservada al comienzo.",
+      "justificaciones_incorrectas": {
+        "B": "Eso describe el edema vasogénico, propio de tumores, abscesos y traumatismos.",
+        "C": "Eso describe el edema intersticial o hidrocefálico.",
+        "D": "La caída de la osmolaridad define el edema osmótico, una categoría distinta."
+      }
+    },
+    {
+      "id": "neuro_005",
+      "competencia": "clasificacion",
+      "tema": "edema_cerebral",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "Un paciente con glioma cerebral presenta edema alrededor del tumor que responde a los corticoides. Ese edema es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "vasogénico, por aumento de la permeabilidad de la barrera hematoencefálica."
+        },
+        {
+          "clave": "B",
+          "texto": "citotóxico, por falla energética celular."
+        },
+        {
+          "clave": "C",
+          "texto": "intersticial, por hidrocefalia obstructiva."
+        },
+        {
+          "clave": "D",
+          "texto": "osmótico, por hiponatremia dilucional."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "El edema peritumoral es vasogénico y es justamente el que responde a la dexametasona, que reduce la permeabilidad capilar; el citotóxico del infarto no responde a corticoides.",
+      "justificaciones_incorrectas": {
+        "B": "El edema citotóxico no mejora con corticoides.",
+        "C": "El intersticial se resuelve drenando el líquido cefalorraquídeo.",
+        "D": "El osmótico se corrige normalizando la natremia."
+      }
+    },
+    {
+      "id": "neuro_006",
+      "competencia": "clasificacion",
+      "tema": "edema_cerebral",
+      "dificultad": 2,
+      "contexto_id": "neuro_ctx_03",
+      "enunciado": "La secuencia de hipertensión arterial, bradicardia y respiración irregular que muestra este paciente se conoce como",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "tríada de Cushing, e indica hipertensión intracraneal con riesgo de herniación."
+        },
+        {
+          "clave": "B",
+          "texto": "tríada de Beck, e indica taponamiento cardiaco."
+        },
+        {
+          "clave": "C",
+          "texto": "reflejo vasovagal, e indica dolor mal controlado."
+        },
+        {
+          "clave": "D",
+          "texto": "síndrome de respuesta inflamatoria sistémica."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La tríada de Cushing es una respuesta tardía a la hipertensión intracraneal grave: exige actuar de inmediato, porque anuncia la herniación.",
+      "justificaciones_incorrectas": {
+        "B": "La tríada de Beck (hipotensión, ingurgitación yugular y ruidos cardiacos velados) corresponde al taponamiento.",
+        "C": "La respuesta vagal produce hipotensión con bradicardia, no hipertensión.",
+        "D": "No hay criterios de respuesta inflamatoria sistémica en este caso."
+      }
+    },
+    {
+      "id": "neuro_007",
+      "competencia": "valoracion_neuro",
+      "tema": "valoracion_neurologica",
+      "dificultad": 2,
+      "contexto_id": "neuro_ctx_01",
+      "enunciado": "El dato más importante que debe confirmar la enfermera para decidir si esta paciente puede recibir trombólisis es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "la hora exacta del último momento en que se la vio asintomática."
+        },
+        {
+          "clave": "B",
+          "texto": "el peso aproximado que refiere la familia."
+        },
+        {
+          "clave": "C",
+          "texto": "la marca del anticoagulante que tomaba antes."
+        },
+        {
+          "clave": "D",
+          "texto": "si desayunó o está en ayunas."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La ventana terapéutica se cuenta desde el último momento sin síntomas; sin ese dato no se puede decidir la trombólisis, y aquí son las 8:05 con inicio a las 7:20.",
+      "justificaciones_incorrectas": {
+        "B": "El peso importa para calcular la dosis, pero no define la elegibilidad.",
+        "C": "Interesa saber si toma anticoagulantes y desde cuándo, más que la marca; además lo suspendió hace seis meses.",
+        "D": "El ayuno no condiciona la trombólisis."
+      }
+    },
+    {
+      "id": "neuro_008",
+      "competencia": "valoracion_neuro",
+      "tema": "valoracion_neurologica",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "La escala NIHSS se utiliza para",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "cuantificar la gravedad del déficit neurológico en el ACV y seguir su evolución."
+        },
+        {
+          "clave": "B",
+          "texto": "medir el nivel de conciencia en el trauma craneoencefálico exclusivamente."
+        },
+        {
+          "clave": "C",
+          "texto": "estimar el riesgo de sangrado con anticoagulantes."
+        },
+        {
+          "clave": "D",
+          "texto": "clasificar el grado de hidrocefalia en la tomografía."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La NIHSS puntúa de forma estandarizada conciencia, lenguaje, campos visuales, fuerza, sensibilidad y coordinación: sirve para decidir tratamiento, comparar entre turnos y detectar deterioro.",
+      "justificaciones_incorrectas": {
+        "B": "Ese es el propósito de la escala de Glasgow.",
+        "C": "El riesgo de sangrado se estima con escalas como HAS-BLED.",
+        "D": "La hidrocefalia se valora por imagen, no con la NIHSS."
+      }
+    },
+    {
+      "id": "neuro_009",
+      "competencia": "valoracion_neuro",
+      "tema": "valoracion_neurologica",
+      "dificultad": 3,
+      "contexto_id": "neuro_ctx_03",
+      "enunciado": "De los cambios registrados entre la hora 0 y la hora 4, ¿cuál es el signo más precoz de deterioro neurológico?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "La caída progresiva del puntaje de Glasgow."
+        },
+        {
+          "clave": "B",
+          "texto": "La anisocoria de la hora 4."
+        },
+        {
+          "clave": "C",
+          "texto": "La bradicardia de la hora 4."
+        },
+        {
+          "clave": "D",
+          "texto": "La respiración irregular de la hora 4."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "El nivel de conciencia es el parámetro que se altera primero: cuando aparecen la anisocoria y la tríada de Cushing, la herniación ya está en curso.",
+      "justificaciones_incorrectas": {
+        "B": "La anisocoria es un signo tardío de compresión del III par por herniación uncal.",
+        "C": "La bradicardia forma parte de la respuesta tardía de Cushing.",
+        "D": "El patrón respiratorio anormal también es tardío."
+      }
+    },
+    {
+      "id": "neuro_010",
+      "competencia": "valoracion_neuro",
+      "tema": "valoracion_neurologica",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "En un paciente con monitorización de presión intracraneal, PIC de 25 mmHg y presión arterial media de 80 mmHg, la presión de perfusión cerebral es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "55 mmHg, por debajo del objetivo habitual de 60-70 mmHg."
+        },
+        {
+          "clave": "B",
+          "texto": "105 mmHg, por encima del objetivo."
+        },
+        {
+          "clave": "C",
+          "texto": "25 mmHg, igual a la presión intracraneal."
+        },
+        {
+          "clave": "D",
+          "texto": "no puede calcularse sin conocer la presión venosa central."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La presión de perfusión cerebral es la presión arterial media menos la presión intracraneal: 80 − 25 = 55 mmHg, cifra insuficiente que exige corregir la PIC o elevar la presión arterial media.",
+      "justificaciones_incorrectas": {
+        "B": "Ese resultado sale de sumar en lugar de restar.",
+        "C": "Confunde el resultado con uno de los términos de la resta.",
+        "D": "La fórmula habitual solo requiere la presión arterial media y la PIC."
+      }
+    },
+    {
+      "id": "neuro_011",
+      "competencia": "valoracion_neuro",
+      "tema": "valoracion_neurologica",
+      "dificultad": 2,
+      "contexto_id": "neuro_ctx_02",
+      "enunciado": "En este paciente con hemorragia subaracnoidea, la enfermera debe vigilar de manera especial entre el tercer y el décimo día",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "la aparición de vasoespasmo, que se manifiesta como déficit focal nuevo o deterioro de la conciencia."
+        },
+        {
+          "clave": "B",
+          "texto": "la aparición de neumonía asociada al ventilador, que solo ocurre en esa ventana."
+        },
+        {
+          "clave": "C",
+          "texto": "la cicatrización de la herida quirúrgica."
+        },
+        {
+          "clave": "D",
+          "texto": "el desarrollo de una úlcera por presión en el talón."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "El vasoespasmo es la complicación característica de ese periodo y su detección temprana por cambios neurológicos es responsabilidad directa del cuidado de enfermería.",
+      "justificaciones_incorrectas": {
+        "B": "La neumonía asociada al ventilador no tiene esa ventana específica ni es la complicación característica de este cuadro.",
+        "C": "Puede no haber herida quirúrgica, y en todo caso no es la vigilancia prioritaria.",
+        "D": "La prevención de úlceras es parte del cuidado, pero no es lo específico de ese periodo."
+      }
+    },
+    {
+      "id": "neuro_012",
+      "competencia": "manejo_neuro",
+      "tema": "manejo_neurocritico",
+      "dificultad": 3,
+      "contexto_id": "neuro_ctx_01",
+      "enunciado": "Respecto de la tensión arterial de 186/98 mmHg en esta paciente candidata a trombólisis, la conducta correcta es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "reducirla de forma controlada por debajo de 185/110 mmHg antes de administrar el trombolítico, sin descensos bruscos."
+        },
+        {
+          "clave": "B",
+          "texto": "bajarla rápidamente a cifras normales, por debajo de 120/80 mmHg."
+        },
+        {
+          "clave": "C",
+          "texto": "no intervenir en absoluto, porque la hipertensión siempre es protectora en el ACV."
+        },
+        {
+          "clave": "D",
+          "texto": "administrar un vasopresor para aumentar la perfusión de la zona isquémica."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "En el candidato a trombólisis se exige tensión menor de 185/110 mmHg por el riesgo de sangrado, pero el descenso debe ser gradual para no comprometer la perfusión de la zona de penumbra.",
+      "justificaciones_incorrectas": {
+        "B": "Un descenso brusco a cifras normales reduce la perfusión de la penumbra isquémica y aumenta el infarto.",
+        "C": "La hipertensión permisiva aplica cuando no se va a trombolizar; aquí hay un umbral que cumplir.",
+        "D": "No hay hipotensión: administrar un vasopresor sería peligroso."
+      }
+    },
+    {
+      "id": "neuro_013",
+      "competencia": "manejo_neuro",
+      "tema": "manejo_neurocritico",
+      "dificultad": 2,
+      "contexto_id": "neuro_ctx_03",
+      "enunciado": "Entre las medidas de enfermería para reducir la presión intracraneal de este paciente, ¿cuál es correcta?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Cabecera a 30°, cabeza en posición neutra y evitar la flexión o rotación del cuello."
+        },
+        {
+          "clave": "B",
+          "texto": "Cabecera a 0° para favorecer la perfusión cerebral."
+        },
+        {
+          "clave": "C",
+          "texto": "Aspiración endotraqueal frecuente y prolongada para prevenir la neumonía."
+        },
+        {
+          "clave": "D",
+          "texto": "Agrupar todos los procedimientos y realizarlos de forma continua para no molestar al paciente el resto del turno."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La elevación a 30° con la cabeza neutra favorece el drenaje venoso yugular sin comprometer la presión de perfusión; la rotación o flexión del cuello lo obstruye y eleva la PIC.",
+      "justificaciones_incorrectas": {
+        "B": "La posición horizontal dificulta el retorno venoso y aumenta la PIC.",
+        "C": "La aspiración es un estímulo que eleva la PIC: se hace breve, con preoxigenación y solo cuando está indicada.",
+        "D": "Encadenar procedimientos produce elevaciones sostenidas de la PIC; conviene espaciarlos y permitir la recuperación entre uno y otro."
+      }
+    },
+    {
+      "id": "neuro_014",
+      "competencia": "manejo_neuro",
+      "tema": "manejo_neurocritico",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Se indica manitol al 20 % en un paciente con edema cerebral. ¿Qué debe vigilar la enfermera?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Diuresis, osmolaridad sérica, sodio y signos de hipovolemia, además de usar filtro por el riesgo de cristalización."
+        },
+        {
+          "clave": "B",
+          "texto": "Glucometría cada hora, porque el manitol produce hipoglucemia grave."
+        },
+        {
+          "clave": "C",
+          "texto": "Tiempo de protrombina, porque el manitol anticoagula."
+        },
+        {
+          "clave": "D",
+          "texto": "Presión intraocular, único parámetro afectado por el fármaco."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "El manitol es un diurético osmótico: arrastra agua al espacio vascular y luego la elimina, de modo que puede producir hipovolemia, trastornos electrolíticos y daño renal si la osmolaridad se eleva demasiado.",
+      "justificaciones_incorrectas": {
+        "B": "El manitol no es metabolizado como la glucosa ni produce hipoglucemia.",
+        "C": "No tiene efecto anticoagulante.",
+        "D": "Reduce la presión intraocular, pero ese no es el parámetro de seguimiento en el paciente neurocrítico."
+      }
+    }
+  ]
+}

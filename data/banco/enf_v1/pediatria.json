@@ -1,0 +1,349 @@
+{
+  "modulo": "pediatria",
+  "contextos": [
+    {
+      "id": "ped_ctx_01",
+      "titulo": "Caso 1 — Primera convulsión con fiebre",
+      "contenido": "Niño de 18 meses llevado a urgencias por sus padres. Hace 30 minutos, en la casa, presentó un episodio de rigidez seguida de sacudidas de las cuatro extremidades, con desviación de la mirada, que duró aproximadamente dos minutos y cedió solo. Después quedó somnoliento durante unos diez minutos y ahora está alerta.\n\nANTECEDENTES: embarazo y parto sin complicaciones, desarrollo psicomotor normal, esquema de vacunación completo. Un tío materno tuvo «convulsiones por fiebre» en la infancia. No ha tenido convulsiones previas.\n\nEXAMEN EN URGENCIAS\nTemperatura 39,2 °C · Frecuencia cardiaca 148 lpm · Frecuencia respiratoria 32 · SatO2 98 %\nAlerta, activo, llora y se consuela con la madre. Faringe eritematosa, amígdalas hipertróficas sin exudado. Otoscopia normal.\nSin rigidez de nuca, fontanela cerrada, sin petequias, sin déficit neurológico focal. Glucometría 92 mg/dL.",
+      "fuente": "Caso elaborado para el simulacro."
+    },
+    {
+      "id": "ped_ctx_02",
+      "titulo": "Caso 2 — Crisis prolongada en urgencias",
+      "contenido": "Niña de 4 años con epilepsia conocida en tratamiento con ácido valproico. Llega en crisis tónico-clónica generalizada que, según la madre, comenzó hace 12 minutos en la casa y no ha cedido. Continúa convulsionando en el servicio de urgencias.\n\nTemperatura 37,1 °C · SatO2 89 % con aire ambiente · Glucometría 78 mg/dL\nLa madre refiere que hace cinco días se le acabó el medicamento y no había podido reclamarlo.",
+      "fuente": "Caso elaborado para el simulacro."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "ped_001",
+      "competencia": "convulsion_febril",
+      "tema": "convulsion_febril",
+      "dificultad": 2,
+      "contexto_id": "ped_ctx_01",
+      "enunciado": "El episodio descrito corresponde a una convulsión febril",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "simple, porque fue generalizada, duró menos de 15 minutos y no se repitió en 24 horas."
+        },
+        {
+          "clave": "B",
+          "texto": "compleja, porque el niño quedó somnoliento después del episodio."
+        },
+        {
+          "clave": "C",
+          "texto": "compleja, porque la temperatura superó los 39 °C."
+        },
+        {
+          "clave": "D",
+          "texto": "simple, pero solo si se descarta meningitis con punción lumbar en todos los casos."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Los tres criterios de la convulsión febril simple son: crisis generalizada, duración menor de 15 minutos y no recurrencia en 24 horas; los tres se cumplen aquí.",
+      "justificaciones_incorrectas": {
+        "B": "El periodo poscrítico breve es esperable y no la convierte en compleja.",
+        "C": "La magnitud de la fiebre no forma parte de la clasificación.",
+        "D": "En una convulsión febril simple, con niño alerta y sin signos meníngeos, la punción lumbar no es obligatoria."
+      }
+    },
+    {
+      "id": "ped_002",
+      "competencia": "convulsion_febril",
+      "tema": "convulsion_febril",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "La convulsión febril, por definición, ocurre en niños",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "entre los 6 meses y los 5 años, con fiebre y sin infección del sistema nervioso central ni antecedente de crisis afebriles."
+        },
+        {
+          "clave": "B",
+          "texto": "de cualquier edad, siempre que la temperatura supere los 38,5 °C."
+        },
+        {
+          "clave": "C",
+          "texto": "menores de 3 meses, por inmadurez de la barrera hematoencefálica."
+        },
+        {
+          "clave": "D",
+          "texto": "mayores de 6 años con epilepsia ya diagnosticada."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La definición incluye el rango de edad, la presencia de fiebre y la exclusión de infección del sistema nervioso central y de crisis previas sin fiebre.",
+      "justificaciones_incorrectas": {
+        "B": "La edad forma parte de la definición: fuera de ese rango hay que buscar otra causa.",
+        "C": "Una convulsión con fiebre por debajo de los 6 meses obliga a descartar infección del sistema nervioso central.",
+        "D": "Si hay epilepsia diagnosticada, no se habla de convulsión febril."
+      }
+    },
+    {
+      "id": "ped_003",
+      "competencia": "convulsion_febril",
+      "tema": "convulsion_febril",
+      "dificultad": 3,
+      "contexto_id": "ped_ctx_01",
+      "enunciado": "¿Cuál de los siguientes hallazgos, de estar presente, obligaría a descartar meningitis con punción lumbar?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Persistencia de somnolencia o irritabilidad marcada, rigidez de nuca o petequias."
+        },
+        {
+          "clave": "B",
+          "texto": "Una temperatura de 39,2 °C."
+        },
+        {
+          "clave": "C",
+          "texto": "El antecedente familiar de convulsiones febriles."
+        },
+        {
+          "clave": "D",
+          "texto": "La faringe eritematosa como foco de la fiebre."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Lo que orienta a infección del sistema nervioso central es el estado neurológico y los signos meníngeos, no la magnitud de la fiebre; en este niño están ausentes.",
+      "justificaciones_incorrectas": {
+        "B": "La cifra de temperatura por sí sola no indica meningitis.",
+        "C": "El antecedente familiar aumenta el riesgo de convulsión febril, no de meningitis.",
+        "D": "Identificar un foco viral apoya justamente el diagnóstico de convulsión febril simple."
+      }
+    },
+    {
+      "id": "ped_004",
+      "competencia": "convulsion_febril",
+      "tema": "convulsion_febril",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Durante una crisis convulsiva en un niño, la actuación correcta es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "colocarlo en decúbito lateral, proteger la cabeza, aflojar la ropa, cronometrar la crisis y administrar oxígeno."
+        },
+        {
+          "clave": "B",
+          "texto": "introducir un objeto entre los dientes para evitar que se muerda la lengua."
+        },
+        {
+          "clave": "C",
+          "texto": "sujetar con firmeza las extremidades para detener las sacudidas."
+        },
+        {
+          "clave": "D",
+          "texto": "administrar el antipirético por vía oral durante la crisis."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La prioridad es proteger la vía aérea y prevenir lesiones; cronometrar la crisis define además si se trata de un estado epiléptico.",
+      "justificaciones_incorrectas": {
+        "B": "Introducir objetos en la boca produce lesiones dentales y obstrucción; la lengua no se traga.",
+        "C": "La inmovilización forzada causa lesiones y no acorta la crisis.",
+        "D": "Nada se administra por vía oral durante una crisis: hay riesgo de broncoaspiración."
+      }
+    },
+    {
+      "id": "ped_005",
+      "competencia": "epilepsia",
+      "tema": "epilepsia",
+      "dificultad": 2,
+      "contexto_id": "ped_ctx_02",
+      "enunciado": "Una crisis que se prolonga más de cinco minutos, o crisis repetidas sin recuperación de la conciencia entre ellas, se define como",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "estado epiléptico, y exige tratamiento inmediato."
+        },
+        {
+          "clave": "B",
+          "texto": "crisis febril compleja, y puede observarse sin tratamiento."
+        },
+        {
+          "clave": "C",
+          "texto": "crisis de ausencia prolongada, de curso benigno."
+        },
+        {
+          "clave": "D",
+          "texto": "seudocrisis de origen psicógeno."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "El umbral operativo actual son cinco minutos, porque a partir de ahí es improbable que la crisis ceda sola y aumenta el daño neuronal.",
+      "justificaciones_incorrectas": {
+        "B": "La niña no tiene fiebre significativa y tiene epilepsia conocida.",
+        "C": "Las ausencias son crisis breves con desconexión, sin actividad motora tónico-clónica.",
+        "D": "Nada en el caso sugiere origen psicógeno, y asumirlo retrasaría el tratamiento."
+      }
+    },
+    {
+      "id": "ped_006",
+      "competencia": "epilepsia",
+      "tema": "epilepsia",
+      "dificultad": 2,
+      "contexto_id": "ped_ctx_02",
+      "enunciado": "El tratamiento farmacológico de primera línea en esta situación es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "una benzodiacepina (midazolam, diazepam o lorazepam), por la vía disponible más rápida."
+        },
+        {
+          "clave": "B",
+          "texto": "ácido valproico oral en dosis doble."
+        },
+        {
+          "clave": "C",
+          "texto": "fenitoína intramuscular en el músculo deltoides."
+        },
+        {
+          "clave": "D",
+          "texto": "manitol al 20 % en bolo."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Las benzodiacepinas son el tratamiento inicial del estado epiléptico; si no hay acceso venoso se usan las vías intramuscular, bucal o intranasal, sin retrasar la administración.",
+      "justificaciones_incorrectas": {
+        "B": "La vía oral es inviable durante una crisis y el valproico no es el fármaco de rescate inmediato.",
+        "C": "La fenitoína no se administra por vía intramuscular: es irritante y su absorción es errática.",
+        "D": "El manitol no tiene indicación en el estado epiléptico sin hipertensión intracraneal."
+      }
+    },
+    {
+      "id": "ped_007",
+      "competencia": "epilepsia",
+      "tema": "epilepsia",
+      "dificultad": 2,
+      "contexto_id": "ped_ctx_02",
+      "enunciado": "Además del fármaco, ¿cuáles son las medidas prioritarias en esta niña con SatO2 de 89 %?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Asegurar la vía aérea con oxígeno, monitorizar, obtener acceso venoso y verificar la glucemia."
+        },
+        {
+          "clave": "B",
+          "texto": "Realizar una tomografía de cráneo antes de cualquier otra intervención."
+        },
+        {
+          "clave": "C",
+          "texto": "Bajar la temperatura con medios físicos como medida principal."
+        },
+        {
+          "clave": "D",
+          "texto": "Esperar a que la crisis ceda sola antes de tocar a la paciente."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "El estado epiléptico se maneja como una urgencia vital: primero la vía aérea, la oxigenación y la circulación, y siempre una glucometría, porque la hipoglucemia es una causa tratable.",
+      "justificaciones_incorrectas": {
+        "B": "La imagen se realiza después de estabilizar y controlar la crisis.",
+        "C": "La temperatura es de 37,1 °C: la fiebre no es el problema aquí.",
+        "D": "A los 12 minutos ya es un estado epiléptico: esperar aumenta el daño."
+      }
+    },
+    {
+      "id": "ped_008",
+      "competencia": "epilepsia",
+      "tema": "epilepsia",
+      "dificultad": 3,
+      "contexto_id": "ped_ctx_02",
+      "enunciado": "El dato de que el medicamento se acabó hace cinco días es relevante porque",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "la suspensión abrupta del antiepiléptico es una de las causas más frecuentes de estado epiléptico en un paciente con epilepsia conocida."
+        },
+        {
+          "clave": "B",
+          "texto": "indica que el diagnóstico de epilepsia era equivocado."
+        },
+        {
+          "clave": "C",
+          "texto": "obliga a cambiar de inmediato a otro medicamento distinto y para siempre."
+        },
+        {
+          "clave": "D",
+          "texto": "confirma que la crisis es de origen febril."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La falta de adherencia o la interrupción del tratamiento explican buena parte de las descompensaciones, y su identificación cambia el plan de egreso y la educación a la familia.",
+      "justificaciones_incorrectas": {
+        "B": "La crisis por suspensión del tratamiento confirma la epilepsia, no la descarta.",
+        "C": "Lo indicado es reanudar el tratamiento y asegurar el suministro, no cambiarlo de forma automática.",
+        "D": "No hay fiebre significativa y la niña tiene epilepsia diagnosticada."
+      }
+    },
+    {
+      "id": "ped_009",
+      "competencia": "educacion_familiar",
+      "tema": "educacion_cuidador",
+      "dificultad": 2,
+      "contexto_id": "ped_ctx_01",
+      "enunciado": "Los padres preguntan si deben dar antipiréticos de forma permanente para evitar otra convulsión. La respuesta correcta es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "que los antipiréticos alivian el malestar pero no han demostrado prevenir la recurrencia de la convulsión febril."
+        },
+        {
+          "clave": "B",
+          "texto": "que deben alternar dos antipiréticos cada tres horas mientras dure cualquier fiebre."
+        },
+        {
+          "clave": "C",
+          "texto": "que deben administrar un antiepiléptico diario durante los próximos dos años."
+        },
+        {
+          "clave": "D",
+          "texto": "que deben bañar al niño con agua helada apenas suba la temperatura."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La evidencia disponible muestra que el uso de antipiréticos no reduce la recurrencia; se usan para el confort del niño, y decirlo con claridad evita culpas innecesarias en los padres.",
+      "justificaciones_incorrectas": {
+        "B": "Alternar antipiréticos de forma rutinaria aumenta el riesgo de errores de dosificación sin beneficio demostrado.",
+        "C": "El tratamiento antiepiléptico continuo no está indicado en la convulsión febril simple.",
+        "D": "El agua helada produce escalofrío, vasoconstricción y malestar, y no baja la temperatura central."
+      }
+    },
+    {
+      "id": "ped_010",
+      "competencia": "educacion_familiar",
+      "tema": "educacion_cuidador",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "¿Cuál de las siguientes indicaciones de egreso es la más importante para la familia de un niño que tuvo una convulsión febril simple?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Cómo proteger al niño durante una crisis y cuándo consultar de urgencia: crisis de más de cinco minutos, repetición o dificultad para despertar."
+        },
+        {
+          "clave": "B",
+          "texto": "Que evite por completo las vacunas en el futuro, porque producen fiebre."
+        },
+        {
+          "clave": "C",
+          "texto": "Que restrinja la actividad física del niño durante seis meses."
+        },
+        {
+          "clave": "D",
+          "texto": "Que el niño desarrollará epilepsia con toda seguridad y debe prepararse para ello."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La familia necesita saber qué hacer si vuelve a ocurrir y qué signos obligan a consultar; eso reduce el miedo y evita conductas peligrosas durante la crisis.",
+      "justificaciones_incorrectas": {
+        "B": "Suspender las vacunas expone al niño a enfermedades graves; el esquema se mantiene.",
+        "C": "No hay razón para restringir la actividad habitual tras una convulsión febril simple.",
+        "D": "La mayoría de los niños con convulsión febril simple no desarrolla epilepsia; el riesgo aumenta poco respecto de la población general."
+      }
+    }
+  ]
+}

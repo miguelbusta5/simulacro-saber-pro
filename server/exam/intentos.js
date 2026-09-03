@@ -3,12 +3,16 @@
 const { consulta, uno, ejecutar, enTransaccion, ahora } = require('../db');
 const { armarSimulacro } = require('./selection');
 const {
-  VERSION_ACTIVA,
+  PRUEBA_POR_DEFECTO,
   NOMBRES_MODULO,
   modulosDe,
   duracionDe,
   nombreVersion,
   nombreCompetencia,
+  versionActivaDe,
+  pruebaDe,
+  nombrePrueba,
+  escalaDe,
 } = require('./blueprint');
 const { calificarModulo, promedioGlobal, DESCRIPCION_NIVEL } = require('./scoring');
 
@@ -55,7 +59,7 @@ async function obtenerIntento(id, userId) {
   return intento;
 }
 
-async function crearIntento(userId) {
+async function crearIntento(userId, pruebaId = PRUEBA_POR_DEFECTO) {
   await cerrarVencidos(userId);
   if (await intentoActivoDe(userId)) {
     throw new ErrorApp(
@@ -65,8 +69,12 @@ async function crearIntento(userId) {
     );
   }
 
-  // Los simulacros nuevos siempre se arman con la versión más reciente.
-  const version = VERSION_ACTIVA;
+  // Los simulacros nuevos siempre se arman con la versión más reciente de la
+  // prueba elegida.
+  const version = versionActivaDe(pruebaId);
+  if (!version) {
+    throw new ErrorApp(400, 'PRUEBA_DESCONOCIDA', `La prueba "${pruebaId}" no existe.`);
+  }
   const preguntas = await armarSimulacro(userId, version);
   const inicio = new Date();
   const vence = new Date(inicio.getTime() + duracionDe(version) * 60 * 1000);
@@ -74,9 +82,9 @@ async function crearIntento(userId) {
   try {
     return await enTransaccion(async (cliente) => {
       const filas = await consulta(
-        `INSERT INTO intentos (user_id, estado, version, iniciado_en, vence_en)
-         VALUES ($1, 'en_curso', $2, $3, $4) RETURNING id`,
-        [userId, version, inicio.toISOString(), vence.toISOString()],
+        `INSERT INTO intentos (user_id, estado, prueba, version, iniciado_en, vence_en)
+         VALUES ($1, 'en_curso', $2, $3, $4, $5) RETURNING id`,
+        [userId, pruebaId, version, inicio.toISOString(), vence.toISOString()],
         cliente
       );
       const intentoId = filas[0].id;
@@ -110,6 +118,7 @@ async function crearIntento(userId) {
 const SQL_PREGUNTAS_EXAMEN = `
   SELECT ip.orden, p.id, p.modulo, p.enunciado, p.opciones, p.contexto_id,
          c.titulo AS contexto_titulo, c.contenido AS contexto_contenido, c.fuente AS contexto_fuente,
+         c.imagen AS contexto_imagen, c.imagen_alt AS contexto_imagen_alt,
          r.opcion AS marcada, r.marcada AS revisar
     FROM intento_preguntas ip
     JOIN preguntas p ON p.id = ip.pregunta_id
@@ -126,6 +135,8 @@ async function cuadernillo(intento) {
   return {
     intento_id: intento.id,
     estado: intento.estado,
+    prueba: pruebaDe(intento.version),
+    prueba_nombre: nombrePrueba(pruebaDe(intento.version)),
     version: intento.version,
     version_nombre: nombreVersion(intento.version),
     iniciado_en: intento.iniciado_en,
@@ -150,6 +161,8 @@ async function cuadernillo(intento) {
             titulo: f.contexto_titulo,
             contenido: f.contexto_contenido,
             fuente: f.contexto_fuente,
+            imagen: f.contexto_imagen || null,
+            imagen_alt: f.contexto_imagen_alt || '',
           }
         : null,
       marcada: f.marcada ?? null,
@@ -219,7 +232,7 @@ async function finalizarIntento(intentoId, userId, motivo = 'entregado') {
   await enTransaccion(async (cliente) => {
     for (const m of modulosDe(intento.version)) {
       const a = acumulado.get(m.id) || { aciertos: 0, total: 0 };
-      const r = calificarModulo(m.id, a.aciertos, a.total);
+      const r = calificarModulo(m.id, a.aciertos, a.total, escalaDe(intento.version));
       await ejecutar(
         `INSERT INTO resultados (intento_id, modulo, aciertos, total, puntaje, nivel)
          VALUES ($1, $2, $3, $4, $5, $6)
@@ -275,6 +288,9 @@ async function resultadosDe(intentoId) {
 
   return {
     intento_id: intentoId,
+    prueba: pruebaDe(intento.version),
+    prueba_nombre: nombrePrueba(pruebaDe(intento.version)),
+    escala: escalaDe(intento.version),
     version: intento.version,
     version_nombre: nombreVersion(intento.version),
     iniciado_en: intento.iniciado_en,
@@ -294,6 +310,7 @@ const SQL_REVISION = `
   SELECT ip.orden, p.id, p.modulo, p.competencia, p.tema, p.enunciado, p.opciones,
          p.correcta, p.justificacion, p.justificaciones_incorrectas, p.contexto_id,
          c.titulo AS contexto_titulo, c.contenido AS contexto_contenido, c.fuente AS contexto_fuente,
+         c.imagen AS contexto_imagen, c.imagen_alt AS contexto_imagen_alt,
          r.opcion AS marcada
     FROM intento_preguntas ip
     JOIN preguntas p ON p.id = ip.pregunta_id
@@ -316,7 +333,13 @@ async function revisionDe(intentoId) {
     enunciado: f.enunciado,
     opciones: JSON.parse(f.opciones),
     contexto: f.contexto_id
-      ? { titulo: f.contexto_titulo, contenido: f.contexto_contenido, fuente: f.contexto_fuente }
+      ? {
+          titulo: f.contexto_titulo,
+          contenido: f.contexto_contenido,
+          fuente: f.contexto_fuente,
+          imagen: f.contexto_imagen || null,
+          imagen_alt: f.contexto_imagen_alt || '',
+        }
       : null,
     marcada: f.marcada ?? null,
     correcta: f.correcta,
@@ -332,7 +355,7 @@ async function revisionDe(intentoId) {
 
 async function historialDe(userId) {
   const filas = await consulta(
-    `SELECT i.id, i.estado, i.version, i.iniciado_en, i.finalizado_en, i.motivo_cierre,
+    `SELECT i.id, i.estado, i.prueba, i.version, i.iniciado_en, i.finalizado_en, i.motivo_cierre,
             (SELECT SUM(aciertos)::int FROM resultados WHERE intento_id = i.id) AS aciertos,
             (SELECT SUM(total)::int FROM resultados WHERE intento_id = i.id) AS total,
             COALESCE((SELECT ROUND(AVG(puntaje))::int FROM resultados WHERE intento_id = i.id), 0)
@@ -342,7 +365,11 @@ async function historialDe(userId) {
       ORDER BY i.iniciado_en DESC`,
     [userId]
   );
-  return filas.map((i) => ({ ...i, version_nombre: nombreVersion(i.version) }));
+  return filas.map((i) => ({
+    ...i,
+    version_nombre: nombreVersion(i.version),
+    prueba_nombre: nombrePrueba(i.prueba || pruebaDe(i.version)),
+  }));
 }
 
 module.exports = {
