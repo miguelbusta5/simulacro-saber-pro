@@ -1,0 +1,507 @@
+{
+  "modulo": "hemodinamia",
+  "contextos": [
+    {
+      "id": "hemo_ctx_01",
+      "titulo": "Curva 1 — Línea arterial radial derecha",
+      "contenido": "Paciente de 62 años en la unidad de cuidado intensivo, con línea arterial radial derecha para monitorización continua. La curva que muestra el monitor es la siguiente.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/presion/linea-arterial-normal.svg",
+      "imagen_alt": "Curva de presión arterial invasiva con ascenso rápido, pico definido, muesca en la rama descendente y descenso progresivo."
+    },
+    {
+      "id": "curva_ctx_02",
+      "titulo": "Curva 2 — Cambio en el trazado del monitor",
+      "contenido": "El mismo paciente, dos horas después. La enfermera observa este cambio en el trazado. El monitor muestra ahora 96/64 mmHg, mientras que la toma con manguito da 128/70 mmHg. El paciente está consciente, sin cambios clínicos.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/presion/linea-arterial-sobreamortiguada.svg",
+      "imagen_alt": "Curva de presión arterial invasiva redondeada, sin pico definido ni muesca en la rama descendente."
+    },
+    {
+      "id": "curva_ctx_03",
+      "titulo": "Curva 3 — Trazado con oscilaciones",
+      "contenido": "Otro paciente con línea arterial femoral. El trazado muestra oscilaciones sobre el pico sistólico. El monitor reporta 168/62 mmHg y el manguito, 138/68 mmHg.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/presion/linea-arterial-subamortiguada.svg",
+      "imagen_alt": "Curva de presión arterial invasiva con oscilaciones rápidas sobre el pico."
+    },
+    {
+      "id": "curva_ctx_04",
+      "titulo": "Curva 4 — Prueba de la onda cuadrada",
+      "contenido": "Se realiza la prueba de la onda cuadrada abriendo la válvula del sistema de lavado a presión y soltándola. Este es el resultado.",
+      "fuente": "Trazado generado para el simulacro.",
+      "imagen": "/img/presion/onda-cuadrada-sobreamortiguada.svg",
+      "imagen_alt": "Tras el lavado, la señal vuelve despacio a la curva, sin oscilaciones."
+    },
+    {
+      "id": "hemo_ctx_05",
+      "titulo": "Caso — Angioplastia primaria con implante de stent",
+      "contenido": "Hombre de 59 años llevado a sala de hemodinamia por un infarto con elevación del ST de cara anterior. Se realiza cateterismo por acceso radial derecho: se documenta oclusión del 100 % de la descendente anterior proximal, se practica angioplastia con balón y se implanta un stent liberador de fármaco. Flujo final TIMI 3.\n\nMEDICACIÓN AL SALIR DE HEMODINAMIA: ácido acetilsalicílico 100 mg al día, ticagrelor 90 mg cada 12 horas, atorvastatina 80 mg al día, enoxaparina según protocolo. Recibió 180 mL de medio de contraste.\n\nAL INGRESO A LA UNIDAD CORONARIA\nTensión arterial 112/68 mmHg · Frecuencia cardiaca 78 lpm · SatO2 97 % con cánula nasal a 2 L/min\nBanda de compresión radial derecha colocada, sin sangrado activo. Mano derecha tibia, llenado capilar de 2 segundos.\nCreatinina previa al procedimiento: 1,3 mg/dL. Diabético en tratamiento con metformina.",
+      "fuente": "Caso elaborado para el simulacro."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "hemo_001",
+      "competencia": "monitoria_invasiva",
+      "tema": "linea_arterial",
+      "dificultad": 2,
+      "contexto_id": "hemo_ctx_01",
+      "enunciado": "¿Cuál de las siguientes NO es una función de la línea arterial?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Administrar medicamentos vasoactivos y soluciones intravenosas."
+        },
+        {
+          "clave": "B",
+          "texto": "Medir la presión arterial latido a latido de forma continua."
+        },
+        {
+          "clave": "C",
+          "texto": "Tomar muestras repetidas para gases arteriales sin puncionar de nuevo al paciente."
+        },
+        {
+          "clave": "D",
+          "texto": "Analizar la morfología de la curva y la variación de la presión de pulso."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Por una línea arterial no se administran medicamentos ni líquidos: la inyección en una arteria puede producir espasmo, trombosis y necrosis distal. Sus funciones son la monitorización continua, la toma de muestras y el análisis de la curva.",
+      "justificaciones_incorrectas": {
+        "B": "Es su función principal, especialmente en pacientes inestables o con vasoactivos.",
+        "C": "Evitar punciones repetidas es una de las razones para instalarla.",
+        "D": "La morfología de la curva y la variación de la presión de pulso aportan información hemodinámica."
+      }
+    },
+    {
+      "id": "hemo_002",
+      "competencia": "monitoria_invasiva",
+      "tema": "linea_arterial",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Para que la medición de la línea arterial sea confiable, el transductor debe estar nivelado en",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "el eje flebostático: cuarto espacio intercostal en la línea media axilar."
+        },
+        {
+          "clave": "B",
+          "texto": "el punto más alto del tórax del paciente."
+        },
+        {
+          "clave": "C",
+          "texto": "la altura de la muñeca donde está insertado el catéter."
+        },
+        {
+          "clave": "D",
+          "texto": "el borde superior del colchón, independientemente de la posición del paciente."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "El eje flebostático corresponde a la aurícula derecha; si el transductor queda por encima, la presión se subestima, y si queda por debajo, se sobreestima, con un error aproximado de 7,5 mmHg por cada 10 cm.",
+      "justificaciones_incorrectas": {
+        "B": "Nivelar por encima del eje flebostático da valores falsamente bajos.",
+        "C": "La referencia es la aurícula derecha, no el sitio de inserción.",
+        "D": "La referencia debe reajustarse cada vez que cambia la posición del paciente o de la cama."
+      }
+    },
+    {
+      "id": "hemo_003",
+      "competencia": "monitoria_invasiva",
+      "tema": "linea_arterial",
+      "dificultad": 3,
+      "contexto_id": "curva_ctx_02",
+      "enunciado": "El trazado redondeado, sin muesca dicrota, con una sistólica menor que la del manguito, corresponde a un sistema",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "sobreamortiguado: subestima la sistólica y sobreestima la diastólica."
+        },
+        {
+          "clave": "B",
+          "texto": "subamortiguado: sobreestima la sistólica."
+        },
+        {
+          "clave": "C",
+          "texto": "correctamente calibrado: la diferencia con el manguito es normal."
+        },
+        {
+          "clave": "D",
+          "texto": "con el transductor por debajo del eje flebostático."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La sobreamortiguación —burbujas, coágulos, acodamiento, conexiones largas o llave semicerrada— aplana la curva: se pierde el pico y la muesca dicrota, y la sistólica queda por debajo de la real.",
+      "justificaciones_incorrectas": {
+        "B": "El sistema subamortiguado muestra picos exagerados y oscilaciones, no una curva aplanada.",
+        "C": "La pérdida de la muesca dicrota indica un problema del sistema y obliga a revisarlo.",
+        "D": "Un transductor bajo eleva todos los valores, no aplana la morfología de la curva."
+      }
+    },
+    {
+      "id": "hemo_004",
+      "competencia": "monitoria_invasiva",
+      "tema": "linea_arterial",
+      "dificultad": 2,
+      "contexto_id": "curva_ctx_04",
+      "enunciado": "La prueba de la onda cuadrada muestra un retorno lento a la línea de base, sin oscilaciones. La primera acción de la enfermera es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "revisar el sistema: burbujas, coágulos, acodamientos, llaves semicerradas y presión del sistema de lavado."
+        },
+        {
+          "clave": "B",
+          "texto": "reportar de inmediato al médico una crisis hipertensiva."
+        },
+        {
+          "clave": "C",
+          "texto": "retirar el catéter arterial, porque el trazado es irrecuperable."
+        },
+        {
+          "clave": "D",
+          "texto": "aumentar la dosis del vasoactivo según los valores que muestra el monitor."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Ese patrón indica sobreamortiguación, que casi siempre tiene una causa mecánica corregible; tratar al paciente con base en cifras erróneas es el verdadero riesgo.",
+      "justificaciones_incorrectas": {
+        "B": "La sobreamortiguación subestima la presión: no hay ningún dato de crisis hipertensiva.",
+        "C": "El catéter suele funcionar bien; lo que falla es el sistema de transmisión.",
+        "D": "Ajustar vasoactivos con una curva no confiable puede dañar al paciente."
+      }
+    },
+    {
+      "id": "hemo_005",
+      "competencia": "monitoria_invasiva",
+      "tema": "linea_arterial",
+      "dificultad": 3,
+      "contexto_id": "curva_ctx_03",
+      "enunciado": "Ante este trazado con oscilaciones y una sistólica muy superior a la del manguito, ¿qué valor conviene usar mientras se corrige el sistema?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "La presión arterial media, que es el parámetro menos afectado por los problemas de amortiguación."
+        },
+        {
+          "clave": "B",
+          "texto": "La presión sistólica del monitor, por ser una medición invasiva."
+        },
+        {
+          "clave": "C",
+          "texto": "La presión diastólica del monitor, que nunca se altera."
+        },
+        {
+          "clave": "D",
+          "texto": "Ninguno: debe retirarse la línea arterial de inmediato."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La presión arterial media es la más estable frente a la sub y la sobreamortiguación, por eso se prefiere para tomar decisiones mientras se resuelve el problema del sistema.",
+      "justificaciones_incorrectas": {
+        "B": "La sistólica es precisamente el valor que la subamortiguación exagera.",
+        "C": "La diastólica también se altera: la subamortiguación tiende a subestimarla.",
+        "D": "El problema es del sistema de medición; retirar la línea no es la primera medida."
+      }
+    },
+    {
+      "id": "hemo_006",
+      "competencia": "monitoria_invasiva",
+      "tema": "linea_arterial",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Entre los cuidados de enfermería de una línea arterial radial, ¿cuál es prioritario para prevenir la isquemia de la mano?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Valorar periódicamente color, temperatura, llenado capilar y sensibilidad de la mano distal al catéter."
+        },
+        {
+          "clave": "B",
+          "texto": "Cambiar el apósito cada 48 horas con técnica limpia."
+        },
+        {
+          "clave": "C",
+          "texto": "Mantener el sistema de lavado a 100 mmHg."
+        },
+        {
+          "clave": "D",
+          "texto": "Rotular la fecha de inserción en el equipo de infusión."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La complicación temida del acceso radial es la isquemia distal: la valoración seriada de la perfusión de la mano es lo que permite detectarla a tiempo y retirar el catéter antes del daño.",
+      "justificaciones_incorrectas": {
+        "B": "El cuidado del apósito previene infección, no isquemia, y se hace con técnica estéril.",
+        "C": "El sistema de lavado se mantiene a 300 mmHg para asegurar el flujo continuo; además no previene isquemia.",
+        "D": "Rotular es buena práctica, pero no detecta la complicación."
+      }
+    },
+    {
+      "id": "hemo_007",
+      "competencia": "procedimientos",
+      "tema": "cateterismo",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "La diferencia fundamental entre una angioplastia con balón y el implante de un stent es que",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "el stent es una malla que queda permanentemente en la arteria y sostiene la pared dilatada, mientras que el balón solo dilata y se retira."
+        },
+        {
+          "clave": "B",
+          "texto": "la angioplastia se hace por vía venosa y el stent por vía arterial."
+        },
+        {
+          "clave": "C",
+          "texto": "el stent se usa solo en arterias periféricas y el balón únicamente en coronarias."
+        },
+        {
+          "clave": "D",
+          "texto": "la angioplastia con balón requiere anticoagulación de por vida y el stent no requiere ningún antiagregante."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "El balón rompe y comprime la placa, pero la pared tiende a retraerse; el stent es un andamio metálico que permanece y reduce la reestenosis y el cierre agudo del vaso.",
+      "justificaciones_incorrectas": {
+        "B": "Ambos procedimientos se realizan por vía arterial.",
+        "C": "Los dos se emplean tanto en coronarias como en el territorio periférico.",
+        "D": "Es al revés: el stent obliga a doble antiagregación durante meses."
+      }
+    },
+    {
+      "id": "hemo_008",
+      "competencia": "procedimientos",
+      "tema": "cateterismo",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Antes de un cateterismo cardiaco por acceso radial, ¿cuál de las siguientes valoraciones es específica de ese acceso?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Comprobar la circulación colateral de la mano, por ejemplo con la prueba de Allen."
+        },
+        {
+          "clave": "B",
+          "texto": "Verificar el pulso pedio bilateral."
+        },
+        {
+          "clave": "C",
+          "texto": "Medir el perímetro abdominal."
+        },
+        {
+          "clave": "D",
+          "texto": "Valorar la fuerza muscular de los miembros inferiores."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La prueba de Allen (o la evaluación con oximetría y pletismografía) verifica que la arteria cubital pueda irrigar la mano si la radial se ocluye tras el procedimiento.",
+      "justificaciones_incorrectas": {
+        "B": "El pulso pedio se valora en el acceso femoral.",
+        "C": "El perímetro abdominal no aporta información para este acceso.",
+        "D": "La valoración de miembros inferiores corresponde al acceso femoral."
+      }
+    },
+    {
+      "id": "hemo_009",
+      "competencia": "procedimientos",
+      "tema": "cateterismo",
+      "dificultad": 3,
+      "contexto_id": "hemo_ctx_05",
+      "enunciado": "Este paciente recibió 180 mL de medio de contraste, tiene creatinina de 1,3 mg/dL y toma metformina. La conducta correcta es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "suspender la metformina y vigilar la función renal en las siguientes 48 horas, asegurando hidratación adecuada."
+        },
+        {
+          "clave": "B",
+          "texto": "duplicar la dosis de metformina para compensar el estrés metabólico del procedimiento."
+        },
+        {
+          "clave": "C",
+          "texto": "restringir por completo los líquidos para proteger el riñón."
+        },
+        {
+          "clave": "D",
+          "texto": "administrar un diurético de asa de inmediato para eliminar el contraste."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Si el contraste deteriora la función renal, la metformina se acumula y aumenta el riesgo de acidosis láctica; por eso se suspende y se controla la creatinina, con hidratación como principal medida preventiva.",
+      "justificaciones_incorrectas": {
+        "B": "Aumentar la dosis incrementa exactamente el riesgo que se quiere evitar.",
+        "C": "La hidratación es la medida protectora más eficaz frente a la nefropatía por contraste.",
+        "D": "Los diuréticos no previenen la nefropatía por contraste y pueden agravar la hipovolemia."
+      }
+    },
+    {
+      "id": "hemo_010",
+      "competencia": "procedimientos",
+      "tema": "cateterismo",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Un flujo TIMI 3 al final de una angioplastia significa que",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "el flujo distal al segmento tratado es normal y completo."
+        },
+        {
+          "clave": "B",
+          "texto": "la arteria permanece totalmente ocluida."
+        },
+        {
+          "clave": "C",
+          "texto": "hay paso de contraste pero con llenado distal lento e incompleto."
+        },
+        {
+          "clave": "D",
+          "texto": "se produjo perforación coronaria durante el procedimiento."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La escala TIMI va de 0 (sin flujo) a 3 (flujo normal): TIMI 3 es el resultado que se busca porque se asocia a mejor pronóstico.",
+      "justificaciones_incorrectas": {
+        "B": "La oclusión total corresponde a TIMI 0.",
+        "C": "El llenado lento e incompleto corresponde a TIMI 2.",
+        "D": "La perforación es una complicación, no una categoría de la escala de flujo."
+      }
+    },
+    {
+      "id": "hemo_011",
+      "competencia": "procedimientos",
+      "tema": "cateterismo",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "Durante el retiro del introductor femoral, el paciente presenta bradicardia, hipotensión, palidez y náuseas. Esto corresponde a",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "una respuesta vasovagal: elevar los miembros inferiores, administrar líquidos y avisar; puede requerir atropina."
+        },
+        {
+          "clave": "B",
+          "texto": "un choque cardiogénico que exige inotrópicos de inmediato."
+        },
+        {
+          "clave": "C",
+          "texto": "una reacción alérgica al medio de contraste."
+        },
+        {
+          "clave": "D",
+          "texto": "un sangrado retroperitoneal, que siempre cursa con bradicardia aislada."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La compresión y el dolor en la zona inguinal estimulan el vago: la tríada bradicardia, hipotensión y náuseas durante el retiro del introductor es la reacción vasovagal, que responde a líquidos, posición y atropina.",
+      "justificaciones_incorrectas": {
+        "B": "El choque cardiogénico cursa con taquicardia y signos de falla, no con bradicardia súbita durante la maniobra.",
+        "C": "La reacción alérgica se manifiesta con urticaria, broncoespasmo o angioedema.",
+        "D": "El sangrado retroperitoneal produce taquicardia, hipotensión y dolor lumbar o abdominal."
+      }
+    },
+    {
+      "id": "hemo_012",
+      "competencia": "cuidado_post",
+      "tema": "posprocedimiento",
+      "dificultad": 2,
+      "contexto_id": "hemo_ctx_05",
+      "enunciado": "Cuatro horas después del procedimiento, la mano derecha del paciente está fría, pálida y con llenado capilar de 5 segundos, con la banda de compresión radial en su sitio. La conducta inicial es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "liberar progresivamente la presión de la banda y reevaluar la perfusión, informando al médico."
+        },
+        {
+          "clave": "B",
+          "texto": "aumentar la presión de la banda para evitar el sangrado."
+        },
+        {
+          "clave": "C",
+          "texto": "retirar la banda por completo de inmediato y dejar el sitio descubierto."
+        },
+        {
+          "clave": "D",
+          "texto": "aplicar calor local y esperar dos horas antes de reevaluar."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La banda debe permitir la hemostasia sin ocluir el flujo: ante signos de isquemia se libera presión de forma gradual y se vuelve a valorar, avisando al equipo médico.",
+      "justificaciones_incorrectas": {
+        "B": "Aumentar la presión agrava la isquemia.",
+        "C": "Retirarla de golpe expone a un sangrado arterial.",
+        "D": "Esperar dos horas ante una mano isquémica puede costar tejido."
+      }
+    },
+    {
+      "id": "hemo_013",
+      "competencia": "cuidado_post",
+      "tema": "posprocedimiento",
+      "dificultad": 2,
+      "contexto_id": "hemo_ctx_05",
+      "enunciado": "El paciente pregunta por qué debe tomar ticagrelor además de la aspirina, si «ya le pusieron el stent y quedó destapada la arteria». La mejor explicación es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "que el stent es un cuerpo extraño hasta que se recubre de endotelio, y suspender la doble antiagregación antes de tiempo puede trombosarlo de forma súbita."
+        },
+        {
+          "clave": "B",
+          "texto": "que se toman los dos por si uno de ellos viene defectuoso de fábrica."
+        },
+        {
+          "clave": "C",
+          "texto": "que el ticagrelor disuelve el colesterol depositado dentro del stent."
+        },
+        {
+          "clave": "D",
+          "texto": "que puede suspenderlos apenas desaparezca el dolor torácico."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La trombosis del stent es una complicación catastrófica y su causa más frecuente es el abandono precoz de la doble antiagregación; la explicación debe dejar claro por qué el tratamiento no se interrumpe sin indicación.",
+      "justificaciones_incorrectas": {
+        "B": "No es una redundancia de seguridad: cada fármaco actúa por una vía distinta de la agregación plaquetaria.",
+        "C": "El colesterol lo maneja la estatina; el antiagregante evita la formación de trombos.",
+        "D": "La duración la define el médico según el tipo de stent y el riesgo; no la ausencia de síntomas."
+      }
+    },
+    {
+      "id": "hemo_014",
+      "competencia": "cuidado_post",
+      "tema": "posprocedimiento",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "En el posoperatorio de un cateterismo por vía femoral, ¿cuál de los siguientes hallazgos exige aviso inmediato al médico?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Dolor lumbar creciente con hipotensión y taquicardia, aunque el sitio de punción se vea seco."
+        },
+        {
+          "clave": "B",
+          "texto": "Equimosis de 3 cm alrededor del sitio de punción, estable y sin dolor."
+        },
+        {
+          "clave": "C",
+          "texto": "Molestia leve en la ingle al flexionar la cadera."
+        },
+        {
+          "clave": "D",
+          "texto": "Diuresis de 80 mL/hora en las primeras dos horas."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Esa tríada sugiere sangrado retroperitoneal, una complicación grave que puede ocurrir sin sangrado visible en la piel y que exige valoración e imagen urgentes.",
+      "justificaciones_incorrectas": {
+        "B": "Una equimosis pequeña y estable es un hallazgo esperable que solo requiere seguimiento.",
+        "C": "La molestia leve local es frecuente tras la compresión.",
+        "D": "Esa diuresis es adecuada y además tranquiliza respecto de la función renal tras el contraste."
+      }
+    }
+  ]
+}

@@ -8,13 +8,15 @@ const path = require('node:path');
 const { consulta, uno, ejecutar, enTransaccion, inicializar, cerrar, ESQUEMA } = require('../server/db');
 const {
   VERSIONES,
-  VERSION_ACTIVA,
+  VERSIONES_ACTIVAS,
   modulosDe,
   moduloDe,
+  nombrePrueba,
   version: buscarVersion,
 } = require('../server/exam/blueprint');
 
 const DIR = path.join(__dirname, '..', 'data', 'banco');
+const PUBLICO = path.join(__dirname, '..', 'public');
 const CLAVES_OPCION = ['A', 'B', 'C', 'D'];
 
 // Cada subdirectorio de data/banco es una versión de la prueba.
@@ -60,6 +62,17 @@ function validar(archivos) {
       if (!c.id || !c.contenido) errores.push(`${archivo}: contexto sin id o sin contenido`);
       if (idsContexto.has(c.id)) {
         errores.push(`${archivo}: contexto duplicado "${c.id}" (ya está en ${idsContexto.get(c.id)})`);
+      }
+      // La imagen es una ruta servida desde public/: si el archivo no existe, el
+      // estudiante vería un hueco en mitad de la pregunta.
+      if (c.imagen) {
+        if (!c.imagen.startsWith('/')) {
+          errores.push(`${archivo}:${c.id}: la imagen debe ser una ruta absoluta que empiece por "/"`);
+        } else if (!fs.existsSync(path.join(PUBLICO, c.imagen.replace(/^\//, '')))) {
+          errores.push(`${archivo}:${c.id}: no existe el archivo public${c.imagen}`);
+        } else if (!c.imagen_alt) {
+          errores.push(`${archivo}:${c.id}: la imagen necesita "imagen_alt" que la describa`);
+        }
       }
       idsContexto.set(c.id, archivo);
     }
@@ -117,11 +130,13 @@ async function escribir(archivos) {
 
   await enTransaccion(async (cliente) => {
     await ejecutar(
-      `INSERT INTO contextos (id, modulo, version, titulo, contenido, fuente)
-       SELECT * FROM unnest($1::text[], $2::text[], $3::text[], $4::text[], $5::text[], $6::text[])
+      `INSERT INTO contextos (id, modulo, version, titulo, contenido, fuente, imagen, imagen_alt)
+       SELECT * FROM unnest($1::text[], $2::text[], $3::text[], $4::text[], $5::text[], $6::text[],
+                            $7::text[], $8::text[])
        ON CONFLICT (id) DO UPDATE SET
          modulo = EXCLUDED.modulo, version = EXCLUDED.version, titulo = EXCLUDED.titulo,
-         contenido = EXCLUDED.contenido, fuente = EXCLUDED.fuente`,
+         contenido = EXCLUDED.contenido, fuente = EXCLUDED.fuente,
+         imagen = EXCLUDED.imagen, imagen_alt = EXCLUDED.imagen_alt`,
       [
         contextos.map((c) => c.id),
         contextos.map((c) => c.modulo),
@@ -129,6 +144,8 @@ async function escribir(archivos) {
         contextos.map((c) => c.titulo || ''),
         contextos.map((c) => c.contenido),
         contextos.map((c) => c.fuente || ''),
+        contextos.map((c) => c.imagen || ''),
+        contextos.map((c) => c.imagen_alt || ''),
       ],
       cliente
     );
@@ -173,8 +190,12 @@ async function reporte() {
   let activaCompleta = true;
 
   for (const v of VERSIONES) {
-    const esActiva = v.id === VERSION_ACTIVA;
-    console.log(`\n${v.nombre} (${v.id})${esActiva ? '  <- versión activa' : '  (solo historial)'}`);
+    // Hay una versión activa por prueba; las demás quedan como historial.
+    const esActiva = VERSIONES_ACTIVAS.includes(v.id);
+    console.log(
+      `\n${nombrePrueba(v.prueba)} · ${v.nombre} (${v.id})` +
+        (esActiva ? '  <- versión activa' : '  (solo historial)')
+    );
 
     for (const m of modulosDe(v.id)) {
       const { n: total } = await uno(
@@ -204,10 +225,11 @@ async function reporte() {
     }
   }
 
+  const activas = VERSIONES_ACTIVAS.join(', ');
   console.log(
     activaCompleta
-      ? `\nEl banco de la versión activa (${VERSION_ACTIVA}) cubre un simulacro completo.\n`
-      : `\nATENCION: el banco de la versión activa (${VERSION_ACTIVA}) no alcanza para un simulacro completo.\n`
+      ? `\nLos bancos de las versiones activas (${activas}) cubren una prueba completa.\n`
+      : `\nATENCION: alguna de las versiones activas (${activas}) no alcanza para una prueba completa.\n`
   );
 }
 

@@ -75,6 +75,22 @@ function nivel(moduloId, puntaje) {
   return tabla[tabla.length - 1][1];
 }
 
+// La prueba de enfermeria no tiene equivalente oficial ni escala publicada, asi
+// que se reporta en porcentaje de acierto, con cuatro niveles propios.
+const CORTES_PORCENTAJE = [
+  [60, 'Insuficiente'],
+  [75, 'Aceptable'],
+  [90, 'Bueno'],
+  [Infinity, 'Sobresaliente'],
+];
+
+function nivelPorcentaje(puntaje) {
+  for (const [tope, etiqueta] of CORTES_PORCENTAJE) {
+    if (puntaje < tope) return etiqueta;
+  }
+  return 'Sobresaliente';
+}
+
 const DESCRIPCION_NIVEL = {
   'Nivel 1': 'Desempeño mínimo. Solo resuelve tareas muy sencillas y directas.',
   'Nivel 2': 'Desempeño básico. Resuelve tareas rutinarias, falla con las que exigen inferir o argumentar.',
@@ -85,17 +101,27 @@ const DESCRIPCION_NIVEL = {
   A2: 'Nivel A2: comprende frases y vocabulario frecuente sobre temas conocidos.',
   B1: 'Nivel B1: comprende textos claros sobre temas familiares y de actualidad.',
   B2: 'Nivel B2: comprende textos complejos y detalles implícitos.',
+  Insuficiente:
+    'Menos del 60 % de acierto. Hay vacíos de fundamentación que conviene cerrar antes de aplicar estos cuidados.',
+  Aceptable:
+    'Entre 60 % y 74 %. Domina lo básico del módulo, pero falla en los casos que exigen decidir con varios datos a la vez.',
+  Bueno: 'Entre 75 % y 89 %. Maneja el módulo con solvencia y falla solo en situaciones poco frecuentes.',
+  Sobresaliente: '90 % o más. Domina el módulo, incluidas las situaciones complejas.',
 };
 
-function calificarModulo(moduloId, aciertos, total) {
-  const puntaje = total > 0 ? puntajeDesdeProporcion(aciertos / total) : 0;
+// `escala` viene de la prueba a la que pertenece el intento (ver blueprint.js):
+// 'icfes' reporta en la escala 0-300 y 'porcentaje', en porcentaje de acierto.
+function calificarModulo(moduloId, aciertos, total, escala = 'icfes') {
+  const porcentaje = total > 0 ? Math.round((aciertos / total) * 100) : 0;
+  const puntaje =
+    escala === 'porcentaje' ? porcentaje : total > 0 ? puntajeDesdeProporcion(aciertos / total) : 0;
   return {
     modulo: moduloId,
     aciertos,
     total,
-    porcentaje: total > 0 ? Math.round((aciertos / total) * 100) : 0,
+    porcentaje,
     puntaje,
-    nivel: nivel(moduloId, puntaje),
+    nivel: escala === 'porcentaje' ? nivelPorcentaje(puntaje) : nivel(moduloId, puntaje),
   };
 }
 
@@ -108,6 +134,7 @@ function promedioGlobal(resultados) {
 module.exports = {
   puntajeDesdeProporcion,
   nivel,
+  nivelPorcentaje,
   calificarModulo,
   promedioGlobal,
   DESCRIPCION_NIVEL,

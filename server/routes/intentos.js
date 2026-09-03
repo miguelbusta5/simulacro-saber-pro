@@ -46,7 +46,8 @@ router.get('/', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
   try {
-    const id = await crearIntento(req.usuario.id);
+    const { prueba } = req.body || {};
+    const id = await crearIntento(req.usuario.id, prueba || undefined);
     res.status(201).json({ intento_id: id });
   } catch (e) {
     next(e);

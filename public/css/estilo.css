@@ -256,7 +256,7 @@ button:disabled {
   border-radius: 0 var(--radio) var(--radio) 0;
   white-space: pre-wrap;
   font-size: 0.95rem;
-  max-height: 22rem;
+  max-height: 28rem;
   overflow-y: auto;
 }
 
@@ -539,6 +539,56 @@ th {
 
 .lista-limpia li {
   margin-bottom: 0.25rem;
+}
+
+/* ---------- menú de pruebas ---------- */
+
+.menu-pruebas {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  align-items: start;
+}
+
+.tarjeta.prueba {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tarjeta.prueba .btn-primario {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.modulos-prueba {
+  margin-bottom: 1rem;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+/* ---------- imágenes de las preguntas ---------- */
+
+.contexto-imagen {
+  margin: 0 0 1rem;
+  padding: 0.6rem;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  overflow-x: auto;
+}
+
+.contexto-imagen img {
+  display: block;
+  width: 100%;
+  min-width: 32rem;
+  height: auto;
+}
+
+.contexto-imagen figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--texto-suave);
 }
 
 /* ---------- ficha de datos ---------- */

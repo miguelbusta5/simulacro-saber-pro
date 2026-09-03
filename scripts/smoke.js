@@ -34,12 +34,18 @@ const {
   modulosDe,
   duracionDe,
   totalPreguntasDe,
+  versionActivaDe,
 } = require('../server/exam/blueprint');
 const seed = require('./seed.js');
 
 const TOTAL = totalPreguntasDe(VERSION_ACTIVA);
 const MODULOS = modulosDe(VERSION_ACTIVA);
 const DURACION = duracionDe(VERSION_ACTIVA);
+
+// La otra prueba del menú, que se califica en otra escala y trae imágenes.
+const VERSION_ENF = versionActivaDe('enfermeria');
+const TOTAL_ENF = totalPreguntasDe(VERSION_ENF);
+const MODULOS_ENF = modulosDe(VERSION_ENF);
 
 let fallos = 0;
 let pruebas = 0;
@@ -392,6 +398,61 @@ async function main() {
     `status ${r.status}, error ${r.datos?.error}`
   );
   await pedir(`/api/intentos/${intentoAdmin}/finalizar`, { method: 'POST' });
+
+  console.log('\nMenú de pruebas y prueba de enfermería');
+  r = await pedir('/api/blueprint');
+  check(
+    'el blueprint expone el menú con las dos pruebas y su estructura',
+    r.status === 200 &&
+      r.datos.pruebas.length === 2 &&
+      r.datos.pruebas.every((p) => p.modulos.length && p.version_activa && p.total_preguntas > 0),
+    JSON.stringify(r.datos.pruebas?.map((p) => `${p.id}:${p.total_preguntas}`))
+  );
+
+  r = await pedir('/api/intentos', { method: 'POST', body: { prueba: 'enfermeria' } });
+  check('se puede iniciar la prueba de enfermería', r.status === 201, `status ${r.status}`);
+  const intentoEnf = r.datos.intento_id;
+
+  r = await pedir(`/api/intentos/${intentoEnf}`);
+  const examenEnf = r.datos;
+  check(
+    `el cuadernillo de enfermería trae ${TOTAL_ENF} preguntas de sus ${MODULOS_ENF.length} módulos`,
+    examenEnf.preguntas.length === TOTAL_ENF &&
+      MODULOS_ENF.every(
+        (m) => examenEnf.preguntas.filter((p) => p.modulo === m.id).length === m.preguntas
+      ),
+    `${examenEnf.preguntas?.length} preguntas`
+  );
+  check(
+    'el cuadernillo identifica la prueba y su versión',
+    examenEnf.prueba === 'enfermeria' && examenEnf.version === VERSION_ENF,
+    `${examenEnf.prueba} / ${examenEnf.version}`
+  );
+  check(
+    'las preguntas con trazado traen la imagen y su descripción',
+    examenEnf.preguntas.some((p) => p.contexto?.imagen && p.contexto.imagen_alt),
+    'ninguna pregunta trae imagen'
+  );
+
+  for (const p of examenEnf.preguntas) {
+    await pedir(`/api/intentos/${intentoEnf}/respuestas/${p.id}`, {
+      method: 'PUT',
+      body: { opcion: correctasReales.get(p.id) },
+    });
+  }
+  await pedir(`/api/intentos/${intentoEnf}/finalizar`, { method: 'POST' });
+
+  r = await pedir(`/api/intentos/${intentoEnf}/resultados`);
+  check(
+    'la prueba de enfermería se califica en porcentaje, no en la escala ICFES',
+    r.status === 200 && r.datos.escala === 'porcentaje' && r.datos.puntaje_global === 100,
+    `escala ${r.datos?.escala}, puntaje ${r.datos?.puntaje_global}`
+  );
+  check(
+    'con todas correctas el nivel es el más alto de la escala propia',
+    r.datos.modulos.every((m) => m.nivel === 'Sobresaliente'),
+    JSON.stringify(r.datos.modulos?.map((m) => m.nivel))
+  );
 
   server.close();
   console.log(`\n${pruebas - fallos}/${pruebas} verificaciones pasaron.`);

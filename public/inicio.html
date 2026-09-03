@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inicio — Simulacro Saber Pro</title>
+<title>Inicio — Simulacros y pruebas</title>
 <link rel="stylesheet" href="/css/estilo.css">
 </head>
 <body>
 <header class="barra">
-  <div class="marca">Simulacro Saber Pro<small id="saludo"></small></div>
+  <div class="marca">Simulacros y pruebas<small id="saludo"></small></div>
   <button id="btn-admin" type="button" class="oculto">Administración</button>
   <button id="btn-salir" type="button">Cerrar sesión</button>
 </header>
@@ -17,29 +17,31 @@
   <div id="aviso" class="aviso oculto"></div>
 
   <section class="tarjeta" id="tarjeta-activo" hidden>
-    <h2>Tienes un simulacro en curso</h2>
+    <h2>Tienes una prueba en curso</h2>
     <p>Debes terminarlo antes de iniciar otro. Mientras esté corriendo tampoco puedes ver las respuestas de intentos anteriores.</p>
     <p>Tiempo restante: <span class="reloj" id="restante">--:--:--</span></p>
-    <button class="btn-primario" id="btn-continuar" type="button">Continuar el simulacro</button>
+    <button class="btn-primario" id="btn-continuar" type="button">Continuar la prueba</button>
   </section>
 
-  <section class="tarjeta" id="tarjeta-nuevo">
-    <h2>Iniciar un nuevo simulacro</h2>
-    <p id="descripcion-prueba" class="silencio">Cargando estructura de la prueba…</p>
+  <section id="tarjeta-nuevo">
+    <h2>Elige una prueba</h2>
     <div class="aviso aviso-alerta">
       Una vez inicies, el cronómetro corre en el servidor: cerrar el navegador no lo detiene y al agotarse el tiempo la prueba se entrega automáticamente.
     </div>
-    <button class="btn-primario" id="btn-iniciar" type="button">Iniciar simulacro</button>
+    <div class="menu-pruebas" id="menu-pruebas">
+      <p class="silencio">Cargando las pruebas disponibles…</p>
+    </div>
   </section>
 
   <section class="tarjeta">
-    <h2>Mis simulacros</h2>
+    <h2>Mis pruebas presentadas</h2>
     <div id="aviso-historial" class="aviso aviso-alerta oculto"></div>
     <div class="tabla-scroll">
       <table>
         <thead>
           <tr>
             <th>Presentada</th>
+            <th>Prueba</th>
             <th>Versión</th>
             <th>Estado</th>
             <th>Aciertos</th>
@@ -47,7 +49,7 @@
             <th></th>
           </tr>
         </thead>
-        <tbody id="historial"><tr><td colspan="6" class="silencio">Cargando…</td></tr></tbody>
+        <tbody id="historial"><tr><td colspan="7" class="silencio">Cargando…</td></tr></tbody>
       </table>
     </div>
   </section>

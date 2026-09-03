@@ -1,0 +1,343 @@
+{
+  "modulo": "urgencias_metabolicas",
+  "contextos": [
+    {
+      "id": "meta_ctx_01",
+      "titulo": "Caso — Cetoacidosis diabética",
+      "contenido": "Mujer de 19 años con diabetes tipo 1 diagnosticada a los 12 años. Ingresa por vómito, dolor abdominal y somnolencia de un día de evolución. La madre refiere que la paciente lleva cuatro días con un cuadro gripal y que dejó de aplicarse la insulina «porque casi no estaba comiendo».\n\nEXAMEN FÍSICO\nTensión arterial 96/58 mmHg · Frecuencia cardiaca 124 lpm · Frecuencia respiratoria 30, profunda · Temperatura 37,4 °C · Peso 55 kg\nMucosa oral seca, ojos hundidos, llenado capilar de 3 segundos. Aliento con olor afrutado. Somnolienta, responde a preguntas simples. Glasgow 14.\n\nLABORATORIO AL INGRESO\nGlucemia 486 mg/dL · pH arterial 7,08 · Bicarbonato 8 mEq/L · pCO2 21 mmHg\nCetonemia 5,4 mmol/L · Cetonuria +++\nSodio 130 mEq/L · Potasio 5,4 mEq/L · Cloro 98 mEq/L · Creatinina 1,2 mg/dL\nLeucocitos 16.400 · Osmolaridad calculada 298 mOsm/kg",
+      "fuente": "Caso elaborado para el simulacro."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "meta_001",
+      "competencia": "diagnostico_metabolico",
+      "tema": "cetoacidosis",
+      "dificultad": 2,
+      "contexto_id": "meta_ctx_01",
+      "enunciado": "Los tres criterios que definen la cetoacidosis diabética en esta paciente son",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "hiperglucemia, acidosis metabólica con anión gap elevado y cetosis."
+        },
+        {
+          "clave": "B",
+          "texto": "hiperglucemia, hipernatremia y osmolaridad mayor de 320 mOsm/kg."
+        },
+        {
+          "clave": "C",
+          "texto": "hipoglucemia, cetosis y alcalosis respiratoria."
+        },
+        {
+          "clave": "D",
+          "texto": "hiperglucemia, leucocitosis y fiebre."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La tríada diagnóstica es glucemia elevada, acidosis metabólica con anión gap aumentado y presencia de cuerpos cetónicos en sangre u orina; los tres están documentados en el caso.",
+      "justificaciones_incorrectas": {
+        "B": "Esa combinación describe el estado hiperosmolar hiperglucémico, que cursa sin cetosis significativa.",
+        "C": "La paciente está hiperglucémica y acidótica, no hipoglucémica ni alcalótica.",
+        "D": "La leucocitosis es frecuente por el estrés y la deshidratación, pero no es criterio diagnóstico."
+      }
+    },
+    {
+      "id": "meta_002",
+      "competencia": "diagnostico_metabolico",
+      "tema": "cetoacidosis",
+      "dificultad": 2,
+      "contexto_id": "meta_ctx_01",
+      "enunciado": "La respiración de 30 por minuto, profunda y regular, corresponde a",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "respiración de Kussmaul, un mecanismo compensador que elimina CO2 frente a la acidosis metabólica."
+        },
+        {
+          "clave": "B",
+          "texto": "respiración de Cheyne-Stokes, propia del daño neurológico central."
+        },
+        {
+          "clave": "C",
+          "texto": "taquipnea por neumonía asociada al cuadro gripal."
+        },
+        {
+          "clave": "D",
+          "texto": "respiración paradójica por fatiga de los músculos respiratorios."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La pCO2 de 21 mmHg confirma la compensación respiratoria: el organismo hiperventila para eliminar ácido volátil y elevar el pH.",
+      "justificaciones_incorrectas": {
+        "B": "La respiración de Cheyne-Stokes es cíclica, con periodos de apnea.",
+        "C": "No hay hallazgos de consolidación y el patrón descrito es característico de la acidosis metabólica.",
+        "D": "La respiración paradójica implica movimiento torácico y abdominal opuesto, que no se describe."
+      }
+    },
+    {
+      "id": "meta_003",
+      "competencia": "diagnostico_metabolico",
+      "tema": "cetoacidosis",
+      "dificultad": 3,
+      "contexto_id": "meta_ctx_01",
+      "enunciado": "El anión gap de esta paciente (Na − [Cl + HCO3]) es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "24 mEq/L, elevado."
+        },
+        {
+          "clave": "B",
+          "texto": "12 mEq/L, normal."
+        },
+        {
+          "clave": "C",
+          "texto": "6 mEq/L, bajo."
+        },
+        {
+          "clave": "D",
+          "texto": "no se puede calcular sin el potasio."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "130 − (98 + 8) = 24 mEq/L, muy por encima del rango normal de 8 a 12: refleja la acumulación de cetoácidos.",
+      "justificaciones_incorrectas": {
+        "B": "Ese sería el valor si el bicarbonato fuera normal; aquí está en 8 mEq/L.",
+        "C": "Un anión gap bajo apunta a otras causas, como hipoalbuminemia.",
+        "D": "La fórmula habitual no incluye el potasio."
+      }
+    },
+    {
+      "id": "meta_004",
+      "competencia": "diagnostico_metabolico",
+      "tema": "cetoacidosis",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "¿Cuál es la diferencia principal entre la cetoacidosis diabética y el estado hiperosmolar hiperglucémico?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "En el estado hiperosmolar hay insulina residual suficiente para frenar la cetogénesis, con glucemias más altas y osmolaridad mayor."
+        },
+        {
+          "clave": "B",
+          "texto": "La cetoacidosis solo ocurre en diabetes tipo 2 y el estado hiperosmolar en tipo 1."
+        },
+        {
+          "clave": "C",
+          "texto": "El estado hiperosmolar cursa siempre con pH menor de 7,0."
+        },
+        {
+          "clave": "D",
+          "texto": "En la cetoacidosis no hay deshidratación."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La ausencia casi total de insulina en la cetoacidosis permite la lipólisis y la producción de cetonas; en el estado hiperosmolar queda insulina suficiente para evitarla, pero no para controlar la glucemia.",
+      "justificaciones_incorrectas": {
+        "B": "Es al revés en cuanto a la asociación típica, y ambos cuadros pueden verse en cualquiera de los dos tipos.",
+        "C": "El estado hiperosmolar cursa sin acidosis significativa.",
+        "D": "La deshidratación es un componente central de la cetoacidosis."
+      }
+    },
+    {
+      "id": "meta_005",
+      "competencia": "manejo_hidroelectrolitico",
+      "tema": "cetoacidosis",
+      "dificultad": 2,
+      "contexto_id": "meta_ctx_01",
+      "enunciado": "El primer paso del tratamiento de esta paciente es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "la reposición de volumen con solución salina isotónica."
+        },
+        {
+          "clave": "B",
+          "texto": "el bolo de insulina rápida intravenosa antes de cualquier líquido."
+        },
+        {
+          "clave": "C",
+          "texto": "la administración de bicarbonato de sodio para corregir el pH."
+        },
+        {
+          "clave": "D",
+          "texto": "la infusión de dextrosa al 10 % para prevenir la hipoglucemia."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "El déficit de volumen es el problema que amenaza primero la perfusión; además, la hidratación por sí sola ya baja la glucemia y mejora la respuesta posterior a la insulina.",
+      "justificaciones_incorrectas": {
+        "B": "La insulina se inicia después de comenzar la hidratación y de verificar el potasio.",
+        "C": "El bicarbonato solo se considera con pH muy bajo y tiene riesgos; no es el primer paso.",
+        "D": "La dextrosa se agrega más adelante, cuando la glucemia baja de 200-250 mg/dL."
+      }
+    },
+    {
+      "id": "meta_006",
+      "competencia": "manejo_hidroelectrolitico",
+      "tema": "cetoacidosis",
+      "dificultad": 3,
+      "contexto_id": "meta_ctx_01",
+      "enunciado": "El potasio de ingreso es de 5,4 mEq/L. ¿Qué debe saber la enfermera antes de iniciar la insulina?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Que la insulina introduce potasio a la célula y la cifra caerá rápido, por lo que hay que medirlo y reponerlo según protocolo."
+        },
+        {
+          "clave": "B",
+          "texto": "Que ese valor obliga a administrar potasio adicional en bolo antes de la insulina."
+        },
+        {
+          "clave": "C",
+          "texto": "Que un potasio alto contraindica la insulina de forma definitiva."
+        },
+        {
+          "clave": "D",
+          "texto": "Que el potasio no se modifica con la insulina y basta con controlarlo cada 24 horas."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "A pesar de un potasio sérico alto, el potasio corporal total está disminuido: la insulina y la corrección de la acidosis lo desplazan al interior de la célula y puede aparecer hipopotasemia grave en pocas horas.",
+      "justificaciones_incorrectas": {
+        "B": "Con potasio de 5,4 mEq/L no se repone de entrada; se repone cuando desciende por debajo de 5,3 y hay diuresis.",
+        "C": "La insulina no está contraindicada: se inicia con vigilancia estrecha del potasio.",
+        "D": "El potasio se controla cada 2-4 horas durante el tratamiento, no cada 24."
+      }
+    },
+    {
+      "id": "meta_007",
+      "competencia": "manejo_hidroelectrolitico",
+      "tema": "cetoacidosis",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Durante la infusión de insulina, la glucemia baja de 486 a 230 mg/dL, pero persisten la cetonemia y el pH de 7,15. La conducta correcta es",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "agregar dextrosa a los líquidos y continuar la infusión de insulina hasta resolver la cetosis y la acidosis."
+        },
+        {
+          "clave": "B",
+          "texto": "suspender la insulina, porque la glucemia ya está cerca de lo normal."
+        },
+        {
+          "clave": "C",
+          "texto": "duplicar la velocidad de la infusión de insulina."
+        },
+        {
+          "clave": "D",
+          "texto": "iniciar insulina subcutánea de acción prolongada y suspender de inmediato la intravenosa."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La insulina es lo que apaga la cetogénesis: se mantiene y se aporta glucosa para evitar la hipoglucemia mientras se corrigen las cetonas y el pH.",
+      "justificaciones_incorrectas": {
+        "B": "Suspenderla reactiva la producción de cetonas y prolonga la acidosis.",
+        "C": "Aumentar la velocidad produciría hipoglucemia sin acelerar la corrección de la acidosis.",
+        "D": "El paso a insulina subcutánea se hace tras resolver la cetoacidosis y con solapamiento de una a dos horas."
+      }
+    },
+    {
+      "id": "meta_008",
+      "competencia": "manejo_hidroelectrolitico",
+      "tema": "cetoacidosis",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "La transición de la insulina intravenosa a la subcutánea debe hacerse",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "aplicando la dosis subcutánea entre una y dos horas ANTES de suspender la infusión."
+        },
+        {
+          "clave": "B",
+          "texto": "suspendiendo la infusión y esperando cuatro horas antes de la primera dosis subcutánea."
+        },
+        {
+          "clave": "C",
+          "texto": "sin traslape, porque la insulina intravenosa tiene efecto residual de varias horas."
+        },
+        {
+          "clave": "D",
+          "texto": "únicamente cuando la glucemia esté por debajo de 100 mg/dL."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La insulina intravenosa tiene una vida media de pocos minutos: si se suspende sin haber administrado antes la subcutánea, la paciente vuelve a quedar sin insulina y la cetoacidosis recurre.",
+      "justificaciones_incorrectas": {
+        "B": "Esperar cuatro horas deja a la paciente sin cobertura insulínica.",
+        "C": "La insulina intravenosa no tiene efecto residual prolongado; ese es el motivo del traslape.",
+        "D": "El criterio es la resolución de la acidosis y la cetosis, no una glucemia tan baja."
+      }
+    },
+    {
+      "id": "meta_009",
+      "competencia": "complicaciones",
+      "tema": "cetoacidosis",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Un adolescente en tratamiento por cetoacidosis presenta, a las ocho horas, cefalea intensa, vómito, bradicardia y deterioro del estado de conciencia. La primera sospecha debe ser",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "edema cerebral secundario a una corrección demasiado rápida de la glucemia y la osmolaridad."
+        },
+        {
+          "clave": "B",
+          "texto": "hipoglucemia, aunque la glucemia sea de 240 mg/dL."
+        },
+        {
+          "clave": "C",
+          "texto": "una crisis de ansiedad por la hospitalización."
+        },
+        {
+          "clave": "D",
+          "texto": "una infección urinaria intercurrente."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "El edema cerebral es la complicación más temida del tratamiento, sobre todo en niños y adolescentes, y se relaciona con descensos bruscos de la osmolaridad; la cefalea con deterioro neurológico obliga a actuar de inmediato.",
+      "justificaciones_incorrectas": {
+        "B": "Con 240 mg/dL no hay hipoglucemia.",
+        "C": "La bradicardia y el deterioro de la conciencia no se explican por ansiedad.",
+        "D": "Una infección urinaria no produce ese cuadro neurológico agudo."
+      }
+    },
+    {
+      "id": "meta_010",
+      "competencia": "complicaciones",
+      "tema": "cetoacidosis",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "¿Por qué la corrección de la glucemia debe ser gradual, sin superar aproximadamente 50-75 mg/dL por hora?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Porque un descenso brusco de la osmolaridad plasmática desplaza agua hacia el interior de las células cerebrales y favorece el edema."
+        },
+        {
+          "clave": "B",
+          "texto": "Porque la insulina pierde eficacia si actúa demasiado rápido."
+        },
+        {
+          "clave": "C",
+          "texto": "Porque la glucosa es el único combustible del riñón y su caída produce falla renal."
+        },
+        {
+          "clave": "D",
+          "texto": "Porque el descenso rápido produce hiperpotasemia grave."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Durante la hiperglucemia sostenida el cerebro genera osmoles idiogénicos; si el plasma se vuelve hipotónico de golpe, el agua entra a la neurona y aparece el edema.",
+      "justificaciones_incorrectas": {
+        "B": "La velocidad del descenso no altera la potencia de la insulina.",
+        "C": "El riñón no depende exclusivamente de la glucosa ni falla por ese mecanismo.",
+        "D": "Lo que produce el tratamiento es hipopotasemia, no hiperpotasemia."
+      }
+    }
+  ]
+}

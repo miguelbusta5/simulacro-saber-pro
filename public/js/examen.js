@@ -2,6 +2,7 @@ const aviso = document.getElementById('aviso');
 const elReloj = document.getElementById('reloj');
 const elGuardado = document.getElementById('estado-guardado');
 const elModuloActual = document.getElementById('modulo-actual');
+const elMarca = document.getElementById('marca-prueba');
 const elUbicacion = document.getElementById('ubicacion');
 const elContexto = document.getElementById('contexto');
 const elEnunciado = document.getElementById('enunciado');
@@ -38,7 +39,7 @@ function arrancarReloj() {
     if (restante === 0 && !entregando) {
       // El servidor ya cerró el intento; solo hay que llevar al usuario al resultado.
       entregando = true;
-      mostrarAviso(aviso, 'Se acabó el tiempo. El simulacro se entregó automáticamente.', 'alerta');
+      mostrarAviso(aviso, 'Se acabó el tiempo. La prueba se entregó automáticamente.', 'alerta');
       setTimeout(() => { location.href = `/resultados.html?intento=${examen.intento_id}`; }, 1500);
     }
   }, 1000);
@@ -95,11 +96,25 @@ function preguntaActual() {
   return examen.preguntas[indice];
 }
 
+// Imagen del contexto. La descripción va solo como texto alternativo, para
+// quien use lector de pantalla: escrita como pie visible sería una transcripción
+// del trazado al lado de la pregunta que pide leerlo.
+function figuraContexto(contexto) {
+  const fig = document.createElement('figure');
+  fig.className = 'contexto-imagen';
+  const img = document.createElement('img');
+  img.src = contexto.imagen;
+  img.alt = contexto.imagen_alt || contexto.titulo || 'Imagen de la pregunta';
+  fig.appendChild(img);
+  return fig;
+}
+
 function pintarPregunta() {
   const p = preguntaActual();
   moduloVisible = p.modulo;
 
   elModuloActual.textContent = `${examen.version_nombre} · ${p.modulo_nombre}`;
+  elMarca.textContent = examen.prueba_nombre;
   const delModulo = examen.preguntas.filter((q) => q.modulo === p.modulo);
   const posicion = delModulo.findIndex((q) => q.numero === p.numero) + 1;
   elUbicacion.textContent =
@@ -124,6 +139,9 @@ function pintarPregunta() {
       div.appendChild(f);
     }
     elContexto.appendChild(div);
+    // La imagen (un trazado, una curva) va fuera del bloque de texto, que tiene
+    // su propio desplazamiento: si quedara dentro habría que bajar para verla.
+    if (p.contexto.imagen) elContexto.appendChild(figuraContexto(p.contexto));
   }
 
   elEnunciado.textContent = p.enunciado;
@@ -243,7 +261,7 @@ btnFinalizar.addEventListener('click', async () => {
   const advertencia = sinResponder
     ? `Te quedan ${sinResponder} preguntas sin responder y no hay penalización por responder mal.\n\n`
     : '';
-  if (!confirm(`${advertencia}¿Entregar el simulacro? Esta acción no se puede deshacer.`)) return;
+  if (!confirm(`${advertencia}¿Entregar la prueba? Esta acción no se puede deshacer.`)) return;
 
   entregando = true;
   btnFinalizar.disabled = true;

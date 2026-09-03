@@ -92,7 +92,24 @@ function tarjetaPregunta(p) {
     div.className = 'contexto';
     div.textContent = p.contexto.contenido;
     det.appendChild(div);
-    art.appendChild(det);
+    if (p.contexto.imagen) {
+      const fig = document.createElement('figure');
+      fig.className = 'contexto-imagen';
+      const img = document.createElement('img');
+      img.src = p.contexto.imagen;
+      img.alt = p.contexto.imagen_alt || p.contexto.titulo || 'Imagen de la pregunta';
+      fig.appendChild(img);
+      if (p.contexto.imagen_alt) {
+        const pie = document.createElement('figcaption');
+        pie.textContent = p.contexto.imagen_alt;
+        fig.appendChild(pie);
+      }
+      art.appendChild(det);
+      // El trazado se muestra siempre: sin la imagen no se entiende la pregunta.
+      art.appendChild(fig);
+    } else {
+      art.appendChild(det);
+    }
   }
 
   const enunciado = document.createElement('p');
@@ -151,7 +168,7 @@ function pintarLista() {
 async function cargar() {
   await exigirSesion();
   if (!intentoId) {
-    mostrarAviso(aviso, 'No se indicó qué simulacro revisar.');
+    mostrarAviso(aviso, 'No se indicó qué prueba revisar.');
     return;
   }
   try {
@@ -165,7 +182,7 @@ async function cargar() {
     contenido.classList.remove('oculto');
   } catch (e) {
     if (e.codigo === 'REVISION_BLOQUEADA') {
-      mostrarAviso(aviso, `${e.message} Vuelve al inicio para continuar tu simulacro.`, 'alerta');
+      mostrarAviso(aviso, `${e.message} Vuelve al inicio para continuar tu prueba.`, 'alerta');
       return;
     }
     mostrarAviso(aviso, e.message);

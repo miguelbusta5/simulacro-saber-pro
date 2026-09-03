@@ -1,0 +1,514 @@
+{
+  "modulo": "cardiologia",
+  "contextos": [
+    {
+      "id": "card_ctx_01",
+      "titulo": "Caso 1 — Dolor torácico en urgencias",
+      "contenido": "Hombre de 58 años que consulta por dolor retroesternal opresivo de 40 minutos de evolución, irradiado al brazo izquierdo y a la mandíbula, acompañado de diaforesis y náuseas. El dolor apareció en reposo y no cedió con el reposo ni con antiácidos.\n\nANTECEDENTES: hipertensión arterial en tratamiento con losartán, diabetes tipo 2 con metformina, tabaquismo de 30 paquetes-año. Padre con infarto a los 54 años. No refiere alergias. Última dosis de sildenafilo: hace 18 horas.\n\nAL INGRESO\nTensión arterial 148/92 mmHg · Frecuencia cardiaca 96 lpm · Frecuencia respiratoria 22 · SatO2 96 % al ambiente · Temperatura 36,6 °C · Glucometría 184 mg/dL\nPaciente ansioso, piel fría y sudorosa. Ruidos cardiacos rítmicos sin soplos. Pulmones con crépitos en ambas bases. Sin ingurgitación yugular. Pulsos periféricos simétricos.\n\nPARACLÍNICOS INICIALES\nTroponina I ultrasensible: 0,04 ng/mL (valor de referencia < 0,04) al ingreso.\nElectrocardiograma de 12 derivaciones: descenso del ST de 1,5 mm en V4-V6 y DI, sin elevación del ST.\nHemoglobina 14,8 g/dL · Creatinina 1,1 mg/dL · Potasio 4,2 mEq/L",
+      "fuente": "Caso elaborado para el simulacro."
+    },
+    {
+      "id": "card_ctx_02",
+      "titulo": "Caso 2 — Descompensación de falla cardiaca",
+      "contenido": "Mujer de 72 años con falla cardiaca crónica con fracción de eyección del 28 %, ingresa por disnea progresiva de cuatro días que hoy aparece en reposo y le impide dormir acostada (usa tres almohadas).\n\nTRATAMIENTO EN CASA: furosemida 40 mg al día, carvedilol 6,25 mg cada 12 horas, enalapril 10 mg cada 12 horas, espironolactona 25 mg al día. Refiere que hace tres semanas dejó de tomar la furosemida «porque orinaba mucho de noche» y que en el último mes ha estado comiendo sopas enlatadas.\n\nAL INGRESO\nTensión arterial 104/68 mmHg · Frecuencia cardiaca 112 lpm · Frecuencia respiratoria 28 · SatO2 88 % al ambiente\nIngurgitación yugular a 45° · Crépitos hasta campos medios en ambos hemitórax · Edema con fóvea grado 3 hasta rodillas · Hepatomegalia dolorosa\nPeso hoy 74 kg; peso seco registrado en la última consulta: 68 kg.\n\nPARACLÍNICOS\nNT-proBNP 6.400 pg/mL · Creatinina 1,4 mg/dL (previa 1,1) · Sodio 132 mEq/L · Potasio 3,3 mEq/L\nRadiografía de tórax: cardiomegalia, redistribución vascular y líneas B de Kerley.",
+      "fuente": "Caso elaborado para el simulacro."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "card_001",
+      "competencia": "valoracion",
+      "tema": "sindrome_coronario_agudo",
+      "dificultad": 2,
+      "contexto_id": "card_ctx_01",
+      "enunciado": "Con los datos disponibles al ingreso, ¿cuál es la interpretación correcta de la troponina de 0,04 ng/mL tomada a los 40 minutos del inicio del dolor?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "No descarta un síndrome coronario agudo: hay que repetirla a las 1-3 horas para evaluar la curva."
+        },
+        {
+          "clave": "B",
+          "texto": "Descarta infarto agudo de miocardio, porque está dentro del valor de referencia."
+        },
+        {
+          "clave": "C",
+          "texto": "Confirma el diagnóstico de infarto, porque está en el límite superior."
+        },
+        {
+          "clave": "D",
+          "texto": "Es irrelevante en presencia de descenso del ST y debe omitirse su repetición."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La troponina tarda en elevarse y una sola determinación temprana no descarta necrosis; el diagnóstico se apoya en la curva seriada (delta) junto con la clínica y el electrocardiograma.",
+      "justificaciones_incorrectas": {
+        "B": "Una troponina normal muy temprana es esperable aunque haya infarto en curso.",
+        "C": "Un valor en el límite, aislado, no confirma nada: se necesita una elevación y caída significativas.",
+        "D": "El descenso del ST aumenta la sospecha y hace más necesaria, no menos, la curva de troponinas."
+      }
+    },
+    {
+      "id": "card_002",
+      "competencia": "valoracion",
+      "tema": "sindrome_coronario_agudo",
+      "dificultad": 2,
+      "contexto_id": "card_ctx_01",
+      "enunciado": "Los crépitos en ambas bases pulmonares, en este paciente, corresponden a la clasificación de Killip",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Killip II."
+        },
+        {
+          "clave": "B",
+          "texto": "Killip I."
+        },
+        {
+          "clave": "C",
+          "texto": "Killip III."
+        },
+        {
+          "clave": "D",
+          "texto": "Killip IV."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Killip II corresponde a congestión pulmonar leve o moderada: crépitos en menos de la mitad de los campos pulmonares, tercer ruido o ingurgitación yugular.",
+      "justificaciones_incorrectas": {
+        "B": "Killip I es la ausencia de signos de congestión.",
+        "C": "Killip III exige edema agudo de pulmón con crépitos en más de la mitad de los campos.",
+        "D": "Killip IV es el choque cardiogénico, con hipotensión e hipoperfusión, que este paciente no presenta."
+      }
+    },
+    {
+      "id": "card_003",
+      "competencia": "valoracion",
+      "tema": "falla_cardiaca",
+      "dificultad": 2,
+      "contexto_id": "card_ctx_02",
+      "enunciado": "El aumento de 6 kg respecto del peso seco, en el contexto de esta paciente, indica principalmente",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "retención hídrica: es el signo más sensible y precoz de descompensación congestiva."
+        },
+        {
+          "clave": "B",
+          "texto": "ganancia de masa muscular por el reposo relativo de las últimas semanas."
+        },
+        {
+          "clave": "C",
+          "texto": "un error de medición, porque el edema no altera el peso corporal de forma significativa."
+        },
+        {
+          "clave": "D",
+          "texto": "desnutrición con edema por hipoalbuminemia, propia de la falla cardiaca avanzada."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Un litro de agua retenida equivale a un kilogramo: el peso diario es el indicador más sensible y barato de congestión, y por eso se enseña a pesarse todos los días en casa.",
+      "justificaciones_incorrectas": {
+        "B": "Seis kilos de músculo no se ganan en semanas, y menos con disnea que impide la actividad.",
+        "C": "El edema sí cambia el peso: es justamente lo que se está midiendo.",
+        "D": "Nada en el caso sugiere hipoalbuminemia; los hallazgos son de congestión venosa sistémica y pulmonar."
+      }
+    },
+    {
+      "id": "card_004",
+      "competencia": "valoracion",
+      "tema": "falla_cardiaca",
+      "dificultad": 2,
+      "contexto_id": "card_ctx_02",
+      "enunciado": "¿Cuál de los siguientes hallazgos indica congestión del lado DERECHO del corazón?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Ingurgitación yugular, hepatomegalia dolorosa y edema con fóvea."
+        },
+        {
+          "clave": "B",
+          "texto": "Crépitos hasta campos medios y ortopnea."
+        },
+        {
+          "clave": "C",
+          "texto": "Líneas B de Kerley en la radiografía de tórax."
+        },
+        {
+          "clave": "D",
+          "texto": "Disnea paroxística nocturna y desaturación."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La falla derecha se manifiesta como congestión venosa sistémica: yugulares ingurgitadas, hígado congestivo y edema periférico.",
+      "justificaciones_incorrectas": {
+        "B": "Los crépitos y la ortopnea son manifestaciones de congestión pulmonar, es decir, del lado izquierdo.",
+        "C": "Las líneas B de Kerley traducen edema intersticial pulmonar, propio de la falla izquierda.",
+        "D": "La disnea paroxística nocturna es congestión pulmonar por redistribución al acostarse."
+      }
+    },
+    {
+      "id": "card_005",
+      "competencia": "valoracion",
+      "tema": "arritmias",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Un paciente monitorizado presenta de forma súbita frecuencia de 190 lpm, regular, con complejo estrecho, tensión arterial 118/70 mmHg y está consciente y sin dolor torácico. ¿Cuál es la valoración correcta?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Taquicardia supraventricular estable: hay tiempo para maniobras vagales antes de considerar fármacos."
+        },
+        {
+          "clave": "B",
+          "texto": "Taquicardia inestable: requiere cardioversión eléctrica sincronizada inmediata."
+        },
+        {
+          "clave": "C",
+          "texto": "Taquicardia ventricular: el complejo estrecho la confirma."
+        },
+        {
+          "clave": "D",
+          "texto": "Fibrilación auricular de respuesta rápida: por definición es irregular a esa frecuencia."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Regular, de complejo estrecho y sin signos de inestabilidad (hipotensión, alteración del estado de conciencia, dolor isquémico o falla aguda): la conducta inicial son las maniobras vagales.",
+      "justificaciones_incorrectas": {
+        "B": "No hay criterios de inestabilidad: la tensión es normal y el paciente está consciente y asintomático.",
+        "C": "La taquicardia ventricular es de complejo ANCHO; el complejo estrecho apunta a origen supraventricular.",
+        "D": "La fibrilación auricular es irregularmente irregular, y aquí el ritmo es regular."
+      }
+    },
+    {
+      "id": "card_006",
+      "competencia": "intervencion",
+      "tema": "sindrome_coronario_agudo",
+      "dificultad": 3,
+      "contexto_id": "card_ctx_01",
+      "enunciado": "¿Cuál de las siguientes indicaciones está CONTRAINDICADA en este paciente?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Nitroglicerina sublingual, por el uso de sildenafilo en las últimas 24 horas."
+        },
+        {
+          "clave": "B",
+          "texto": "Ácido acetilsalicílico 300 mg masticado."
+        },
+        {
+          "clave": "C",
+          "texto": "Oxígeno suplementario si la saturación baja de 90 %."
+        },
+        {
+          "clave": "D",
+          "texto": "Monitorización electrocardiográfica continua y acceso venoso."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Los inhibidores de la fosfodiesterasa-5 y los nitratos administrados juntos producen hipotensión grave; con sildenafilo se deben evitar los nitratos durante al menos 24 horas (48 con tadalafilo).",
+      "justificaciones_incorrectas": {
+        "B": "La aspirina masticada es una de las primeras medidas del síndrome coronario agudo y aquí no hay contraindicación.",
+        "C": "El oxígeno se indica cuando hay hipoxemia; con SatO2 menor de 90 % está justificado.",
+        "D": "La monitorización y el acceso venoso son obligatorios ante la sospecha de un síndrome coronario agudo."
+      }
+    },
+    {
+      "id": "card_007",
+      "competencia": "intervencion",
+      "tema": "falla_cardiaca",
+      "dificultad": 2,
+      "contexto_id": "card_ctx_02",
+      "enunciado": "La orden médica indica furosemida 40 mg intravenosos ahora. ¿Qué debe hacer la enfermera además de administrarla?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Registrar peso diario, balance hídrico estricto y vigilar el potasio, que ya está en 3,3 mEq/L."
+        },
+        {
+          "clave": "B",
+          "texto": "Restringir por completo la ingesta de líquidos a cero durante las primeras 24 horas."
+        },
+        {
+          "clave": "C",
+          "texto": "Suspender el carvedilol antes de administrar el diurético para evitar la bradicardia."
+        },
+        {
+          "clave": "D",
+          "texto": "Administrarla en infusión rápida junto con la espironolactona para potenciar el efecto."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La respuesta al diurético se mide con peso y balance, y la furosemida agrava la hipopotasemia, que en un corazón enfermo favorece arritmias: es el electrolito que hay que vigilar y reponer.",
+      "justificaciones_incorrectas": {
+        "B": "Se restringen los líquidos según indicación, pero no se suspenden por completo; la meta es un balance negativo controlado.",
+        "C": "El betabloqueador no se suspende de rutina en la descompensación; se ajusta según la respuesta y solo se suspende si hay hipoperfusión o bradicardia significativa.",
+        "D": "La espironolactona es oral y ahorradora de potasio; no se administra «junto» con la furosemida como bolo."
+      }
+    },
+    {
+      "id": "card_008",
+      "competencia": "intervencion",
+      "tema": "edema_agudo_pulmon",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Paciente con edema agudo de pulmón: disnea intensa, saturación de 84 %, crépitos generalizados y tensión arterial 176/98 mmHg. ¿Cuál es la posición y la medida inicial más adecuadas?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Sentado con las piernas colgando, oxígeno de alto flujo y preparar diurético y vasodilatador."
+        },
+        {
+          "clave": "B",
+          "texto": "Decúbito supino con las piernas elevadas para mejorar el retorno venoso."
+        },
+        {
+          "clave": "C",
+          "texto": "Decúbito lateral izquierdo y administración rápida de cristaloides."
+        },
+        {
+          "clave": "D",
+          "texto": "Trendelenburg para favorecer la perfusión cerebral."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La posición sentada con las piernas colgando reduce el retorno venoso y la precarga, mejora la mecánica ventilatoria y alivia la congestión mientras actúan el oxígeno, el diurético y el vasodilatador.",
+      "justificaciones_incorrectas": {
+        "B": "Elevar las piernas aumenta el retorno venoso y empeora la congestión pulmonar.",
+        "C": "Administrar líquidos a un paciente con edema pulmonar agrava el cuadro.",
+        "D": "El Trendelenburg aumenta la congestión pulmonar y compromete aún más la ventilación."
+      }
+    },
+    {
+      "id": "card_009",
+      "competencia": "intervencion",
+      "tema": "arritmias",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Se indica adenosina 6 mg intravenosos para una taquicardia supraventricular. ¿Cómo debe administrarse?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "En bolo rápido de 1-2 segundos por la vía más proximal, seguido de 20 mL de solución salina y elevación del brazo."
+        },
+        {
+          "clave": "B",
+          "texto": "En infusión de 30 minutos diluida en 100 mL de solución salina."
+        },
+        {
+          "clave": "C",
+          "texto": "En bolo lento de 5 minutos, vigilando la aparición de rubor facial."
+        },
+        {
+          "clave": "D",
+          "texto": "Por vía intramuscular, porque la vía venosa periférica es insuficiente."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La adenosina tiene una vida media de menos de 10 segundos: si no llega al corazón en bolo rápido con lavado, se degrada antes de actuar.",
+      "justificaciones_incorrectas": {
+        "B": "Diluida y en infusión no alcanza la concentración necesaria para interrumpir el circuito de reentrada.",
+        "C": "Un bolo lento la vuelve ineficaz por su vida media ultracorta.",
+        "D": "La adenosina es exclusivamente intravenosa."
+      }
+    },
+    {
+      "id": "card_010",
+      "competencia": "intervencion",
+      "tema": "farmacologia_cardiovascular",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "Antes de administrar carvedilol a un paciente hospitalizado, la enfermera debe verificar de manera prioritaria",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "la frecuencia cardiaca y la tensión arterial, y consultar si hay bradicardia o hipotensión."
+        },
+        {
+          "clave": "B",
+          "texto": "la glucometría, porque el carvedilol produce hiperglucemia intensa."
+        },
+        {
+          "clave": "C",
+          "texto": "el tiempo de protrombina, por el riesgo de sangrado."
+        },
+        {
+          "clave": "D",
+          "texto": "la temperatura, porque el fármaco produce fiebre medicamentosa."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "El carvedilol es un betabloqueador con efecto alfa: reduce la frecuencia cardiaca y la tensión arterial, y esos dos valores son los que definen si la dosis puede administrarse.",
+      "justificaciones_incorrectas": {
+        "B": "Los betabloqueadores pueden enmascarar los síntomas de hipoglucemia, no producir hiperglucemia intensa.",
+        "C": "El carvedilol no altera la coagulación.",
+        "D": "La fiebre no es un efecto característico del carvedilol."
+      }
+    },
+    {
+      "id": "card_011",
+      "competencia": "fundamentacion",
+      "tema": "sindrome_coronario_agudo",
+      "dificultad": 3,
+      "contexto_id": "card_ctx_01",
+      "enunciado": "¿Cuál es la diferencia fisiopatológica entre la angina inestable y el infarto sin elevación del ST?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "En el infarto hay necrosis miocárdica demostrada por elevación de troponinas; en la angina inestable, isquemia sin necrosis."
+        },
+        {
+          "clave": "B",
+          "texto": "En la angina inestable el dolor aparece con el ejercicio y en el infarto siempre en reposo."
+        },
+        {
+          "clave": "C",
+          "texto": "En el infarto sin elevación del ST la arteria está totalmente ocluida y en la angina inestable, parcialmente."
+        },
+        {
+          "clave": "D",
+          "texto": "En la angina inestable el electrocardiograma siempre es normal y en el infarto siempre está alterado."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Ambos comparten el mecanismo —placa inestable con trombo no oclusivo— y se separan por un solo criterio: si hay o no elevación de marcadores de necrosis.",
+      "justificaciones_incorrectas": {
+        "B": "La angina inestable se caracteriza justamente por aparecer en reposo o con esfuerzos mínimos.",
+        "C": "La oclusión total y persistente corresponde al infarto CON elevación del ST.",
+        "D": "El electrocardiograma puede ser normal en ambos cuadros y alterado en ambos."
+      }
+    },
+    {
+      "id": "card_012",
+      "competencia": "fundamentacion",
+      "tema": "falla_cardiaca",
+      "dificultad": 2,
+      "contexto_id": "card_ctx_02",
+      "enunciado": "¿Por qué el enalapril mejora el pronóstico en la falla cardiaca con fracción de eyección reducida?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Porque bloquea el eje renina-angiotensina-aldosterona, reduce la poscarga y frena el remodelado ventricular."
+        },
+        {
+          "clave": "B",
+          "texto": "Porque aumenta directamente la contractilidad del miocardio."
+        },
+        {
+          "clave": "C",
+          "texto": "Porque produce vasoconstricción periférica y eleva la tensión arterial."
+        },
+        {
+          "clave": "D",
+          "texto": "Porque bloquea los receptores beta del nodo sinusal y reduce la frecuencia cardiaca."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La activación crónica del eje renina-angiotensina-aldosterona perpetúa la vasoconstricción, la retención de sodio y el remodelado; inhibirlo es lo que cambia el pronóstico, más allá del alivio sintomático.",
+      "justificaciones_incorrectas": {
+        "B": "No es un inotrópico: no aumenta la contractilidad.",
+        "C": "Produce vasodilatación y baja la tensión arterial.",
+        "D": "Ese es el mecanismo de los betabloqueadores."
+      }
+    },
+    {
+      "id": "card_013",
+      "competencia": "fundamentacion",
+      "tema": "farmacologia_cardiovascular",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "La nitroglicerina alivia el dolor isquémico principalmente porque",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "produce venodilatación, reduce la precarga y con ello la demanda miocárdica de oxígeno."
+        },
+        {
+          "clave": "B",
+          "texto": "disuelve el trombo que ocluye la arteria coronaria."
+        },
+        {
+          "clave": "C",
+          "texto": "aumenta la frecuencia cardiaca y con ella el gasto cardiaco."
+        },
+        {
+          "clave": "D",
+          "texto": "bloquea los receptores del dolor a nivel del sistema nervioso central."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Su efecto predominante a dosis habituales es venoso: al disminuir el retorno venoso baja la tensión parietal del ventrículo y, por tanto, el consumo de oxígeno; además dilata las coronarias epicárdicas.",
+      "justificaciones_incorrectas": {
+        "B": "No tiene acción fibrinolítica; eso corresponde a los trombolíticos.",
+        "C": "La taquicardia refleja es un efecto adverso, no el mecanismo del alivio.",
+        "D": "No es un analgésico central: alivia el dolor corrigiendo el desequilibrio entre aporte y demanda."
+      }
+    },
+    {
+      "id": "card_014",
+      "competencia": "fundamentacion",
+      "tema": "valvulopatias",
+      "dificultad": 3,
+      "contexto_id": null,
+      "enunciado": "En la estenosis aórtica severa, ¿por qué la administración de vasodilatadores puede ser peligrosa?",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "Porque el gasto cardiaco es fijo por la obstrucción y la caída de la resistencia periférica produce hipotensión y síncope."
+        },
+        {
+          "clave": "B",
+          "texto": "Porque los vasodilatadores aumentan la poscarga y sobrecargan el ventrículo."
+        },
+        {
+          "clave": "C",
+          "texto": "Porque producen bradicardia refleja intensa por estimulación vagal."
+        },
+        {
+          "clave": "D",
+          "texto": "Porque cierran la válvula aórtica de manera prematura durante la sístole."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "Con una válvula estrecha el ventrículo no puede aumentar el volumen expulsado para compensar la vasodilatación: la presión de perfusión cae y aparece el síncope.",
+      "justificaciones_incorrectas": {
+        "B": "Los vasodilatadores reducen la poscarga; no la aumentan.",
+        "C": "La respuesta esperable es taquicardia refleja, no bradicardia.",
+        "D": "No actúan sobre el mecanismo de apertura y cierre valvular."
+      }
+    },
+    {
+      "id": "card_015",
+      "competencia": "fundamentacion",
+      "tema": "arritmias",
+      "dificultad": 2,
+      "contexto_id": null,
+      "enunciado": "La fibrilación auricular aumenta el riesgo de accidente cerebrovascular embólico porque",
+      "opciones": [
+        {
+          "clave": "A",
+          "texto": "la aurícula no se contrae de forma organizada y la sangre se estanca, sobre todo en la orejuela izquierda, donde se forman trombos."
+        },
+        {
+          "clave": "B",
+          "texto": "la frecuencia ventricular elevada rompe las placas de ateroma de las carótidas."
+        },
+        {
+          "clave": "C",
+          "texto": "la irregularidad del pulso produce vasoespasmo cerebral sostenido."
+        },
+        {
+          "clave": "D",
+          "texto": "el ventrículo izquierdo se dilata y expulsa fragmentos de músculo necrosado."
+        }
+      ],
+      "correcta": "A",
+      "justificacion": "La pérdida de la contracción auricular organizada genera estasis; el trombo se forma típicamente en la orejuela izquierda y de ahí embolizan al territorio cerebral.",
+      "justificaciones_incorrectas": {
+        "B": "La embolia en la fibrilación auricular es cardioembólica, no por ruptura de placas carotídeas.",
+        "C": "No existe tal mecanismo de vasoespasmo por irregularidad del pulso.",
+        "D": "No se expulsan fragmentos de músculo: el émbolo es un trombo formado por estasis."
+      }
+    }
+  ]
+}

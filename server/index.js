@@ -8,12 +8,16 @@ const { inicializar } = require('./db');
 const { cargarUsuario } = require('./auth');
 const { faltantesPorModulo } = require('./exam/selection');
 const {
+  PRUEBAS,
   VERSIONES,
   VERSION_ACTIVA,
+  VERSIONES_ACTIVAS,
   modulosDe,
   duracionDe,
   totalPreguntasDe,
   nombreVersion,
+  versionActivaDe,
+  versionesDe,
 } = require('./exam/blueprint');
 
 const app = express();
@@ -29,9 +33,42 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/intentos', require('./routes/intentos'));
 app.use('/api/admin', require('./routes/admin'));
 
+// Menú de la pantalla de inicio: qué pruebas hay, con qué estructura se arma
+// cada una hoy y si su banco alcanza para presentarla.
 app.get('/api/blueprint', async (_req, res, next) => {
   try {
+    const pruebas = [];
+    for (const p of PRUEBAS) {
+      const activa = versionActivaDe(p.id);
+      pruebas.push({
+        id: p.id,
+        nombre: p.nombre,
+        descripcion: p.descripcion,
+        escala: p.escala,
+        version_activa: activa,
+        version_nombre: nombreVersion(activa),
+        duracion_minutos: duracionDe(activa),
+        total_preguntas: totalPreguntasDe(activa),
+        modulos: modulosDe(activa).map((m) => ({
+          id: m.id,
+          nombre: m.nombre,
+          preguntas: m.preguntas,
+        })),
+        versiones: versionesDe(p.id).map((v) => ({
+          id: v.id,
+          nombre: v.nombre,
+          descripcion: v.descripcion,
+          duracion_minutos: v.duracion_minutos,
+          total_preguntas: totalPreguntasDe(v.id),
+        })),
+        banco_incompleto: await faltantesPorModulo(activa),
+      });
+    }
+
     res.json({
+      pruebas,
+      // Compatibilidad con clientes anteriores al menú de pruebas: los datos
+      // sueltos describen la prueba por defecto, el Saber Pro.
       version_activa: VERSION_ACTIVA,
       version_nombre: nombreVersion(VERSION_ACTIVA),
       duracion_minutos: duracionDe(VERSION_ACTIVA),
@@ -43,12 +80,13 @@ app.get('/api/blueprint', async (_req, res, next) => {
       })),
       versiones: VERSIONES.map((v) => ({
         id: v.id,
+        prueba: v.prueba,
         nombre: v.nombre,
         descripcion: v.descripcion,
         duracion_minutos: v.duracion_minutos,
         total_preguntas: totalPreguntasDe(v.id),
       })),
-      banco_incompleto: await faltantesPorModulo(VERSION_ACTIVA),
+      banco_incompleto: pruebas.flatMap((p) => p.banco_incompleto),
     });
   } catch (e) {
     next(e);
@@ -79,11 +117,10 @@ const PUERTO = Number(process.env.PORT) || 3000;
 async function arrancar() {
   await inicializar();
 
-  const faltan = await faltantesPorModulo(VERSION_ACTIVA);
-  if (faltan.length) {
-    console.warn(
-      `AVISO: el banco de la ${VERSION_ACTIVA} está incompleto. Ejecuta: npm run seed`
-    );
+  for (const versionId of VERSIONES_ACTIVAS) {
+    const faltan = await faltantesPorModulo(versionId);
+    if (!faltan.length) continue;
+    console.warn(`AVISO: el banco de la ${versionId} está incompleto. Ejecuta: npm run seed`);
     for (const f of faltan) console.warn(`  - ${f.nombre}: hay ${f.hay}, se necesitan ${f.necesita}`);
   }
 

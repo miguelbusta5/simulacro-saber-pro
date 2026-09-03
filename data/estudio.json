@@ -199,6 +199,186 @@
         "Puntuación que separa ideas: coma, punto y coma, dos puntos"
       ],
       "como_practicar": "Reescribe cada párrafo que escribas quitándole una cuarta parte de las palabras sin perder nada de lo que dice. Lo que sobrevive es lo que de verdad estabas diciendo."
+    },
+    "cardiologia.valoracion": {
+      "que_mide": "Reconocer en la historia, el examen físico y los paraclínicos los signos que definen la gravedad del paciente cardiovascular y su clasificación de riesgo.",
+      "que_estudiar": [
+        "Características del dolor torácico de origen isquémico y sus equivalentes anginosos",
+        "Signos de congestión izquierda (crépitos, ortopnea) y derecha (ingurgitación yugular, edema, hepatomegalia)",
+        "Clasificación de Killip y criterios de inestabilidad hemodinámica",
+        "Curva de troponinas: por qué una sola determinación temprana no descarta infarto"
+      ],
+      "como_practicar": "Tome casos con signos vitales y paraclínicos y, antes de leer la respuesta, escriba en una línea si el paciente está estable o inestable y qué dato lo define."
+    },
+    "cardiologia.intervencion": {
+      "que_mide": "Decidir y ejecutar con seguridad las intervenciones de enfermería y la administración de medicamentos cardiovasculares.",
+      "que_estudiar": [
+        "Contraindicaciones de los nitratos, en especial con inhibidores de la fosfodiesterasa-5",
+        "Verificaciones previas a betabloqueadores, digoxina y antiarrítmicos",
+        "Administración de adenosina y de fármacos de vida media ultracorta",
+        "Posición y medidas iniciales en el edema agudo de pulmón"
+      ],
+      "como_practicar": "Para cada medicamento cardiovascular que administre, escriba el parámetro que debe verificar antes, el efecto adverso que debe vigilar después y el criterio para no administrarlo."
+    },
+    "cardiologia.fundamentacion": {
+      "que_mide": "Explicar por qué funciona cada tratamiento: el mecanismo fisiopatológico y farmacológico que hay detrás de la indicación.",
+      "que_estudiar": [
+        "Diferencia entre angina inestable e infarto sin elevación del ST",
+        "Eje renina-angiotensina-aldosterona y remodelado ventricular",
+        "Precarga, poscarga y consumo miocárdico de oxígeno",
+        "Origen del riesgo embólico en la fibrilación auricular"
+      ],
+      "como_practicar": "Tome cada fármaco del tratamiento de un paciente y explique en dos frases qué hace y por qué mejora ese problema concreto."
+    },
+    "electrocardiografia.reconocimiento": {
+      "que_mide": "Identificar el ritmo y los hallazgos del trazado de manera sistemática, antes de interpretarlo clínicamente.",
+      "que_estudiar": [
+        "Lectura sistemática: frecuencia, ritmo, onda P, intervalo PR, ancho del QRS, segmento ST y onda T",
+        "Diferencia entre fibrilación auricular, flúter y taquicardia supraventricular",
+        "Bloqueos auriculoventriculares de primer, segundo (Mobitz I y II) y tercer grado",
+        "Complejo estrecho frente a complejo ancho"
+      ],
+      "como_practicar": "Lea cada trazado siempre en el mismo orden y en voz alta; no salte al diagnóstico antes de terminar los seis pasos."
+    },
+    "electrocardiografia.interpretacion_clinica": {
+      "que_mide": "Relacionar el trazado con la situación del paciente: localizar la lesión, reconocer causas metabólicas y valorar la urgencia.",
+      "que_estudiar": [
+        "Correlación entre derivaciones y caras del corazón, y la arteria responsable",
+        "Infarto inferior con compromiso del ventrículo derecho y su implicación para los nitratos",
+        "Cambios electrocardiográficos de la hiperpotasemia y la hipopotasemia",
+        "Bloqueo de rama izquierda nuevo con clínica isquémica"
+      ],
+      "como_practicar": "Ante cada trazado pregúntese qué derivaciones están alteradas, qué territorio miran y qué esperaría encontrar en el examen físico de ese paciente."
+    },
+    "electrocardiografia.conducta": {
+      "que_mide": "Decidir la acción inmediata que corresponde al trazado: desfibrilar, cardiovertir, marcapasos, fármaco u observación.",
+      "que_estudiar": [
+        "Ritmos desfibrilables y no desfibrilables",
+        "Diferencia entre cardioversión sincronizada y desfibrilación",
+        "Manejo de la bradiarritmia sintomática",
+        "Prioridades ante cambios electrocardiográficos por hiperpotasemia"
+      ],
+      "como_practicar": "Frente a cada trazado responda dos preguntas en este orden: ¿hay pulso? y ¿el paciente está estable? La conducta se desprende de esas dos respuestas."
+    },
+    "hemodinamia.monitoria_invasiva": {
+      "que_mide": "Manejar la línea arterial: qué mide, cómo se garantiza que el valor sea confiable y qué cuidados previenen sus complicaciones.",
+      "que_estudiar": [
+        "Funciones de la línea arterial y por qué nunca se administran medicamentos por ella",
+        "Nivelación en el eje flebostático y calibración a cero",
+        "Curvas sub y sobreamortiguadas y prueba de la onda cuadrada",
+        "Valoración de la perfusión distal y prevención de la isquemia de la mano"
+      ],
+      "como_practicar": "En cada turno haga la prueba de la onda cuadrada y compare el valor invasivo con el del manguito; si difieren, busque la causa antes de tratar la cifra."
+    },
+    "hemodinamia.procedimientos": {
+      "que_mide": "Comprender en qué consisten el cateterismo, la angioplastia y el implante de stent, y qué exige cada acceso vascular.",
+      "que_estudiar": [
+        "Angioplastia con balón frente a stent: qué queda dentro de la arteria y por qué",
+        "Prueba de Allen y valoración previa según el acceso radial o femoral",
+        "Nefropatía por medio de contraste y manejo de la metformina",
+        "Escala de flujo TIMI y reacción vasovagal al retirar el introductor"
+      ],
+      "como_practicar": "Reconstruya el recorrido del catéter desde el sitio de punción hasta la coronaria y anote en cada paso qué puede salir mal y cómo se detecta."
+    },
+    "hemodinamia.cuidado_post": {
+      "que_mide": "Vigilar al paciente después del procedimiento y reconocer a tiempo las complicaciones del sitio de punción y del stent.",
+      "que_estudiar": [
+        "Manejo de la banda de compresión radial y signos de isquemia de la mano",
+        "Sangrado retroperitoneal tras acceso femoral: cómo se manifiesta sin sangrado visible",
+        "Doble antiagregación y trombosis del stent",
+        "Educación al egreso y signos de alarma"
+      ],
+      "como_practicar": "Escriba la lista de signos que obligan a llamar al médico en el posoperatorio y téngala presente en cada valoración horaria."
+    },
+    "neurologia.clasificacion": {
+      "que_mide": "Distinguir los tipos de accidente cerebrovascular y de edema cerebral por su mecanismo, porque de ahí depende el tratamiento.",
+      "que_estudiar": [
+        "ACV isquémico: cardioembólico, aterotrombótico y lacunar; accidente isquémico transitorio",
+        "ACV hemorrágico: intraparenquimatoso y subaracnoideo",
+        "Edema citotóxico, vasogénico, intersticial y osmótico",
+        "Tríada de Cushing y signos de herniación"
+      ],
+      "como_practicar": "Ante cada caso pregunte primero si es isquémico o hemorrágico y después por qué mecanismo; escriba el dato del caso que lo demuestra."
+    },
+    "neurologia.valoracion_neuro": {
+      "que_mide": "Aplicar las escalas y los cálculos con que se vigila al paciente neurológico y detectar el deterioro precoz.",
+      "que_estudiar": [
+        "Escala de Glasgow y escala NIHSS: qué mide cada una",
+        "Hora del último momento sin síntomas y ventana terapéutica",
+        "Presión de perfusión cerebral = presión arterial media − presión intracraneal",
+        "Vigilancia del vasoespasmo tras hemorragia subaracnoidea"
+      ],
+      "como_practicar": "Compare la valoración neurológica de su turno con la del turno anterior parámetro por parámetro: el deterioro se ve en la tendencia, no en un dato aislado."
+    },
+    "neurologia.manejo_neuro": {
+      "que_mide": "Ejecutar las medidas que protegen el cerebro lesionado y evitar las que elevan la presión intracraneal.",
+      "que_estudiar": [
+        "Metas de tensión arterial en el ACV isquémico con y sin trombólisis",
+        "Posición, manejo del cuello y agrupación de procedimientos",
+        "Manitol y solución salina hipertónica: vigilancia y riesgos",
+        "Control de fiebre, glucemia y convulsiones en el paciente neurocrítico"
+      ],
+      "como_practicar": "Revise su rutina de cuidados y marque cuáles elevan la presión intracraneal; planifique cómo espaciarlos en el turno."
+    },
+    "urgencias_metabolicas.diagnostico_metabolico": {
+      "que_mide": "Reconocer la descompensación metabólica a partir de la clínica y los gases, y diferenciarla de cuadros parecidos.",
+      "que_estudiar": [
+        "Criterios de cetoacidosis diabética: hiperglucemia, acidosis con anión gap y cetosis",
+        "Cálculo e interpretación del anión gap",
+        "Respiración de Kussmaul y compensación respiratoria",
+        "Cetoacidosis frente a estado hiperosmolar hiperglucémico"
+      ],
+      "como_practicar": "Con cada gasometría calcule el anión gap antes de leer la interpretación del laboratorio."
+    },
+    "urgencias_metabolicas.manejo_hidroelectrolitico": {
+      "que_mide": "Ordenar el tratamiento en la secuencia correcta: volumen, potasio, insulina y glucosa.",
+      "que_estudiar": [
+        "Por qué la hidratación precede a la insulina",
+        "Potasio corporal total frente a potasio sérico y su caída con la insulina",
+        "Cuándo agregar dextrosa sin suspender la insulina",
+        "Traslape al pasar de insulina intravenosa a subcutánea"
+      ],
+      "como_practicar": "Escriba de memoria el orden de las intervenciones y, al lado de cada una, el parámetro que debe controlar y con qué frecuencia."
+    },
+    "urgencias_metabolicas.complicaciones": {
+      "que_mide": "Anticipar las complicaciones que produce el propio tratamiento y reconocerlas a tiempo.",
+      "que_estudiar": [
+        "Edema cerebral por corrección rápida de la osmolaridad, sobre todo en niños y adolescentes",
+        "Hipopotasemia e hipoglucemia durante la infusión de insulina",
+        "Velocidad máxima recomendada de descenso de la glucemia",
+        "Signos neurológicos de alarma durante el tratamiento"
+      ],
+      "como_practicar": "Por cada intervención que realice, pregúntese qué complicación puede causar y con qué signo se manifestaría primero."
+    },
+    "pediatria.convulsion_febril": {
+      "que_mide": "Clasificar la convulsión febril, distinguirla de una infección del sistema nervioso central y actuar durante la crisis.",
+      "que_estudiar": [
+        "Criterios de convulsión febril simple y compleja",
+        "Rango de edad y exclusiones de la definición",
+        "Signos que obligan a descartar meningitis",
+        "Qué hacer y qué no hacer durante una crisis"
+      ],
+      "como_practicar": "Ante cada caso decida si la crisis es simple o compleja y señale los tres criterios que usó para decidirlo."
+    },
+    "pediatria.epilepsia": {
+      "que_mide": "Reconocer el estado epiléptico y aplicar la secuencia de manejo, incluida la causa más frecuente de descompensación.",
+      "que_estudiar": [
+        "Definición operativa de estado epiléptico (cinco minutos)",
+        "Benzodiacepinas de primera línea y vías alternativas a la venosa",
+        "Prioridades ABC y glucometría durante la crisis",
+        "Suspensión del tratamiento y adherencia"
+      ],
+      "como_practicar": "Practique en voz alta la secuencia de los primeros diez minutos del estado epiléptico, con tiempos y dosis por peso."
+    },
+    "pediatria.educacion_familiar": {
+      "que_mide": "Dar a la familia información correcta y aplicable sobre qué hacer, qué no hacer y cuándo consultar.",
+      "que_estudiar": [
+        "Papel real de los antipiréticos en la recurrencia de la convulsión febril",
+        "Signos de alarma para consultar de urgencia",
+        "Riesgo de epilepsia posterior tras una convulsión febril simple",
+        "Mantenimiento del esquema de vacunación"
+      ],
+      "como_practicar": "Explique el alta a un familiar sin usar términos técnicos y pídale que se lo repita: lo que no pueda repetir es lo que hay que volver a explicar."
     }
   },
   "temas": {
@@ -222,6 +402,32 @@
     "estructura_texto": "Organización de las partes del texto y progresión de las ideas entre párrafos.",
     "coherencia_cohesion": "Conectores, referencias y unidad temática que enlazan las oraciones.",
     "lexico_registro": "Precisión de las palabras y adecuación del registro a la situación.",
-    "normativa": "Concordancia, puntuación y construcción correcta de las oraciones."
+    "normativa": "Concordancia, puntuación y construcción correcta de las oraciones.",
+    "sindrome_coronario_agudo": "Angina inestable e infarto con y sin elevación del ST: clínica, marcadores, clasificación de Killip y tratamiento inicial.",
+    "falla_cardiaca": "Falla cardiaca crónica descompensada: signos de congestión, peso diario, balance hídrico y tratamiento farmacológico.",
+    "edema_agudo_pulmon": "Edema agudo de pulmón: reconocimiento, posición, oxigenación, diuréticos y vasodilatadores.",
+    "arritmias": "Taquiarritmias y bradiarritmias: criterios de estabilidad, maniobras vagales, fármacos y cardioversión.",
+    "farmacologia_cardiovascular": "Nitratos, betabloqueadores, inhibidores de la enzima convertidora, antiagregantes y antiarrítmicos: mecanismo, verificaciones y efectos adversos.",
+    "valvulopatias": "Estenosis e insuficiencia valvular: consecuencias hemodinámicas y precauciones terapéuticas.",
+    "ritmo_normal": "Lectura sistemática del electrocardiograma normal como referencia para reconocer lo anormal.",
+    "isquemia_infarto": "Cambios electrocardiográficos de la isquemia y el infarto: elevación y descenso del ST, onda T y onda Q, y su localización.",
+    "arritmias_supraventriculares": "Fibrilación auricular, flúter y taquicardia supraventricular en el trazado.",
+    "arritmias_ventriculares": "Taquicardia ventricular y fibrilación ventricular: reconocimiento y conducta.",
+    "bloqueos": "Bloqueos auriculoventriculares y de rama: criterios en el trazado y significado clínico.",
+    "trastornos_electroliticos": "Efecto del potasio, el calcio y el magnesio sobre el electrocardiograma.",
+    "pericarditis": "Pericarditis aguda: dolor característico y elevación difusa del ST con descenso del PR.",
+    "reanimacion": "Ritmos de paro, desfibrilación y reanimación cardiopulmonar de alta calidad.",
+    "linea_arterial": "Línea arterial: funciones, nivelación, calibración, curvas anormales, prueba de la onda cuadrada y cuidados.",
+    "cateterismo": "Cateterismo cardiaco, angioplastia y stent: accesos, preparación, medio de contraste y complicaciones del procedimiento.",
+    "posprocedimiento": "Cuidado posterior al cateterismo: sitio de punción, doble antiagregación y signos de alarma.",
+    "acv_isquemico": "ACV isquémico: mecanismos, ventana terapéutica, trombólisis y metas de tensión arterial.",
+    "acv_hemorragico": "ACV hemorrágico intraparenquimatoso y subaracnoideo: presentación y complicaciones.",
+    "edema_cerebral": "Tipos de edema cerebral, hipertensión intracraneal y signos de herniación.",
+    "valoracion_neurologica": "Escalas de Glasgow y NIHSS, presión de perfusión cerebral y detección del deterioro.",
+    "manejo_neurocritico": "Cuidados del paciente neurocrítico: posición, sedación, osmoterapia y control de la PIC.",
+    "cetoacidosis": "Cetoacidosis diabética: criterios diagnósticos, anión gap, secuencia de tratamiento y complicaciones.",
+    "convulsion_febril": "Convulsión febril simple y compleja: criterios, diagnóstico diferencial y manejo de la crisis.",
+    "epilepsia": "Epilepsia en pediatría y estado epiléptico: definición, primera línea de tratamiento y causas de descompensación.",
+    "educacion_cuidador": "Educación a la familia: signos de alarma, qué hacer durante una crisis y desmontar creencias frecuentes."
   }
 }
